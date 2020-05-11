@@ -6,7 +6,7 @@
 #include "common/str.h"
 #include "common/debug.h"
 #include "common/hex.h"
-#include "graphics/managed_surface.h"
+#include "graphics/surface.h"
 #include "graphics/colormasks.h"
 
 enum PS2PixelFormat : byte
@@ -109,10 +109,10 @@ public:
 
     void ReadFile(char *path);
 
-    Graphics::ManagedSurface *getSurface() const;
+    Graphics::Surface *getSurface() const;
 
 private:
-    Graphics::ManagedSurface *surface;
+    Graphics::Surface *surface;
     TMXData dat;
 };
 

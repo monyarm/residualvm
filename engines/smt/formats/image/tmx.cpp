@@ -5,7 +5,6 @@ void TMXFile::ReadFile(char *path)
     Common::File f;
     if (f.open(path))
     {
-        debug("TMX");
 
         dat.header.tmxID = f.readUint16BE();
         dat.header.userID = f.readUint16BE();
@@ -31,15 +30,14 @@ void TMXFile::ReadFile(char *path)
         Common::DumpFile pal;
         Common::DumpFile img;
 
-        Common::hexdump(toBytes(dat.formatsettings.pixelFmt), 1);
 
         switch (dat.formatsettings.pixelFmt)
         {
         case PSMT4:
         {
-            pal.open("dumps/pal.data", true);
+            /* pal.open("dumps/pal.data", true);
             img.open("dumps/image.data", true);
-
+ */
             byte *_pixels = new byte[(sizeof(byte) * dat.formatsettings.width * dat.formatsettings.height) / 2];
 
             f.read(_pixels, (sizeof(byte) * dat.formatsettings.width * dat.formatsettings.height) / 2);
@@ -51,18 +49,18 @@ void TMXFile::ReadFile(char *path)
                 pixels.push_back(_pixels[i] & 0x0f);
                 pixels.push_back(_pixels[i] >> 4);
             }
-
+/* 
             img.write(pixels.data(), (sizeof(byte) * dat.formatsettings.width * dat.formatsettings.height));
 
             img.flush();
-            img.close();
+            img.close(); */
             delete _pixels;
         }
         break;
         case PSMT8:
-        { /* 
+        {
             pal.open("dumps/pal.data", true);
-            img.open("dumps/image.data", true); */
+            img.open("dumps/image.data", true); 
 
             byte *_palette = new byte[256 * 4];
             f.read(_palette, 256 * 4);
@@ -83,7 +81,7 @@ void TMXFile::ReadFile(char *path)
 
                 for (int x = 0; x < 8; x++)
                 {
-                    
+
                     palette.push_back(_palette[(index + x) * 4 + 0]);
                     palette.push_back(_palette[(index + x) * 4 + 1]);
                     palette.push_back(_palette[(index + x) * 4 + 2]);
@@ -93,7 +91,7 @@ void TMXFile::ReadFile(char *path)
 
                 for (int x = 0; x < 8; x++)
                 {
-                    
+
                     palette.push_back(_palette[(index + x) * 4 + 0]);
                     palette.push_back(_palette[(index + x) * 4 + 1]);
                     palette.push_back(_palette[(index + x) * 4 + 2]);
@@ -103,14 +101,14 @@ void TMXFile::ReadFile(char *path)
 
                 for (int x = 0; x < 8; x++)
                 {
-                    
+
                     palette.push_back(_palette[(index + x) * 4 + 0]);
                     palette.push_back(_palette[(index + x) * 4 + 1]);
                     palette.push_back(_palette[(index + x) * 4 + 2]);
                     palette.push_back(_palette[(index + x) * 4 + 3]);
                 }
                 index += 8;
-            } /* 
+            }/* 
             pal.write(palette.data(), 256 * 4);
             pal.flush();
             pal.close(); */
@@ -127,25 +125,21 @@ void TMXFile::ReadFile(char *path)
             //dat.image.assign(pixels, pixels + dat.formatsettings.width * dat.formatsettings.height);
 
             Common::Array<uint32> image;
-            for (size_t i = 0; i < dat.formatsettings.width * dat.formatsettings.height; i++)
+            uint32 *truepalette = (uint32 *)palette.data();
+            for (size_t i = 0; i < dat.formatsettings.width * dat.formatsettings.height ; i++)
             {
-                /* image.push_back(palette[pixels[i *4 +3]]);
-                image.push_back(palette[pixels[i *4 +2]]);
-                image.push_back(palette[pixels[i *4 +1]]);
-                image.push_back(palette[pixels[i *4 +0]]); */
-
-                                image.push_back(palette[pixels[i]]);
-
-
+                image.push_back(truepalette[pixels[i]]);
             }
+            img.write(image.data(), dat.formatsettings.width * dat.formatsettings.height * sizeof(uint32));
+            img.flush();
+            img.close();
 
-            surface = new Graphics::ManagedSurface();
+            surface = new Graphics::Surface();
             surface->w = dat.formatsettings.width;
             surface->h = dat.formatsettings.height;
             debug(Graphics::createPixelFormat<8888>().toString().c_str());
             surface->format = Graphics::createPixelFormat<8888>();
             surface->setPixels(image.data());
-
         }
         break;
         case PSMTC32:
@@ -177,7 +171,7 @@ void TMXFile::ReadFile(char *path)
     }
 }
 
-Graphics::ManagedSurface *TMXFile::getSurface() const
+Graphics::Surface *TMXFile::getSurface() const
 {
     return surface;
 }

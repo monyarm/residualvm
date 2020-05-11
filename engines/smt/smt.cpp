@@ -50,12 +50,12 @@ Common::Error SMTEngine::run()
 	Graphics::PixelFormat *format = new Graphics::PixelFormat();
 	*format = Graphics::createPixelFormat<8888>();
 
-	if (getGameId() == "P3P")
+	if (strcmp(getGameId(), "P3P") == 0)
 	{
 		//PSP
 		//initGraphics(480, 272, format);
 		initGraphics(1920, 1080, format);
-	} else if (getGameId() == "P4G")
+	} else if (strcmp(getGameId(), "P4G") == 0)
 	{
 		//PSP
 		initGraphics(960, 554, format);
@@ -82,29 +82,6 @@ Common::Error SMTEngine::run()
 
 	_tmx.ReadFile("test.tmx");
 
-	Common::Event e;
-	while (!shouldQuit())
-	{
-		g_system->getEventManager()->pollEvent(e);
-		g_system->delayMillis(10);
-
-		Graphics::Surface *screen = g_system->lockScreen();
-		screen->fillRect(Common::Rect(0, 0, g_system->getWidth(), g_system->getHeight()), 0);
-
-		Graphics::ManagedSurface *surface = _tmx.getSurface(); // = tmxData
-
-		int w = CLIP<int>(surface->w, 0, g_system->getWidth());
-		int h = CLIP<int>(surface->h, 0, g_system->getHeight());
-
-		int x = (g_system->getWidth() - w) / 2;
-		int y = (g_system->getHeight() - h) / 2;
-
-		screen->copyRectToSurface(*surface, x, y, Common::Rect(0, 0, w, h));
-
-		g_system->unlockScreen();
-		g_system->updateScreen();
-	}
-
 	// You could use backend transactions directly as an alternative,
 	// but it isn't recommended, until you want to handle the error values
 	// from OSystem::endGFXTransaction yourself.
@@ -126,14 +103,29 @@ Common::Error SMTEngine::run()
 	// Additional setup.
 	debug("SMTEngine::init");
 
-	// Your main even loop should be (invoked from) here.
-	debug("SMTEngine::go: Hello, World!");
 
-	// This test will show up if -d1 and --debugflags=example are specified on the commandline
-	debugC(1, kSMTDebug, "Example debug call");
+	Common::Event e;
+	while (!shouldQuit())
+	{
+		g_system->getEventManager()->pollEvent(e);
+		g_system->delayMillis(10);
 
-	// This test will show up if --debugflags=example or --debugflags=example2 or both of them and -d3 are specified on the commandline
-	debugC(3, kSMTDebug | kSMTDebug2, "Example debug call two");
+		Graphics::Surface *screen = g_system->lockScreen();
+		screen->fillRect(Common::Rect(0, 0, g_system->getWidth(), g_system->getHeight()), 212313211);
+
+		Graphics::Surface *surface = _tmx.getSurface(); // = tmxData
+		
+		int w = CLIP<int>(surface->w, 0, g_system->getWidth());
+		int h = CLIP<int>(surface->h, 0, g_system->getHeight());
+
+		int x = (g_system->getWidth() - w) / 2;
+		int y = (g_system->getHeight() - h) / 2;
+
+		screen->copyRectToSurface(*surface, x, y, Common::Rect(0, 0, w, h));
+
+		g_system->unlockScreen();
+		g_system->updateScreen();
+	}
 
 	return Common::kNoError;
 }
