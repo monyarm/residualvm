@@ -78,10 +78,12 @@ Common::Error BibleBlackEngine::run()
 	{
 		debug("can't read archive");
 	}
-	
+
 	Audio::SeekableAudioStream *str;
 	str = Audio::makeWAVStream(f.readStream(f.size()),DisposeAfterUse::YES);
-	_mixer->playStream(Audio::Mixer::SoundType::kMusicSoundType, _shandle, str);
+	_mixer->playStream(Audio::Mixer::SoundType::kMusicSoundType, &_shandle, str);
+
+	while (true) {}
 
 	// You could use backend transactions directly as an alternative,
 	// but it isn't recommended, until you want to handle the error values
