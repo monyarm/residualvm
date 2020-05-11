@@ -45,7 +45,7 @@ void TMXFile::ReadFile(char *path)
             f.read(_pixels, (sizeof(byte) * dat.formatsettings.width * dat.formatsettings.height) / 2);
 
             Common::Array<byte> pixels;
-            for (int i = 0; i < (sizeof(byte) * dat.formatsettings.width * dat.formatsettings.height); i++)
+            for (size_t i = 0; i < (sizeof(byte) * dat.formatsettings.width * dat.formatsettings.height); i++)
             {
 
                 pixels.push_back(_pixels[i] & 0x0f);
@@ -60,57 +60,92 @@ void TMXFile::ReadFile(char *path)
         }
         break;
         case PSMT8:
-        {
+        { /* 
             pal.open("dumps/pal.data", true);
-            img.open("dumps/image.data", true);
+            img.open("dumps/image.data", true); */
 
+            byte *_palette = new byte[256 * 4];
+            f.read(_palette, 256 * 4);
 
-            byte *_palette = (byte *)malloc(256);
-            f.read(_palette, 256);
+            Common::Array<byte> palette;
 
-            byte* palette = new byte[(sizeof(byte) * dat.formatsettings.width * dat.formatsettings.height)];
-            memcpy(palette, _palette, 256);
-
-
-            int newIndex = 0;
-            int oldIndex = 0;
+            int index = 0;
             for (int i = 0; i < 8; i++)
             {
                 for (int x = 0; x < 8; x++)
                 {
-                    palette[newIndex++] = _palette[oldIndex++];
+                    palette.push_back(_palette[(index + x) * 4 + 0]);
+                    palette.push_back(_palette[(index + x) * 4 + 1]);
+                    palette.push_back(_palette[(index + x) * 4 + 2]);
+                    palette.push_back(_palette[(index + x) * 4 + 3]);
                 }
-                oldIndex += 8;
-                for (int x = 0; x < 8; x++)
-                {
-                    palette[newIndex++] = _palette[oldIndex++];
-                }
-                oldIndex -= 16;
-                for (int x = 0; x < 8; x++)
-                {
-                    palette[newIndex++] = _palette[oldIndex++];
-                }
-                oldIndex += 8;
-                for (int x = 0; x < 8; x++)
-                {
-                    palette[newIndex++] = _palette[oldIndex++];
-                }
-            }
+                index += 16;
 
-            pal.write(palette,256);
+                for (int x = 0; x < 8; x++)
+                {
+                    
+                    palette.push_back(_palette[(index + x) * 4 + 0]);
+                    palette.push_back(_palette[(index + x) * 4 + 1]);
+                    palette.push_back(_palette[(index + x) * 4 + 2]);
+                    palette.push_back(_palette[(index + x) * 4 + 3]);
+                }
+                index -= 8;
+
+                for (int x = 0; x < 8; x++)
+                {
+                    
+                    palette.push_back(_palette[(index + x) * 4 + 0]);
+                    palette.push_back(_palette[(index + x) * 4 + 1]);
+                    palette.push_back(_palette[(index + x) * 4 + 2]);
+                    palette.push_back(_palette[(index + x) * 4 + 3]);
+                }
+                index += 16;
+
+                for (int x = 0; x < 8; x++)
+                {
+                    
+                    palette.push_back(_palette[(index + x) * 4 + 0]);
+                    palette.push_back(_palette[(index + x) * 4 + 1]);
+                    palette.push_back(_palette[(index + x) * 4 + 2]);
+                    palette.push_back(_palette[(index + x) * 4 + 3]);
+                }
+                index += 8;
+            } /* 
+            pal.write(palette.data(), 256 * 4);
             pal.flush();
-            pal.close();
+            pal.close(); */
 
             byte *pixels = new byte[(sizeof(byte) * dat.formatsettings.width * dat.formatsettings.height)];
 
             f.read(pixels, sizeof(PS2PixelFormat) * dat.formatsettings.width * dat.formatsettings.height);
 
-            img.write(pixels, sizeof(PS2PixelFormat) * dat.formatsettings.width * dat.formatsettings.height);
-
+            /* img.write(pixels, sizeof(PS2PixelFormat) * dat.formatsettings.width * dat.formatsettings.height);
 
             img.flush();
-            img.close();
-            delete pixels;
+            img.close(); */
+            //dat.palette = palette;
+            //dat.image.assign(pixels, pixels + dat.formatsettings.width * dat.formatsettings.height);
+
+            Common::Array<uint32> image;
+            for (size_t i = 0; i < dat.formatsettings.width * dat.formatsettings.height; i++)
+            {
+                /* image.push_back(palette[pixels[i *4 +3]]);
+                image.push_back(palette[pixels[i *4 +2]]);
+                image.push_back(palette[pixels[i *4 +1]]);
+                image.push_back(palette[pixels[i *4 +0]]); */
+
+                                image.push_back(palette[pixels[i]]);
+
+
+            }
+
+            surface = new Graphics::ManagedSurface();
+            surface->w = dat.formatsettings.width;
+            surface->h = dat.formatsettings.height;
+            debug(Graphics::createPixelFormat<8888>().toString().c_str());
+            surface->format = Graphics::createPixelFormat<8888>();
+            surface->setPixels(image.data());
+
         }
         break;
         case PSMTC32:
@@ -142,6 +177,10 @@ void TMXFile::ReadFile(char *path)
     }
 }
 
+Graphics::ManagedSurface *TMXFile::getSurface() const
+{
+    return surface;
+}
 TMXFile::TMXFile()
 {
 }

@@ -1,19 +1,6 @@
-#include "common/scummsys.h"
-
-#include "common/system.h"
-#include "common/config-manager.h"
-#include "common/debug.h"
-#include "common/debug-channels.h"
-#include "common/error.h"
-#include "common/file.h"
-#include "common/fs.h"
-#include "common/str.h"
-
 #include "smt/formats/archive/cpk.h"
 #include "smt/formats/video/pmsf.h"
 #include "smt/formats/image/tmx.h"
-
-#include "engines/util.h"
 
 #include "smt/smt.h"
 
@@ -41,7 +28,6 @@ SMTEngine::SMTEngine(OSystem *syst, const ADGameDescription *desc)
 	// Don't forget to register your random source
 	_rnd = new Common::RandomSource("smt");
 
-
 	debug("SMTEngine::SMTEngine");
 }
 
@@ -56,21 +42,37 @@ SMTEngine::~SMTEngine()
 	DebugMan.clearAllDebugChannels();
 }
 
-
 Common::Error SMTEngine::run()
 {
 	// Initialize graphics using following:
 
 	Common::List<Graphics::PixelFormat> formats = g_system->getSupportedFormats();
+	Graphics::PixelFormat *format = new Graphics::PixelFormat();
+	*format = Graphics::createPixelFormat<8888>();
 
-	initGraphics(480, 272, formats);
-
-	Graphics::PixelFormat format = g_system->getScreenFormat();
+	if (getGameId() == "P3P")
+	{
+		//PSP
+		//initGraphics(480, 272, format);
+		initGraphics(1920, 1080, format);
+	} else if (getGameId() == "P4G")
+	{
+		//PSP
+		initGraphics(960, 554, format);
+	}
+	else
+	{
+		
+		initGraphics(1920, 1080, format);
+	}
 	
+
+	//Graphics::PixelFormat format = g_system->getScreenFormat();
+	debug(format->toString().c_str());
+
 	//CPKFile _cpk = CPKFile();
 
 	//_cpk.ReadFile("umd0.cpk");
-
 
 	//PMSFFile _pmsf = PMSFFile();
 
@@ -80,6 +82,28 @@ Common::Error SMTEngine::run()
 
 	_tmx.ReadFile("test.tmx");
 
+	Common::Event e;
+	while (!shouldQuit())
+	{
+		g_system->getEventManager()->pollEvent(e);
+		g_system->delayMillis(10);
+
+		Graphics::Surface *screen = g_system->lockScreen();
+		screen->fillRect(Common::Rect(0, 0, g_system->getWidth(), g_system->getHeight()), 0);
+
+		Graphics::ManagedSurface *surface = _tmx.getSurface(); // = tmxData
+
+		int w = CLIP<int>(surface->w, 0, g_system->getWidth());
+		int h = CLIP<int>(surface->h, 0, g_system->getHeight());
+
+		int x = (g_system->getWidth() - w) / 2;
+		int y = (g_system->getHeight() - h) / 2;
+
+		screen->copyRectToSurface(*surface, x, y, Common::Rect(0, 0, w, h));
+
+		g_system->unlockScreen();
+		g_system->updateScreen();
+	}
 
 	// You could use backend transactions directly as an alternative,
 	// but it isn't recommended, until you want to handle the error values
