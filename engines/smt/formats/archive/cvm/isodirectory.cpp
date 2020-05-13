@@ -8,12 +8,13 @@ IsoDirectoryRecord::IsoDirectoryRecord(Common::SeekableReadStream &reader, IsoDi
     InternalRead(reader);
 }
 
-IsoDirectoryRecord::IsoDirectoryRecord(Common::SeekableReadStream &reader)
+IsoDirectoryRecord::IsoDirectoryRecord(Common::SeekableReadStream &reader): mParent(nullptr)
 {
     hasParent = true;
     InternalRead(reader);
 }
-IsoDirectoryRecord::IsoDirectoryRecord()
+
+IsoDirectoryRecord::IsoDirectoryRecord(): mParent(nullptr)
 {
     hasParent = false;
 }
@@ -57,7 +58,7 @@ void IsoDirectoryRecord::InternalRead(Common::SeekableReadStream &reader)
         debug(mName.c_str());
     }
     bool isDirectory = (mFlags & (int)RecordFlags::DirectoryRecord) == (int)RecordFlags::DirectoryRecord;
-    bool isNotParentOrGrandparentDirectory = nameLength != 1 || !hasParent;
+    bool isNotParentOrGrandparentDirectory = nameLength != 1 || mParent == nullptr;
 
     if (isDirectory && isNotParentOrGrandparentDirectory)
     {

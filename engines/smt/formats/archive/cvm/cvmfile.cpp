@@ -32,7 +32,7 @@ CVMArchive::CVMArchive(const Common::String &filename) : _cvmFilename(filename)
     }
 
     cvmFile.seek(ISO_ROOTDIRECTORY_OFFSET - 1, cvmFile.pos());
-    mRootDirectory = new IsoDirectoryRecord(cvmFile);
+    mRootDirectory = new IsoDirectoryRecord(cvmFile, nullptr);
 
     //for (CVMHeader header : _tempHeaders)
     //{
@@ -68,7 +68,7 @@ const Common::ArchiveMemberPtr CVMArchive::getMember(const Common::String &name)
     if (!hasFile(name))
         return Common::ArchiveMemberPtr();
 
-    return Common::ArchiveMemberPtr(new Common::GenericArchiveMember(name, this));
+    return Common::ArchiveMemberPtr(new Common::GenericArchiveMember(name, nullptr));
 }
 
 Common::SeekableReadStream *CVMArchive::createReadStreamForMember(const Common::String &name) const
