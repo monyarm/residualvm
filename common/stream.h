@@ -27,7 +27,8 @@
 #include "common/scummsys.h"
 #include "common/str.h"
 
-namespace Common {
+namespace Common
+{
 
 class ReadStream;
 class SeekableReadStream;
@@ -35,7 +36,8 @@ class SeekableReadStream;
 /**
  * Virtual base class for both ReadStream and WriteStream.
  */
-class Stream {
+class Stream
+{
 public:
 	virtual ~Stream() {}
 
@@ -62,7 +64,8 @@ public:
 /**
  * Generic interface for a writable data stream.
  */
-class WriteStream : virtual public Stream {
+class WriteStream : virtual public Stream
+{
 public:
 	/**
 	 * Write data into the stream. Subclasses must implement this
@@ -100,7 +103,8 @@ public:
 	 *
 	 * By default, this just flushes the stream.
 	 */
-	virtual void finalize() {
+	virtual void finalize()
+	{
 		flush();
 	}
 
@@ -112,78 +116,91 @@ public:
 	 */
 	virtual int32 pos() const = 0;
 
-
 	// The remaining methods all have default implementations; subclasses
 	// need not (and should not) overload them.
 
-	void writeByte(byte value) {
+	void writeByte(byte value)
+	{
 		write(&value, 1);
 	}
 
-	void writeSByte(int8 value) {
+	void writeSByte(int8 value)
+	{
 		write(&value, 1);
 	}
 
-	void writeUint16LE(uint16 value) {
+	void writeUint16LE(uint16 value)
+	{
 		value = TO_LE_16(value);
 		write(&value, 2);
 	}
 
-	void writeUint32LE(uint32 value) {
+	void writeUint32LE(uint32 value)
+	{
 		value = TO_LE_32(value);
 		write(&value, 4);
 	}
 
-	void writeUint64LE(uint64 value) {
+	void writeUint64LE(uint64 value)
+	{
 		value = TO_LE_64(value);
 		write(&value, 8);
 	}
 
-	void writeUint16BE(uint16 value) {
+	void writeUint16BE(uint16 value)
+	{
 		value = TO_BE_16(value);
 		write(&value, 2);
 	}
 
-	void writeUint32BE(uint32 value) {
+	void writeUint32BE(uint32 value)
+	{
 		value = TO_BE_32(value);
 		write(&value, 4);
 	}
 
-	void writeUint64BE(uint64 value) {
+	void writeUint64BE(uint64 value)
+	{
 		value = TO_BE_64(value);
 		write(&value, 8);
 	}
 
-	FORCEINLINE void writeSint16LE(int16 value) {
+	FORCEINLINE void writeSint16LE(int16 value)
+	{
 		writeUint16LE((uint16)value);
 	}
 
-	FORCEINLINE void writeSint32LE(int32 value) {
+	FORCEINLINE void writeSint32LE(int32 value)
+	{
 		writeUint32LE((uint32)value);
 	}
 
-	FORCEINLINE void writeSint64LE(int64 value) {
+	FORCEINLINE void writeSint64LE(int64 value)
+	{
 		writeUint64LE((uint64)value);
 	}
 
-	FORCEINLINE void writeSint16BE(int16 value) {
+	FORCEINLINE void writeSint16BE(int16 value)
+	{
 		writeUint16BE((uint16)value);
 	}
 
-	FORCEINLINE void writeSint32BE(int32 value) {
+	FORCEINLINE void writeSint32BE(int32 value)
+	{
 		writeUint32BE((uint32)value);
 	}
 
-	FORCEINLINE void writeSint64BE(int64 value) {
+	FORCEINLINE void writeSint64BE(int64 value)
+	{
 		writeUint64BE((uint64)value);
 	}
-
 
 	/**
 	 * Write the given 32-bit floating point value stored
 	 * in little endian(LSB first) order into the stream.
 	 */
-	FORCEINLINE void writeFloatLE(float value) {
+	FORCEINLINE void writeFloatLE(float value)
+	{
 		uint32 n;
 
 		memcpy(&n, &value, 4);
@@ -191,12 +208,12 @@ public:
 		writeUint32LE(n);
 	}
 
-
 	/**
 	 * Write the given 32-bit floating point value stored
 	 * in big endian order into the stream.
 	 */
-	FORCEINLINE void writeFloatBE(float value) {
+	FORCEINLINE void writeFloatBE(float value)
+	{
 		uint32 n;
 
 		memcpy(&n, &value, 4);
@@ -208,7 +225,8 @@ public:
 	 * Write the given 64-bit floating point value stored
 	 * in little endian(LSB first) order into the stream.
 	 */
-	FORCEINLINE void writeDoubleLE(double value) {
+	FORCEINLINE void writeDoubleLE(double value)
+	{
 		uint64 n;
 
 		memcpy(&n, &value, 8);
@@ -216,12 +234,12 @@ public:
 		writeUint64LE(n);
 	}
 
-
 	/**
 	 * Write the given 64-bit floating point value stored
 	 * in big endian order into the stream.
 	 */
-	FORCEINLINE void writeDoubleBE(double value) {
+	FORCEINLINE void writeDoubleBE(double value)
+	{
 		uint64 n;
 
 		memcpy(&n, &value, 8);
@@ -246,7 +264,8 @@ public:
 /**
  * Derived abstract base class for write streams streams that are seekable
  */
-class SeekableWriteStream : public WriteStream {
+class SeekableWriteStream : public WriteStream
+{
 public:
 	/**
 	 * Sets the stream position indicator for the stream. The new position,
@@ -277,7 +296,8 @@ public:
 /**
  * Generic interface for a readable data stream.
  */
-class ReadStream : virtual public Stream {
+class ReadStream : virtual public Stream
+{
 public:
 	/**
 	 * Returns true if a read failed because the stream end has been reached.
@@ -305,7 +325,6 @@ public:
 	 */
 	virtual uint32 read(void *dataPtr, uint32 dataSize) = 0;
 
-
 	// The remaining methods all have default implementations; subclasses
 	// in general should not overload them.
 
@@ -315,7 +334,8 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	byte readByte() {
+	byte readByte()
+	{
 		byte b = 0; // FIXME: remove initialisation
 		read(&b, 1);
 		return b;
@@ -327,8 +347,21 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	FORCEINLINE int8 readSByte() {
+	FORCEINLINE int8 readSByte()
+	{
 		return (int8)readByte();
+	}
+
+	uint16 readUint16(bool LE)
+	{
+		if (LE)
+		{
+			return readUint16LE();
+		}
+		else
+		{
+			return readUint16BE();
+		}
 	}
 
 	/**
@@ -338,10 +371,23 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	uint16 readUint16LE() {
+	uint16 readUint16LE()
+	{
 		uint16 val;
 		read(&val, 2);
 		return FROM_LE_16(val);
+	}
+
+	uint32 readUint32(bool LE)
+	{
+		if (LE)
+		{
+			return readUint32LE();
+		}
+		else
+		{
+			return readUint32BE();
+		}
 	}
 
 	/**
@@ -351,10 +397,23 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	uint32 readUint32LE() {
+	uint32 readUint32LE()
+	{
 		uint32 val;
 		read(&val, 4);
 		return FROM_LE_32(val);
+	}
+
+	uint64 readUint64(bool LE)
+	{
+		if (LE)
+		{
+			return readUint64LE();
+		}
+		else
+		{
+			return readUint64BE();
+		}
 	}
 
 	/**
@@ -364,7 +423,8 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	uint64 readUint64LE() {
+	uint64 readUint64LE()
+	{
 		uint64 val;
 		read(&val, 8);
 		return FROM_LE_64(val);
@@ -377,7 +437,8 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	uint16 readUint16BE() {
+	uint16 readUint16BE()
+	{
 		uint16 val;
 		read(&val, 2);
 		return FROM_BE_16(val);
@@ -390,7 +451,8 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	uint32 readUint32BE() {
+	uint32 readUint32BE()
+	{
 		uint32 val;
 		read(&val, 4);
 		return FROM_BE_32(val);
@@ -403,10 +465,16 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	uint64 readUint64BE() {
+	uint64 readUint64BE()
+	{
 		uint64 val;
 		read(&val, 8);
 		return FROM_BE_64(val);
+	}
+
+	FORCEINLINE int16 readSint16(bool LE)
+	{
+		return (int16)readUint16(LE);
 	}
 
 	/**
@@ -416,8 +484,16 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	FORCEINLINE int16 readSint16LE() {
+	FORCEINLINE int16 readSint16LE()
+	{
 		return (int16)readUint16LE();
+	}
+
+
+
+	FORCEINLINE int32 readSint32(bool LE)
+	{
+		return (int32)readUint32(LE);
 	}
 
 	/**
@@ -427,8 +503,16 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	FORCEINLINE int32 readSint32LE() {
+	FORCEINLINE int32 readSint32LE()
+	{
 		return (int32)readUint32LE();
+	}
+
+
+
+	FORCEINLINE int64 readSint64(bool LE)
+	{
+		return (int64)readUint64(LE);
 	}
 
 	/**
@@ -438,7 +522,8 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	FORCEINLINE int64 readSint64LE() {
+	FORCEINLINE int64 readSint64LE()
+	{
 		return (int64)readUint64LE();
 	}
 
@@ -449,7 +534,8 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	FORCEINLINE int16 readSint16BE() {
+	FORCEINLINE int16 readSint16BE()
+	{
 		return (int16)readUint16BE();
 	}
 
@@ -460,7 +546,8 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	FORCEINLINE int32 readSint32BE() {
+	FORCEINLINE int32 readSint32BE()
+	{
 		return (int32)readUint32BE();
 	}
 
@@ -471,7 +558,8 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	FORCEINLINE int64 readSint64BE() {
+	FORCEINLINE int64 readSint64BE()
+	{
 		return (int64)readUint64BE();
 	}
 
@@ -482,7 +570,8 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	FORCEINLINE float readFloatLE() {
+	FORCEINLINE float readFloatLE()
+	{
 		uint32 n = readUint32LE();
 		float f;
 
@@ -498,7 +587,8 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	FORCEINLINE float readFloatBE() {
+	FORCEINLINE float readFloatBE()
+	{
 		uint32 n = readUint32BE();
 		float f;
 
@@ -507,7 +597,6 @@ public:
 		return f;
 	}
 
-
 	/**
 	 * Read a 64-bit floating point value stored in little endian (LSB first)
 	 * order from the stream and return it.
@@ -515,7 +604,8 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	FORCEINLINE double readDoubleLE() {
+	FORCEINLINE double readDoubleLE()
+	{
 		uint64 n = readUint64LE();
 		double d;
 
@@ -531,7 +621,8 @@ public:
 	 * if a read error occurred (for which client code can check by
 	 * calling err() and eos() ).
 	 */
-	FORCEINLINE double readDoubleBE() {
+	FORCEINLINE double readDoubleBE()
+	{
 		uint64 n = readUint64BE();
 		double d;
 
@@ -557,18 +648,16 @@ public:
 	 * @param transformCR	if set (default), then transform \r into \n
 	 */
 	Common::String readPascalString(bool transformCR = true);
-
 };
-
 
 /**
  * Interface for a seekable & readable data stream.
  *
  * @todo Get rid of SEEK_SET, SEEK_CUR, or SEEK_END, use our own constants
  */
-class SeekableReadStream : virtual public ReadStream {
+class SeekableReadStream : virtual public ReadStream
+{
 public:
-
 	/**
 	 * Obtains the current value of the stream position indicator of the
 	 * stream.
@@ -633,7 +722,6 @@ public:
 	 */
 	virtual char *readLine(char *s, size_t bufSize);
 
-
 	/**
 	 * Reads a full line and returns it as a Common::String. Reading
 	 * stops when the end of a line is reached (CR, CR/LF or LF), and
@@ -645,6 +733,17 @@ public:
 	 * err() or eos() to determine whether an exception occurred.
 	 */
 	virtual String readLine();
+
+	Common::String readString()
+	{
+		Common::String result;
+		char c;
+
+		while (pos() < size() && (c = (char)readByte()) != '\0')
+			result += c;
+
+		return result;
+	}
 
 	/**
 	 * Print a hexdump of the stream while maintaing position. The number
@@ -660,7 +759,8 @@ public:
  * This is a ReadStream mixin subclass which adds non-endian read
  * methods whose endianness is set during the stream creation.
  */
-class ReadStreamEndian : virtual public ReadStream {
+class ReadStreamEndian : virtual public ReadStream
+{
 private:
 	const bool _bigEndian;
 
@@ -669,33 +769,39 @@ public:
 
 	bool isBE() const { return _bigEndian; }
 
-	uint16 readUint16() {
+	uint16 readUint16()
+	{
 		uint16 val;
 		read(&val, 2);
 		return (_bigEndian) ? TO_BE_16(val) : TO_LE_16(val);
 	}
 
-	uint32 readUint32() {
+	uint32 readUint32()
+	{
 		uint32 val;
 		read(&val, 4);
 		return (_bigEndian) ? TO_BE_32(val) : TO_LE_32(val);
 	}
 
-	uint64 readUint64() {
+	uint64 readUint64()
+	{
 		uint64 val;
 		read(&val, 8);
 		return (_bigEndian) ? TO_BE_64(val) : TO_LE_64(val);
 	}
 
-	FORCEINLINE int16 readSint16() {
+	FORCEINLINE int16 readSint16()
+	{
 		return (int16)readUint16();
 	}
 
-	FORCEINLINE int32 readSint32() {
+	FORCEINLINE int32 readSint32()
+	{
 		return (int32)readUint32();
 	}
 
-	FORCEINLINE int64 readSint64() {
+	FORCEINLINE int64 readSint64()
+	{
 		return (int64)readUint64();
 	}
 };
@@ -704,11 +810,11 @@ public:
  * This is a SeekableReadStream subclass which adds non-endian read
  * methods whose endianness is set during the stream creation.
  */
-class SeekableReadStreamEndian : public SeekableReadStream, public ReadStreamEndian {
+class SeekableReadStreamEndian : public SeekableReadStream, public ReadStreamEndian
+{
 public:
 	SeekableReadStreamEndian(bool bigEndian) : ReadStreamEndian(bigEndian) {}
 };
-
 
 } // End of namespace Common
 

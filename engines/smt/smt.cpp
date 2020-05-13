@@ -73,7 +73,7 @@ Common::Error SMTEngine::run()
 
 	//_pmsf.ReadFile("p3opmv_p3p.pmsf");
 
-	TMXFile _tmx = TMXFile("test/PSMT8.tmx");
+	TMXFile _tmx = TMXFile("test/PSMT4.tmx");
 
 	// You could use backend transactions directly as an alternative,
 	// but it isn't recommended, until you want to handle the error values
