@@ -27,17 +27,10 @@ inline const char* VectorToHex(std::vector<byte> _data)
 
 
 template<typename T>
-inline const char* BytesToHex(T* _data) 
+inline const char* BytesToHex(T _data) 
 {
     byte* data = toBytes(_data);
-    int len = sizeof(_data);
-    Common::String s = "0x";
-    for (int i = 0; i < len; ++i)
-    {
-        s += hexmap[(data[i] & 0xF0) >> 4];
-        s += hexmap[data[i] & 0x0F];
-    }
-    return s.c_str();
+    return BytesToHex(data);
 }
 
 template<>
