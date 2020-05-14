@@ -13,17 +13,16 @@ TMXFile::TMXFile(const char *path)
 TMXFile::TMXFile(Common::SeekableReadStream *stream)
 {
     readFile(stream);
-
 }
 
-const Graphics::Surface *TMXFile::getSurface() const
+Graphics::TransparentSurface *const TMXFile::getSurface()
 {
     return &_surface;
 }
 
 void TMXFile::readFile(Common::SeekableReadStream *stream)
 {
-    
+
     readHeader(stream);
     Common::hexdump((byte *)&dat.formatsettings.paletteFmt, 1);
     Common::hexdump((byte *)&dat.formatsettings.pixelFmt, 1);
@@ -73,13 +72,24 @@ void TMXFile::readPalette(Common::SeekableReadStream *f)
 
             Common::Array<byte> palette = tilePalette(_palette);
 
-            dat.palette = palette.data();
+            for (size_t i = 0; i < 256; i++)
+            {
+                ((uint32 *)palette.data())[i] = (((uint32 *)palette.data())[i] & 0x0000FFFF) << 16 | (((uint32 *)palette.data())[i] & 0xFFFF0000) >> 16;
+                ((uint32 *)palette.data())[i] = (((uint32 *)palette.data())[i] & 0x00FF00FF) << 8 | (((uint32 *)palette.data())[i] & 0xFF00FF00) >> 8;
+            }
+
+            dat.palette = ((uint32 *)palette.data());
         }
         else if (dat.formatsettings.pixelFmt == PSMT4)
         {
             byte *_palette = new byte[16 * 4];
-            f->read(_palette, 16 * 4);
-            dat.palette = _palette;
+            for (size_t i = 0; i < 16; i++)
+            {
+                ((uint32 *)_palette)[i] = (((uint32 *)_palette)[i] & 0x0000FFFF) << 16 | (((uint32 *)_palette)[i] & 0xFFFF0000) >> 16;
+                ((uint32 *)_palette)[i] = (((uint32 *)_palette)[i] & 0x00FF00FF) << 8 | (((uint32 *)_palette)[i] & 0xFF00FF00) >> 8;
+            }
+
+            dat.palette = ((uint32 *)_palette);
         }
 
         break;
@@ -94,7 +104,7 @@ void TMXFile::readPalette(Common::SeekableReadStream *f)
 void TMXFile::readIndex(Common::SeekableReadStream *f)
 {
 
-    const Graphics::PixelFormat *format = new Graphics::PixelFormat(4, 8, 8, 8, 8, 0, 8, 16, 24);
+    const Graphics::PixelFormat *format = new Graphics::PixelFormat(4, 8, 8, 8, 8, 24, 16, 8, 0);
     switch (dat.formatsettings.pixelFmt)
     {
     case PSMT4:
@@ -117,12 +127,11 @@ void TMXFile::readIndex(Common::SeekableReadStream *f)
             pixels.push_back(_pixels[i] >> 4);
         }
 
-        uint32 *truepalette = (uint32 *)dat.palette;
         uint32 *destP = (uint32 *)_surface.getPixels();
 
         for (int i = 0; i < dat.formatsettings.width * dat.formatsettings.height; i++, ++destP)
         {
-            *destP = truepalette[pixels[i]];
+            *destP = dat.palette[pixels[i]];
         }
         delete _pixels;
     }
@@ -137,12 +146,11 @@ void TMXFile::readIndex(Common::SeekableReadStream *f)
         byte *pixels = new byte[(sizeof(byte) * dat.formatsettings.width * dat.formatsettings.height)];
         f->read(pixels, sizeof(PS2PixelFormat) * dat.formatsettings.width * dat.formatsettings.height);
 
-        uint32 *truepalette = (uint32 *)dat.palette;
         uint32 *destP = (uint32 *)_surface.getPixels();
 
         for (int i = 0; i < dat.formatsettings.width * dat.formatsettings.height; i++, ++destP)
         {
-            *destP = truepalette[pixels[i]];
+            *destP = dat.palette[pixels[i]];
         }
 
         delete[] pixels;

@@ -7,6 +7,7 @@
 #include "common/debug.h"
 #include "common/hex.h"
 #include "graphics/surface.h"
+#include "graphics/transparent_surface.h"
 #include "graphics/colormasks.h"
 
 #include "graphics/s3tc.h"
@@ -103,10 +104,10 @@ public:
         _surface.free();
     }
 
-    const Graphics::Surface *getSurface() const;
+    Graphics::TransparentSurface * const getSurface();
 
 private:
-    Graphics::Surface _surface;
+    Graphics::TransparentSurface _surface;
     DDSData dat;
 
     void readFile(Common::SeekableReadStream *stream);
