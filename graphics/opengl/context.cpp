@@ -1,6 +1,6 @@
-/* ResidualVM - A 3D game interpreter
+/* NovelVM - A 3D game interpreter
  *
- * ResidualVM is the legal property of its developers, whose names
+ * NovelVM is the legal property of its developers, whose names
  * are too numerous to list here. Please refer to the COPYRIGHT
  * file distributed with this source distribution.
  *
@@ -116,7 +116,7 @@ void Context::initialize(ContextType contextType) {
 		// GLES2 always has FBO support.
 		framebufferObjectSupported = true;
 
-		// ResidualVM does not support multisample FBOs with GLES2 for now
+		// NovelVM does not support multisample FBOs with GLES2 for now
 		framebufferObjectMultisampleSupported = false;
 		multisampleMaxSamples = -1;
 	} else {

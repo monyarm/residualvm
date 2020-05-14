@@ -48,7 +48,7 @@ POSIXSaveFileManager::POSIXSaveFileManager() {
 	const char *home = getenv("HOME");
 	if (home && *home && strlen(home) < MAXPATHLEN) {
 		savePath = home;
-		savePath += "/Documents/ResidualVM Savegames";
+		savePath += "/Documents/NovelVM Savegames";
 
 		ConfMan.registerDefault("savepath", savePath);
 	}
@@ -61,7 +61,7 @@ POSIXSaveFileManager::POSIXSaveFileManager() {
 	envVar = getenv("HOME");
 	if (envVar && *envVar) {
 		savePath = envVar;
-		savePath += "/.residualvm";
+		savePath += "/.novelvm";
 
 		struct stat sb;
 		if (stat(savePath.c_str(), &sb) != 0 || !S_ISDIR(sb.st_mode)) {
@@ -86,8 +86,8 @@ POSIXSaveFileManager::POSIXSaveFileManager() {
 			prefix = envVar;
 		}
 
-		// Our default save path is '$XDG_DATA_HOME/residualvm/saves'
-		savePath += "residualvm/saves";
+		// Our default save path is '$XDG_DATA_HOME/novelvm/saves'
+		savePath += "novelvm/saves";
 
 		if (!Posix::assureDirectoryExists(savePath, prefix.c_str())) {
 			savePath.clear();
@@ -109,13 +109,13 @@ POSIXSaveFileManager::POSIXSaveFileManager() {
 	// we only set the value in the transient domain if it is not
 	// yet present there.
 	if (!ConfMan.hasKey("savepath", Common::ConfigManager::kTransientDomain)) {
-		const char *dir = getenv("RESIDUALVM_SAVEPATH");
+		const char *dir = getenv("NOVELVM_SAVEPATH");
 		if (dir && *dir && strlen(dir) < MAXPATHLEN) {
 			Common::FSNode saveDir(dir);
 			if (!saveDir.exists()) {
-				warning("Ignoring non-existent RESIDUALVM_SAVEPATH '%s'", dir);
+				warning("Ignoring non-existent NOVELVM_SAVEPATH '%s'", dir);
 			} else if (!saveDir.isWritable()) {
-				warning("Ignoring non-writable RESIDUALVM_SAVEPATH '%s'", dir);
+				warning("Ignoring non-writable NOVELVM_SAVEPATH '%s'", dir);
 			} else {
 				ConfMan.set("savepath", dir, Common::ConfigManager::kTransientDomain);
 			}

@@ -358,14 +358,14 @@ void TranslationManager::loadLanguageDat(int index) {
 	// Get number of translations
 	int nbTranslations = in.readUint16BE();
 	if (nbTranslations != (int)_langs.size()) {
-		warning("The 'translations.dat' file has changed since starting ResidualVM. GUI translation will not be available");
+		warning("The 'translations.dat' file has changed since starting NovelVM. GUI translation will not be available");
 		return;
 	}
 
 	// Get the number of codepages
 	int nbCodepages = in.readUint16BE();
 	if (nbCodepages != (int)_charmaps.size()) {
-		warning("The 'translations.dat' file has changed since starting ResidualVM. GUI translation will not be available");
+		warning("The 'translations.dat' file has changed since starting NovelVM. GUI translation will not be available");
 		return;
 	}
 

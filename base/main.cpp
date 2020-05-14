@@ -20,9 +20,9 @@
  *
  */
 
-/*! \mainpage %ResidualVM Source Reference
+/*! \mainpage %NovelVM Source Reference
  *
- * These pages contains a cross referenced documentation for the %ResidualVM source code,
+ * These pages contains a cross referenced documentation for the %NovelVM source code,
  * generated with Doxygen (http://www.doxygen.org) directly from the source.
  * Currently not much is actually properly documented, but at least you can get an overview
  * of almost all the classes, methods and variables, and how they interact.
@@ -159,7 +159,7 @@ static Common::Error runGame(const Plugin *plugin, OSystem &system, const Common
 	Common::Error err = Common::kNoError;
 	Engine *engine = 0;
 
-// Disabled in ResidualVM:
+// Disabled in NovelVM:
 #if 0//defined(SDL_BACKEND) && defined(USE_OPENGL) && defined(USE_RGB_COLOR)
 	// HACK: We set up the requested graphics mode setting here to allow the
 	// backend to switch from Surface SDL to OpenGL if necessary. This is
@@ -328,7 +328,7 @@ static void setupGraphics(OSystem &system) {
 		system.setGraphicsMode(ConfMan.get("gfx_mode").c_str());
 
 		system.initSize(320, 200);
-		system.launcherInitSize(640, 480); //ResidualVM specific
+		system.launcherInitSize(640, 480); //NovelVM specific
 
 		if (ConfMan.hasKey("aspect_ratio"))
 			system.setFeatureState(OSystem::kFeatureAspectRatioCorrection, ConfMan.getBool("aspect_ratio"));

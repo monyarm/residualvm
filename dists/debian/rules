@@ -17,7 +17,7 @@ override_dh_auto_configure:
             --host=$(DEB_HOST_GNU_TYPE) \
             --prefix=/usr \
             --bindir=/usr/games \
-            --datadir=/usr/share/residualvm \
+            --datadir=/usr/share/novelvm \
             --enable-release \
             ${ARCH_OPTS}
 

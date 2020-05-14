@@ -1,13 +1,13 @@
-# LANGUAGE translation for ResidualVM.
-# Copyright (C) YEAR ResidualVM Team
-# This file is distributed under the same license as the ResidualVM package.
+# LANGUAGE translation for NovelVM.
+# Copyright (C) YEAR NovelVM Team
+# This file is distributed under the same license as the NovelVM package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: ResidualVM 0.4.0git\n"
-"Report-Msgid-Bugs-To: https://github.com/residualvm/residualvm/issues\n"
+"Project-Id-Version: NovelVM 0.4.0git\n"
+"Report-Msgid-Bugs-To: https://github.com/novelvm/novelvm/issues\n"
 "POT-Creation-Date: 2020-05-09 19:47+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: gui/launcher.cpp:491
 msgid ""
-"ResidualVM could not find any engine capable of running the selected game!"
+"NovelVM could not find any engine capable of running the selected game!"
 msgstr ""
 
 #: gui/options.cpp:1226
@@ -63,8 +63,8 @@ msgstr ""
 #: engines/engine.cpp:593
 msgid ""
 "WARNING: The game you are about to start is not yet fully supported by "
-"ResidualVM. As such, it is likely to be unstable, and any saved game you "
-"make might not work in future versions of ResidualVM."
+"NovelVM. As such, it is likely to be unstable, and any saved game you "
+"make might not work in future versions of NovelVM."
 msgstr ""
 
 #: engines/grim/detection.cpp:57
@@ -73,7 +73,7 @@ msgstr ""
 
 #: engines/grim/detection.cpp:58
 msgid ""
-"Load an user patch. Please note that the ResidualVM-team doesn't provide "
+"Load an user patch. Please note that the NovelVM-team doesn't provide "
 "support for using such patches."
 msgstr ""
 
@@ -88,8 +88,8 @@ msgstr ""
 #: engines/grim/grim.cpp:314
 #, c-format
 msgid ""
-"ResidualVM found some problems with your game data files.\n"
-"Running ResidualVM nevertheless may cause game bugs or even crashes.\n"
+"NovelVM found some problems with your game data files.\n"
+"Running NovelVM nevertheless may cause game bugs or even crashes.\n"
 "Do you still want to run %s?"
 msgstr ""
 
@@ -110,7 +110,7 @@ msgstr ""
 #, c-format
 msgid ""
 "The game data file %s may be corrupted.\n"
-"If you are sure it is not please provide the ResidualVM team the following "
+"If you are sure it is not please provide the NovelVM team the following "
 "code, along with the file name, the language and a description of your game "
 "version (i.e. dvd-box or jewelcase):\n"
 "%s"
@@ -126,13 +126,13 @@ msgstr ""
 msgid ""
 "Could not open the file %s for checking.\n"
 "It may be missing or you may not have the rights to open it.\n"
-"Go to http://wiki.residualvm.org/index.php/Datafiles to see a list of the "
+"Go to http://wiki.novelvm.org/index.php/Datafiles to see a list of the "
 "needed files."
 msgstr ""
 
 #: engines/grim/md5checkdialog.cpp:42
 msgid ""
-"ResidualVM will now verify the game data files, to make sure you have the "
+"NovelVM will now verify the game data files, to make sure you have the "
 "best gaming experience.\n"
 "This may take a while, please wait.\n"
 "Successive runs will not check them again."
@@ -142,26 +142,26 @@ msgstr ""
 msgid ""
 "The original patch of Grim Fandango\n"
 "is missing. Please download it from\n"
-"http://www.residualvm.org/downloads/\n"
+"http://www.novelvm.org/downloads/\n"
 "and put it in the game data files directory"
 msgstr ""
 
 #: engines/grim/resource.cpp:101
 msgid ""
 "The original patch of Escape from Monkey Island is missing. \n"
-"Please download it from http://www.residualvm.org/downloads/\n"
+"Please download it from http://www.novelvm.org/downloads/\n"
 "and put it in the game data files directory.\n"
 "Pay attention to download the correct version according to the game's "
 "language"
 msgstr ""
 
 #: engines/grim/resource.cpp:121
-msgid "residualvm-grim-patch.lab not found"
+msgid "novelvm-grim-patch.lab not found"
 msgstr ""
 
 #: engines/grim/resource.cpp:143
 msgid ""
-"Loading datausr.lab. Please note that the ResidualVM-team doesn't provide "
+"Loading datausr.lab. Please note that the NovelVM-team doesn't provide "
 "support for using such patches"
 msgstr ""
 
@@ -172,7 +172,7 @@ msgstr ""
 
 #: engines/grim/resource.cpp:181
 msgid ""
-"Loading datausr.m4b. Please note that the ResidualVM-team doesn't provide "
+"Loading datausr.m4b. Please note that the NovelVM-team doesn't provide "
 "support for using such patches"
 msgstr ""
 
@@ -194,7 +194,7 @@ msgid ""
 "patch.\n"
 "Please install the official update corresponding to your game's language.\n"
 "The updates can be downloaded from:\n"
-"http://www.residualvm.org/downloads/"
+"http://www.novelvm.org/downloads/"
 msgstr ""
 
 #: engines/stark/detection.cpp:345

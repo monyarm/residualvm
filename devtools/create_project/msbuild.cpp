@@ -163,7 +163,7 @@ void MSBuildProvider::createProjectFile(const std::string &name, const std::stri
 	// Visual Studio 2015 and up automatically import natvis files that are part of the project
 	if (name == PROJECT_NAME && _version >= 14) {
 		project << "\t<ItemGroup>\n";
-		project << "\t\t<None Include=\"" << setup.srcDir << "/devtools/create_project/scripts/residualvm.natvis\" />\n";
+		project << "\t\t<None Include=\"" << setup.srcDir << "/devtools/create_project/scripts/novelvm.natvis\" />\n";
 		project << "\t</ItemGroup>\n";
 	}
 
@@ -259,7 +259,7 @@ void MSBuildProvider::writeReferences(const BuildSetup &setup, std::ofstream &ou
 void MSBuildProvider::outputProjectSettings(std::ofstream &project, const std::string &name, const BuildSetup &setup, bool isRelease, bool isWin32, std::string configuration) {
 	// Check for project-specific warnings:
 	std::map<std::string, StringList>::iterator warningsIterator = _projectWarnings.find(name);
-	bool enableLanguageExtensions = true; // ResidualVM
+	bool enableLanguageExtensions = true; // NovelVM
 	bool disableEditAndContinue = find(_disableEditAndContinue.begin(), _disableEditAndContinue.end(), name) != _disableEditAndContinue.end();
 
 	// Nothing to add here, move along!

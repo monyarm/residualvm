@@ -141,8 +141,8 @@ msgid "No"
 msgstr "Ei"
 
 #: gui/downloaddialog.cpp:137 gui/launcher.cpp:536
-msgid "ResidualVM couldn't open the specified directory!"
-msgstr "ResidualVM ei voi avata kyseistä hakemistoa!"
+msgid "NovelVM couldn't open the specified directory!"
+msgstr "NovelVM ei voi avata kyseistä hakemistoa!"
 
 #: gui/downloaddialog.cpp:147
 msgid ""
@@ -632,24 +632,24 @@ msgid "~Q~uit"
 msgstr "~L~opeta"
 
 #: gui/launcher.cpp:140 backends/platform/sdl/macosx/appmenu_osx.mm:209
-msgid "Quit ResidualVM"
-msgstr "Lopeta ResidualVM"
+msgid "Quit NovelVM"
+msgstr "Lopeta NovelVM"
 
 #: gui/launcher.cpp:141
 msgid "A~b~out..."
 msgstr "~T~ietoa..."
 
 #: gui/launcher.cpp:141 backends/platform/sdl/macosx/appmenu_osx.mm:203
-msgid "About ResidualVM"
-msgstr "Tietoa ResidualVM:stä"
+msgid "About NovelVM"
+msgstr "Tietoa NovelVM:stä"
 
 #: gui/launcher.cpp:142
 msgid "~O~ptions..."
 msgstr "~A~setukset..."
 
 #: gui/launcher.cpp:142
-msgid "Change global ResidualVM options"
-msgstr "Muuta globaaleja ResidualVM:n asetuksia"
+msgid "Change global NovelVM options"
+msgstr "Muuta globaaleja NovelVM:n asetuksia"
 
 #: gui/launcher.cpp:144
 msgid "~S~tart"
@@ -767,12 +767,12 @@ msgid "This game does not support loading games from the launcher."
 msgstr "Tämä peli ei tue pelitallennuksien lataamista pelin ulkopuolelta."
 
 #: gui/launcher.cpp:490
-msgid "ResidualVM could not find any engine capable of running the selected game!"
-msgstr "ResidualVM ei löytänyt pelimoottoria joka tukee valittua peliä!"
+msgid "NovelVM could not find any engine capable of running the selected game!"
+msgstr "NovelVM ei löytänyt pelimoottoria joka tukee valittua peliä!"
 
 #: gui/launcher.cpp:555
-msgid "ResidualVM could not find any game in the specified directory!"
-msgstr "ResidualVM ei löytänyt yhtään peliä kyseisestä hakemistosta!"
+msgid "NovelVM could not find any game in the specified directory!"
+msgstr "NovelVM ei löytänyt yhtään peliä kyseisestä hakemistosta!"
 
 #: gui/launcher.cpp:570
 msgid "Unknown variant"
@@ -1221,9 +1221,9 @@ msgid "Theme Path:"
 msgstr "Teemojen polku:"
 
 #: gui/options.cpp:1895 gui/options.cpp:1897 gui/options.cpp:1898
-msgid "Specifies path to additional data used by all games or ResidualVM"
+msgid "Specifies path to additional data used by all games or NovelVM"
 msgstr ""
-"Määrittää polun, jossa on lisätiedostoja joita ResidualVM tai kaikki pelit "
+"Määrittää polun, jossa on lisätiedostoja joita NovelVM tai kaikki pelit "
 "käyttävät"
 
 #: gui/options.cpp:1904
@@ -1258,24 +1258,24 @@ msgstr "Näppäimet"
 
 #: gui/options.cpp:1948
 msgid "GUI language:"
-msgstr "ResidualVM:n kieli:"
+msgstr "NovelVM:n kieli:"
 
 #: gui/options.cpp:1948
-msgid "Language of ResidualVM GUI"
-msgstr "ResidualVM käyttöliittymän kieli"
+msgid "Language of NovelVM GUI"
+msgstr "NovelVM käyttöliittymän kieli"
 
 #: gui/options.cpp:1974
 msgid "Switch the GUI language to the game language"
-msgstr "Käytä pelin kieltä ResidualVM:ssä"
+msgstr "Käytä pelin kieltä NovelVM:ssä"
 
 #: gui/options.cpp:1975
 msgid ""
 "When starting a game, change the GUI language to the game language.That way, "
-"if a game uses the ResidualVM save and load dialogs, they are in the same "
+"if a game uses the NovelVM save and load dialogs, they are in the same "
 "language as the game."
 msgstr ""
-"Käytä pelissä valittua kieltä ResidualVM:n käyttöliittymässä pelin ollessa "
-"käynnissä. Näin pelin mahdollisesti avaamat ResidualVM:n dialogit ovat samalla "
+"Käytä pelissä valittua kieltä NovelVM:n käyttöliittymässä pelin ollessa "
+"käynnissä. Näin pelin mahdollisesti avaamat NovelVM:n dialogit ovat samalla "
 "kielellä kuin itse peli."
 
 #: gui/options.cpp:1988
@@ -1284,10 +1284,10 @@ msgstr "Käytä käyttöjärjestelmän tiedostoselainta"
 
 #: gui/options.cpp:1989
 msgid ""
-"Use the native system file browser instead of the ResidualVM one to select a "
+"Use the native system file browser instead of the NovelVM one to select a "
 "file or directory."
 msgstr ""
-"Käytä käyttöjärjestelmän tiedostoselainta ResidualVM:n toteutuksen sijaan "
+"Käytä käyttöjärjestelmän tiedostoselainta NovelVM:n toteutuksen sijaan "
 "tiedostojen ja kansioiden valintaan."
 
 #: gui/options.cpp:1996 gui/updates-dialog.cpp:86
@@ -1295,8 +1295,8 @@ msgid "Update check:"
 msgstr "Päivitystarkistus:"
 
 #: gui/options.cpp:1996
-msgid "How often to check ResidualVM updates"
-msgstr "Kuinka usein tarkistetaan onko ResidualVM:ään päivityksiä"
+msgid "How often to check NovelVM updates"
+msgstr "Kuinka usein tarkistetaan onko NovelVM:ään päivityksiä"
 
 #: gui/options.cpp:2008
 msgid "Check now"
@@ -1350,8 +1350,8 @@ msgid "Used space:"
 msgstr "Käytetty tila:"
 
 #: gui/options.cpp:2032
-msgid "Space used by ResidualVM's saved games on this storage"
-msgstr "ResidualVM:n pelitallennusten käyttämä tila tallennustilassa"
+msgid "Space used by NovelVM's saved games on this storage"
+msgstr "NovelVM:n pelitallennusten käyttämä tila tallennustilassa"
 
 #: gui/options.cpp:2035
 msgid "Last sync:"
@@ -1388,12 +1388,12 @@ msgstr "Aloita pelitallennusten synkronointi"
 
 #: gui/options.cpp:2044
 msgctxt "lowres"
-msgid "You can download game files from your cloud ResidualVM folder:"
-msgstr "Voit ladata pelitiedostoja ResidualVM-pilvikansiostasi:"
+msgid "You can download game files from your cloud NovelVM folder:"
+msgstr "Voit ladata pelitiedostoja NovelVM-pilvikansiostasi:"
 
 #: gui/options.cpp:2046
-msgid "You can download game files from your cloud ResidualVM folder:"
-msgstr "Voit ladata pelitiedostoja ResidualVM-pilvikansiostasi:"
+msgid "You can download game files from your cloud NovelVM folder:"
+msgstr "Voit ladata pelitiedostoja NovelVM-pilvikansiostasi:"
 
 #: gui/options.cpp:2047
 msgid "Download game files"
@@ -1705,8 +1705,8 @@ msgid "Unknown Author"
 msgstr "Tuntematon tekijä"
 
 #: gui/remotebrowser.cpp:129
-msgid "ResidualVM could not access the directory!"
-msgstr "ResidualVM ei voi avata kyseistä hakemistoa!"
+msgid "NovelVM could not access the directory!"
+msgstr "NovelVM ei voi avata kyseistä hakemistoa!"
 
 #: gui/saveload-dialog.cpp:343
 msgid "List view"
@@ -1835,11 +1835,11 @@ msgstr "Pelin tietojen kopiointi leikepöydälle epäonnistui!"
 
 #: gui/updates-dialog.cpp:49
 msgid ""
-"ResidualVM now supports automatic check for updates\n"
+"NovelVM now supports automatic check for updates\n"
 "which requires access to the Internet. Would you\n"
 "like to enable this feature?"
 msgstr ""
-"ResidualVM tukee nyt automaattista päivitysten tarkistusta,\n"
+"NovelVM tukee nyt automaattista päivitysten tarkistusta,\n"
 "joka vaatii pääsyn internetiin. Haluaisitko laittaa päälle\n"
 "tämän ominaisuuden?"
 
@@ -2165,11 +2165,11 @@ msgstr ""
 #: engines/engine.cpp:591
 msgid ""
 "WARNING: The game you are about to start is not yet fully supported by "
-"ResidualVM. As such, it is likely to be unstable, and any saved game you make "
-"might not work in future versions of ResidualVM."
+"NovelVM. As such, it is likely to be unstable, and any saved game you make "
+"might not work in future versions of NovelVM."
 msgstr ""
-"VAROITUS: ResidualVM ei vielä tue täysin valitsemaasi peliä. Peli saattaa olla "
-"epävakaa, eivätkä pelitallennukset välttämättä toimi tulevissa ResidualVM:n "
+"VAROITUS: NovelVM ei vielä tue täysin valitsemaasi peliä. Peli saattaa olla "
+"epävakaa, eivätkä pelitallennukset välttämättä toimi tulevissa NovelVM:n "
 "versioissa."
 
 #: engines/engine.cpp:594 engines/wintermute/wintermute.cpp:190
@@ -2189,11 +2189,11 @@ msgstr "Pelin tallentaminen ei ole tällä hetkellä mahdollista"
 msgid ""
 "The game in '%s' seems to be an unknown game variant.\n"
 "\n"
-"Please report the following data to the ResidualVM team at %s along with the "
+"Please report the following data to the NovelVM team at %s along with the "
 "name of the game you tried to add and its version, language, etc.:"
 msgstr ""
 "Peli kansiossa \"%s\" näyttää olevan tuntematon pelivariantti.\n"
-"Ole hyvä ja raportoi seuraavat tiedot ResidualVM:n kehittäjille osoitteessa %s "
+"Ole hyvä ja raportoi seuraavat tiedot NovelVM:n kehittäjille osoitteessa %s "
 "pelin nimen,\n"
 "version, kielen, yms. kera:"
 
@@ -2836,10 +2836,10 @@ msgstr "Tiedoston lukeminen ei onnistunut!"
 #: backends/networking/sdl_net/handlers/filesajaxpagehandler.cpp:59
 msgid ""
 "The page is not available without the resources. Make sure file wwwroot.zip "
-"from ResidualVM distribution is available in 'themepath'."
+"from NovelVM distribution is available in 'themepath'."
 msgstr ""
 "Sivu ei ole saatavilla ilman resursseja. Varmista että tiedosto wwwroot.zip "
-"ResidualVM -jakelusta on saatavilla 'themepath'-hakemistopolussa."
+"NovelVM -jakelusta on saatavilla 'themepath'-hakemistopolussa."
 
 #: backends/networking/sdl_net/handlers/filesajaxpagehandler.cpp:67
 #: backends/networking/sdl_net/handlers/filesajaxpagehandler.cpp:68
@@ -2891,8 +2891,8 @@ msgid "Parent directory"
 msgstr "Päähakemisto"
 
 #: backends/networking/sdl_net/handlers/filespagehandler.cpp:218
-msgid "ResidualVM couldn't list the directory you specified."
-msgstr "ResidualVM ei voi avata kyseistä hakemistoa."
+msgid "NovelVM couldn't list the directory you specified."
+msgstr "NovelVM ei voi avata kyseistä hakemistoa."
 
 #: backends/networking/sdl_net/handlers/filespagehandler.cpp:232
 msgid "Index of"
@@ -3104,8 +3104,8 @@ msgid "Magnify Mode Off"
 msgstr "Suurennustila poissa"
 
 #: backends/platform/ds/arm9/source/dsoptions.cpp:57
-msgid "ResidualVM Main Menu"
-msgstr "ResidualVM päävalikko"
+msgid "NovelVM Main Menu"
+msgstr "NovelVM päävalikko"
 
 #: backends/platform/ds/arm9/source/dsoptions.cpp:63
 msgid "~L~eft handed mode"
@@ -3215,8 +3215,8 @@ msgid "Right Click"
 msgstr "Oikea klikkaus"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:205
-msgid "Hide ResidualVM"
-msgstr "Piilota ResidualVM"
+msgid "Hide NovelVM"
+msgstr "Piilota NovelVM"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:206
 msgid "Hide Others"
@@ -3247,8 +3247,8 @@ msgid "General Information"
 msgstr "Yleistä Tietoa"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:218
-msgid "What's New in ResidualVM"
-msgstr "Uutta ResidualVM:ssä"
+msgid "What's New in NovelVM"
+msgstr "Uutta NovelVM:ssä"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:220
 msgid "Credits"
@@ -3611,8 +3611,8 @@ msgstr "Käytä alkuperäisiä tallenna/lataa valikkoja"
 #: engines/neverhood/detection.cpp:178 engines/sci/detection.cpp:458
 #: engines/sherlock/detection.cpp:76 engines/toltecs/detection.cpp:229
 #: engines/zvision/detection_tables.h:51
-msgid "Use the original save/load screens instead of the ResidualVM ones"
-msgstr "Käytä alkuperäisiä tallenna/lataa valikkoja ResidualVM valikoiden sijaan"
+msgid "Use the original save/load screens instead of the NovelVM ones"
+msgstr "Käytä alkuperäisiä tallenna/lataa valikkoja NovelVM valikoiden sijaan"
 
 #: engines/agi/detection.cpp:157
 msgid "Use an alternative palette"
@@ -3811,7 +3811,7 @@ msgstr ""
 
 #: engines/drascula/saveload.cpp:47
 msgid ""
-"ResidualVM found that you have old saved games for Drascula that should be "
+"NovelVM found that you have old saved games for Drascula that should be "
 "converted.\n"
 "The old saved game format is no longer supported, so you will not be able to "
 "load your games if you don't convert them.\n"
@@ -3821,9 +3821,9 @@ msgid ""
 msgstr ""
 "Drascula:n pelitallennukset ovat vanhassa formaatissa. Tallennukset tulee "
 "muuntaa,\n"
-"jotta niitä voi käyttää ResidualVM:ssä. Paina 'Hyväksy' muuntaaksesi tiedostot. "
+"jotta niitä voi käyttää NovelVM:ssä. Paina 'Hyväksy' muuntaaksesi tiedostot. "
 "Mikäli et halua muuntaa tiedostoja nyt\n"
-"ResidualVM kysyy asiaa seuraavan kerran kun käynnistät pelin.\n"
+"NovelVM kysyy asiaa seuraavan kerran kun käynnistät pelin.\n"
 
 #: engines/dreamweb/detection.cpp:58
 msgid "Use bright palette mode"
@@ -4335,14 +4335,14 @@ msgid ""
 "\n"
 "%s %s\n"
 "\n"
-"Do you wish to use this saved game file with ResidualVM?\n"
+"Do you wish to use this saved game file with NovelVM?\n"
 "\n"
 msgstr ""
 "Seuraava alkuperäinen pelitallennus löydettiin pelipolustasi:\n"
 "\n"
 "%s %s\n"
 "\n"
-"Haluatko käyttää tätä tallennusta ResidualVM:ssä?\n"
+"Haluatko käyttää tätä tallennusta NovelVM:ssä?\n"
 "\n"
 
 #: engines/kyra/gui/saveload_eob.cpp:602
@@ -4358,14 +4358,14 @@ msgstr ""
 #, c-format
 msgid ""
 "%d original saved games have been successfully imported into\n"
-"ResidualVM. If you want to manually import original saved game later you will\n"
-"need to open the ResidualVM debug console and use the command "
+"NovelVM. If you want to manually import original saved game later you will\n"
+"need to open the NovelVM debug console and use the command "
 "'import_savefile'.\n"
 "\n"
 msgstr ""
-"%d alkuperäistä pelitallennusta onnistuneesti ladattu ResidualVM:ään.\n"
+"%d alkuperäistä pelitallennusta onnistuneesti ladattu NovelVM:ään.\n"
 "Jos haluat myöhemmin ladata pelitallennuksia käsin, joudut avaamaan\n"
-"ResidualVM:n debug konsolin ja käyttämään komentoa \"import_savefile\".\n"
+"NovelVM:n debug konsolin ja käyttämään komentoa \"import_savefile\".\n"
 "\n"
 
 #: engines/kyra/graphics/screen_eob.cpp:2436
@@ -4646,13 +4646,13 @@ msgid ""
 "At this point, the Riven Demo would\n"
 "ask if you would like to open a web browser\n"
 "to bring you to the Red Orb store to buy\n"
-"the game. ResidualVM cannot do that and\n"
+"the game. NovelVM cannot do that and\n"
 "the site no longer exists."
 msgstr ""
 "Tässä kohtaa Rivenin demo kysyisi\n"
 "josko haluaisit avata selaimen\n"
 "viedäkseen sinut Red Orb-kauppaan\n"
-"josta voisit ostaa pelin. ResidualVM ei\n"
+"josta voisit ostaa pelin. NovelVM ei\n"
 "voi tehdä sitä ja sivustoa ei ole enää\n"
 "olemassa."
 
@@ -4699,14 +4699,14 @@ msgstr "Tallennetaan peliä..."
 
 #: engines/parallaction/saveload.cpp:269
 msgid ""
-"ResidualVM found that you have old saved games for Nippon Safes that should be "
+"NovelVM found that you have old saved games for Nippon Safes that should be "
 "renamed.\n"
 "The old names are no longer supported, so you will not be able to load your "
 "games if you don't convert them.\n"
 "\n"
 "Press OK to convert them now, otherwise you will be asked next time.\n"
 msgstr ""
-"ResidualVM löysi pelille Nippon Safes vanhoja pelitallennuksia jotka pitäisi "
+"NovelVM löysi pelille Nippon Safes vanhoja pelitallennuksia jotka pitäisi "
 "uudelleennimetä.\n"
 "Vanhoja nimiä ei enää tueta, joten et pysty lataamaan tallenteitasi ellet "
 "muuta niiden nimiä.\n"
@@ -4715,19 +4715,19 @@ msgstr ""
 "seuraavalla kerralla. \n"
 
 #: engines/parallaction/saveload.cpp:316
-msgid "ResidualVM successfully converted all your saved games."
-msgstr "ResidualVM muunsi kaikki pelitallenteet onnistuneesti."
+msgid "NovelVM successfully converted all your saved games."
+msgstr "NovelVM muunsi kaikki pelitallenteet onnistuneesti."
 
 #: engines/parallaction/saveload.cpp:318
 msgid ""
-"ResidualVM printed some warnings in your console window and can't guarantee all "
+"NovelVM printed some warnings in your console window and can't guarantee all "
 "your files have been converted.\n"
 "\n"
 "Please report to the team."
 msgstr ""
 "Osa tiedostoista ei ehkä muuntunut oikein. Varoitukset tulostettiin konsoli-"
 "ikkunaan. Pyydämme että ilmoittaisit\n"
-"niistä ResidualVM:n kehittäjille."
+"niistä NovelVM:n kehittäjille."
 
 #: engines/pegasus/pegasus.cpp:701
 msgid "Invalid file name for saving"
@@ -4935,16 +4935,16 @@ msgstr ""
 #: engines/sci/sci.cpp:388
 msgid ""
 "Subtitles are enabled, but subtitling in King's Quest 7 was unfinished and "
-"disabled in the release version of the game. ResidualVM allows the subtitles to "
+"disabled in the release version of the game. NovelVM allows the subtitles to "
 "be re-enabled, but because they were removed from the original game, they do "
 "not always render properly or reflect the actual game speech. This is not a "
-"ResidualVM bug -- it is a problem with the game's assets."
+"NovelVM bug -- it is a problem with the game's assets."
 msgstr ""
 "Tekstitys on päällä, mutta King's Quest 7:n tekstitys on keskeneräinen ja "
-"pois päältä pelin julkaisuversiossa. ResidualVM sallii tekstityksen "
+"pois päältä pelin julkaisuversiossa. NovelVM sallii tekstityksen "
 "päällelaittamisen, mutta niiden keskeneräisyydestä johtuen ne eivät aina "
 "piirry oikein tai vastaa pelissä esiintyvää puhetta. Tämä ei ole vika "
-"ResidualVM:ssä, vaan ongelma pelissä itsessään."
+"NovelVM:ssä, vaan ongelma pelissä itsessään."
 
 #: engines/sci/sci.cpp:412
 msgid ""
@@ -4952,7 +4952,7 @@ msgid ""
 "market support for General MIDI for this game in their \"General MIDI Utility"
 "\". Please, apply this patch in order to enjoy MIDI music with this game. "
 "Once you have obtained it, you can unpack all of the included *.PAT files in "
-"your ResidualVM extras folder and ResidualVM will add the appropriate patch "
+"your NovelVM extras folder and NovelVM will add the appropriate patch "
 "automatically. Alternatively, you can follow the instructions in the READ.ME "
 "file included in the patch and rename the associated *.PAT file to 4.PAT and "
 "place it in the game folder. Without this patch, General MIDI music for this "
@@ -4961,8 +4961,8 @@ msgstr ""
 "Olet valinnut General MIDI:n äänilaitteeksi. Sierralta on saatavilla General "
 "MIDI-tuki tähän peliin heidän 'General MIDI Utility':ssään. Asenna "
 "edellämainittu korjaus jos haluat kuunnella MIDI musiikkia tässä pelissä. "
-"Ladattuasi korjauksen, pura sen sisältämät *.PAT-tiedostot ResidualVM:n extras-"
-"kansioon. ResidualVM osaa lukea ja ottaa ne käyttöön sieltä automaattisesti. "
+"Ladattuasi korjauksen, pura sen sisältämät *.PAT-tiedostot NovelVM:n extras-"
+"kansioon. NovelVM osaa lukea ja ottaa ne käyttöön sieltä automaattisesti. "
 "Voit myös seurata korjauksen mukana tulleita ohjeita ja nimetä *.PAT-"
 "tiedoston 4.PAT:iksi sekä siirtää sen pelikansioon. Ilman tätä korjausta "
 "pelin MIDI-musiikki kuulostaa pahasti vääristyneeltä."
@@ -4971,13 +4971,13 @@ msgstr ""
 msgid ""
 "Your game is patched with a fan made script patch. Such patches have been "
 "reported to cause issues, as they modify game scripts extensively. The "
-"issues that these patches fix do not occur in ResidualVM, so you are advised to "
+"issues that these patches fix do not occur in NovelVM, so you are advised to "
 "remove this patch from your game folder in order to avoid having unexpected "
 "errors and/or issues later on."
 msgstr ""
 "Peliäsi on paikkailtu fanien tekemällä korjauksella. Tällaiset korjaukset "
 "saattavat aiheuttaa ongelmia, sillä ne muokkaavat peliä huomattavasti. "
-"Ongelmat joita nämä korjaukset paikkaavat ei esiinny ResidualVM:ssä, joten "
+"Ongelmat joita nämä korjaukset paikkaavat ei esiinny NovelVM:ssä, joten "
 "suosittelemme että poistatte nämä korjaukset pelikansiosta jotteivät ne "
 "aiheuttaisi ongelmia."
 
@@ -5011,14 +5011,14 @@ msgstr ""
 
 #: engines/sci/sci.cpp:879
 msgid ""
-"Characters saved inside ResidualVM are shown automatically. Character files "
-"saved in the original interpreter need to be put inside ResidualVM's saved "
+"Characters saved inside NovelVM are shown automatically. Character files "
+"saved in the original interpreter need to be put inside NovelVM's saved "
 "games directory and a prefix needs to be added depending on which game it "
 "was saved in: 'qfg1-' for Quest for Glory 1, 'qfg2-' for Quest for Glory 2. "
 "Example: 'qfg2-thief.sav'."
 msgstr ""
-"ResidualVM:n kautta tallennetut hahmot näytetään automaattisesti. "
-"Alkuperäisellä pelimoottorilla luodut hahmotiedostot pitää sijoittaa ResidualVM:"
+"NovelVM:n kautta tallennetut hahmot näytetään automaattisesti. "
+"Alkuperäisellä pelimoottorilla luodut hahmotiedostot pitää sijoittaa NovelVM:"
 "n pelitallennuskansioon ja niihin pitää lisätä pelikohtainen etuliite: "
 "'qfg1-' jos peli on Quest for Glory 1, 'qfg2-' jos peli on Quest for Glory "
 "2. Esimerkki: 'qfg2-thief.sav'."
@@ -5064,12 +5064,12 @@ msgstr ""
 msgid ""
 "Your game version appears to be unknown. If this is *NOT* a fan-modified\n"
 "version (in particular, not a fan-made translation), please, report the\n"
-"following data to the ResidualVM team along with the name of the game you "
+"following data to the NovelVM team along with the name of the game you "
 "tried\n"
 "to add and its version, language, etc.:\n"
 msgstr ""
 "Peliversiosi vaikuttaa olevan tuntematon. Jos tämä *EI* ole faniversio\n"
-"(esim. fanikäännös), ole kiltti ja raportoi seuraavat tiedot ResidualVM:n "
+"(esim. fanikäännös), ole kiltti ja raportoi seuraavat tiedot NovelVM:n "
 "kehittäjille pelin nimen,\n"
 "version, kielen, yms. kera.\n"
 
@@ -5766,11 +5766,11 @@ msgstr ""
 msgid ""
 "Usually, Maniac Mansion would start now. But for that to work, the game "
 "files for Maniac Mansion have to be in the 'Maniac' directory inside the "
-"Tentacle game directory, and the game has to be added to ResidualVM."
+"Tentacle game directory, and the game has to be added to NovelVM."
 msgstr ""
 "Normaalisti Maniac Mansion käynnistyisi nyt. Jotta se olisi mahdollista, "
 "Maniac Mansionin pelitiedostojen pitää löytyä \"Maniac\"-kansiosta Tentacle-"
-"pelikansion sisältä, ja sen pitää myös olla lisätty pelinä ResidualVM:ään."
+"pelikansion sisältä, ja sen pitää myös olla lisätty pelinä NovelVM:ään."
 
 #: engines/scumm/players/player_v3m.cpp:129
 msgid ""
@@ -5933,15 +5933,15 @@ msgid "PSX stream cutscene '%s' cannot be played in paletted mode"
 msgstr "PSX stream videota '%s' ei voi toistaa paletisoidussa tilassa"
 
 #: engines/sword1/animation.cpp:553 engines/sword2/animation.cpp:449
-msgid "DXA cutscenes found but ResidualVM has been built without zlib"
+msgid "DXA cutscenes found but NovelVM has been built without zlib"
 msgstr ""
-"DXA videotiedostoja löydettiin mutta ResidualVM on käännetty ilman zlib-tukea"
+"DXA videotiedostoja löydettiin mutta NovelVM on käännetty ilman zlib-tukea"
 
 #: engines/sword1/animation.cpp:569 engines/sword2/animation.cpp:465
 msgid ""
-"MPEG-2 cutscenes found but ResidualVM has been built without MPEG-2 support"
+"MPEG-2 cutscenes found but NovelVM has been built without MPEG-2 support"
 msgstr ""
-"MPEG-2 videotiedostoja löydettiin mutta ResidualVM on käännetty ilman MPEG-2-"
+"MPEG-2 videotiedostoja löydettiin mutta NovelVM on käännetty ilman MPEG-2-"
 "tukea"
 
 #: engines/sword1/animation.cpp:576 engines/sword2/animation.cpp:474
@@ -5951,7 +5951,7 @@ msgstr "Videotiedosto '%s' ei löytynyt"
 
 #: engines/sword1/control.cpp:887
 msgid ""
-"ResidualVM found that you have old saved games for Broken Sword 1 that should "
+"NovelVM found that you have old saved games for Broken Sword 1 that should "
 "be converted.\n"
 "The old saved game format is no longer supported, so you will not be able to "
 "load your games if you don't convert them.\n"
@@ -5959,7 +5959,7 @@ msgid ""
 "Press OK to convert them now, otherwise you will be asked again the next "
 "time you start the game.\n"
 msgstr ""
-"ResidualVM löysi pelille Broken Sword 1 vanhoja pelitallennuksia jotka pitäisi "
+"NovelVM löysi pelille Broken Sword 1 vanhoja pelitallennuksia jotka pitäisi "
 "muuntaa.\n"
 "Vanhaa formaattia ei enää tueta, joten et pysty lataamaan tallenteitasi "
 "ellet muunna niitä.\n"
@@ -5990,8 +5990,8 @@ msgstr "Broken Sword 1:n demo päättyy tähän"
 
 #: engines/sword2/animation.cpp:429
 msgid ""
-"PSX cutscenes found but ResidualVM has been built without RGB color support"
-msgstr "PSX videoita löydetty, mutta ResidualVM on käännetty ilman RGB tukea"
+"PSX cutscenes found but NovelVM has been built without RGB color support"
+msgstr "PSX videoita löydetty, mutta NovelVM on käännetty ilman RGB tukea"
 
 #: engines/sword2/sword2.cpp:79
 msgid "Show object labels"
@@ -6018,7 +6018,7 @@ msgid ""
 "executable. Please decompress it"
 msgstr ""
 "Tiedosto teenagent.dat on pakattu, mutta zlib-kirjastoa ei ole käännetty "
-"ResidualVM:ään. Pura teenagent.dat"
+"NovelVM:ään. Pura teenagent.dat"
 
 #: engines/tony/tony.cpp:256
 #, c-format
@@ -6474,19 +6474,19 @@ msgstr "Tämä peli vaatii toimiakseen PNG-, JPEG- sekä Vorbis-tuen."
 msgid "This game requires the FoxTail subengine, which is not compiled in."
 msgstr ""
 "Tämä peli vaatii toimiakseen FoxTail-pelimoottorin, jota ei ole käännetty "
-"tähän ResidualVM:ään."
+"tähän NovelVM:ään."
 
 #: engines/wintermute/wintermute.cpp:178
 msgid "This game requires the HeroCraft subengine, which is not compiled in."
 msgstr ""
 "Tämä peli vaatii toimiakseen HeroCraft-pelimoottorin, jota ei ole käännetty "
-"tähän ResidualVM:ään."
+"tähän NovelVM:ään."
 
 #: engines/wintermute/wintermute.cpp:189
 msgid ""
-"This game requires 3D characters support, which is out of ResidualVM's scope."
+"This game requires 3D characters support, which is out of NovelVM's scope."
 msgstr ""
-"Tämä peli vaatii toimiakseen tuen 3D-hahmoille, jota ResidualVM ei tarjoa."
+"Tämä peli vaatii toimiakseen tuen 3D-hahmoille, jota NovelVM ei tarjoa."
 
 #: engines/xeen/detection.cpp:96
 msgid "Show item costs in standard inventory mode"
@@ -6723,8 +6723,8 @@ msgstr ""
 #~ msgid "Pastes clipboard contents into fields"
 #~ msgstr "Liittää leikepöydän sisällön kenttiin"
 
-#~ msgid "You will be directed to ResidualVM's page where"
-#~ msgstr "Sinut ohjataan ResidualVM:n sivuille jossa"
+#~ msgid "You will be directed to NovelVM's page where"
+#~ msgstr "Sinut ohjataan NovelVM:n sivuille jossa"
 
 #~ msgid "you should allow it to access your storage."
 #~ msgstr "sinun pitää sallia sen pääsy tallennustilaasi."
@@ -6762,9 +6762,9 @@ msgstr ""
 #~ msgid "AdLib Emulator"
 #~ msgstr "AdLib emulaattori"
 
-#~ msgid "Use the original save/load screens instead of the ResidualVM interface"
+#~ msgid "Use the original save/load screens instead of the NovelVM interface"
 #~ msgstr ""
-#~ "Käytä alkuperäisiä tallenna/lataa valikkoja ResidualVM käyttöliittymän sijaan"
+#~ "Käytä alkuperäisiä tallenna/lataa valikkoja NovelVM käyttöliittymän sijaan"
 
 #~ msgid "(You can always enable it in the options dialog on the Misc tab)"
 #~ msgstr "(Voit aina laittaa sen päälle asetusvalikon \"Muut\"-välilehdestä)"
@@ -6830,32 +6830,32 @@ msgstr ""
 
 #~ msgid ""
 #~ "Unable to find \"sky.cpt\" file!\n"
-#~ "Please download it from www.ResidualVM.org"
+#~ "Please download it from www.NovelVM.org"
 #~ msgstr ""
 #~ "Tiedostoa \"sky.cpt\" ei löydy!\n"
-#~ "Hae se ResidualVM:n verkkosivulta"
+#~ "Hae se NovelVM:n verkkosivulta"
 
 #~ msgid ""
 #~ "The \"sky.cpt\" file has an incorrect size.\n"
-#~ "Please (re)download it from www.ResidualVM.org"
+#~ "Please (re)download it from www.NovelVM.org"
 #~ msgstr ""
 #~ "Tiedosto \"sky.cpt\" on väärän kokoinen.\n"
-#~ "Hae uusi versio ResidualVM:n verkkosivuilta"
+#~ "Hae uusi versio NovelVM:n verkkosivuilta"
 
 #~ msgid ""
-#~ "You're missing the 'teenagent.dat' file. Get it from the ResidualVM website"
+#~ "You're missing the 'teenagent.dat' file. Get it from the NovelVM website"
 #~ msgstr ""
-#~ "Asennuksestasi puuttuu 'teenagent.dat' tiedosto. Hae se ResidualVM:n "
+#~ "Asennuksestasi puuttuu 'teenagent.dat' tiedosto. Hae se NovelVM:n "
 #~ "nettisivuilta"
 
-#~ msgid "You're missing the 'toon.dat' file. Get it from the ResidualVM website"
+#~ msgid "You're missing the 'toon.dat' file. Get it from the NovelVM website"
 #~ msgstr ""
-#~ "Asennuksestasi puuttuu 'toon.dat' tiedosto. Hae se ResidualVM:n nettisivuilta"
+#~ "Asennuksestasi puuttuu 'toon.dat' tiedosto. Hae se NovelVM:n nettisivuilta"
 
 #, fuzzy
-#~ msgid "File 'toon.dat' is corrupt. Get it from the ResidualVM website"
+#~ msgid "File 'toon.dat' is corrupt. Get it from the NovelVM website"
 #~ msgstr ""
-#~ "Asennuksestasi puuttuu 'teenagent.dat' tiedosto. Hae se ResidualVM:n "
+#~ "Asennuksestasi puuttuu 'teenagent.dat' tiedosto. Hae se NovelVM:n "
 #~ "nettisivuilta"
 
 #, fuzzy
@@ -6866,16 +6866,16 @@ msgstr ""
 #~ msgstr "Peli hakemistossa '%s' näyttäisi olevan tuntematon."
 
 #~ msgid ""
-#~ "Please, report the following data to the ResidualVM team along with name"
+#~ "Please, report the following data to the NovelVM team along with name"
 #~ msgstr ""
-#~ "Ole hyvä ja ilmoita ResidualVM:n kehittäjille seuraavat tiedot, lisäksi kerro"
+#~ "Ole hyvä ja ilmoita NovelVM:n kehittäjille seuraavat tiedot, lisäksi kerro"
 
 #~ msgid "of the game you tried to add and its version/language/etc.:"
 #~ msgstr ""
 #~ "mikä peli oli kyseessä, ja sen versio, kieli, ja muut vastaavat tiedot."
 
-#~ msgid "You have to restart ResidualVM before your changes will take effect."
-#~ msgstr "ResidualVM pitää käynnistää uudelleen jotta muutokset tulevat voimaan."
+#~ msgid "You have to restart NovelVM before your changes will take effect."
+#~ msgstr "NovelVM pitää käynnistää uudelleen jotta muutokset tulevat voimaan."
 
 #, fuzzy
 #~ msgid "Specifies where Files Manager can access to"
@@ -6888,8 +6888,8 @@ msgstr ""
 #~ msgstr "Käytä unditteröintiä EGA peleissä"
 
 #, fuzzy
-#~ msgid "MPEG-2 cutscenes found but ResidualVM has been built without MPEG-2"
-#~ msgstr "PSX videoita löydetty, mutta ResidualVM on käännetty ilman RGB tukea"
+#~ msgid "MPEG-2 cutscenes found but NovelVM has been built without MPEG-2"
+#~ msgstr "PSX videoita löydetty, mutta NovelVM on käännetty ilman RGB tukea"
 
 #~ msgid ""
 #~ "Turns off General MIDI mapping for games with Roland MT-32 soundtrack"

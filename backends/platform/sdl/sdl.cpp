@@ -40,9 +40,9 @@
 #endif
 
 #include "backends/events/default/default-events.h"
-// ResidualVM:
+// NovelVM:
 // #include "backends/events/sdl/sdl-events.h"
-// ResidualVM:
+// NovelVM:
 // #include "backends/events/sdl/legacy-sdl-events.h"
 #include "backends/events/sdl/resvm-sdl-events.h"
 #include "backends/keymapper/hardware-input.h"
@@ -52,10 +52,10 @@
 
 #ifdef USE_OPENGL
 #include "backends/graphics/openglsdl/openglsdl-graphics.h"
-//#include "graphics/cursorman.h" // ResidualVM
-#include "graphics/opengl/context.h" // ResidualVM specific
+//#include "graphics/cursorman.h" // NovelVM
+#include "graphics/opengl/context.h" // NovelVM specific
 #endif
-#include "graphics/renderer.h" // ResidualVM specific
+#include "graphics/renderer.h" // NovelVM specific
 
 #include <time.h>	// for getTimeAndDate()
 
@@ -75,14 +75,14 @@
 
 OSystem_SDL::OSystem_SDL()
 	:
-#if 0 // ResidualVM - not used
+#if 0 // NovelVM - not used
 #ifdef USE_OPENGL
 	_graphicsModes(),
 	_graphicsMode(0),
 	_firstGLMode(0),
 	_defaultSDLMode(0),
 	_defaultGLMode(0),
-#endif // ResidualVM
+#endif // NovelVM
 #endif
 	_inited(false),
 	_initedSDL(false),
@@ -207,17 +207,17 @@ void OSystem_SDL::initBackend() {
 #endif
 	debug(1, "Using SDL Video Driver \"%s\"", sdlDriverName);
 
-// ResidualVM specific code start
+// NovelVM specific code start
 #ifdef USE_OPENGL
 	detectFramebufferSupport();
 	detectAntiAliasingSupport();
 #endif
-// ResidualVM specific code end
+// NovelVM specific code end
 
 	// Create the default event source, in case a custom backend
 	// manager didn't provide one yet.
 	if (!_eventSource)
-		_eventSource = new ResVmSdlEventSource(); // ResidualVm: was SdlEventSource
+		_eventSource = new ResVmSdlEventSource(); // NovelVm: was SdlEventSource
 
 #if !SDL_VERSION_ATLEAST(2, 0, 0)
 	// SDL 1 does not generate its own keyboard repeat events.
@@ -230,7 +230,7 @@ void OSystem_SDL::initBackend() {
 	}
 
 	if (_graphicsManager == 0) {
-#if 0 // ResidualVM - not used
+#if 0 // NovelVM - not used
 #ifdef USE_OPENGL
 		// Setup a list with both SDL and OpenGL graphics modes. We only do
 		// this whenever the subclass did not already set up an graphics
@@ -251,7 +251,7 @@ void OSystem_SDL::initBackend() {
 				}
 			}
 		}
-#endif // ResidualVM
+#endif // NovelVM
 #endif
 
 		if (_graphicsManager == 0) {
@@ -293,7 +293,7 @@ void OSystem_SDL::initBackend() {
 	dynamic_cast<SdlGraphicsManager *>(_graphicsManager)->activateManager();
 }
 
-// ResidualVM specific code - Start
+// NovelVM specific code - Start
 #ifdef USE_OPENGL
 void OSystem_SDL::detectFramebufferSupport() {
 	_capabilities.openGLFrameBuffer = false;
@@ -371,7 +371,7 @@ void OSystem_SDL::detectAntiAliasingSupport() {
 }
 
 #endif // USE_OPENGL
-// End of ResidualVM specific code
+// End of NovelVM specific code
 
 void OSystem_SDL::engineInit() {
 #if SDL_VERSION_ATLEAST(2, 0, 0)
@@ -463,7 +463,7 @@ void OSystem_SDL::setWindowCaption(const char *caption) {
 	_window->setWindowCaption(cap);
 }
 
-// ResidualVM specific code
+// NovelVM specific code
 #ifdef USE_OPENGL
 void OSystem_SDL::setupScreen(uint screenW, uint screenH, bool fullscreen, bool accel3d) {
 	bool switchedManager = false;
@@ -504,7 +504,7 @@ void OSystem_SDL::launcherInitSize(uint w, uint h) {
 	setupScreen(w, h, fullscreen, matchingRendererType != Graphics::kRendererTypeTinyGL);
 }
 
-// End of ResidualVM specific code
+// End of NovelVM specific code
 
 void OSystem_SDL::quit() {
 	destroy();
@@ -730,7 +730,7 @@ Common::String OSystem_SDL::getScreenshotsPath() {
 	return path;
 }
 
-#if 0 // ResidualVM - not used
+#if 0 // NovelVM - not used
 #ifdef USE_OPENGL
 
 const OSystem::GraphicsMode *OSystem_SDL::getSupportedGraphicsModes() const {
@@ -879,7 +879,7 @@ void OSystem_SDL::setupGraphicsModes() {
 	}
 }
 #endif
-#endif // ResidualVM
+#endif // NovelVM
 
 char *OSystem_SDL::convertEncoding(const char *to, const char *from, const char *string, size_t length) {
 #if SDL_VERSION_ATLEAST(1, 2, 10)

@@ -23,13 +23,13 @@
 #ifndef TOOLS_CREATE_PROJECT_CONFIG_H
 #define TOOLS_CREATE_PROJECT_CONFIG_H
 
-#define PROJECT_DESCRIPTION "ResidualVM"  // Used in console output and build configuration
-#define PROJECT_NAME "residualvm"         // Used for folders, icons, resources and project/solution name
-#define LIBS_DEFINE "RESIDUALVM_LIBS"     // Name of the include environment variable
+#define PROJECT_DESCRIPTION "NovelVM"  // Used in console output and build configuration
+#define PROJECT_NAME "novelvm"         // Used for folders, icons, resources and project/solution name
+#define LIBS_DEFINE "NOVELVM_LIBS"     // Name of the include environment variable
 #define REVISION_DEFINE "SCUMMVM_INTERNAL_REVISION"
 #define FIRST_ENGINE "grim"               // Name of the engine which should be sorted as first element
 
-#define ENABLE_LANGUAGE_EXTENSIONS ""    // Comma separated list of projects that need language extensions, not used by ResidualVM
+#define ENABLE_LANGUAGE_EXTENSIONS ""    // Comma separated list of projects that need language extensions, not used by NovelVM
 #define DISABLE_EDIT_AND_CONTINUE ""     // Comma separated list of projects that need Edit&Continue to be disabled for co-routine support (the main project is automatically added)
 
 //#define ADDITIONAL_LIBRARY ""            // Add a single library to the list of externally linked libraries

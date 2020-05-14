@@ -36,7 +36,7 @@ class Mixer;
 
 namespace Graphics {
 struct Surface;
-//ResidualVM specific:
+//NovelVM specific:
 class PixelBuffer;
 }
 
@@ -359,7 +359,7 @@ public:
 		 */
 		kFeatureIconifyWindow,
 
-		//ResidualVM specific
+		//NovelVM specific
 		kFeatureOpenGL,
 		// Can side textures be rendered on the side for widescreen support?
 		kFeatureSideTextures,
@@ -369,7 +369,7 @@ public:
 		 * waiting for vertical sync before refreshing the screen to reduce
 		 * tearing is enabled.
 		 *
-		 * ResidualVM specific
+		 * NovelVM specific
 		 */
 		kFeatureVSync,
 
@@ -382,7 +382,7 @@ public:
 		 *
 		 * For TinyGL that means the backbuffer surface is kept.
 		 *
-		 * ResidualVM specific
+		 * NovelVM specific
 		 */
 		kFeatureFullscreenToggleKeepsContext,
 
@@ -486,7 +486,7 @@ public:
 	 * rather complicated for backend authors to fully understand and
 	 * implement the semantics of the OSystem interface.
 	 *
-	 * !!! Below description not apply for ResidualVM !!!
+	 * !!! Below description not apply for NovelVM !!!
 	 *
 	 * The graphics visible to the user in the end are actually
 	 * composed in three layers: the game graphics, the overlay
@@ -546,7 +546,7 @@ public:
 	//@{
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Description of a graphics mode.
 	 */
@@ -571,7 +571,7 @@ public:
 	};
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Retrieve a list of all graphics modes supported by this backend.
 	 * This can be both video modes as well as graphic filters/scalers;
@@ -586,7 +586,7 @@ public:
     }
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Return the ID of the 'default' graphics mode. What exactly this means
 	 * is up to the backend. This mode is set by the client code when no user
@@ -598,7 +598,7 @@ public:
 	virtual int getDefaultGraphicsMode() const { return 0; }
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Switch to the specified graphics mode. If switching to the new mode
 	 * failed, this method returns false.
@@ -609,7 +609,7 @@ public:
 	virtual bool setGraphicsMode(int mode) { return (mode == 0); }
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Switch to the graphics mode with the given name. If 'name' is unknown,
 	 * or if switching to the new mode failed, this method returns false.
@@ -623,7 +623,7 @@ public:
 	bool setGraphicsMode(const char *name);
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Determine which graphics mode is currently active.
 	 * @return the ID of the active graphics mode
@@ -631,7 +631,7 @@ public:
 	virtual int getGraphicsMode() const { return 0; }
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Sets the graphics scale factor to x1. Games with large screen sizes
 	 * reset the scale to x1 so the screen will not be too big when starting
@@ -641,7 +641,7 @@ public:
 
 #ifdef USE_RGB_COLOR
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Determine the pixel format currently in use for screen rendering.
 	 * @return the active screen pixel format.
@@ -650,7 +650,7 @@ public:
 	virtual Graphics::PixelFormat getScreenFormat() const = 0;
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Returns a list of all pixel formats supported by the backend.
 	 * The first item in the list must be directly supported by hardware,
@@ -686,7 +686,7 @@ public:
 #endif
 
 	/**
-	 * !!! ResidualVM specific method !!!
+	 * !!! NovelVM specific method !!!
 	 *
 	 * Retrieve a list of supported levels of anti-aliasting.
 	 * Anti-aliasing only works when using one of the hardware
@@ -698,7 +698,7 @@ public:
 	}
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Retrieve a list of all hardware shaders supported by this backend.
 	 * This can be only hardware shaders.
@@ -723,7 +723,7 @@ public:
 	virtual int getDefaultShader() const { return 0; }
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Switch to the specified shader mode. If switching to the new mode
 	 * failed, this method returns false.
@@ -734,7 +734,7 @@ public:
 	virtual bool setShader(int id) { return false; }
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Switch to the shader mode with the given name. If 'name' is unknown,
 	 * or if switching to the new mode failed, this method returns false.
@@ -844,7 +844,7 @@ public:
 	virtual void initSizeHint(const Graphics::ModeList &modes) {}
  
 	/**
-	 * !!! ResidualVM specific method !!!
+	 * !!! NovelVM specific method !!!
 	 * Set the size of the launcher virtual screen.
 	 *
 	 * @param width		the new virtual screen width
@@ -853,7 +853,7 @@ public:
 	virtual void launcherInitSize(uint width, uint height) = 0;
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Return an int value which is changed whenever any screen
 	 * parameters (like the resolution) change. That is, whenever a
@@ -870,7 +870,7 @@ public:
 	virtual int getScreenChangeID() const { return 0; }
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Begin a new GFX transaction, which is a sequence of GFX mode changes.
 	 * The idea behind GFX transactions is to make it possible to activate
@@ -890,7 +890,7 @@ public:
 	virtual void beginGFXTransaction() {}
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * This type is able to save the different errors which can happen while
 	 * changing GFX config values inside GFX transactions.
@@ -912,7 +912,7 @@ public:
 	};
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * End (and thereby commit) the current GFX transaction.
 	 * @see beginGFXTransaction
@@ -923,7 +923,7 @@ public:
 
 	/**
 	 * Set the size of the screen.
-	 * !!! ResidualVM specific method: !!!
+	 * !!! NovelVM specific method: !!!
 	 *
 	 * @param width			the new screen width
 	 * @param height		the new screen height
@@ -936,7 +936,7 @@ public:
 	 * Return a Graphics::PixelBuffer representing the framebuffer.
 	 * The caller can then perform arbitrary graphics transformations
 	 * on the framebuffer (blitting, scrolling, etc.).
-	 * !!! ResidualVM specific method: !!!
+	 * !!! NovelVM specific method: !!!
 	 */
 	virtual Graphics::PixelBuffer getScreenPixelBuffer() = 0;
 
@@ -947,7 +947,7 @@ public:
 	 * The system must take a copy of the Surfaces, as they will be free()d
 	 * automatically.
 	 *
-	 * !!! ResidualVM specific method: !!!
+	 * !!! NovelVM specific method: !!!
 	 *
 	 * @param left			Texture to be used on the left
 	 * @param height		Texture to be used on the right
@@ -970,7 +970,7 @@ public:
 	virtual int16 getWidth() = 0;
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Return the palette manager singleton. For more information, refer
 	 * to the PaletteManager documentation.
@@ -978,7 +978,7 @@ public:
 	virtual PaletteManager *getPaletteManager() = 0;
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Blit a bitmap to the virtual screen.
 	 * The real screen will not immediately be updated to reflect the changes.
@@ -1008,7 +1008,7 @@ public:
 	virtual void copyRectToScreen(const void *buf, int pitch, int x, int y, int w, int h) = 0;
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Lock the active screen framebuffer and return a Graphics::Surface
 	 * representing it. The caller can then perform arbitrary graphics
@@ -1034,7 +1034,7 @@ public:
 
 	/**
 	 * Fills the screen with a given color value.
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 */
 	virtual void fillScreen(uint32 col) = 0;
@@ -1051,7 +1051,7 @@ public:
 	virtual void updateScreen() = 0;
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Set current shake position, a feature needed for some SCUMM screen
 	 * effects. The effect causes the displayed graphics to be shifted upwards
@@ -1069,7 +1069,7 @@ public:
 	virtual void setShakePos(int shakeXOffset, int shakeYOffset) = 0;
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Sets the area of the screen that has the focus.  For example, when a character
 	 * is speaking, they will have the focus.  Allows for pan-and-scan style views
@@ -1093,7 +1093,7 @@ public:
 	virtual void clearFocusRectangle() {}
 
 	/**
-	 * !!! ResidualVM specific method !!!
+	 * !!! NovelVM specific method !!!
 	 * Instruct the backend to capture a screenshot of the current screen.
 	 *
 	 * The backend can persist it the way it considers appropriate.
@@ -1209,7 +1209,7 @@ public:
 	/**
 	 * Lock or unlock the mouse cursor within the window.
 	 *
-	 * ResidualVM specific method
+	 * NovelVM specific method
 	 */
 	virtual bool lockMouse(bool lock) = 0;
 
@@ -1222,7 +1222,7 @@ public:
 	virtual void warpMouse(int x, int y) = 0;
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Set the bitmap used for drawing the cursor.
 	 *
@@ -1241,7 +1241,7 @@ public:
 	virtual void setMouseCursor(const void *buf, uint w, uint h, int hotspotX, int hotspotY, uint32 keycolor, bool dontScale = false, const Graphics::PixelFormat *format = nullptr) = 0;
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Replace the specified range of cursor the palette with new colors.
 	 * The palette entries from 'start' till (start+num-1) will be replaced - so
@@ -1432,7 +1432,7 @@ public:
 	virtual void setWindowCaption(const char *caption) {}
 
 	/**
-	 * !!! Not used in ResidualVM !!!
+	 * !!! Not used in NovelVM !!!
 	 *
 	 * Display a message in an 'on screen display'. That is, display it in a
 	 * fashion where it is visible on or near the screen (e.g. in a transparent

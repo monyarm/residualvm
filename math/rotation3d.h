@@ -1,6 +1,6 @@
-/* ResidualVM - A 3D game interpreter
+/* NovelVM - A 3D game interpreter
  *
- * ResidualVM is the legal property of its developers, whose names
+ * NovelVM is the legal property of its developers, whose names
  * are too numerous to list here. Please refer to the COPYRIGHT
  * file distributed with this source distribution.
  *
@@ -44,7 +44,7 @@ enum EulerOrder {
 	EO_YXZ,
 	EO_YZX,
 	EO_YZY,
-	EO_ZXY,		// Original ResidualVM implmentation
+	EO_ZXY,		// Original NovelVM implmentation
 	EO_ZXZ,
 	EO_ZYX,
 	EO_ZYZ
@@ -151,7 +151,7 @@ void Rotation3D<T>::buildFromEuler(const Angle &first, const Angle &second, cons
 			m2.buildAroundZ(second);
 			m3.buildAroundY(third);
 			break;
-		// Original ResidualVM Implementation
+		// Original NovelVM Implementation
 		case EO_ZXY:
 			this->buildAroundZ(first);
 			m2.buildAroundX(second);
@@ -359,7 +359,7 @@ void Rotation3D<T>::getEuler(Angle *first, Angle *second, Angle *third, EulerOrd
 				t = 0.0f;
 			}
 			break;
-		case EO_ZXY:		// Original ResidualVM implmentation
+		case EO_ZXY:		// Original NovelVM implmentation
 			if (m->getValue(2, 1) < 1.0f) {
 				if (m->getValue(2, 1) > -1.0f) {
 					f = -atan2(m->getValue(0, 1), m->getValue(1, 1));

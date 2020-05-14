@@ -58,7 +58,7 @@
 #include "backends/text-to-speech/windows/windows-text-to-speech.h"
 #endif
 
-#define DEFAULT_CONFIG_FILE "residualvm.ini"
+#define DEFAULT_CONFIG_FILE "novelvm.ini"
 
 void OSystem_Win32::init() {
 	// Initialize File System Factory
@@ -106,7 +106,7 @@ void OSystem_Win32::initBackend() {
 			freopen("CONOUT$","w",stdout);
 			freopen("CONOUT$","w",stderr);
 		}
-		SetConsoleTitle("ResidualVM Status Window");
+		SetConsoleTitle("NovelVM Status Window");
 	} else {
 		FreeConsole();
 	}
@@ -235,13 +235,13 @@ Common::String OSystem_Win32::getScreenshotsPath() {
 		return Common::String();
 	}
 
-	screenshotsPath = Common::String(picturesPath) + "\\ResidualVM Screenshots\\";
+	screenshotsPath = Common::String(picturesPath) + "\\NovelVM Screenshots\\";
 
 	// If the directory already exists (as it should in most cases),
 	// we don't want to fail, but we need to stop on other errors (such as ERROR_PATH_NOT_FOUND)
 	if (!CreateDirectory(screenshotsPath.c_str(), NULL)) {
 		if (GetLastError() != ERROR_ALREADY_EXISTS)
-			error("Cannot create ResidualVM Screenshots folder");
+			error("Cannot create NovelVM Screenshots folder");
 	}
 
 	return screenshotsPath;
@@ -252,10 +252,10 @@ Common::String OSystem_Win32::getDefaultConfigFileName() {
 
 	// Use the Application Data directory of the user profile.
 	if (SHGetFolderPathFunc(NULL, CSIDL_APPDATA, NULL, SHGFP_TYPE_CURRENT, configFile) == S_OK) {
-		strcat(configFile, "\\ResidualVM");
+		strcat(configFile, "\\NovelVM");
 		if (!CreateDirectory(configFile, NULL)) {
 			if (GetLastError() != ERROR_ALREADY_EXISTS)
-				error("Cannot create ResidualVM application data folder");
+				error("Cannot create NovelVM application data folder");
 		}
 
 		strcat(configFile, "\\" DEFAULT_CONFIG_FILE);
@@ -299,11 +299,11 @@ Common::String OSystem_Win32::getDefaultLogFileName() {
 		return Common::String();
 	}
 
-	strcat(logFile, "\\ResidualVM");
+	strcat(logFile, "\\NovelVM");
 	CreateDirectory(logFile, NULL);
 	strcat(logFile, "\\Logs");
 	CreateDirectory(logFile, NULL);
-	strcat(logFile, "\\residualvm.log");
+	strcat(logFile, "\\novelvm.log");
 
 	return logFile;
 }

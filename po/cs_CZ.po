@@ -144,8 +144,8 @@ msgid "No"
 msgstr "Ne"
 
 #: gui/downloaddialog.cpp:137 gui/launcher.cpp:536
-msgid "ResidualVM couldn't open the specified directory!"
-msgstr "ResidualVM nemohl tento adresáø otevøít!"
+msgid "NovelVM couldn't open the specified directory!"
+msgstr "NovelVM nemohl tento adresáø otevøít!"
 
 #: gui/downloaddialog.cpp:147
 msgid ""
@@ -639,24 +639,24 @@ msgid "~Q~uit"
 msgstr "~U~konèit"
 
 #: gui/launcher.cpp:140 backends/platform/sdl/macosx/appmenu_osx.mm:209
-msgid "Quit ResidualVM"
-msgstr "Ukonèit ResidualVM"
+msgid "Quit NovelVM"
+msgstr "Ukonèit NovelVM"
 
 #: gui/launcher.cpp:141
 msgid "A~b~out..."
 msgstr "~O~ Programu..."
 
 #: gui/launcher.cpp:141 backends/platform/sdl/macosx/appmenu_osx.mm:203
-msgid "About ResidualVM"
-msgstr "O ResidualVM"
+msgid "About NovelVM"
+msgstr "O NovelVM"
 
 #: gui/launcher.cpp:142
 msgid "~O~ptions..."
 msgstr "~V~olby..."
 
 #: gui/launcher.cpp:142
-msgid "Change global ResidualVM options"
-msgstr "Zmìnit globální volby ResidualVM"
+msgid "Change global NovelVM options"
+msgstr "Zmìnit globální volby NovelVM"
 
 #: gui/launcher.cpp:144
 msgid "~S~tart"
@@ -774,12 +774,12 @@ msgid "This game does not support loading games from the launcher."
 msgstr "Tato hra nepodporuje spou¹tìní her ze spou¹tìèe."
 
 #: gui/launcher.cpp:490
-msgid "ResidualVM could not find any engine capable of running the selected game!"
-msgstr "ResidualVM nemohl najít ¾ádné jádro schopné vybranou hru spustit!"
+msgid "NovelVM could not find any engine capable of running the selected game!"
+msgstr "NovelVM nemohl najít ¾ádné jádro schopné vybranou hru spustit!"
 
 #: gui/launcher.cpp:555
-msgid "ResidualVM could not find any game in the specified directory!"
-msgstr "ResidualVM nemohl v zadaném adresáøi najít ¾ádnou hru!"
+msgid "NovelVM could not find any game in the specified directory!"
+msgstr "NovelVM nemohl v zadaném adresáøi najít ¾ádnou hru!"
 
 #: gui/launcher.cpp:570
 msgid "Unknown variant"
@@ -1225,8 +1225,8 @@ msgid "Theme Path:"
 msgstr "Cesta ke Vzhledu:"
 
 #: gui/options.cpp:1895 gui/options.cpp:1897 gui/options.cpp:1898
-msgid "Specifies path to additional data used by all games or ResidualVM"
-msgstr "Stanoví cestu k dodateèným datùm pou¾ívaná v¹emi hrami nebo ResidualVM"
+msgid "Specifies path to additional data used by all games or NovelVM"
+msgstr "Stanoví cestu k dodateèným datùm pou¾ívaná v¹emi hrami nebo NovelVM"
 
 #: gui/options.cpp:1904
 msgid "Plugins Path:"
@@ -1264,8 +1264,8 @@ msgid "GUI language:"
 msgstr "Jazyk GUI:"
 
 #: gui/options.cpp:1948
-msgid "Language of ResidualVM GUI"
-msgstr "Jazyk GUI ResidualVM"
+msgid "Language of NovelVM GUI"
+msgstr "Jazyk GUI NovelVM"
 
 #: gui/options.cpp:1974
 msgid "Switch the GUI language to the game language"
@@ -1274,11 +1274,11 @@ msgstr "Zmìnit jazyk GUI na jazyk hry"
 #: gui/options.cpp:1975
 msgid ""
 "When starting a game, change the GUI language to the game language.That way, "
-"if a game uses the ResidualVM save and load dialogs, they are in the same "
+"if a game uses the NovelVM save and load dialogs, they are in the same "
 "language as the game."
 msgstr ""
 "Pøi spu¹tìní hry bude jazyk rozhraní zmìnìn na jazyk hry. Pokud hra vyu¾ívá "
-"dialogová okna ResidualVM, zobrazí se následnì ve stejném jazyce jako má hra."
+"dialogová okna NovelVM, zobrazí se následnì ve stejném jazyce jako má hra."
 
 #: gui/options.cpp:1988
 msgid "Use native system file browser"
@@ -1286,7 +1286,7 @@ msgstr ""
 
 #: gui/options.cpp:1989
 msgid ""
-"Use the native system file browser instead of the ResidualVM one to select a "
+"Use the native system file browser instead of the NovelVM one to select a "
 "file or directory."
 msgstr ""
 
@@ -1295,8 +1295,8 @@ msgid "Update check:"
 msgstr "Ovìøení aktualizací:"
 
 #: gui/options.cpp:1996
-msgid "How often to check ResidualVM updates"
-msgstr "Jak èasto ResidualVM kontroluje aktualizace"
+msgid "How often to check NovelVM updates"
+msgstr "Jak èasto NovelVM kontroluje aktualizace"
 
 #: gui/options.cpp:2008
 msgid "Check now"
@@ -1347,8 +1347,8 @@ msgid "Used space:"
 msgstr "Vyu¾itý prostor:"
 
 #: gui/options.cpp:2032
-msgid "Space used by ResidualVM's saved games on this storage"
-msgstr "Prostor vyu¾itý ulo¾enými hrami ResidualVM v tomto úlo¾i¹ti"
+msgid "Space used by NovelVM's saved games on this storage"
+msgstr "Prostor vyu¾itý ulo¾enými hrami NovelVM v tomto úlo¾i¹ti"
 
 #: gui/options.cpp:2035
 #, fuzzy
@@ -1387,12 +1387,12 @@ msgstr "Spustit synchronizaci ulo¾ených her"
 
 #: gui/options.cpp:2044
 msgctxt "lowres"
-msgid "You can download game files from your cloud ResidualVM folder:"
-msgstr "Soubory hry mù¾ete stáhnout z va¹í cloud slo¾ky ResidualVM:"
+msgid "You can download game files from your cloud NovelVM folder:"
+msgstr "Soubory hry mù¾ete stáhnout z va¹í cloud slo¾ky NovelVM:"
 
 #: gui/options.cpp:2046
-msgid "You can download game files from your cloud ResidualVM folder:"
-msgstr "Soubory hry mù¾ete stáhnout z va¹í cloud slo¾ky ResidualVM:"
+msgid "You can download game files from your cloud NovelVM folder:"
+msgstr "Soubory hry mù¾ete stáhnout z va¹í cloud slo¾ky NovelVM:"
 
 #: gui/options.cpp:2047
 msgid "Download game files"
@@ -1710,8 +1710,8 @@ msgid "Unknown Author"
 msgstr "Neznámý autor"
 
 #: gui/remotebrowser.cpp:129
-msgid "ResidualVM could not access the directory!"
-msgstr "ResidualVM nemá k tomuto adresáøi pøístup!"
+msgid "NovelVM could not access the directory!"
+msgstr "NovelVM nemá k tomuto adresáøi pøístup!"
 
 #: gui/saveload-dialog.cpp:343
 msgid "List view"
@@ -1842,11 +1842,11 @@ msgstr ""
 
 #: gui/updates-dialog.cpp:49
 msgid ""
-"ResidualVM now supports automatic check for updates\n"
+"NovelVM now supports automatic check for updates\n"
 "which requires access to the Internet. Would you\n"
 "like to enable this feature?"
 msgstr ""
-"ResidualVM nyní podporuje automatickou kontrolu\n"
+"NovelVM nyní podporuje automatickou kontrolu\n"
 "aktualizací která vy¾aduje pøipojení k internetu.\n"
 "Chtìli byste tuto funkci nyní zapnout?"
 
@@ -2176,12 +2176,12 @@ msgstr ""
 #: engines/engine.cpp:591
 msgid ""
 "WARNING: The game you are about to start is not yet fully supported by "
-"ResidualVM. As such, it is likely to be unstable, and any saved game you make "
-"might not work in future versions of ResidualVM."
+"NovelVM. As such, it is likely to be unstable, and any saved game you make "
+"might not work in future versions of NovelVM."
 msgstr ""
 "VAROVÁNÍ: Hra, kterou se chystáte spustit, není je¹tì plnì podporována "
-"ResidualVM. Proto je mo¾né, ¾e bude nestabilní a jakékoli ulo¾ené hry nemusí "
-"fungovat v budoucích verzích ResidualVM."
+"NovelVM. Proto je mo¾né, ¾e bude nestabilní a jakékoli ulo¾ené hry nemusí "
+"fungovat v budoucích verzích NovelVM."
 
 #: engines/engine.cpp:594 engines/wintermute/wintermute.cpp:190
 msgid "Start anyway"
@@ -2200,12 +2200,12 @@ msgstr ""
 msgid ""
 "The game in '%s' seems to be an unknown game variant.\n"
 "\n"
-"Please report the following data to the ResidualVM team at %s along with the "
+"Please report the following data to the NovelVM team at %s along with the "
 "name of the game you tried to add and its version, language, etc.:"
 msgstr ""
 "Verze hry, nacházející se v '%s', se zdá být neznámá.\n"
 "\n"
-"Prosím pøepo¹lete následující data týmu ResidualVM na %s spolu s názvem hry, "
+"Prosím pøepo¹lete následující data týmu NovelVM na %s spolu s názvem hry, "
 "kterou jste chtìli pøidat, a její verzí, jazykem, atd.:"
 
 #: engines/game.cpp:175
@@ -2892,7 +2892,7 @@ msgstr "Nelze smazat soubor."
 #: backends/networking/sdl_net/handlers/filesajaxpagehandler.cpp:59
 msgid ""
 "The page is not available without the resources. Make sure file wwwroot.zip "
-"from ResidualVM distribution is available in 'themepath'."
+"from NovelVM distribution is available in 'themepath'."
 msgstr ""
 
 #: backends/networking/sdl_net/handlers/filesajaxpagehandler.cpp:67
@@ -2952,8 +2952,8 @@ msgstr "Cesta není adresáø"
 
 #: backends/networking/sdl_net/handlers/filespagehandler.cpp:218
 #, fuzzy
-msgid "ResidualVM couldn't list the directory you specified."
-msgstr "ResidualVM nemá k tomuto adresáøi pøístup!"
+msgid "NovelVM couldn't list the directory you specified."
+msgstr "NovelVM nemá k tomuto adresáøi pøístup!"
 
 #: backends/networking/sdl_net/handlers/filespagehandler.cpp:232
 msgid "Index of"
@@ -3171,8 +3171,8 @@ msgid "Magnify Mode Off"
 msgstr ""
 
 #: backends/platform/ds/arm9/source/dsoptions.cpp:57
-msgid "ResidualVM Main Menu"
-msgstr "Hlavní Menu ResidualVM"
+msgid "NovelVM Main Menu"
+msgstr "Hlavní Menu NovelVM"
 
 #: backends/platform/ds/arm9/source/dsoptions.cpp:63
 msgid "~L~eft handed mode"
@@ -3280,8 +3280,8 @@ msgid "Right Click"
 msgstr "Pravé kliknutí"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:205
-msgid "Hide ResidualVM"
-msgstr "Skrýt ResidualVM"
+msgid "Hide NovelVM"
+msgstr "Skrýt NovelVM"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:206
 msgid "Hide Others"
@@ -3313,7 +3313,7 @@ msgid "General Information"
 msgstr ""
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:218
-msgid "What's New in ResidualVM"
+msgid "What's New in NovelVM"
 msgstr ""
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:220
@@ -3679,8 +3679,8 @@ msgstr "Pou¾ít pùvodní obrazovky naètení/ulo¾ení"
 #: engines/neverhood/detection.cpp:178 engines/sci/detection.cpp:458
 #: engines/sherlock/detection.cpp:76 engines/toltecs/detection.cpp:229
 #: engines/zvision/detection_tables.h:51
-msgid "Use the original save/load screens instead of the ResidualVM ones"
-msgstr "Pou¾ít pùvodní obrazovky naètení/ulo¾ení místo ze ResidualVM"
+msgid "Use the original save/load screens instead of the NovelVM ones"
+msgstr "Pou¾ít pùvodní obrazovky naètení/ulo¾ení místo ze NovelVM"
 
 #: engines/agi/detection.cpp:157
 msgid "Use an alternative palette"
@@ -3869,7 +3869,7 @@ msgstr ""
 
 #: engines/drascula/saveload.cpp:47
 msgid ""
-"ResidualVM found that you have old saved games for Drascula that should be "
+"NovelVM found that you have old saved games for Drascula that should be "
 "converted.\n"
 "The old saved game format is no longer supported, so you will not be able to "
 "load your games if you don't convert them.\n"
@@ -3877,7 +3877,7 @@ msgid ""
 "Press OK to convert them now, otherwise you will be asked again the next "
 "time you start the game.\n"
 msgstr ""
-"ResidualVM zjistil, ¾e máte staré ulo¾ené pozice pro Drascula, které by mìly "
+"NovelVM zjistil, ¾e máte staré ulo¾ené pozice pro Drascula, které by mìly "
 "být pøevedeny.\n"
 "Starý formát ulo¾ených her ji¾ není podporován, tak¾e pokud je nepøevedete, "
 "nebudete moci va¹e hry naèíst.\n"
@@ -4403,14 +4403,14 @@ msgid ""
 "\n"
 "%s %s\n"
 "\n"
-"Do you wish to use this saved game file with ResidualVM?\n"
+"Do you wish to use this saved game file with NovelVM?\n"
 "\n"
 msgstr ""
 "V cestì va¹í hry byl nalezen následující soubor s ulo¾enou hrou:\n"
 "\n"
 "%s %s\n"
 "\n"
-"Chcete tento soubor pou¾ít v ResidualVM?\n"
+"Chcete tento soubor pou¾ít v NovelVM?\n"
 "\n"
 
 #: engines/kyra/gui/saveload_eob.cpp:602
@@ -4426,14 +4426,14 @@ msgstr ""
 #, c-format
 msgid ""
 "%d original saved games have been successfully imported into\n"
-"ResidualVM. If you want to manually import original saved game later you will\n"
-"need to open the ResidualVM debug console and use the command "
+"NovelVM. If you want to manually import original saved game later you will\n"
+"need to open the NovelVM debug console and use the command "
 "'import_savefile'.\n"
 "\n"
 msgstr ""
 "%d pùvodních ulo¾ených her bylo úspì¹nì importováno do\n"
-"ResidualVM. Pokud chcete pozdìji toto uèinit znovu ruènì, je tøeba otevøít\n"
-"ladící konzoli ResidualVM a pou¾ít pøíkaz 'import_savefile'.\n"
+"NovelVM. Pokud chcete pozdìji toto uèinit znovu ruènì, je tøeba otevøít\n"
+"ladící konzoli NovelVM a pou¾ít pøíkaz 'import_savefile'.\n"
 "\n"
 
 #: engines/kyra/graphics/screen_eob.cpp:2436
@@ -4698,14 +4698,14 @@ msgid ""
 "At this point, the Riven Demo would\n"
 "ask if you would like to open a web browser\n"
 "to bring you to the Red Orb store to buy\n"
-"the game. ResidualVM cannot do that and\n"
+"the game. NovelVM cannot do that and\n"
 "the site no longer exists."
 msgstr ""
 "V tuto chvíli by se Vás demoverze\n"
 "Riven zeptala, zda byste nechtìli nav¹tívit\n"
 "internetové stránky obchodu Red Orb, kde\n"
 "byste si mohli zakoupit tuto hru.\n"
-"ResidualVM toto neumí a stránka ji¾\n"
+"NovelVM toto neumí a stránka ji¾\n"
 "neexistuje."
 
 #: engines/neverhood/detection.cpp:184
@@ -4751,14 +4751,14 @@ msgstr "Ukládání hry..."
 
 #: engines/parallaction/saveload.cpp:269
 msgid ""
-"ResidualVM found that you have old saved games for Nippon Safes that should be "
+"NovelVM found that you have old saved games for Nippon Safes that should be "
 "renamed.\n"
 "The old names are no longer supported, so you will not be able to load your "
 "games if you don't convert them.\n"
 "\n"
 "Press OK to convert them now, otherwise you will be asked next time.\n"
 msgstr ""
-"ResidualVM zjistil, ¾e máte staré ulo¾ené hry pro Nippon Safes, které by mìly "
+"NovelVM zjistil, ¾e máte staré ulo¾ené hry pro Nippon Safes, které by mìly "
 "být pøejmenovány.\n"
 "Staré názvy ji¾ nejsou podporovány, tak¾e pokud je nepøevedete, nebudete "
 "moci va¹e hry naèíst.\n"
@@ -4766,17 +4766,17 @@ msgstr ""
 "Stisknìte OK, abyste je pøevedli teï, jinak budete po¾ádáni pøí¹tì.\n"
 
 #: engines/parallaction/saveload.cpp:316
-msgid "ResidualVM successfully converted all your saved games."
-msgstr "ResidualVM úspì¹nì pøevedl v¹echny va¹e ulo¾ené hry."
+msgid "NovelVM successfully converted all your saved games."
+msgstr "NovelVM úspì¹nì pøevedl v¹echny va¹e ulo¾ené hry."
 
 #: engines/parallaction/saveload.cpp:318
 msgid ""
-"ResidualVM printed some warnings in your console window and can't guarantee all "
+"NovelVM printed some warnings in your console window and can't guarantee all "
 "your files have been converted.\n"
 "\n"
 "Please report to the team."
 msgstr ""
-"ResidualVM vytiskl nìkterá varování ve va¹em oknì konzole a nemù¾e zaruèit, ¾e "
+"NovelVM vytiskl nìkterá varování ve va¹em oknì konzole a nemù¾e zaruèit, ¾e "
 "v¹echny va¹e soubory byly pøevedeny.\n"
 "\n"
 "Prosím nahlaste to týmu."
@@ -4985,15 +4985,15 @@ msgstr ""
 #: engines/sci/sci.cpp:388
 msgid ""
 "Subtitles are enabled, but subtitling in King's Quest 7 was unfinished and "
-"disabled in the release version of the game. ResidualVM allows the subtitles to "
+"disabled in the release version of the game. NovelVM allows the subtitles to "
 "be re-enabled, but because they were removed from the original game, they do "
 "not always render properly or reflect the actual game speech. This is not a "
-"ResidualVM bug -- it is a problem with the game's assets."
+"NovelVM bug -- it is a problem with the game's assets."
 msgstr ""
 "Titulky jsou zapnuty, ale ve vydané verzi King's Quest 7 nebyly dokonèeny a "
-"ve høe jsou zakázány. ResidualVM umo¾òuje je znovu zapnout, ale proto¾e byly v "
+"ve høe jsou zakázány. NovelVM umo¾òuje je znovu zapnout, ale proto¾e byly v "
 "pùvodní høe odstranìny, ne v¾dycky se zobrazí dobøe a netýkají se právì "
-"øeèených vìt. Toto není chyba ve ResidualVM -- je to problém pùvodních herních "
+"øeèených vìt. Toto není chyba ve NovelVM -- je to problém pùvodních herních "
 "dat."
 
 #: engines/sci/sci.cpp:412
@@ -5002,7 +5002,7 @@ msgid ""
 "market support for General MIDI for this game in their \"General MIDI Utility"
 "\". Please, apply this patch in order to enjoy MIDI music with this game. "
 "Once you have obtained it, you can unpack all of the included *.PAT files in "
-"your ResidualVM extras folder and ResidualVM will add the appropriate patch "
+"your NovelVM extras folder and NovelVM will add the appropriate patch "
 "automatically. Alternatively, you can follow the instructions in the READ.ME "
 "file included in the patch and rename the associated *.PAT file to 4.PAT and "
 "place it in the game folder. Without this patch, General MIDI music for this "
@@ -5012,7 +5012,7 @@ msgstr ""
 "poprodejní podporu General MIDI pro tuto hru pomocí jejich \"General MIDI "
 "Utility\". Prosím pou¾ijte tuto záplatu, abyste pøede¹li problémùm s General "
 "MIDI v této høe. Kdy¾ ji získáte, je tøeba rozbalit v¹echny soubory konèící "
-"na .PAT do dodateèné cesty ResidualVM a program pøíslu¹né záplaty pou¾ije "
+"na .PAT do dodateèné cesty NovelVM a program pøíslu¹né záplaty pou¾ije "
 "automaticky. Nebo mù¾ete postupovat dle pokynù v souboru READ.ME dodávaného "
 "se záplatou a pøejmenovat pøidru¾ený soubor *.PAT na 4.PAT a umístit ho do "
 "slo¾ky se horu. Bez této záplaty bude hudba General MIDI v této høe znít "
@@ -5022,13 +5022,13 @@ msgstr ""
 msgid ""
 "Your game is patched with a fan made script patch. Such patches have been "
 "reported to cause issues, as they modify game scripts extensively. The "
-"issues that these patches fix do not occur in ResidualVM, so you are advised to "
+"issues that these patches fix do not occur in NovelVM, so you are advised to "
 "remove this patch from your game folder in order to avoid having unexpected "
 "errors and/or issues later on."
 msgstr ""
 "Va¹e hra byla upravena komunitní záplatou skriptu. U takovýchto oprav byly "
 "èasto hlá¹eny chyby, proto¾e znaènì mìní herní skripty. Problémy, které mají "
-"tyto záplaty opravit, se ve ResidualVM nevyskytují. Proto vám doporuèujeme, "
+"tyto záplaty opravit, se ve NovelVM nevyskytují. Proto vám doporuèujeme, "
 "abyste v¹echny záplaty tohoto typu odstranili z herní slo¾ky, abyste "
 "pøede¹li pozdìj¹ím výskytùm neoèekávaných chyb a problémù."
 
@@ -5055,15 +5055,15 @@ msgstr ""
 
 #: engines/sci/sci.cpp:879
 msgid ""
-"Characters saved inside ResidualVM are shown automatically. Character files "
-"saved in the original interpreter need to be put inside ResidualVM's saved "
+"Characters saved inside NovelVM are shown automatically. Character files "
+"saved in the original interpreter need to be put inside NovelVM's saved "
 "games directory and a prefix needs to be added depending on which game it "
 "was saved in: 'qfg1-' for Quest for Glory 1, 'qfg2-' for Quest for Glory 2. "
 "Example: 'qfg2-thief.sav'."
 msgstr ""
-"Postavy ulo¾ené v rámci ResidualVM jsou zobrazeny automaticky. Soubory postav "
+"Postavy ulo¾ené v rámci NovelVM jsou zobrazeny automaticky. Soubory postav "
 "ulo¾ené v originálním interpretovi, je tøeba umístit do slo¾ky s ulo¾enými "
-"hrami ResidualVM a musí k nim být pøidána pøedpona, dle hry, z které pocházejí: "
+"hrami NovelVM a musí k nim být pøidána pøedpona, dle hry, z které pocházejí: "
 "'qfg1-' pro Quest for Glory 1, 'qfg2-' pro Quest for Glory 2. Pøíklad: 'qfg2-"
 "thief.sav'."
 
@@ -5093,13 +5093,13 @@ msgstr ""
 msgid ""
 "Your game version appears to be unknown. If this is *NOT* a fan-modified\n"
 "version (in particular, not a fan-made translation), please, report the\n"
-"following data to the ResidualVM team along with the name of the game you "
+"following data to the NovelVM team along with the name of the game you "
 "tried\n"
 "to add and its version, language, etc.:\n"
 msgstr ""
 "Nelze správnì zjistit verzi va¹í hry. Pokud toto *NENÍ* komunitou upravená\n"
 "verze (zvlá¹tì pøeklad od fanou¹kù), prosím nahlaste následující\n"
-"data týmu ResidualVM spolu s názvem hry, kterou jste chtìli pøidat, \n"
+"data týmu NovelVM spolu s názvem hry, kterou jste chtìli pøidat, \n"
 "a její verzí, jazykem, atd.:\n"
 
 #: engines/scumm/detection.cpp:1158
@@ -5795,11 +5795,11 @@ msgstr ""
 msgid ""
 "Usually, Maniac Mansion would start now. But for that to work, the game "
 "files for Maniac Mansion have to be in the 'Maniac' directory inside the "
-"Tentacle game directory, and the game has to be added to ResidualVM."
+"Tentacle game directory, and the game has to be added to NovelVM."
 msgstr ""
 "Normálnì by teï byl spu¹tìn Maniac Mansion. Ale aby toto mohlo fungovat, "
 "musí být soubory se hrou umístìny do slo¾ky 'Maniac' uvnitø slo¾ky se hrou "
-"Tentacle a hra musí být pøidána do ResidualVM."
+"Tentacle a hra musí být pøidána do NovelVM."
 
 #: engines/scumm/players/player_v3m.cpp:129
 msgid ""
@@ -5956,13 +5956,13 @@ msgid "PSX stream cutscene '%s' cannot be played in paletted mode"
 msgstr "Proud videa PSX '%s' nemù¾e být pøehrán v re¾imu palety"
 
 #: engines/sword1/animation.cpp:553 engines/sword2/animation.cpp:449
-msgid "DXA cutscenes found but ResidualVM has been built without zlib"
-msgstr "Videa DXA nalezena, ale ResidualVM byl sestaven bez podpory zlib"
+msgid "DXA cutscenes found but NovelVM has been built without zlib"
+msgstr "Videa DXA nalezena, ale NovelVM byl sestaven bez podpory zlib"
 
 #: engines/sword1/animation.cpp:569 engines/sword2/animation.cpp:465
 msgid ""
-"MPEG-2 cutscenes found but ResidualVM has been built without MPEG-2 support"
-msgstr "Videa MPEG-2 nalezena, ale ResidualVM byl sestaven bez podpory MPEG-2"
+"MPEG-2 cutscenes found but NovelVM has been built without MPEG-2 support"
+msgstr "Videa MPEG-2 nalezena, ale NovelVM byl sestaven bez podpory MPEG-2"
 
 #: engines/sword1/animation.cpp:576 engines/sword2/animation.cpp:474
 #, c-format
@@ -5971,7 +5971,7 @@ msgstr "Video '%s' nenalezeno"
 
 #: engines/sword1/control.cpp:887
 msgid ""
-"ResidualVM found that you have old saved games for Broken Sword 1 that should "
+"NovelVM found that you have old saved games for Broken Sword 1 that should "
 "be converted.\n"
 "The old saved game format is no longer supported, so you will not be able to "
 "load your games if you don't convert them.\n"
@@ -5979,7 +5979,7 @@ msgid ""
 "Press OK to convert them now, otherwise you will be asked again the next "
 "time you start the game.\n"
 msgstr ""
-"ResidualVM zjistil, ¾e máte staré ulo¾ené hry pro Broken Sword 1, které by mìly "
+"NovelVM zjistil, ¾e máte staré ulo¾ené hry pro Broken Sword 1, které by mìly "
 "být pøevedeny.\n"
 "Starý formát ulo¾ených her ji¾ není podporován, tak¾e pokud je nepøevedete, "
 "nebudete moci va¹e hry naèíst.\n"
@@ -6010,8 +6010,8 @@ msgstr "Toto je konec Dema Broken Sword 1"
 
 #: engines/sword2/animation.cpp:429
 msgid ""
-"PSX cutscenes found but ResidualVM has been built without RGB color support"
-msgstr "Videa PSX nalezena, ale ResidualVM byl sestaven bez podpory barev RGB"
+"PSX cutscenes found but NovelVM has been built without RGB color support"
+msgstr "Videa PSX nalezena, ale NovelVM byl sestaven bez podpory barev RGB"
 
 #: engines/sword2/sword2.cpp:79
 msgid "Show object labels"
@@ -6532,7 +6532,7 @@ msgstr ""
 
 #: engines/wintermute/wintermute.cpp:189
 msgid ""
-"This game requires 3D characters support, which is out of ResidualVM's scope."
+"This game requires 3D characters support, which is out of NovelVM's scope."
 msgstr ""
 
 #: engines/xeen/detection.cpp:96
@@ -6765,8 +6765,8 @@ msgstr ""
 #~ msgid "Pastes clipboard contents into fields"
 #~ msgstr "Vlo¾í obsah schránky do polí"
 
-#~ msgid "You will be directed to ResidualVM's page where"
-#~ msgstr "Budete pøesmìrováni na stránku ResidualVM kde"
+#~ msgid "You will be directed to NovelVM's page where"
+#~ msgstr "Budete pøesmìrováni na stránku NovelVM kde"
 
 #~ msgid "you should allow it to access your storage."
 #~ msgstr "budete muset povolit pøístup k va¹emu úlo¾i¹ti."
@@ -6806,8 +6806,8 @@ msgstr ""
 #~ msgid "AdLib Emulator"
 #~ msgstr "AdLib Emulátor"
 
-#~ msgid "Use the original save/load screens instead of the ResidualVM interface"
-#~ msgstr "Pou¾ít pùvodní obrazovky naètení/ulo¾ení místo rozhraní ResidualVM"
+#~ msgid "Use the original save/load screens instead of the NovelVM interface"
+#~ msgstr "Pou¾ít pùvodní obrazovky naètení/ulo¾ení místo rozhraní NovelVM"
 
 #~ msgid "(You can always enable it in the options dialog on the Misc tab)"
 #~ msgstr "(Toto nastavení v¾dy mù¾ete zmìnit ve Volbách v kartì Rùzné)"
@@ -6853,32 +6853,32 @@ msgstr ""
 
 #~ msgid ""
 #~ "Unable to find \"sky.cpt\" file!\n"
-#~ "Please download it from www.ResidualVM.org"
+#~ "Please download it from www.NovelVM.org"
 #~ msgstr ""
 #~ "Nelze nalézt soubor \"sky.cpt\"!\n"
-#~ "Stáhnìte si ho, prosím z www.ResidualVM.org"
+#~ "Stáhnìte si ho, prosím z www.NovelVM.org"
 
 #~ msgid ""
 #~ "The \"sky.cpt\" file has an incorrect size.\n"
-#~ "Please (re)download it from www.ResidualVM.org"
+#~ "Please (re)download it from www.NovelVM.org"
 #~ msgstr ""
 #~ "Soubor \"sky.cpt\" má nesprávnou velikost.\n"
-#~ "Stáhnìte si ho, prosím, (znovu) z www.ResidualVM.org"
+#~ "Stáhnìte si ho, prosím, (znovu) z www.NovelVM.org"
 
 #~ msgid ""
-#~ "You're missing the 'teenagent.dat' file. Get it from the ResidualVM website"
+#~ "You're missing the 'teenagent.dat' file. Get it from the NovelVM website"
 #~ msgstr ""
-#~ "Chybí vám soubor 'teenagent.dat'. Mù¾ete ho získat ze stránky ResidualVM"
+#~ "Chybí vám soubor 'teenagent.dat'. Mù¾ete ho získat ze stránky NovelVM"
 
 #, fuzzy
-#~ msgid "You're missing the 'toon.dat' file. Get it from the ResidualVM website"
+#~ msgid "You're missing the 'toon.dat' file. Get it from the NovelVM website"
 #~ msgstr ""
-#~ "Chybí vám soubor 'teenagent.dat'. Mù¾ete ho získat ze stránky ResidualVM."
+#~ "Chybí vám soubor 'teenagent.dat'. Mù¾ete ho získat ze stránky NovelVM."
 
 #, fuzzy
-#~ msgid "File 'toon.dat' is corrupt. Get it from the ResidualVM website"
+#~ msgid "File 'toon.dat' is corrupt. Get it from the NovelVM website"
 #~ msgstr ""
-#~ "Chybí vám soubor 'teenagent.dat'. Mù¾ete ho získat ze stránky ResidualVM."
+#~ "Chybí vám soubor 'teenagent.dat'. Mù¾ete ho získat ze stránky NovelVM."
 
 #~ msgid "Invalid save file name"
 #~ msgstr "Neplatný název souboru"
@@ -6888,23 +6888,23 @@ msgstr ""
 
 #~ msgid ""
 #~ "Files button in-game shows original savegame dialog rather than the "
-#~ "ResidualVM menu"
+#~ "NovelVM menu"
 #~ msgstr ""
 #~ "Tlaèítko Files ve høe zobrazí pùvodní dialogové okno pro ulo¾ení hry "
-#~ "místo nabídky ResidualVM"
+#~ "místo nabídky NovelVM"
 
 #~ msgid "The game in '%s' seems to be unknown."
 #~ msgstr "Hra v '%s' se zdá být neznámá."
 
 #~ msgid ""
-#~ "Please, report the following data to the ResidualVM team along with name"
-#~ msgstr "Prosím nahlaste následující data týmu ResidualVM spolu se jménem"
+#~ "Please, report the following data to the NovelVM team along with name"
+#~ msgstr "Prosím nahlaste následující data týmu NovelVM spolu se jménem"
 
 #~ msgid "of the game you tried to add and its version/language/etc.:"
 #~ msgstr "hry, kterou jste se pokusili pøidat a její verzi/jazyk/atd.:"
 
-#~ msgid "You have to restart ResidualVM before your changes will take effect."
-#~ msgstr "Pro pou¾ití tìchto nastavení musíte restartovat ResidualVM."
+#~ msgid "You have to restart NovelVM before your changes will take effect."
+#~ msgstr "Pro pou¾ití tìchto nastavení musíte restartovat NovelVM."
 
 #~ msgid "OpenGL (No filtering)"
 #~ msgstr "OpenGL (bez filtrování)"
@@ -6926,16 +6926,16 @@ msgstr ""
 #~ msgstr "Jste si jisti, ¾e chcete odejít?  (A/N)A"
 
 #~ msgid ""
-#~ "Usually, Maniac Mansion would start now. But ResidualVM doesn't do that yet. "
-#~ "To play it, go to 'Add Game' in the ResidualVM start menu and select the "
+#~ "Usually, Maniac Mansion would start now. But NovelVM doesn't do that yet. "
+#~ "To play it, go to 'Add Game' in the NovelVM start menu and select the "
 #~ "'Maniac' directory inside the Tentacle game directory."
 #~ msgstr ""
-#~ "Normálnì by teï Maniac Mansion byl spu¹tìn. Ale ResidualVM toto zatím "
+#~ "Normálnì by teï Maniac Mansion byl spu¹tìn. Ale NovelVM toto zatím "
 #~ "nedìlá. Abyste toto mohli hrát, pøejdìte do 'Pøidat Hru' v poèáteèním "
-#~ "menu ResidualVM a vyberte adresáø 'Maniac' uvnitø herního adresáøe Tentacle."
+#~ "menu NovelVM a vyberte adresáø 'Maniac' uvnitø herního adresáøe Tentacle."
 
-#~ msgid "MPEG-2 cutscenes found but ResidualVM has been built without MPEG-2"
-#~ msgstr "Videa MPEG-2 nalezena, ale ResidualVM byl sestaven bez MPEG-2"
+#~ msgid "MPEG-2 cutscenes found but NovelVM has been built without MPEG-2"
+#~ msgstr "Videa MPEG-2 nalezena, ale NovelVM byl sestaven bez MPEG-2"
 
 #~ msgid ""
 #~ "Turns off General MIDI mapping for games with Roland MT-32 soundtrack"
@@ -6983,8 +6983,8 @@ msgstr ""
 #~ msgid "If this is an original and unmodified version, please report any"
 #~ msgstr "Pokud je toto pùvodní a nezmìnìná verze, ohlaste prosím jakékoli"
 
-#~ msgid "information previously printed by ResidualVM to the team."
-#~ msgstr "pøede¹le vypsané informace od ResidualVM zpátky týmu."
+#~ msgid "information previously printed by NovelVM to the team."
+#~ msgstr "pøede¹le vypsané informace od NovelVM zpátky týmu."
 
 #~ msgid "Discovered %d new games."
 #~ msgstr "Objeveno %d nových her."

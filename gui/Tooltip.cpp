@@ -55,8 +55,8 @@ void Tooltip::setup(Dialog *parent, Widget *widget, int x, int y) {
 	_x = MIN<int16>(parent->_x + x + _xdelta, g_gui.getWidth() - _w - 3);
 	_y = MIN<int16>(parent->_y + y + _ydelta, g_gui.getHeight() - _h - 3);
 #ifdef USE_TTS
-	if (ConfMan.hasKey("tts_enabled", "residualvm") &&
-			ConfMan.getBool("tts_enabled", "residualvm")) {
+	if (ConfMan.hasKey("tts_enabled", "novelvm") &&
+			ConfMan.getBool("tts_enabled", "novelvm")) {
 		Common::TextToSpeechManager *ttsMan = g_system->getTextToSpeechManager();
 		if (ttsMan == nullptr)
 			return;

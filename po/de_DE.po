@@ -1,12 +1,12 @@
-# LANGUAGE translation for ResidualVM.
-# Copyright (C) 2015 ResidualVM Team
-# This file is distributed under the same license as the ResidualVM package.
+# LANGUAGE translation for NovelVM.
+# Copyright (C) 2015 NovelVM Team
+# This file is distributed under the same license as the NovelVM package.
 # Lothar Serra Mari <scummvm@rootfather.de>, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ResidualVM 0.4.0git\n"
-"Report-Msgid-Bugs-To: https://github.com/residualvm/residualvm/issues\n"
+"Project-Id-Version: NovelVM 0.4.0git\n"
+"Report-Msgid-Bugs-To: https://github.com/novelvm/novelvm/issues\n"
 "POT-Creation-Date: 2020-05-09 19:47+0200\n"
 "PO-Revision-Date: 2019-04-27 22:35+0200\n"
 "Last-Translator: Lothar Serra Mari <serra@scummvm.org>\n"
@@ -24,8 +24,8 @@ msgstr ""
 
 #: gui/launcher.cpp:491
 msgid ""
-"ResidualVM could not find any engine capable of running the selected game!"
-msgstr "ResidualVM kann keine für diese Spiel geeignete Engine finden!"
+"NovelVM could not find any engine capable of running the selected game!"
+msgstr "NovelVM kann keine für diese Spiel geeignete Engine finden!"
 
 #: gui/options.cpp:1226
 #, c-format
@@ -64,13 +64,13 @@ msgstr ""
 #: engines/engine.cpp:593
 msgid ""
 "WARNING: The game you are about to start is not yet fully supported by "
-"ResidualVM. As such, it is likely to be unstable, and any saved game you "
-"make might not work in future versions of ResidualVM."
+"NovelVM. As such, it is likely to be unstable, and any saved game you "
+"make might not work in future versions of NovelVM."
 msgstr ""
 "WARNUNG: Das Spiel, welches Sie starten wollen, wird noch nicht vollständig "
-"von ResidualVM unterstützt. Somit ist es wahrscheinlich, dass es instabil "
+"von NovelVM unterstützt. Somit ist es wahrscheinlich, dass es instabil "
 "ist und jegliche Spielstände, die Sie erstellen, könnten in zukünftigen "
-"Versionen von ResidualVM nicht mehr funktionieren."
+"Versionen von NovelVM nicht mehr funktionieren."
 
 #: engines/grim/detection.cpp:57
 msgid "Load user patch (unsupported)"
@@ -78,11 +78,11 @@ msgstr "Benutzer-Patch laden (nicht unterstützt)"
 
 #: engines/grim/detection.cpp:58
 msgid ""
-"Load an user patch. Please note that the ResidualVM-team doesn't provide "
+"Load an user patch. Please note that the NovelVM-team doesn't provide "
 "support for using such patches."
 msgstr ""
 "Lade einen benutzerdefinierten Patch. Bitte beachten Sie, dass das "
-"ResidualVM-Team keine Unterstützung für solche Patches anbietet."
+"NovelVM-Team keine Unterstützung für solche Patches anbietet."
 
 #: engines/grim/detection.cpp:66
 msgid "Show FPS"
@@ -95,12 +95,12 @@ msgstr "Zeigt die aktuelle Bildwiederholrate an, während Sie spielen."
 #: engines/grim/grim.cpp:314
 #, c-format
 msgid ""
-"ResidualVM found some problems with your game data files.\n"
-"Running ResidualVM nevertheless may cause game bugs or even crashes.\n"
+"NovelVM found some problems with your game data files.\n"
+"Running NovelVM nevertheless may cause game bugs or even crashes.\n"
 "Do you still want to run %s?"
 msgstr ""
-"ResidualVM hat Probleme mit Ihren Spiel-Dateien gefunden.\n"
-"Wenn Sie ResidualVM trotzdem starten, kann dies Fehler im Spiel oder "
+"NovelVM hat Probleme mit Ihren Spiel-Dateien gefunden.\n"
+"Wenn Sie NovelVM trotzdem starten, kann dies Fehler im Spiel oder "
 "Abstürze verursachen.\n"
 "Möchten Sie %s trotzdem ausführen?"
 
@@ -121,14 +121,14 @@ msgstr "'%s' ist möglicherweise defekt. MD5: '%s'"
 #, c-format
 msgid ""
 "The game data file %s may be corrupted.\n"
-"If you are sure it is not please provide the ResidualVM team the following "
+"If you are sure it is not please provide the NovelVM team the following "
 "code, along with the file name, the language and a description of your game "
 "version (i.e. dvd-box or jewelcase):\n"
 "%s"
 msgstr ""
 "Die Spiel-Datei %s ist möglicherweise defekt.\n"
 "Wenn Sie sicher sind, dass dies nicht der Fall ist, schicken Sie den "
-"folgenden Code an das ResidualVM-Team, zusammen mit Dateinamen, der Sprache "
+"folgenden Code an das NovelVM-Team, zusammen mit Dateinamen, der Sprache "
 "und einer Beschreibung Ihrer Spiele-Version (z.B. DVD-Box oder Jewelcase):\n"
 "%s"
 
@@ -142,23 +142,23 @@ msgstr "Kann %s nicht zur Überprüfung öffnen"
 msgid ""
 "Could not open the file %s for checking.\n"
 "It may be missing or you may not have the rights to open it.\n"
-"Go to http://wiki.residualvm.org/index.php/Datafiles to see a list of the "
+"Go to http://wiki.novelvm.org/index.php/Datafiles to see a list of the "
 "needed files."
 msgstr ""
 "Die Datei %s kann nicht zur Überprüfung geöffnet werden.\n"
 "Entweder fehlt die Datei, oder Sie haben nicht die nötigen Rechte, um sie zu "
 "öffnen.\n"
-"Auf https://wiki.residualvm.org/index.php/Datafiles finden Sie eine Liste "
+"Auf https://wiki.novelvm.org/index.php/Datafiles finden Sie eine Liste "
 "der benötigten Dateien."
 
 #: engines/grim/md5checkdialog.cpp:42
 msgid ""
-"ResidualVM will now verify the game data files, to make sure you have the "
+"NovelVM will now verify the game data files, to make sure you have the "
 "best gaming experience.\n"
 "This may take a while, please wait.\n"
 "Successive runs will not check them again."
 msgstr ""
-"ResidualVM wird jetzt die Spiel-Dateien überprüfen, um ein optimales "
+"NovelVM wird jetzt die Spiel-Dateien überprüfen, um ein optimales "
 "Spielerlebnis sicherzustellen.\n"
 "Dies wird eine Weile dauern - bitte warten.\n"
 "Zukünftig werden sie nicht mehr überprüft."
@@ -168,12 +168,12 @@ msgstr ""
 msgid ""
 "The original patch of Grim Fandango\n"
 "is missing. Please download it from\n"
-"http://www.residualvm.org/downloads/\n"
+"http://www.novelvm.org/downloads/\n"
 "and put it in the game data files directory"
 msgstr ""
 "Der originale Patch von Grim Fandango\n"
 "ist nicht vorhanden. Bitte laden Sie ihn von\n"
-"https://www.residualvm.org/downloads/\n"
+"https://www.novelvm.org/downloads/\n"
 "herunter und kopieren Sie ihn in das Verzeichnis\n"
 "mit den Spiel-Dateien"
 
@@ -181,27 +181,27 @@ msgstr ""
 #, fuzzy
 msgid ""
 "The original patch of Escape from Monkey Island is missing. \n"
-"Please download it from http://www.residualvm.org/downloads/\n"
+"Please download it from http://www.novelvm.org/downloads/\n"
 "and put it in the game data files directory.\n"
 "Pay attention to download the correct version according to the game's "
 "language"
 msgstr ""
 "Der originale Patch von Escape from Monkey Island ist nicht vorhanden. \n"
-"Bitte Laden Sie ihn von https://www.residualvm.org/downloads/ herunter \n"
+"Bitte Laden Sie ihn von https://www.novelvm.org/downloads/ herunter \n"
 "und kopieren Sie ihn in das Verzeichnis mit den Spiel-Dateien.\n"
 "Achten Sie darauf, dass Sie die zur Spiel-Sprache passende Version "
 "herunterladen"
 
 #: engines/grim/resource.cpp:121
-msgid "residualvm-grim-patch.lab not found"
-msgstr "residualvm-grim-patch.lab nicht gefunden"
+msgid "novelvm-grim-patch.lab not found"
+msgstr "novelvm-grim-patch.lab nicht gefunden"
 
 #: engines/grim/resource.cpp:143
 msgid ""
-"Loading datausr.lab. Please note that the ResidualVM-team doesn't provide "
+"Loading datausr.lab. Please note that the NovelVM-team doesn't provide "
 "support for using such patches"
 msgstr ""
-"Lade datausr.lab. Bitte beachten Sie, dass das ResidualVM-Team keine "
+"Lade datausr.lab. Bitte beachten Sie, dass das NovelVM-Team keine "
 "Unterstützung für solche Patches anbietet"
 
 #: engines/grim/resource.cpp:150
@@ -211,10 +211,10 @@ msgstr "%s nicht gefunden"
 
 #: engines/grim/resource.cpp:181
 msgid ""
-"Loading datausr.m4b. Please note that the ResidualVM-team doesn't provide "
+"Loading datausr.m4b. Please note that the NovelVM-team doesn't provide "
 "support for using such patches"
 msgstr ""
-"Lade datausr.m4b. Bitte beachten Sie, dass das ResidualVM-Team keine "
+"Lade datausr.m4b. Bitte beachten Sie, dass das NovelVM-Team keine "
 "Unterstützung für solche Patches anbietet"
 
 #: engines/grim/resource.cpp:188
@@ -236,13 +236,13 @@ msgid ""
 "patch.\n"
 "Please install the official update corresponding to your game's language.\n"
 "The updates can be downloaded from:\n"
-"http://www.residualvm.org/downloads/"
+"http://www.novelvm.org/downloads/"
 msgstr ""
 "Diese Version von Myst III wurde nicht auf die aktuellste Version "
 "aktualisiert.\n"
 "Bitte installieren Sie das zu Ihrer Sprache passende Update.\n"
 "Die Updates können unter folgender Website heruntergeladen werden:\n"
-"https://www.residualvm.org/downloads/"
+"https://www.novelvm.org/downloads/"
 
 #: engines/stark/detection.cpp:345
 msgid "Load modded assets"
@@ -431,8 +431,8 @@ msgid "No"
 msgstr "Nein"
 
 #: gui/downloaddialog.cpp:137 gui/launcher.cpp:536
-msgid "ResidualVM couldn't open the specified directory!"
-msgstr "ResidualVM konnte das gewählte Verzeichnis nicht öffnen!"
+msgid "NovelVM couldn't open the specified directory!"
+msgstr "NovelVM konnte das gewählte Verzeichnis nicht öffnen!"
 
 #: gui/downloaddialog.cpp:147
 msgid ""
@@ -925,24 +925,24 @@ msgid "~Q~uit"
 msgstr "~B~eenden"
 
 #: gui/launcher.cpp:140 backends/platform/sdl/macosx/appmenu_osx.mm:209
-msgid "Quit ResidualVM"
-msgstr "ResidualVM beenden"
+msgid "Quit NovelVM"
+msgstr "NovelVM beenden"
 
 #: gui/launcher.cpp:141
 msgid "A~b~out..."
 msgstr "Übe~r~..."
 
 #: gui/launcher.cpp:141 backends/platform/sdl/macosx/appmenu_osx.mm:203
-msgid "About ResidualVM"
-msgstr "Über ResidualVM"
+msgid "About NovelVM"
+msgstr "Über NovelVM"
 
 #: gui/launcher.cpp:142
 msgid "~O~ptions..."
 msgstr "~O~ptionen..."
 
 #: gui/launcher.cpp:142
-msgid "Change global ResidualVM options"
-msgstr "Globale ResidualVM-Einstellungen ändern"
+msgid "Change global NovelVM options"
+msgstr "Globale NovelVM-Einstellungen ändern"
 
 #: gui/launcher.cpp:144
 msgid "~S~tart"
@@ -1063,12 +1063,12 @@ msgstr ""
 "Für dieses Spiel wird das Laden aus der Spieleliste heraus nicht unterstützt."
 
 #: gui/launcher.cpp:490
-msgid "ResidualVM could not find any engine capable of running the selected game!"
-msgstr "ResidualVM konnte keine passende Engine für dieses Spiel finden!"
+msgid "NovelVM could not find any engine capable of running the selected game!"
+msgstr "NovelVM konnte keine passende Engine für dieses Spiel finden!"
 
 #: gui/launcher.cpp:555
-msgid "ResidualVM could not find any game in the specified directory!"
-msgstr "ResidualVM konnte im gewählten Verzeichnis kein Spiel finden!"
+msgid "NovelVM could not find any game in the specified directory!"
+msgstr "NovelVM konnte im gewählten Verzeichnis kein Spiel finden!"
 
 #: gui/launcher.cpp:570
 msgid "Unknown variant"
@@ -1517,9 +1517,9 @@ msgid "Theme Path:"
 msgstr "Themes:"
 
 #: gui/options.cpp:1895 gui/options.cpp:1897 gui/options.cpp:1898
-msgid "Specifies path to additional data used by all games or ResidualVM"
+msgid "Specifies path to additional data used by all games or NovelVM"
 msgstr ""
-"Legt das Verzeichnis für zusätzliche Spieldateien für alle Spiele in ResidualVM "
+"Legt das Verzeichnis für zusätzliche Spieldateien für alle Spiele in NovelVM "
 "fest"
 
 #: gui/options.cpp:1904
@@ -1557,8 +1557,8 @@ msgid "GUI language:"
 msgstr "Sprache:"
 
 #: gui/options.cpp:1948
-msgid "Language of ResidualVM GUI"
-msgstr "Sprache der ResidualVM-Oberfläche"
+msgid "Language of NovelVM GUI"
+msgstr "Sprache der NovelVM-Oberfläche"
 
 #: gui/options.cpp:1974
 msgid "Switch the GUI language to the game language"
@@ -1567,12 +1567,12 @@ msgstr "Menüsprache auf Spielsprache einstellen"
 #: gui/options.cpp:1975
 msgid ""
 "When starting a game, change the GUI language to the game language.That way, "
-"if a game uses the ResidualVM save and load dialogs, they are in the same "
+"if a game uses the NovelVM save and load dialogs, they are in the same "
 "language as the game."
 msgstr ""
 "Die Sprache der Menüführung wird beim Starten des Spiels auf die Sprache des "
 "Spiels gestellt. Damit ist sichergestellt, dass bei der Verwendung der "
-"ResidualVM-eigenen \"Speichern und Laden\"-Funktionalität gleiche Sprachen "
+"NovelVM-eigenen \"Speichern und Laden\"-Funktionalität gleiche Sprachen "
 "verwendet werden."
 
 #: gui/options.cpp:1988
@@ -1581,19 +1581,19 @@ msgstr "Verwende betriebssystemeigenen Dateimanager"
 
 #: gui/options.cpp:1989
 msgid ""
-"Use the native system file browser instead of the ResidualVM one to select a "
+"Use the native system file browser instead of the NovelVM one to select a "
 "file or directory."
 msgstr ""
 "Verwende zur Auswahl einer Datei oder eines Verzeichnisses den "
-"betriebssystemeigenen Dateimanager anstelle des ResidualVM-eigenen Auswahlmenüs."
+"betriebssystemeigenen Dateimanager anstelle des NovelVM-eigenen Auswahlmenüs."
 
 #: gui/options.cpp:1996 gui/updates-dialog.cpp:86
 msgid "Update check:"
 msgstr "Updates suchen:"
 
 #: gui/options.cpp:1996
-msgid "How often to check ResidualVM updates"
-msgstr "Legt fest, wie oft nach Aktualisierungen für ResidualVM gesucht wird"
+msgid "How often to check NovelVM updates"
+msgstr "Legt fest, wie oft nach Aktualisierungen für NovelVM gesucht wird"
 
 #: gui/options.cpp:2008
 msgid "Check now"
@@ -1647,9 +1647,9 @@ msgid "Used space:"
 msgstr "Belegter Speicher:"
 
 #: gui/options.cpp:2032
-msgid "Space used by ResidualVM's saved games on this storage"
+msgid "Space used by NovelVM's saved games on this storage"
 msgstr ""
-"Von ResidualVM-Spielständen belegter Speicherplatz auf diesem Cloud-Speicher"
+"Von NovelVM-Spielständen belegter Speicherplatz auf diesem Cloud-Speicher"
 
 #: gui/options.cpp:2035
 msgid "Last sync:"
@@ -1682,12 +1682,12 @@ msgstr "Starte Spielstand-Synchronisation"
 
 #: gui/options.cpp:2044
 msgctxt "lowres"
-msgid "You can download game files from your cloud ResidualVM folder:"
-msgstr "Laden Sie die Spieldateien des ResidualVM-Ordners Ihrer Cloud herunter:"
+msgid "You can download game files from your cloud NovelVM folder:"
+msgstr "Laden Sie die Spieldateien des NovelVM-Ordners Ihrer Cloud herunter:"
 
 #: gui/options.cpp:2046
-msgid "You can download game files from your cloud ResidualVM folder:"
-msgstr "Laden Sie die Spieldateien des ResidualVM-Ordners Ihrer Cloud herunter:"
+msgid "You can download game files from your cloud NovelVM folder:"
+msgstr "Laden Sie die Spieldateien des NovelVM-Ordners Ihrer Cloud herunter:"
 
 #: gui/options.cpp:2047
 msgid "Download game files"
@@ -2001,8 +2001,8 @@ msgid "Unknown Author"
 msgstr "Unbekannter Autor"
 
 #: gui/remotebrowser.cpp:129
-msgid "ResidualVM could not access the directory!"
-msgstr "ResidualVM konnte auf das gewählte Verzeichnis nicht zugreifen!"
+msgid "NovelVM could not access the directory!"
+msgstr "NovelVM konnte auf das gewählte Verzeichnis nicht zugreifen!"
 
 #: gui/saveload-dialog.cpp:343
 msgid "List view"
@@ -2133,11 +2133,11 @@ msgstr "Kopieren der Spielinformationen in die Zwischenablage fehlgeschlagen!"
 
 #: gui/updates-dialog.cpp:49
 msgid ""
-"ResidualVM now supports automatic check for updates\n"
+"NovelVM now supports automatic check for updates\n"
 "which requires access to the Internet. Would you\n"
 "like to enable this feature?"
 msgstr ""
-"ResidualVM unterstützt die automatische Suche nach Aktualisierungen,\n"
+"NovelVM unterstützt die automatische Suche nach Aktualisierungen,\n"
 "wozu ein Internetzugang erforderlich ist.\n"
 "Möchten Sie diese Funktion aktivieren?"
 
@@ -2469,13 +2469,13 @@ msgstr ""
 #: engines/engine.cpp:591
 msgid ""
 "WARNING: The game you are about to start is not yet fully supported by "
-"ResidualVM. As such, it is likely to be unstable, and any saved game you make "
-"might not work in future versions of ResidualVM."
+"NovelVM. As such, it is likely to be unstable, and any saved game you make "
+"might not work in future versions of NovelVM."
 msgstr ""
 "WARNUNG: Das Spiel, welches Sie starten wollen, wird noch nicht vollständig "
-"von ResidualVM unterstützt. Somit ist es wahrscheinlich, dass es instabil ist "
+"von NovelVM unterstützt. Somit ist es wahrscheinlich, dass es instabil ist "
 "und jegliche Spielstände, die Sie erstellen, könnten in zukünftigen "
-"Versionen von ResidualVM nicht mehr funktionieren."
+"Versionen von NovelVM nicht mehr funktionieren."
 
 #: engines/engine.cpp:594 engines/wintermute/wintermute.cpp:190
 msgid "Start anyway"
@@ -2494,12 +2494,12 @@ msgstr "Das Speichern des Spiels ist derzeit nicht möglich"
 msgid ""
 "The game in '%s' seems to be an unknown game variant.\n"
 "\n"
-"Please report the following data to the ResidualVM team at %s along with the "
+"Please report the following data to the NovelVM team at %s along with the "
 "name of the game you tried to add and its version, language, etc.:"
 msgstr ""
 "Das Spiel in '%s' scheint eine unbekannte Version zu sein.\n"
 "\n"
-"Bitte teilen Sie dem ResidualVM-Team unter %s die folgenden Informationen "
+"Bitte teilen Sie dem NovelVM-Team unter %s die folgenden Informationen "
 "zusammen mit dem Namen, der Version und der Sprache des Spiels, welches Sie "
 "hinzufügen möchten, mit:"
 
@@ -3142,10 +3142,10 @@ msgstr "Die Datei konnte nicht gelesen werden!"
 #: backends/networking/sdl_net/handlers/filesajaxpagehandler.cpp:59
 msgid ""
 "The page is not available without the resources. Make sure file wwwroot.zip "
-"from ResidualVM distribution is available in 'themepath'."
+"from NovelVM distribution is available in 'themepath'."
 msgstr ""
 "Ohne zusätzliche Dateien ist diese Seite nicht verfügbar. Stellen Sie "
-"sicher, dass die Datei wwwroot.zip von ResidualVM im Theme-Pfad verfügbar ist."
+"sicher, dass die Datei wwwroot.zip von NovelVM im Theme-Pfad verfügbar ist."
 
 #: backends/networking/sdl_net/handlers/filesajaxpagehandler.cpp:67
 #: backends/networking/sdl_net/handlers/filesajaxpagehandler.cpp:68
@@ -3197,8 +3197,8 @@ msgid "Parent directory"
 msgstr "Übergeordnetes Verzeichnis"
 
 #: backends/networking/sdl_net/handlers/filespagehandler.cpp:218
-msgid "ResidualVM couldn't list the directory you specified."
-msgstr "ResidualVM konnte auf das gewählte Verzeichnis nicht zugreifen."
+msgid "NovelVM couldn't list the directory you specified."
+msgstr "NovelVM konnte auf das gewählte Verzeichnis nicht zugreifen."
 
 #: backends/networking/sdl_net/handlers/filespagehandler.cpp:232
 msgid "Index of"
@@ -3413,8 +3413,8 @@ msgid "Magnify Mode Off"
 msgstr "Vergrößerungs-Modus deaktiviert"
 
 #: backends/platform/ds/arm9/source/dsoptions.cpp:57
-msgid "ResidualVM Main Menu"
-msgstr "ResidualVM-Hauptmenü"
+msgid "NovelVM Main Menu"
+msgstr "NovelVM-Hauptmenü"
 
 #: backends/platform/ds/arm9/source/dsoptions.cpp:63
 msgid "~L~eft handed mode"
@@ -3522,8 +3522,8 @@ msgid "Right Click"
 msgstr "Rechtsklick"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:205
-msgid "Hide ResidualVM"
-msgstr "ResidualVM ausblenden"
+msgid "Hide NovelVM"
+msgstr "NovelVM ausblenden"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:206
 msgid "Hide Others"
@@ -3554,8 +3554,8 @@ msgid "General Information"
 msgstr "Allgemeine Informationen"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:218
-msgid "What's New in ResidualVM"
-msgstr "Neues in ResidualVM"
+msgid "What's New in NovelVM"
+msgstr "Neues in NovelVM"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:220
 msgid "Credits"
@@ -3918,9 +3918,9 @@ msgstr "Originale Spielstand-Menüs"
 #: engines/neverhood/detection.cpp:178 engines/sci/detection.cpp:458
 #: engines/sherlock/detection.cpp:76 engines/toltecs/detection.cpp:229
 #: engines/zvision/detection_tables.h:51
-msgid "Use the original save/load screens instead of the ResidualVM ones"
+msgid "Use the original save/load screens instead of the NovelVM ones"
 msgstr ""
-"Verwende die originalen Speicher- und Lade-Menüs statt der Menüs von ResidualVM"
+"Verwende die originalen Speicher- und Lade-Menüs statt der Menüs von NovelVM"
 
 #: engines/agi/detection.cpp:157
 msgid "Use an alternative palette"
@@ -4126,7 +4126,7 @@ msgstr ""
 
 #: engines/drascula/saveload.cpp:47
 msgid ""
-"ResidualVM found that you have old saved games for Drascula that should be "
+"NovelVM found that you have old saved games for Drascula that should be "
 "converted.\n"
 "The old saved game format is no longer supported, so you will not be able to "
 "load your games if you don't convert them.\n"
@@ -4134,7 +4134,7 @@ msgid ""
 "Press OK to convert them now, otherwise you will be asked again the next "
 "time you start the game.\n"
 msgstr ""
-"ResidualVM hat erkannt, dass Sie alte Spielstände von Drascula haben, die "
+"NovelVM hat erkannt, dass Sie alte Spielstände von Drascula haben, die "
 "umgewandelt werden sollten.\n"
 "Das alte Speicherformat wird nicht mehr unterstützt, daher können Sie diese "
 "Spielstände unkonvertiert nicht laden.\n"
@@ -4653,7 +4653,7 @@ msgid ""
 "\n"
 "%s %s\n"
 "\n"
-"Do you wish to use this saved game file with ResidualVM?\n"
+"Do you wish to use this saved game file with NovelVM?\n"
 "\n"
 msgstr ""
 "Die folgende originale Spielstand-Datei wurde in Ihrem Spieleverzeichnis "
@@ -4661,7 +4661,7 @@ msgstr ""
 "\n"
 "%s %s\n"
 "\n"
-"Möchten Sie diese Spielstand-Datei in ResidualVM verwenden?\n"
+"Möchten Sie diese Spielstand-Datei in NovelVM verwenden?\n"
 "\n"
 
 #: engines/kyra/gui/saveload_eob.cpp:602
@@ -4678,15 +4678,15 @@ msgstr ""
 #, c-format
 msgid ""
 "%d original saved games have been successfully imported into\n"
-"ResidualVM. If you want to manually import original saved game later you will\n"
-"need to open the ResidualVM debug console and use the command "
+"NovelVM. If you want to manually import original saved game later you will\n"
+"need to open the NovelVM debug console and use the command "
 "'import_savefile'.\n"
 "\n"
 msgstr ""
-"%d originale Spielstand-Dateien wurden erfolgreich in ResidualVM\n"
+"%d originale Spielstand-Dateien wurden erfolgreich in NovelVM\n"
 "importiert. Wenn Sie weitere Spielstand-Dateien später manuell importieren "
 "wollen,\n"
-"müssen Sie die ResidualVM-Entwicklerkonsole öffnen und den Befehl "
+"müssen Sie die NovelVM-Entwicklerkonsole öffnen und den Befehl "
 "\"import_savefile\" verwenden.\n"
 "\n"
 
@@ -4980,13 +4980,13 @@ msgid ""
 "At this point, the Riven Demo would\n"
 "ask if you would like to open a web browser\n"
 "to bring you to the Red Orb store to buy\n"
-"the game. ResidualVM cannot do that and\n"
+"the game. NovelVM cannot do that and\n"
 "the site no longer exists."
 msgstr ""
 "An dieser Stelle würde die Riven-Demo\n"
 "Sie fragen, ob Sie einen Web-Browser\n"
 "öffnen möchten, um das Spiel direkt von\n"
-"Red Orb zu kaufen. ResidualVM kann dies nicht.\n"
+"Red Orb zu kaufen. NovelVM kann dies nicht.\n"
 "Die Webseite existiert nicht mehr."
 
 #: engines/neverhood/detection.cpp:184
@@ -5035,14 +5035,14 @@ msgstr "Spiel wird gespeichert..."
 
 #: engines/parallaction/saveload.cpp:269
 msgid ""
-"ResidualVM found that you have old saved games for Nippon Safes that should be "
+"NovelVM found that you have old saved games for Nippon Safes that should be "
 "renamed.\n"
 "The old names are no longer supported, so you will not be able to load your "
 "games if you don't convert them.\n"
 "\n"
 "Press OK to convert them now, otherwise you will be asked next time.\n"
 msgstr ""
-"ResidualVM hat erkannt, dass Sie alte Spielstände von Nippon Safes haben, die "
+"NovelVM hat erkannt, dass Sie alte Spielstände von Nippon Safes haben, die "
 "umbenannt werden sollten.\n"
 "Die alten Dateinamen werden nicht mehr unterstützt, daher können Sie diese "
 "Spielstände unkonvertiert nicht laden.\n"
@@ -5051,17 +5051,17 @@ msgstr ""
 "gefragt, wenn Sie nächstes Mal dieses Spiel starten.\n"
 
 #: engines/parallaction/saveload.cpp:316
-msgid "ResidualVM successfully converted all your saved games."
-msgstr "ResidualVM hat alle Speicherstände erfolgreich umgewandelt."
+msgid "NovelVM successfully converted all your saved games."
+msgstr "NovelVM hat alle Speicherstände erfolgreich umgewandelt."
 
 #: engines/parallaction/saveload.cpp:318
 msgid ""
-"ResidualVM printed some warnings in your console window and can't guarantee all "
+"NovelVM printed some warnings in your console window and can't guarantee all "
 "your files have been converted.\n"
 "\n"
 "Please report to the team."
 msgstr ""
-"ResidualVM hat ein paar Warnungen im Konsolenfenster ausgegeben und kann nicht "
+"NovelVM hat ein paar Warnungen im Konsolenfenster ausgegeben und kann nicht "
 "gewährleisten, dass alle Speicherstände umgewandelt wurden.\n"
 "\n"
 "Bitte berichten Sie dies dem Team auf Englisch."
@@ -5278,16 +5278,16 @@ msgstr ""
 #: engines/sci/sci.cpp:388
 msgid ""
 "Subtitles are enabled, but subtitling in King's Quest 7 was unfinished and "
-"disabled in the release version of the game. ResidualVM allows the subtitles to "
+"disabled in the release version of the game. NovelVM allows the subtitles to "
 "be re-enabled, but because they were removed from the original game, they do "
 "not always render properly or reflect the actual game speech. This is not a "
-"ResidualVM bug -- it is a problem with the game's assets."
+"NovelVM bug -- it is a problem with the game's assets."
 msgstr ""
 "Untertitel sind aktiviert, die Untertitel in King's Quest 7 wurden jedoch "
-"nicht fertiggestellt und im veröffentlichten Spiel deaktiviert. ResidualVM "
+"nicht fertiggestellt und im veröffentlichten Spiel deaktiviert. NovelVM "
 "erlaubt, dass die Untertitel trotzdem aktiviert werden. Da diese jedoch im "
 "Originalspiel entfernt wurden, werden sie nicht immer korrekt dargestellt "
-"oder weichen von der Sprachausgabe ab. Dies ist kein Fehler in ResidualVM -- es "
+"oder weichen von der Sprachausgabe ab. Dies ist kein Fehler in NovelVM -- es "
 "ist ein Problem mit den Spieldaten."
 
 #: engines/sci/sci.cpp:412
@@ -5296,7 +5296,7 @@ msgid ""
 "market support for General MIDI for this game in their \"General MIDI Utility"
 "\". Please, apply this patch in order to enjoy MIDI music with this game. "
 "Once you have obtained it, you can unpack all of the included *.PAT files in "
-"your ResidualVM extras folder and ResidualVM will add the appropriate patch "
+"your NovelVM extras folder and NovelVM will add the appropriate patch "
 "automatically. Alternatively, you can follow the instructions in the READ.ME "
 "file included in the patch and rename the associated *.PAT file to 4.PAT and "
 "place it in the game folder. Without this patch, General MIDI music for this "
@@ -5306,8 +5306,8 @@ msgstr ""
 "Spiel Unterstützung von General MIDI über das \"General MIDI Utility\" an, "
 "welches separat erhältlich war. Bitte installieren Sie diesen Patch, um MIDI-"
 "Musik in diesem Spiel zu erleben. Nachdem Sie den Patch erhalten haben, "
-"können Sie alle darin befindlichen *.PAT-Dateien in Ihr ResidualVM Extra-"
-"Verzeichnis entpacken. ResidualVM wird den passenden Patch dann automatisch "
+"können Sie alle darin befindlichen *.PAT-Dateien in Ihr NovelVM Extra-"
+"Verzeichnis entpacken. NovelVM wird den passenden Patch dann automatisch "
 "auswählen. Alternativ können Sie die Anweisungen in der READ.ME-Datei "
 "befolgen, die mit dem Patch mitgeliefert wird, und die zugehörige *.PAT-"
 "Datei in 4.PAT umbenennen und im Spiele-Verzeichnis ablegen. Ohne diesen "
@@ -5317,14 +5317,14 @@ msgstr ""
 msgid ""
 "Your game is patched with a fan made script patch. Such patches have been "
 "reported to cause issues, as they modify game scripts extensively. The "
-"issues that these patches fix do not occur in ResidualVM, so you are advised to "
+"issues that these patches fix do not occur in NovelVM, so you are advised to "
 "remove this patch from your game folder in order to avoid having unexpected "
 "errors and/or issues later on."
 msgstr ""
 "Ihr Spiel wurde mit einem von Fans erstellten Patch gepatcht. Solche Patches "
 "sind dafür bekannt, Fehler zu verursachen, da sie die Spiel-Skripte "
 "umfangreich verändern. Die Fehler, die durch solche Patches behoben werden "
-"treten nicht in ResidualVM auf, weshalb Sie diesen Patch aus Ihrem Spiel-"
+"treten nicht in NovelVM auf, weshalb Sie diesen Patch aus Ihrem Spiel-"
 "Verzeichnis entfernen sollten, um unerwartete Fehler und/oder Probleme zu "
 "verhindern."
 
@@ -5359,15 +5359,15 @@ msgstr ""
 
 #: engines/sci/sci.cpp:879
 msgid ""
-"Characters saved inside ResidualVM are shown automatically. Character files "
-"saved in the original interpreter need to be put inside ResidualVM's saved "
+"Characters saved inside NovelVM are shown automatically. Character files "
+"saved in the original interpreter need to be put inside NovelVM's saved "
 "games directory and a prefix needs to be added depending on which game it "
 "was saved in: 'qfg1-' for Quest for Glory 1, 'qfg2-' for Quest for Glory 2. "
 "Example: 'qfg2-thief.sav'."
 msgstr ""
-"Charaktere, die in ResidualVM gespeichert wurden, werden automatisch angezeigt. "
+"Charaktere, die in NovelVM gespeichert wurden, werden automatisch angezeigt. "
 "Charakter-Dateien, die im originalen Interpreter gespeichert wurden, müssen "
-"in das Spielstand-Verzeichnis von ResidualVM kopiert und mit einem Präfix "
+"in das Spielstand-Verzeichnis von NovelVM kopiert und mit einem Präfix "
 "ergänzt werden, der davon abhängig ist, in welchem Spiel die Charaktere "
 "erstellt wurden: 'qfg1-' für Quest for Glory 1, 'qfg2-' für Quest for Glory "
 "2. Beispiel: 'qfg2-thief.sav'."
@@ -5414,13 +5414,13 @@ msgstr ""
 msgid ""
 "Your game version appears to be unknown. If this is *NOT* a fan-modified\n"
 "version (in particular, not a fan-made translation), please, report the\n"
-"following data to the ResidualVM team along with the name of the game you "
+"following data to the NovelVM team along with the name of the game you "
 "tried\n"
 "to add and its version, language, etc.:\n"
 msgstr ""
 "Ihre Spiel-Version ist offenbar unbekannt. Wenn es sich *NICHT* um eine\n"
 "von Fans modifizierte Version (z.B. eine Fan-Übersetzung) handelt, teilen\n"
-"Sie bitte dem ResidualVM-Team die folgenden Daten sowie den Namen des Spiels,\n"
+"Sie bitte dem NovelVM-Team die folgenden Daten sowie den Namen des Spiels,\n"
 "welches Sie hinzufügen wollten, dessen Version, Sprache usw. mit:\n"
 
 #: engines/scumm/detection.cpp:1158
@@ -6118,11 +6118,11 @@ msgstr ""
 msgid ""
 "Usually, Maniac Mansion would start now. But for that to work, the game "
 "files for Maniac Mansion have to be in the 'Maniac' directory inside the "
-"Tentacle game directory, and the game has to be added to ResidualVM."
+"Tentacle game directory, and the game has to be added to NovelVM."
 msgstr ""
-"Normalerweise würde jetzt Maniac Mansion starten. ResidualVM kann das jedoch "
+"Normalerweise würde jetzt Maniac Mansion starten. NovelVM kann das jedoch "
 "noch nicht. Um dieses Spiel zu spielen, klicken Sie auf \"Spiel hinzufügen\" "
-"im Startmenü von ResidualVM und wählen das Verzeichnis \"Maniac\" im "
+"im Startmenü von NovelVM und wählen das Verzeichnis \"Maniac\" im "
 "Verzeichnis dieses Spiels aus."
 
 #: engines/scumm/players/player_v3m.cpp:129
@@ -6288,16 +6288,16 @@ msgstr ""
 "PSX-Zwischensequenz \"%s\" kann in Palettenmodus nicht wiedergegeben werden"
 
 #: engines/sword1/animation.cpp:553 engines/sword2/animation.cpp:449
-msgid "DXA cutscenes found but ResidualVM has been built without zlib"
+msgid "DXA cutscenes found but NovelVM has been built without zlib"
 msgstr ""
-"DXA-Zwischensequenzen gefunden, aber ResidualVM wurde ohne Zlib-Unterstützung "
+"DXA-Zwischensequenzen gefunden, aber NovelVM wurde ohne Zlib-Unterstützung "
 "erstellt"
 
 #: engines/sword1/animation.cpp:569 engines/sword2/animation.cpp:465
 msgid ""
-"MPEG-2 cutscenes found but ResidualVM has been built without MPEG-2 support"
+"MPEG-2 cutscenes found but NovelVM has been built without MPEG-2 support"
 msgstr ""
-"MPEG-2-Zwischensequenzen gefunden, aber ResidualVM wurde ohne Unterstützung für "
+"MPEG-2-Zwischensequenzen gefunden, aber NovelVM wurde ohne Unterstützung für "
 "MPEG-2-Videos erstellt"
 
 #: engines/sword1/animation.cpp:576 engines/sword2/animation.cpp:474
@@ -6307,7 +6307,7 @@ msgstr "Zwischensequenz \"%s\" nicht gefunden"
 
 #: engines/sword1/control.cpp:887
 msgid ""
-"ResidualVM found that you have old saved games for Broken Sword 1 that should "
+"NovelVM found that you have old saved games for Broken Sword 1 that should "
 "be converted.\n"
 "The old saved game format is no longer supported, so you will not be able to "
 "load your games if you don't convert them.\n"
@@ -6315,7 +6315,7 @@ msgid ""
 "Press OK to convert them now, otherwise you will be asked again the next "
 "time you start the game.\n"
 msgstr ""
-"ResidualVM hat erkannt, dass Sie alte Spielstände von Baphomets Fluch 1 haben, "
+"NovelVM hat erkannt, dass Sie alte Spielstände von Baphomets Fluch 1 haben, "
 "die umgewandelt werden sollten.\n"
 "Das alte Speicherformat wird nicht mehr unterstützt, daher können Sie diese "
 "Spielstände unkonvertiert nicht laden.\n"
@@ -6346,9 +6346,9 @@ msgstr "Das ist das Ende der Demo von Broken Sword 1 (Baphomets Fluch 1)"
 
 #: engines/sword2/animation.cpp:429
 msgid ""
-"PSX cutscenes found but ResidualVM has been built without RGB color support"
+"PSX cutscenes found but NovelVM has been built without RGB color support"
 msgstr ""
-"PSX-Zwischensequenzen gefunden, aber ResidualVM wurde ohne Unterstützung für "
+"PSX-Zwischensequenzen gefunden, aber NovelVM wurde ohne Unterstützung für "
 "RGB-Farben erstellt"
 
 #: engines/sword2/sword2.cpp:79
@@ -6843,10 +6843,10 @@ msgstr "Dieses Spiel benötigt die FoxTail-Engine, welche nicht eingebaut ist."
 
 #: engines/wintermute/wintermute.cpp:189
 msgid ""
-"This game requires 3D characters support, which is out of ResidualVM's scope."
+"This game requires 3D characters support, which is out of NovelVM's scope."
 msgstr ""
 "Dieses Spiel benötigt die Unterstützung von 3D-Charakteren, welche nicht in "
-"ResidualVM enthalten ist."
+"NovelVM enthalten ist."
 
 #: engines/xeen/detection.cpp:96
 msgid "Show item costs in standard inventory mode"
@@ -6914,71 +6914,71 @@ msgstr ""
 "Spielstände bis zu Version %d. Sie benötigen eine aktualisierte Version der "
 "Engine, um diesen Spielstand zu verwenden."
 
-#~ msgid "Quit ResidualVM"
-#~ msgstr "ResidualVM beenden"
+#~ msgid "Quit NovelVM"
+#~ msgstr "NovelVM beenden"
 
-#~ msgid "About ResidualVM"
-#~ msgstr "Über ResidualVM"
+#~ msgid "About NovelVM"
+#~ msgstr "Über NovelVM"
 
-#~ msgid "Change global ResidualVM options"
-#~ msgstr "Globale ResidualVM-Optionen ändern"
+#~ msgid "Change global NovelVM options"
+#~ msgstr "Globale NovelVM-Optionen ändern"
 
-#~ msgid "Language of ResidualVM GUI"
-#~ msgstr "Sprache der ResidualVM-Oberfläche"
+#~ msgid "Language of NovelVM GUI"
+#~ msgstr "Sprache der NovelVM-Oberfläche"
 
 #~ msgid ""
 #~ "When starting a game, change the GUI language to the game language.That "
-#~ "way, if a game uses the ResidualVM save and load dialogs, they are in the "
+#~ "way, if a game uses the NovelVM save and load dialogs, they are in the "
 #~ "same language as the game."
 #~ msgstr ""
 #~ "Die Sprache der Menüführung wird beim Starten des Spiels auf die Sprache "
 #~ "des Spiels gestellt. Damit ist sichergestellt, dass bei der Verwendung "
-#~ "der ResidualVM-eigenen \"Speichern und Laden\"-Funktionalität gleiche "
+#~ "der NovelVM-eigenen \"Speichern und Laden\"-Funktionalität gleiche "
 #~ "Sprachen verwendet werden."
 
 #~ msgid ""
-#~ "Use the native system file browser instead of the ResidualVM one to "
+#~ "Use the native system file browser instead of the NovelVM one to "
 #~ "select a file or directory."
 #~ msgstr ""
 #~ "Verwende zur Auswahl einer Datei oder eines Verzeichnisses den "
-#~ "betriebssystemeigenen Dateimanager anstelle des ResidualVM-eigenen "
+#~ "betriebssystemeigenen Dateimanager anstelle des NovelVM-eigenen "
 #~ "Auswahlmenüs."
 
-#~ msgid "How often to check ResidualVM updates"
-#~ msgstr "Wie oft ResidualVM nach Updates suchen soll"
+#~ msgid "How often to check NovelVM updates"
+#~ msgstr "Wie oft NovelVM nach Updates suchen soll"
 
 #~ msgid ""
-#~ "ResidualVM now supports automatic check for updates\n"
+#~ "NovelVM now supports automatic check for updates\n"
 #~ "which requires access to the Internet. Would you\n"
 #~ "like to enable this feature?"
 #~ msgstr ""
-#~ "ResidualVM kann automatisch nach Aktualisierungen suchen\n"
+#~ "NovelVM kann automatisch nach Aktualisierungen suchen\n"
 #~ "was einen Zugang zum Internet erfordert.\n"
 #~ "Möchten Sie diese Funktion aktivieren?"
 
 #~ msgid ""
 #~ "The game in '%s' seems to be an unknown game variant.\n"
 #~ "\n"
-#~ "Please report the following data to the ResidualVM team at %s along with "
+#~ "Please report the following data to the NovelVM team at %s along with "
 #~ "the name of the game you tried to add and its version, language, etc.:"
 #~ msgstr ""
 #~ "Das Spiel in '%s' scheint eine unbekannte Version zu sein.\n"
 #~ "\n"
-#~ "Bitte teilen Sie dem ResidualVM-Team unter %s die folgenden Informationen "
+#~ "Bitte teilen Sie dem NovelVM-Team unter %s die folgenden Informationen "
 #~ "zusammen mit dem Namen, der Version und der Sprache des Spiels, welches "
 #~ "Sie hinzufügen möchten, mit:"
 
-#~ msgid "Hide ResidualVM"
-#~ msgstr "ResidualVM verstecken"
+#~ msgid "Hide NovelVM"
+#~ msgstr "NovelVM verstecken"
 
-#~ msgid "What's New in ResidualVM"
-#~ msgstr "Neues in ResidualVM"
+#~ msgid "What's New in NovelVM"
+#~ msgstr "Neues in NovelVM"
 
-#~ msgid "ResidualVM couldn't open the specified directory!"
-#~ msgstr "ResidualVM kann das gewählte Verzeichnis nicht öffnen!"
+#~ msgid "NovelVM couldn't open the specified directory!"
+#~ msgstr "NovelVM kann das gewählte Verzeichnis nicht öffnen!"
 
-#~ msgid "ResidualVM could not find any game in the specified directory!"
-#~ msgstr "ResidualVM kann kein Spiel im gewählten Verzeichnis finden!"
+#~ msgid "NovelVM could not find any game in the specified directory!"
+#~ msgstr "NovelVM kann kein Spiel im gewählten Verzeichnis finden!"
 
 #~ msgid "Software Rendering"
 #~ msgstr "Software-Rendering"
@@ -6986,14 +6986,14 @@ msgstr ""
 #~ msgid "Enable software rendering"
 #~ msgstr "Software-Rendering aktivieren"
 
-#~ msgid "You have to restart ResidualVM before your changes will take effect."
+#~ msgid "You have to restart NovelVM before your changes will take effect."
 #~ msgstr ""
-#~ "Sie müssen ResidualVM neu starten, damit die Änderungen wirksam werden."
+#~ "Sie müssen NovelVM neu starten, damit die Änderungen wirksam werden."
 
 #~ msgid ""
-#~ "Please, report the following data to the ResidualVM team along with name"
+#~ "Please, report the following data to the NovelVM team along with name"
 #~ msgstr ""
-#~ "Bitte melden Sie die folgenden Daten an das ResidualVM-Team, zusammen mit "
+#~ "Bitte melden Sie die folgenden Daten an das NovelVM-Team, zusammen mit "
 #~ "dem Namen"
 
 #~ msgid "C-Pad Sensitivity:"
@@ -7172,8 +7172,8 @@ msgstr ""
 #~ msgid "Pastes clipboard contents into fields"
 #~ msgstr "Fügt den Inhalt der Zwischenablage in die Felder ein"
 
-#~ msgid "You will be directed to ResidualVM's page where"
-#~ msgstr "Sie werden zur Webseite von ResidualVM weitergeleitet,"
+#~ msgid "You will be directed to NovelVM's page where"
+#~ msgstr "Sie werden zur Webseite von NovelVM weitergeleitet,"
 
 #~ msgid "you should allow it to access your storage."
 #~ msgstr "wo Sie den Zugriff auf die Cloud erlauben sollten."
@@ -7212,10 +7212,10 @@ msgstr ""
 #~ msgid "AdLib Emulator"
 #~ msgstr "AdLib-Emulator"
 
-#~ msgid "Use the original save/load screens instead of the ResidualVM interface"
+#~ msgid "Use the original save/load screens instead of the NovelVM interface"
 #~ msgstr ""
 #~ "Verwendet die originalen Menüs zum Speichern und Laden statt der von "
-#~ "ResidualVM"
+#~ "NovelVM"
 
 #~ msgid "(You can always enable it in the options dialog on the Misc tab)"
 #~ msgstr ""
@@ -7286,43 +7286,43 @@ msgstr ""
 
 #~ msgid ""
 #~ "Unable to find \"sky.cpt\" file!\n"
-#~ "Please download it from www.ResidualVM.org"
+#~ "Please download it from www.NovelVM.org"
 #~ msgstr ""
 #~ "Konnte \"sky.cpt\" nicht finden!\n"
 #~ "Bitte laden Sie die Datei von\n"
-#~ "www.ResidualVM.org herunter"
+#~ "www.NovelVM.org herunter"
 
 #~ msgid ""
 #~ "The \"sky.cpt\" file has an incorrect size.\n"
-#~ "Please (re)download it from www.ResidualVM.org"
+#~ "Please (re)download it from www.NovelVM.org"
 #~ msgstr ""
 #~ "Die Datei \"sky.cpt\" hat eine ungültige Größe.\n"
 #~ "Bitte laden Sie diese Datei (erneut) von\n"
-#~ "www.ResidualVM.org herunter"
+#~ "www.NovelVM.org herunter"
 
 #~ msgid ""
-#~ "You're missing the 'teenagent.dat' file. Get it from the ResidualVM website"
+#~ "You're missing the 'teenagent.dat' file. Get it from the NovelVM website"
 #~ msgstr ""
 #~ "Ihnen fehlt die Datei \"teenagent.dat\". Laden Sie sich diese von der "
-#~ "ResidualVM-Website unter https://www.ResidualVM.org herunter"
+#~ "NovelVM-Website unter https://www.NovelVM.org herunter"
 
-#~ msgid "You're missing the 'toon.dat' file. Get it from the ResidualVM website"
+#~ msgid "You're missing the 'toon.dat' file. Get it from the NovelVM website"
 #~ msgstr ""
-#~ "Ihnen fehlt die Datei \"toon.dat\". Laden Sie sich diese von der ResidualVM-"
-#~ "Website unter https://www.ResidualVM.org herunter"
+#~ "Ihnen fehlt die Datei \"toon.dat\". Laden Sie sich diese von der NovelVM-"
+#~ "Website unter https://www.NovelVM.org herunter"
 
-#~ msgid "File 'toon.dat' is corrupt. Get it from the ResidualVM website"
+#~ msgid "File 'toon.dat' is corrupt. Get it from the NovelVM website"
 #~ msgstr ""
-#~ "Die Datei \"toon.dat\" ist defekt. Laden Sie diese von der ResidualVM-"
+#~ "Die Datei \"toon.dat\" ist defekt. Laden Sie diese von der NovelVM-"
 #~ "Website herunter"
 
 #~ msgid ""
 #~ "File 'toon.dat' is wrong version. Expected %d.%d but got %d.%d. Get it "
-#~ "from the ResidualVM website"
+#~ "from the NovelVM website"
 #~ msgstr ""
 #~ "Falsche Version der Datei 'toon.dat'. %d.%d wurde erwartet, aber %d.%d "
-#~ "erhalten. Laden Sie die Datei von der ResidualVM-Website unter http://www."
-#~ "ResidualVM.org herunter"
+#~ "erhalten. Laden Sie die Datei von der NovelVM-Website unter http://www."
+#~ "NovelVM.org herunter"
 
 #~ msgid "Invalid save file name"
 #~ msgstr "Ungültiger Spielstandname"
@@ -7332,18 +7332,18 @@ msgstr ""
 
 #~ msgid ""
 #~ "Files button in-game shows original savegame dialog rather than the "
-#~ "ResidualVM menu"
+#~ "NovelVM menu"
 #~ msgstr ""
 #~ "Dateien-Schaltfläche im Spiel zeigt originales Spielstand-Menü statt dem "
-#~ "von ResidualVM."
+#~ "von NovelVM."
 
 #~ msgid "The game in '%s' seems to be unknown."
 #~ msgstr "Das Spiel im Verzeichnis \"%s\" scheint nicht bekannt zu sein."
 
 #~ msgid ""
-#~ "Please, report the following data to the ResidualVM team along with name"
+#~ "Please, report the following data to the NovelVM team along with name"
 #~ msgstr ""
-#~ "Bitte geben Sie die folgenden Daten auf Englisch an das ResidualVM-Team "
+#~ "Bitte geben Sie die folgenden Daten auf Englisch an das NovelVM-Team "
 #~ "weiter sowie"
 
 #~ msgid "of the game you tried to add and its version/language/etc.:"
@@ -7351,9 +7351,9 @@ msgstr ""
 #~ "den Namen des Spiels, das Sie hinzufügen wollten, als auch die Version/"
 #~ "Sprache/usw.:"
 
-#~ msgid "You have to restart ResidualVM before your changes will take effect."
+#~ msgid "You have to restart NovelVM before your changes will take effect."
 #~ msgstr ""
-#~ "Sie müssen ResidualVM neu starten, damit die Änderungen wirksam werden."
+#~ "Sie müssen NovelVM neu starten, damit die Änderungen wirksam werden."
 
 #~ msgid "OpenGL (No filtering)"
 #~ msgstr "OpenGL (ohne Filter)"
@@ -7370,9 +7370,9 @@ msgstr ""
 #~ msgid "Enable undithering in EGA games"
 #~ msgstr "Aktiviert die Aufhebung der Fehlerdiffusion in EGA-Spielen."
 
-#~ msgid "MPEG-2 cutscenes found but ResidualVM has been built without MPEG-2"
+#~ msgid "MPEG-2 cutscenes found but NovelVM has been built without MPEG-2"
 #~ msgstr ""
-#~ "MPEG-2-Zwischensequenzen gefunden, aber ResidualVM wurde ohne Unterstützung "
+#~ "MPEG-2-Zwischensequenzen gefunden, aber NovelVM wurde ohne Unterstützung "
 #~ "für MPEG-2-Videos erstellt."
 
 #~ msgid ""

@@ -91,7 +91,7 @@ public:
 		// Music plugins
 		// TODO: Use defines to disable or enable each MIDI driver as a
 		// static/dynamic plugin, like it's done for the engines
-/*ResidualVM: disabled belows
+/*NovelVM: disabled belows
 		LINK_PLUGIN(AUTO)
 		LINK_PLUGIN(NULL)
 		#if defined(WIN32) && !defined(__SYMBIAN32__)

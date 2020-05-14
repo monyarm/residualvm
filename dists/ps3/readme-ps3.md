@@ -1,17 +1,17 @@
 Prerequisites
 =============
 - A homebrew enabled PlayStation 3 console. As of now that mostly means having a custom firmware installed. Obtaining and installing such a software is out of the scope of this document. Sorry, but you're on your own for that one.
-- At least one ResidualVM supported game. The list of compatible games can be seen here: https://www.residualvm.org/compatibility/
+- At least one NovelVM supported game. The list of compatible games can be seen here: https://www.novelvm.org/compatibility/
 - An USB drive.
 
 Installing
 ==========
-From a computer, download the installable package of the PS3 port from ResidualVM's main site. It should be a .pkg file. Copy it to an USB drive.
-After having plugged the USB drive to you PS3, the installation package should appear in the XMB under the "Games > Install Package" menu. Installing it copies ResidualVM and its dependencies to your PS3's hard drive. It also adds the "Games > PlayStation 3 > ResidualVM" XMB entry which is to be used to launch ResidualVM.
+From a computer, download the installable package of the PS3 port from NovelVM's main site. It should be a .pkg file. Copy it to an USB drive.
+After having plugged the USB drive to you PS3, the installation package should appear in the XMB under the "Games > Install Package" menu. Installing it copies NovelVM and its dependencies to your PS3's hard drive. It also adds the "Games > PlayStation 3 > NovelVM" XMB entry which is to be used to launch NovelVM.
 
 Configuring and playing games
 =============================
-The user manual describes how to add games to ResidualVM and launch them : https://wiki.residualvm.org/index.php/Running_ResidualVM
+The user manual describes how to add games to NovelVM and launch them : https://wiki.novelvm.org/index.php/Running_NovelVM
 
 PlayStation 3 Specifics
 =======================
@@ -32,7 +32,7 @@ Joypad button mapping
 - R1 + Square     => Space ' '
 - Triangle        => Escape (used to skip cutscenes)
 - R1 + Triangle   => Return
-- Start           => ResidualVM's global in-game menu
+- Start           => NovelVM's global in-game menu
 - Select          => Toggle virtual keyboard
 - R1 + Select     => AGI predictive input dialog
 
@@ -42,13 +42,13 @@ Unauthorized distribution of an installable package with non freeware games incl
 
 Building from source
 ====================
-This port of ResidualVM to the PS3 is based on SDL2. It uses the open source SDK PSL1GHT.
+This port of NovelVM to the PS3 is based on SDL2. It uses the open source SDK PSL1GHT.
 
 The dependencies needed to build it are :
 
 - The toolchain from https://github.com/ps3dev/ps3toolchain
 - SDL from https://bitbucket.org/bgK/sdl_psl1ght
-- ResidualVM from https://github.com/residualvm/residualvm
+- NovelVM from https://github.com/novelvm/novelvm
 
 Once all the dependencies are correctly setup, an installable package can be obtained from source by issuing the following command :
 

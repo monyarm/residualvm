@@ -1,5 +1,5 @@
-product residualvm
-    id "ResidualVM 0.4.0git"
+product novelvm
+    id "NovelVM 0.4.0git"
     image sw
         id "software"
         version 18
@@ -7,7 +7,7 @@ product residualvm
         subsys eoe default
             id "execution only env"
             replaces self
-            exp residualvm.sw.eoe
+            exp novelvm.sw.eoe
         endsubsys
     endimage
     image man
@@ -15,9 +15,9 @@ product residualvm
         version 18
         order 9999
         subsys readme default
-            id "residualvm documentation"
+            id "novelvm documentation"
             replaces self
-            exp residualvm.man.readme
+            exp novelvm.man.readme
         endsubsys
     endimage
 endproduct

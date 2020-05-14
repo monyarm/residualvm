@@ -23,13 +23,13 @@
 #include "backends/modular-backend.h"
 
 #include "backends/graphics/graphics.h"
-#include "backends/graphics/resvm-graphics.h" // ResidualVM specific
+#include "backends/graphics/resvm-graphics.h" // NovelVM specific
 #include "backends/mutex/mutex.h"
 #include "gui/EventRecorder.h"
 
 #include "audio/mixer.h"
 #include "graphics/pixelformat.h"
-#include "graphics/pixelbuffer.h" // ResidualVM specific:
+#include "graphics/pixelbuffer.h" // NovelVM specific:
 
 ModularBackend::ModularBackend()
 	:
@@ -129,17 +129,17 @@ Common::List<Graphics::PixelFormat> ModularBackend::getSupportedFormats() const 
 
 #endif
 
-// ResidualVM specific method
+// NovelVM specific method
 void ModularBackend::setupScreen(uint screenW, uint screenH, bool fullscreen, bool accel3d) {
 	_graphicsManager->setupScreen(screenW, screenH, fullscreen, accel3d);
 }
 
-// ResidualVM specific method
+// NovelVM specific method
 Graphics::PixelBuffer ModularBackend::getScreenPixelBuffer() {
 	return _graphicsManager->getScreenPixelBuffer();
 }
 
-// ResidualVM specific method
+// NovelVM specific method
 void ModularBackend::suggestSideTextures(Graphics::Surface *left, Graphics::Surface *right) {
 	_graphicsManager->suggestSideTextures(left, right);
 }
@@ -251,7 +251,7 @@ bool ModularBackend::showMouse(bool visible) {
 	return _graphicsManager->showMouse(visible);
 }
 
-// ResidualVM specific method
+// NovelVM specific method
 bool ModularBackend::lockMouse(bool visible) {
 	return _graphicsManager->lockMouse(visible);
 }

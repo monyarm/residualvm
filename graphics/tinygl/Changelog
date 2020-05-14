@@ -1,8 +1,8 @@
-This is a modified version of TinyGL 0.4 intended for use with ResidualVM.
+This is a modified version of TinyGL 0.4 intended for use with NovelVM.
 The changes made from the original version of TinyGL 0.4 are:
 
 * Changed file extensions from *.c to *.cpp to compile as C++.
-* Included only files needed by ResidualVM.
+* Included only files needed by NovelVM.
 * Changed include paths in source files.
 * Added needed type casts and fixes for proper compile.
 * Added 't/T' prefix to prevent OpenGL name clashes.
@@ -20,7 +20,7 @@ The changes made from the original version of TinyGL 0.4 are:
 	* struct structName instead of typedef struct {} structName;
 	* pass-by-const-reference instead of by-value when possible
 * Changed the math-functions to use const-pointers if possible.
-* Reformatted the source to use the same code-formatting conventions as the rest of ResidualVM
+* Reformatted the source to use the same code-formatting conventions as the rest of NovelVM
   (indentation-wise, not variable-naming wise)
 * Refactored all the maths code in a C++ fashion, removed some unused functions.
 * Heavily refactored the triangle and line drawing routines
@@ -32,4 +32,4 @@ The changes made from the original version of TinyGL 0.4 are:
 * Implemented a system that enables to defer draw calls.
 * Implemented dirty rectangle system that prevents redrawing of unchanged region of the screen.
 
-For more information refer to log changes in github: https://github.com/residualvm/residualvm
+For more information refer to log changes in github: https://github.com/novelvm/novelvm

@@ -1,4 +1,4 @@
-package org.residualvm.residualvm;
+package org.novelvm.novelvm;
 
 import android.view.InputDevice;
 import android.view.MotionEvent;
@@ -10,7 +10,7 @@ import android.view.View;
  */
 public class MouseHelper {
 	private View.OnHoverListener _listener;
-	private ResidualVM _residualvm;
+	private NovelVM _novelvm;
 	private long _rmbGuardTime;
 	private boolean _rmbPressed;
 	private boolean _lmbPressed;
@@ -33,8 +33,8 @@ public class MouseHelper {
 	 */
 	public static void checkHoverAvailable() {}
 
-	public MouseHelper(ResidualVM residualvm) {
-		_residualvm = residualvm;
+	public MouseHelper(NovelVM novelvm) {
+		_novelvm = novelvm;
 		_listener = createListener();
 	}
 
@@ -70,7 +70,7 @@ public class MouseHelper {
 	}
 
 	public boolean onMouseEvent(MotionEvent e, boolean hover) {
-		_residualvm.pushEvent(ResidualVMEvents.JE_MOUSE_MOVE, (int)e.getX(), (int)e.getY(), 0, 0, 0, 0);
+		_novelvm.pushEvent(NovelVMEvents.JE_MOUSE_MOVE, (int)e.getX(), (int)e.getY(), 0, 0, 0, 0);
 
 		int buttonState = e.getButtonState();
 
@@ -84,14 +84,14 @@ public class MouseHelper {
 		if (lmbDown) {
 			if (!_lmbPressed) {
 				// left mouse button was pressed just now
-				_residualvm.pushEvent(ResidualVMEvents.JE_LMB_DOWN, (int)e.getX(), (int)e.getY(), e.getButtonState(), 0, 0, 0);
+				_novelvm.pushEvent(NovelVMEvents.JE_LMB_DOWN, (int)e.getX(), (int)e.getY(), e.getButtonState(), 0, 0, 0);
 			}
 
 			_lmbPressed = true;
 		} else {
 			if (_lmbPressed) {
 				// left mouse button was released just now
-				_residualvm.pushEvent(ResidualVMEvents.JE_LMB_UP, (int)e.getX(), (int)e.getY(), e.getButtonState(), 0, 0, 0);
+				_novelvm.pushEvent(NovelVMEvents.JE_LMB_UP, (int)e.getX(), (int)e.getY(), e.getButtonState(), 0, 0, 0);
 			}
 
 			_lmbPressed = false;
@@ -101,14 +101,14 @@ public class MouseHelper {
 		if (rmbDown) {
 			if (!_rmbPressed) {
 				// right mouse button was pressed just now
-				_residualvm.pushEvent(ResidualVMEvents.JE_RMB_DOWN, (int)e.getX(), (int)e.getY(), e.getButtonState(), 0, 0, 0);
+				_novelvm.pushEvent(NovelVMEvents.JE_RMB_DOWN, (int)e.getX(), (int)e.getY(), e.getButtonState(), 0, 0, 0);
 			}
 
 			_rmbPressed = true;
 		} else {
 			if (_rmbPressed) {
 				// right mouse button was released just now
-				_residualvm.pushEvent(ResidualVMEvents.JE_RMB_UP, (int)e.getX(), (int)e.getY(), e.getButtonState(), 0, 0, 0);
+				_novelvm.pushEvent(NovelVMEvents.JE_RMB_UP, (int)e.getX(), (int)e.getY(), e.getButtonState(), 0, 0, 0);
 				_rmbGuardTime = System.currentTimeMillis();
 			}
 
@@ -119,14 +119,14 @@ public class MouseHelper {
 		if (mmbDown) {
 			if (!_mmbPressed) {
 				// middle mouse button was pressed just now
-				_residualvm.pushEvent(ResidualVMEvents.JE_MMB_DOWN, (int)e.getX(), (int)e.getY(), e.getButtonState(), 0, 0, 0);
+				_novelvm.pushEvent(NovelVMEvents.JE_MMB_DOWN, (int)e.getX(), (int)e.getY(), e.getButtonState(), 0, 0, 0);
 			}
 
 			_mmbPressed = true;
 		} else {
 			if (_mmbPressed) {
 				// middle mouse button was released just now
-				_residualvm.pushEvent(ResidualVMEvents.JE_MMB_UP, (int)e.getX(), (int)e.getY(), e.getButtonState(), 0, 0, 0);
+				_novelvm.pushEvent(NovelVMEvents.JE_MMB_UP, (int)e.getX(), (int)e.getY(), e.getButtonState(), 0, 0, 0);
 			}
 
 			_mmbPressed = false;

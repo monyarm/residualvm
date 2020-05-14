@@ -124,7 +124,7 @@ static void openFromBundle(NSString *file) {
 }
 
 - (void)openUserManual {
-	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://www.residualvm.org/documentation"]];
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://www.novelvm.org/documentation"]];
 }
 
 - (void)openCredits {
@@ -199,15 +199,15 @@ void replaceApplicationMenuItems() {
 	CFStringEncoding stringEncoding = kCFStringEncodingASCII;
 #endif
 
-	NSMenu *appleMenu = addMenu("ResidualVM", kCFStringEncodingASCII, @"", @selector(setAppleMenu:));
+	NSMenu *appleMenu = addMenu("NovelVM", kCFStringEncodingASCII, @"", @selector(setAppleMenu:));
 	if (appleMenu) {
-		addMenuItem(_("About ResidualVM"), stringEncoding, nil, @selector(orderFrontStandardAboutPanel:), @"", appleMenu);
+		addMenuItem(_("About NovelVM"), stringEncoding, nil, @selector(orderFrontStandardAboutPanel:), @"", appleMenu);
 		[appleMenu addItem:[NSMenuItem separatorItem]];
-		addMenuItem(_("Hide ResidualVM"), stringEncoding, nil, @selector(hide:), @"h", appleMenu);
+		addMenuItem(_("Hide NovelVM"), stringEncoding, nil, @selector(hide:), @"h", appleMenu);
 		addMenuItem(_("Hide Others"), stringEncoding, nil, @selector(hideOtherApplications:), @"h", appleMenu, (NSEventModifierFlagOption|NSEventModifierFlagCommand));
 		addMenuItem(_("Show All"), stringEncoding, nil, @selector(unhideAllApplications:), @"", appleMenu);
 		[appleMenu addItem:[NSMenuItem separatorItem]];
-		addMenuItem(_("Quit ResidualVM"), stringEncoding, nil, @selector(terminate:), @"q", appleMenu);
+		addMenuItem(_("Quit NovelVM"), stringEncoding, nil, @selector(terminate:), @"q", appleMenu);
 	}
 
 	NSMenu *windowMenu = addMenu(_("Window"), stringEncoding, @"", @selector(setWindowsMenu:));
@@ -223,7 +223,7 @@ void replaceApplicationMenuItems() {
 		addMenuItem(_("User Manual"), stringEncoding, delegate, @selector(openUserManual), @"", helpMenu);
 		[helpMenu addItem:[NSMenuItem separatorItem]];
 		addMenuItem(_("General Information"), stringEncoding, delegate, @selector(openReadme), @"", helpMenu);
-		addMenuItem(_("What's New in ResidualVM"), stringEncoding, delegate, @selector(openNews), @"", helpMenu);
+		addMenuItem(_("What's New in NovelVM"), stringEncoding, delegate, @selector(openNews), @"", helpMenu);
 		[helpMenu addItem:[NSMenuItem separatorItem]];
 		addMenuItem(_("Credits"), stringEncoding, delegate, @selector(openCredits), @"", helpMenu);
 		addMenuItem(_("GPL License"), stringEncoding, delegate, @selector(openLicenseGPL), @"", helpMenu);

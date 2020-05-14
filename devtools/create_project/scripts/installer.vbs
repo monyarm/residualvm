@@ -62,7 +62,7 @@ Sub CreateInstaller()
 	' Build command line
 	Dim commandLine : commandLine = """" & innoPath & "\iscc.exe"" /Qp" & _
 	                                " /O""" & targetFolder & """" & _
-	                                " """ & rootFolder & "\dists\win32\residualvm.iss"""
+	                                " """ & rootFolder & "\dists\win32\novelvm.iss"""
 
 	Dim oExec: Set oExec = WshShell.Exec(commandline)
 	If Err.Number <> 0 Then

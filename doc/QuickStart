@@ -4,13 +4,13 @@ you need here and can understand a bit of English, try to look at the
 English README file.
 
 For more information, compatibility lists, details on donating, the
-latest release, progress reports and more, please visit the ResidualVM home
-page at: https://www.residualvm.org/
+latest release, progress reports and more, please visit the NovelVM home
+page at: https://www.novelvm.org/
 
 Table of Contents:
 ------------------
 1.0) Introduction
- * 1.1 About ResidualVM
+ * 1.1 About NovelVM
  * 1.2 Quick start
 2.0) Contact
  * 2.1 Reporting Bugs
@@ -18,24 +18,24 @@ Table of Contents:
 1.0) Introduction:
 ---- -------------
 
-1.1) About ResidualVM:
+1.1) About NovelVM:
 ---- --------------
-ResidualVM is a program which allows you to run certain classic 3D
+NovelVM is a program which allows you to run certain classic 3D
 games, provided you already have their data files.
-ResidualVM just replaces the executables shipped with the game,
+NovelVM just replaces the executables shipped with the game,
 allowing you to play them on systems for which they were never designed!
 
-At this time ResidualVM is still under heavy development. Be aware that
+At this time NovelVM is still under heavy development. Be aware that
 whilst we attempt to make sure that many games can be completed with few
 major bugs, crashes can happen and we offer no warranty. That being
 said.
 
 1.2) Quick start:
 ---- ------------
-For the impatient among you, here is how to get ResidualVM running in five
+For the impatient among you, here is how to get NovelVM running in five
 simple steps.
 
-1. Download ResidualVM from <https://www.residualvm.org/downloads.php> and
+1. Download NovelVM from <https://www.novelvm.org/downloads.php> and
 install it.
 
 2. Create a directory on your hard drive and copy the game datafiles
@@ -43,15 +43,15 @@ from the original media to this directory. Repeat this for every game
 you want to play (it is better to use a separate directory for each
 game).
 
-3. Start ResidualVM.
+3. Start NovelVM.
 
-If at this stage ResidualVM appears in English instead of <translated
+If at this stage NovelVM appears in English instead of <translated
 language>, do as follow to change the language:
 - Click on 'Options'.
 - Click on the right arrow in the tab bar and select the 'Misc' tab.
 - Select "<translated language>" in the 'GUI Language' box and click on
   'OK'.
-- Confirm the message box that pops-up, click on 'Quit' to quit ResidualVM
+- Confirm the message box that pops-up, click on 'Quit' to quit NovelVM
   and then restart the program.
 
 Now choose 'Add game', select the directory with the game datafiles (do
@@ -63,7 +63,7 @@ though). Confirm the dialog.
 
 5. Select the game you want to play in the list, and press 'Start'.
 
-ResidualVM remembers the games that you add. So if you close ResidualVM, the
+NovelVM remembers the games that you add. So if you close NovelVM, the
 next time you start it again the list of game will contain all the games
 you previously added. You can therefore go directly to step 5, unless
 you want to add more games.
@@ -71,15 +71,15 @@ you want to add more games.
 Hint: If you want to add multiple games in one go, try pressing and
 holding the shift key before clicking 'Add game' -- its label will
 change to 'Mass Add' and if you press it, you are again asked to select
-a directory, only this time ResidualVM will search through all
+a directory, only this time NovelVM will search through all
 subdirectoriess for supported games.
 
 
 2.0) Contact:
 ---- --------
-The easiest way to contact the ResidualVM team is by submitting bug reports
-(see section 2.1) or by using our forums at https://forums.residualvm.org .
-You can also join chat with us on IRC (#residualvm on irc.freenode.net) .
+The easiest way to contact the NovelVM team is by submitting bug reports
+(see section 2.1) or by using our forums at https://forums.novelvm.org .
+You can also join chat with us on IRC (#novelvm on irc.freenode.net) .
 Please do not ask us to support an unsupported game -- read the FAQ on our
 web site first. Note that the official language of the forum and chat is
 English and no other languages should be used.
@@ -93,7 +93,7 @@ reproducible, and still occurs in the latest git/Daily build version.
 Also check the known problems list (below) and the compatibility list on
 our website for that game, to ensure the issue is not already known:
 
-  https://www.residualvm.org/compatibility/
+  https://www.novelvm.org/compatibility/
 
 Please do not report bugs for games that are not listed as being
 completeable in the 'Supported Games' section, or compatibility list. We
@@ -101,7 +101,7 @@ completeable in the 'Supported Games' section, or compatibility list. We
 
 Please include the following information:
 
-  - ResidualVM version (PLEASE test the latest git/Daily build)
+  - NovelVM version (PLEASE test the latest git/Daily build)
   - Bug details, including instructions on reproducing
   - Language of game (English, German, ...)
   - Version of game (talkie, floppy, ...)

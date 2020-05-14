@@ -1,6 +1,6 @@
-/* ResidualVM - A 3D game interpreter
+/* NovelVM - A 3D game interpreter
  *
- * ResidualVM is the legal property of its developers, whose names
+ * NovelVM is the legal property of its developers, whose names
  * are too numerous to list here. Please refer to the COPYRIGHT
  * file distributed with this source distribution.
  *
@@ -249,12 +249,12 @@ void SurfaceSdlGraphicsManager::updateScreen() {
 }
 
 int16 SurfaceSdlGraphicsManager::getHeight() const {
-	// ResidualVM specific
+	// NovelVM specific
 	return _subScreen->h;
 }
 
 int16 SurfaceSdlGraphicsManager::getWidth() const {
-	// ResidualVM specific
+	// NovelVM specific
 	return _subScreen->w;
 }
 
@@ -390,7 +390,7 @@ void SurfaceSdlGraphicsManager::closeOverlay() {
 }
 
 void SurfaceSdlGraphicsManager::warpMouse(int x, int y) {
-	//ResidualVM specific
+	//NovelVM specific
 	// Scale from game coordinates to screen coordinates
 	x = (x * _gameRect.getWidth()) / _subScreen->w;
 	y = (y * _gameRect.getHeight()) / _subScreen->h;
@@ -438,7 +438,7 @@ SDL_Surface *SurfaceSdlGraphicsManager::SDL_SetVideoMode(int width, int height, 
 	if ((flags & SDL_FULLSCREEN) != 0) {
 		// On Linux/X11, when toggling to fullscreen, the window manager saves
 		// the window size to be able to restore it when going back to windowed mode.
-		// If the user configured ResidualVM to start in fullscreen mode, we first
+		// If the user configured NovelVM to start in fullscreen mode, we first
 		// create a window and then toggle it to fullscreen to give the window manager
 		// a chance to save the window size. That way if the user switches back
 		// to windowed mode, the window manager has a window size to apply instead

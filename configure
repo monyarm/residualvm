@@ -133,7 +133,7 @@ done
 #
 # Default settings
 #
-#ResidualVM defaults: sdlnet=no libcurl=no flac=no seq_midi=no sndio=no timidity=no
+#NovelVM defaults: sdlnet=no libcurl=no flac=no seq_midi=no sndio=no timidity=no
 # a52=no theoradec=no faad=no fluidsynth=no mt32emu=no lua=no build_scalers=no
 # build_hq_scalers=no nuked_opl=no tts=no osxdockplugin=no
 #
@@ -182,7 +182,7 @@ _fribidi=auto
 _debug_build=auto
 _release_build=auto
 _optimizations=auto
-_use_cxx11=no
+_use_cxx11=yes
 _verbose_build=no
 _text_console=no
 _mt32emu=no
@@ -224,8 +224,8 @@ _as="as"
 _dwp=dwp
 _windres=windres
 _stagingpath="staging"
-_win32path="c:/residualvm"
-_amigaospath="Games:ResidualVM"
+_win32path="c:/novelvm"
+_amigaospath="Games:NovelVM"
 _staticlibpath=
 _xcodetoolspath=
 _sparklepath=
@@ -263,7 +263,7 @@ add_feature freetype2 "FreeType2" "_freetype2"
 add_feature highres "high resolution" "_highres"
 add_feature mad "MAD" "_mad"
 add_feature jpeg "JPEG" "_jpeg"
-add_feature opengl_shaders "OpenGL with shaders" "_opengl_shaders" #ResidualVM specific
+add_feature opengl_shaders "OpenGL with shaders" "_opengl_shaders" #NovelVM specific
 add_feature png "PNG" "_png"
 add_feature theoradec "libtheoradec" "_theoradec"
 add_feature vorbis "Vorbis file support" "_vorbis _tremor"
@@ -277,15 +277,15 @@ add_feature fribidi "FriBidi" "_fribidi"
 # Like GNU autoconf, we distinguish datadir and datarootdir
 # to make it possible to change e.g. the location of the
 # man pages independently of that of the engine data files,
-# which are placed inside $datadir/residualvm
+# which are placed inside $datadir/novelvm
 prefix=NONE
 exec_prefix=NONE
 bindir='${exec_prefix}/bin'
 libdir='${exec_prefix}/lib'
 datarootdir='${prefix}/share'
-datadir='${datarootdir}/residualvm'
+datadir='${datarootdir}/novelvm'
 mandir='${datarootdir}/man'
-docdir='${datarootdir}/doc/residualvm'
+docdir='${datarootdir}/doc/novelvm'
 #localedir='${datarootdir}/locale'
 
 # For cross compiling
@@ -298,7 +298,7 @@ _host_alias=""
 _port_mk="ports.mk"
 
 # Use temp files in the build directory
-TMPO=./residualvm-conf
+TMPO=./novelvm-conf
 TMPC=${TMPO}.cpp
 TMPLOG=config.log
 
@@ -972,9 +972,9 @@ Fine tuning of the installation directories:
   --libdir=DIR            object code libraries [EPREFIX/lib]
   --datarootdir=DIR       read-only arch.-independent data root [PREFIX/share]
   --datadir=DIR           read-only architecture-independent data
-                          [DATAROOTDIR/residualvm]
+                          [DATAROOTDIR/novelvm]
   --mandir=DIR            man documentation [DATAROOTDIR/man]
-  --docdir=DIR            documentation root [DATAROOTDIR/doc/residualvm]
+  --docdir=DIR            documentation root [DATAROOTDIR/doc/novelvm]
 
 Special configuration feature:
   --host=HOST             cross-compile to target HOST (arm-linux, ...)
@@ -1156,7 +1156,7 @@ done # for parm in ...
 #
 # If we're not showing help, greet the user and start the log file
 #
-echo "Running ResidualVM configure..."
+echo "Running NovelVM configure..."
 echo "Configure run on" `date` > $TMPLOG
 cat >> $TMPLOG <<EOF
 Invocation command line was:
@@ -1182,12 +1182,12 @@ for ac_option in $@; do
 	--enable-dependency-tracking)                        ;;
 	# End of ignored options.
 	--enable-static)              _static_build=yes      ;;
-#	--disable-16bit)              _16bit=no              ;; #ResidualVM: not supported
-#	--enable-highres)             _highres=yes           ;; #ResidualVM: not supported
-#	--disable-highres)            _highres=no            ;; #ResidualVM: not supported
+#	--disable-16bit)              _16bit=no              ;; #NovelVM: not supported
+#	--enable-highres)             _highres=yes           ;; #NovelVM: not supported
+#	--disable-highres)            _highres=no            ;; #NovelVM: not supported
 	--disable-savegame-timestamp) _savegame_timestamp=no ;;
-#	--disable-scalers)            _build_scalers=no      ;; #ResidualVM: not supported
-#	--disable-hq-scalers)         _build_hq_scalers=no   ;; #ResidualVM: not supported
+#	--disable-scalers)            _build_scalers=no      ;; #NovelVM: not supported
+#	--disable-hq-scalers)         _build_hq_scalers=no   ;; #NovelVM: not supported
 	--enable-alsa)                _alsa=yes              ;;
 	--disable-alsa)               _alsa=no               ;;
 	--enable-seq-midi)            _seq_midi=yes          ;;
@@ -1249,33 +1249,33 @@ for ac_option in $@; do
 	--disable-updates)            _updates=no            ;;
 	--enable-libunity)            _libunity=yes          ;;
 	--disable-libunity)           _libunity=no           ;;
-	--enable-glew)                _glew=yes              ;; #ResidualVM specific option
-	--disable-glew)               _glew=no               ;; #ResidualVM specific option
-	--enable-opengl)              _opengl=yes            ;; #ResidualVM specific option
-	--disable-opengl)             _opengl=no             ;; #ResidualVM specific option
-	--enable-opengl-shaders)      _opengl_shaders=yes    ;; #ResidualVM specific option
-	--disable-opengl-shaders).    _opengl_shaders=no     ;; #ResidualVM specific option
-	--force-opengles2)            _opengles2=yes         ;; #ResidualVM specific option
+	--enable-glew)                _glew=yes              ;; #NovelVM specific option
+	--disable-glew)               _glew=no               ;; #NovelVM specific option
+	--enable-opengl)              _opengl=yes            ;; #NovelVM specific option
+	--disable-opengl)             _opengl=no             ;; #NovelVM specific option
+	--enable-opengl-shaders)      _opengl_shaders=yes    ;; #NovelVM specific option
+	--disable-opengl-shaders).    _opengl_shaders=no     ;; #NovelVM specific option
+	--force-opengles2)            _opengles2=yes         ;; #NovelVM specific option
 	--enable-bink)                _bink=yes              ;;
 	--disable-bink)               _bink=no               ;;
 #	--opengl-mode=*)
 #		_opengl_mode=`echo $ac_option | cut -d '=' -f 2`
-#		;; #ResidualVM: not supported
+#		;; #NovelVM: not supported
 	--enable-verbose-build)      _verbose_build=yes      ;;
 	--enable-plugins)            _dynamic_modules=yes    ;;
 	--default-dynamic)           _plugins_default=dynamic;;
-#	--enable-mt32emu)            _mt32emu=yes            ;; #ResidualVM: not supported
-#	--disable-mt32emu)           _mt32emu=no             ;; #ResidualVM: not supported
-#	--enable-lua)                _lua=yes                ;; #ResidualVM: not supported
-#	--disable-lua)               _lua=no                 ;; #ResidualVM: not supported
-#	--enable-nuked-opl)          _nuked_opl=yes          ;; #ResidualVM: not supported
-#	--disable-nuked-opl)         _nuked_opl=no           ;; #ResidualVM: not supported
+#	--enable-mt32emu)            _mt32emu=yes            ;; #NovelVM: not supported
+#	--disable-mt32emu)           _mt32emu=no             ;; #NovelVM: not supported
+#	--enable-lua)                _lua=yes                ;; #NovelVM: not supported
+#	--disable-lua)               _lua=no                 ;; #NovelVM: not supported
+#	--enable-nuked-opl)          _nuked_opl=yes          ;; #NovelVM: not supported
+#	--disable-nuked-opl)         _nuked_opl=no           ;; #NovelVM: not supported
 	--enable-translation)        _translation=yes        ;;
 	--disable-translation)       _translation=no         ;;
 	--enable-vkeybd)             _vkeybd=yes             ;;
 	--disable-vkeybd)            _vkeybd=no              ;;
-#	--enable-eventrecorder)      _eventrec=yes           ;; #ResidualVM: not supported
-#	--disable-eventrecorder)     _eventrec=no            ;; #ResidualVM: not supported
+#	--enable-eventrecorder)      _eventrec=yes           ;; #NovelVM: not supported
+#	--disable-eventrecorder)     _eventrec=no            ;; #NovelVM: not supported
 	--enable-text-console)       _text_console=yes       ;;
 	--disable-text-console)      _text_console=no        ;;
 	--enable-iconv)              _iconv=yes              ;;
@@ -1320,7 +1320,7 @@ for ac_option in $@; do
 		TREMOR_CFLAGS="-I$arg/include"
 		TREMOR_LIBS="-L$arg/lib"
 		;;
-#	--with-ieee1284-prefix=*) ;; #ResidualVM: not supported
+#	--with-ieee1284-prefix=*) ;; #NovelVM: not supported
 #		arg=`echo $ac_option | cut -d '=' -f 2`
 #		IEEE1284_CFLAGS="-I$arg/include"
 #		IEEE1284_LIBS="-L$arg/lib"
@@ -1389,13 +1389,13 @@ for ac_option in $@; do
 		SDL_NET_CFLAGS="-I$arg/include"
 		SDL_NET_LIBS="-L$arg/lib"
 		;;
-#ResidualVM: specific option
+#NovelVM: specific option
 	--with-opengl-prefix=*)
 		arg=`echo $ac_option | cut -d '=' -f 2`
 		OPENGL_CFLAGS="-I$arg/include"
 		OPENGL_LIBS="-L$arg/lib"
 		;;
-#ResidualVM: specific option
+#NovelVM: specific option
 	--with-glew-prefix=*)
 		arg=`echo $ac_option | cut -d '=' -f 2`
 		GLEW_CFLAGS="-I$arg/include"
@@ -1612,7 +1612,7 @@ arm-*riscos)
 	_host_os=riscos
 	_host_cpu=arm
 	_host_alias=$_host
-	datarootdir='/\<ResidualVM\$$Dir\>'
+	datarootdir='/\<NovelVM\$$Dir\>'
 	datadir='${datarootdir}/data'
 	docdir='${datarootdir}/docs'
 	;;
@@ -1682,13 +1682,13 @@ maemo)
 	# The prefix is always the same on Maemo so we hardcode the default
 	# here. It is still possible to define a custom prefix which is
 	# needed when packaging the app with a user-specific app ID.
-	test "x$prefix" = xNONE && prefix=/opt/residualvm
+	test "x$prefix" = xNONE && prefix=/opt/novelvm
 	# Maemo apps are installed into app-specific directories. The
 	# default directory structure of ScummVM makes no sense here so we
 	# hardcode Maemo specific directories here.
 	datarootdir='${prefix}/share'
-	datadir=/opt/residualvm/share
-	docdir='${datarootdir}/doc/residualvm'
+	datadir=/opt/novelvm/share
+	docdir='${datarootdir}/doc/novelvm'
 	;;
 n64)
 	_host_os=n64
@@ -1780,7 +1780,7 @@ webos)
 	# The prefix is always the same on WebOS so we hardcode the default
 	# here. It is still possible to define a custom prefix which is
 	# needed when packaging the app with a user-specific app ID.
-	test "x$prefix" = xNONE && prefix=/media/cryptofs/apps/usr/palm/applications/org.residualvm.residualvm
+	test "x$prefix" = xNONE && prefix=/media/cryptofs/apps/usr/palm/applications/org.novelvm.novelvm
 	# WebOS apps are installed into app-specific directories. The
 	# default directory structure of ScummVM makes no sense here so we
 	# hardcode WebOS specific directories here.
@@ -2905,7 +2905,7 @@ EOF
 		# append_var DEFINES "-D__USE_MINGW_ANSI_STDIO=0"  # Modern MinGW does not need it
 		append_var LDFLAGS "-static-libgcc -static-libstdc++"
 		append_var LIBS "-lmingw32 -lwinmm -lgdi32"
-		append_var OBJS "dists/residualvm.o"
+		append_var OBJS "dists/novelvm.o"
 		add_line_to_config_mk 'WIN32 = 1'
 		_port_mk="backends/platform/sdl/win32/win32.mk"
 		;;
@@ -3369,7 +3369,7 @@ if test -n "$_host"; then
 			append_var LDFLAGS "-mno-crt0"
 			append_var LDFLAGS "-L$N64SDK/hkz-libn64"
 			append_var LDFLAGS "-L$N64SDK/lib"
-			append_var LDFLAGS "-T n64ld_cpp.x -Xlinker -Map -Xlinker residualvm.map"
+			append_var LDFLAGS "-T n64ld_cpp.x -Xlinker -Map -Xlinker novelvm.map"
 			_backend="n64"
 			_mt32emu=no
 			_build_scalers=no
@@ -4053,8 +4053,8 @@ POST_OBJS_FLAGS := -Wl,-no-whole-archive
 # (otherwise unnecessary) dependency from plugins back
 # to the main libscummvm.so.
 _mak_plugins='
-PLUGIN_EXTRA_DEPS = libresidualvm.so
-PLUGIN_LDFLAGS  += $(LDFLAGS) -L. -lresidualvm
+PLUGIN_EXTRA_DEPS = libnovelvm.so
+PLUGIN_LDFLAGS  += $(LDFLAGS) -L. -lnovelvm
 PRE_OBJS_FLAGS  := -Wl,-export-dynamic -Wl,-whole-archive
 POST_OBJS_FLAGS := -Wl,-no-whole-archive
 '
@@ -4150,9 +4150,9 @@ POST_OBJS_FLAGS := -Wl,-no-whole-archive
 		_plugin_suffix=".dll"
 _mak_plugins='
 PLUGIN_EXTRA_DEPS	= $(EXECUTABLE)
-PLUGIN_LDFLAGS		:= -Wl,--enable-auto-import -shared ./libresidualvm.a
+PLUGIN_LDFLAGS		:= -Wl,--enable-auto-import -shared ./libnovelvm.a
 PRE_OBJS_FLAGS		:= -Wl,--whole-archive
-POST_OBJS_FLAGS		:= -Wl,--export-all-symbols -Wl,--no-whole-archive -Wl,--out-implib,./libresidualvm.a
+POST_OBJS_FLAGS		:= -Wl,--export-all-symbols -Wl,--no-whole-archive -Wl,--out-implib,./libnovelvm.a
 '
 		;;
 	ps2)
@@ -5056,7 +5056,7 @@ if test "$_libunity" = auto ; then
 			cat > $TMPC << EOF
 #include <unity.h>
 int main(void) {
-	unity_launcher_entry_get_for_desktop_id("residualvm.desktop");
+	unity_launcher_entry_get_for_desktop_id("novelvm.desktop");
 	return 0;
 }
 EOF
@@ -5197,7 +5197,7 @@ echo "$_freetype2"
 define_in_config_if_yes "$_freetype2" "USE_FREETYPE2"
 
 
-# ResidualVM specific start ->
+# NovelVM specific start ->
 #
 # Check for GLEW
 #
@@ -5471,7 +5471,7 @@ fi
 echocheck "iconv"
 define_in_config_if_yes "$_iconv" 'USE_ICONV'
 echo "$_iconv"
-# ResidualVM specific ends here <-
+# NovelVM specific ends here <-
 
 
 #
@@ -5761,7 +5761,7 @@ fi
 define_in_config_if_yes $_updates 'USE_UPDATES'
 
 #
-# Check whether to activate engines (ResidualVM specific)
+# Check whether to activate engines (NovelVM specific)
 #
 if test `get_engine_build monkey4` = yes && test ! "$_mpeg2" = yes ; then
 	echo "...disabling support for video cutscenes in PS2 version of Escape from Monkey Island. mpeg2dec is required"
@@ -5800,7 +5800,7 @@ case $_backend in
 		append_var DEFINES "-DPLUGIN_DIRECTORY=\\\"host:plugins\\\""
 		;;
 	*)
-		append_var DEFINES "-DPLUGIN_DIRECTORY=\\\"$libdir/residualvm\\\""
+		append_var DEFINES "-DPLUGIN_DIRECTORY=\\\"$libdir/novelvm\\\""
 		;;
 esac
 
@@ -5834,11 +5834,11 @@ if test "$_nasm" = yes ; then
 fi
 
 if test "$_16bit" = yes ; then
-	: # residualvm not use it
+	: # novelvm not use it
 fi
 
 if test "$_highres" = yes ; then
-	: # residualvm not use it
+	: # novelvm not use it
 fi
 
 if test "$_savegame_timestamp" = yes ; then
@@ -5847,9 +5847,9 @@ fi
 
 if test "$_build_scalers" = yes ; then
 	if test "$_build_hq_scalers" = yes ; then
-		: # residualvm not use it
+		: # novelvm not use it
 	else
-		: # residualvm not use it
+		: # novelvm not use it
 	fi
 fi
 
@@ -5916,7 +5916,7 @@ case $_backend in
 		system_libs=''
 		for lib in $LIBS; do
 			case $lib in
-			-lz|-lm|-ldl|-landroid|-lGLESv1_CM|-lGLESv2) # ResidualVM specific
+			-lz|-lm|-ldl|-landroid|-lGLESv1_CM|-lGLESv2) # NovelVM specific
 				system_libs="$system_libs $lib"
 				;;
 			*)
@@ -5928,7 +5928,7 @@ case $_backend in
 		# -lgcc is carefully placed here - we want to catch
 		# all toolchain symbols in *our* libraries rather
 		# than pick up anything unhygenic from the Android libs.
-		LIBS="-Wl,-Bstatic $static_libs -Wl,-Bdynamic -lgcc $system_libs -llog -landroid" # ResidualVM removed: -lGLESv1_CM
+		LIBS="-Wl,-Bstatic $static_libs -Wl,-Bdynamic -lgcc $system_libs -llog -landroid" # NovelVM removed: -lGLESv1_CM
 		;;
 	n64)
 		# Move some libs down here, otherwise some symbols requires by libvorbis aren't found
@@ -6003,8 +6003,6 @@ done
 
 # Sort engines to place our headline engine at start...
 # No technical reason, just historical convention
-headline_engine=grim
-_sorted_engines="${headline_engine}"
 for engine in $_engines; do
 	if test "${engine}" != "${headline_engine}" ; then
 		_sorted_engines="${_sorted_engines} ${engine}"
@@ -6066,7 +6064,7 @@ s/#/    /g'
 fi
 
 if test -n "$_engines_built_wip" ; then
-	echo "WARNING: This ResidualVM build contains the following UNSTABLE engines:"
+	echo "WARNING: This NovelVM build contains the following UNSTABLE engines:"
 	echo "$_engines_built_wip" | sed 's/@/\
 /g
 s/#/    /g'

@@ -1,5 +1,5 @@
 #!/bin/sh
-# ResidualVM Slackware 9(.1) Package Creation Script
+# NovelVM Slackware 9(.1) Package Creation Script
 # Initial version by Jay Lanagan <roni@parodius.com>
 # Updated by Robert Kelsen <rkelsen@optusnet.com.au>
 
@@ -7,7 +7,7 @@ CWD=`pwd`
 if [ "$TMP" = "" ]; then
   TMP=/tmp
 fi
-PKG=$TMP/package-residualvm
+PKG=$TMP/package-novelvm
 
 VERSION=0.4.0git
 ARCH=i486
@@ -21,19 +21,19 @@ if [ ! -d $PKG ]; then
 fi
 
 #cd $TMP
-tar xvf residualvm-$VERSION.tar.bz2
-cd residualvm-$VERSION
+tar xvf novelvm-$VERSION.tar.bz2
+cd novelvm-$VERSION
 ./configure --prefix=/usr --bindir=/usr/games --enable-release
 make
-strip residualvm
+strip novelvm
 make install DESTDIR=$PKG
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
 cd $PKG
 chown -R root.root .
-makepkg -l y -c n $TMP/residualvm-$VERSION-$ARCH-$BUILD.tgz
+makepkg -l y -c n $TMP/novelvm-$VERSION-$ARCH-$BUILD.tgz
 
 if [ "$1" = "--cleanup" ]; then
-  rm -rf $TMP/residualvm-$VERSION
+  rm -rf $TMP/novelvm-$VERSION
   rm -rf $PKG
 fi

@@ -71,7 +71,7 @@
 #define FAKE_BOLD 0
 #endif
 
-// ResidualVM specific
+// NovelVM specific
 #if FREETYPE_MAJOR > 2 || ( FREETYPE_MAJOR == 2 &&  FREETYPE_MINOR >= 9)
 #include FT_TRUETYPE_DRIVER_H
 #endif
@@ -142,10 +142,10 @@ public:
 	TTFFont();
 	virtual ~TTFFont();
 
-// ResidualVM specific argument: stemDarkening
+// NovelVM specific argument: stemDarkening
 	bool load(Common::SeekableReadStream &stream, int size, TTFSizeMode sizeMode,
 	          uint dpi, TTFRenderMode renderMode, const uint32 *mapping, bool stemDarkening);
-// ResidualVM specific argument: stemDarkening
+// NovelVM specific argument: stemDarkening
 	bool load(uint8 *ttfFile, uint32 sizeFile, int32 faceIndex, bool fakeBold, bool fakeItalic,
 	          int size, TTFSizeMode sizeMode, uint dpi, TTFRenderMode renderMode, const uint32 *mapping, bool stemDarkening);
 
@@ -217,7 +217,7 @@ TTFFont::~TTFFont() {
 	}
 }
 
-// ResidualVM specific argument: stemDarkening
+// NovelVM specific argument: stemDarkening
 bool TTFFont::load(Common::SeekableReadStream &stream, int size, TTFSizeMode sizeMode,
                    uint dpi, TTFRenderMode renderMode, const uint32 *mapping, bool stemDarkening) {
 	if (!g_ttf.isInitialized())
@@ -235,7 +235,7 @@ bool TTFFont::load(Common::SeekableReadStream &stream, int size, TTFSizeMode siz
 		return false;
 	}
 
-// ResidualVM specific argument: stemDarkening
+// NovelVM specific argument: stemDarkening
 	if (!load(ttfFile, sizeFile, 0, false, false, size, sizeMode, dpi, renderMode, mapping, stemDarkening)) {
 		delete[] ttfFile;
 		return false;
@@ -245,7 +245,7 @@ bool TTFFont::load(Common::SeekableReadStream &stream, int size, TTFSizeMode siz
 	return true;
 }
 
-// ResidualVM specific argument: stemDarkening
+// NovelVM specific argument: stemDarkening
 bool TTFFont::load(uint8 *ttfFile, uint32 sizeFile, int32 faceIndex, bool bold, bool italic,
                    int size, TTFSizeMode sizeMode, uint dpi, TTFRenderMode renderMode, const uint32 *mapping, bool stemDarkening) {
 	_initialized = false;
@@ -830,11 +830,11 @@ void TTFFont::assureCached(uint32 chr) const {
 	}
 }
 
-// ResidualVM specific argument: stemDarkening
+// NovelVM specific argument: stemDarkening
 Font *loadTTFFont(Common::SeekableReadStream &stream, int size, TTFSizeMode sizeMode, uint dpi, TTFRenderMode renderMode, const uint32 *mapping, bool stemDarkening) {
 	TTFFont *font = new TTFFont();
 
-// ResidualVM specific argument: stemDarkening
+// NovelVM specific argument: stemDarkening
 	if (!font->load(stream, size, sizeMode, dpi, renderMode, mapping, stemDarkening)) {
 		delete font;
 		return 0;
@@ -1023,7 +1023,7 @@ Font *findTTFace(const Common::Array<Common::String> &files, const Common::U32St
 		dpi = 96;
 	}
 
-	// ResidualVM last argument: false
+	// NovelVM last argument: false
 	if (!font->load(bestTTFFile, bestSize, bestFaceId, bold, italic, size, sizeMode,
 	                dpi, renderMode, mapping, false)) {
 		delete font;

@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
 	// The following will gather the application name and add the binary path
 	// to a variable in AmigaOS4's ENV(ARC) system. It will then be placed in
 	// AppPaths, so that ScummVM becomes AmiUpdate aware.
-	const char *const appname = "ResidualVM";
+	const char *const appname = "NovelVM";
 
 	BPTR lock;
 	APTR oldwin;

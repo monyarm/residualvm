@@ -2,8 +2,8 @@
 # Windows specific
 #
 
-# ResidualVM: Added DIST_FILES_SHADERS
-dists/residualvm.o: $(srcdir)/icons/residualvm.ico $(DIST_FILES_THEMES) $(DIST_FILES_NETWORKING) $(DIST_FILES_ENGINEDATA) $(DIST_FILES_SHADERS) config.h $(srcdir)/base/internal_version.h
+# NovelVM: Added DIST_FILES_SHADERS
+dists/novelvm.o: $(srcdir)/icons/novelvm.ico $(DIST_FILES_THEMES) $(DIST_FILES_NETWORKING) $(DIST_FILES_ENGINEDATA) $(DIST_FILES_SHADERS) config.h $(srcdir)/base/internal_version.h
 
 # Special target to create a win32 snapshot binary (for Inno Setup)
 win32dist: all
@@ -32,14 +32,14 @@ else
 endif
 	cp $(WIN32SDLDOCPATH)/README-SDL.txt $(WIN32PATH)/README-SDL.txt
 	cp $(WIN32SDLPATH)/SDL2.dll $(WIN32PATH)
-	cp $(srcdir)/dists/win32/ResidualVM.iss $(WIN32PATH)
+	cp $(srcdir)/dists/win32/NovelVM.iss $(WIN32PATH)
 ifdef USE_SDL_NET
 	cp $(WIN32SDLPATH)/SDL2_net.dll $(WIN32PATH)
-	sed -e '/SDL2_net\.dll/ s/^;//' -i $(WIN32PATH)/ResidualVM.iss
+	sed -e '/SDL2_net\.dll/ s/^;//' -i $(WIN32PATH)/NovelVM.iss
 endif
 ifdef USE_SPARKLE
 	cp $(WIN32SPARKLEPATH)/WinSparkle.dll $(WIN32PATH)
-	sed -e '/WinSparkle\.dll/ s/^;//' -i $(WIN32PATH)/ResidualVM.iss
+	sed -e '/WinSparkle\.dll/ s/^;//' -i $(WIN32PATH)/NovelVM.iss
 endif
 	unix2dos $(WIN32PATH)/*.txt
 	unix2dos $(WIN32PATH)/doc/*.txt

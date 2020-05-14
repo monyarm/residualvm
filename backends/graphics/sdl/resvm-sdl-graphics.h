@@ -1,6 +1,6 @@
-/* ResidualVM - A 3D game interpreter
+/* NovelVM - A 3D game interpreter
  *
- * ResidualVM is the legal property of its developers, whose names
+ * NovelVM is the legal property of its developers, whose names
  * are too numerous to list here. Please refer to the COPYRIGHT
  * file distributed with this source distribution.
  *
@@ -33,7 +33,7 @@
 class SdlEventSource;
 
 /**
- * Base class for a ResidualVM SDL based graphics manager.
+ * Base class for a NovelVM SDL based graphics manager.
  *
  * Used to share reusable methods between SDL graphics managers
  */
@@ -54,7 +54,7 @@ public:
 
 	// GraphicsManager API - Mouse
 	bool showMouse(bool visible) override;
-	bool lockMouse(bool lock) override; // ResidualVM specific method
+	bool lockMouse(bool lock) override; // NovelVM specific method
 
 	// Common::EventObserver API
 	bool notifyEvent(const Common::Event &event) override;

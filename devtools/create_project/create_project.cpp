@@ -1051,17 +1051,17 @@ const Feature s_features[] = {
 	{       "ogg",         "USE_OGG", "libogg_static",    true,  "Ogg support" },
 	{    "vorbis",      "USE_VORBIS", "libvorbisfile_static libvorbis_static", true, "Vorbis support" },
 	{    "tremor",      "USE_TREMOR", "libtremor", false, "Tremor support" },
-	{      "flac",        "USE_FLAC", "libFLAC_static win_utf8_io_static",   false, "FLAC support" }, // ResidualVM change
+	{      "flac",        "USE_FLAC", "libFLAC_static win_utf8_io_static",   false, "FLAC support" }, // NovelVM change
 	{       "png",         "USE_PNG", "libpng16",         true,  "libpng support" },
 	{      "faad",        "USE_FAAD", "libfaad",          false, "AAC support" },
-	{     "mpeg2",       "USE_MPEG2", "libmpeg2",         true, "MPEG-2 support" }, // ResidualVM change
-	{    "theora",   "USE_THEORADEC", "libtheora_static", false, "Theora decoding support" }, // ResidualVM change
+	{     "mpeg2",       "USE_MPEG2", "libmpeg2",         true, "MPEG-2 support" }, // NovelVM change
+	{    "theora",   "USE_THEORADEC", "libtheora_static", false, "Theora decoding support" }, // NovelVM change
 	{  "freetype",   "USE_FREETYPE2", "freetype",         true, "FreeType support" },
 	{      "jpeg",        "USE_JPEG", "jpeg-static",      true, "libjpeg support" },
-	{"fluidsynth",  "USE_FLUIDSYNTH", "libfluidsynth",    false, "FluidSynth support" }, // ResidualVM change
-	{   "libcurl",     "USE_LIBCURL", "libcurl",          false, "libcurl support" }, // ResidualVM change
-	{    "sdlnet",     "USE_SDL_NET", "SDL_net",          false, "SDL_net support" }, // ResidualVM change
-	{      "glew",        "USE_GLEW", "GLEW",             true,  "GLEW support" }, // ResidualVM specific
+	{"fluidsynth",  "USE_FLUIDSYNTH", "libfluidsynth",    false, "FluidSynth support" }, // NovelVM change
+	{   "libcurl",     "USE_LIBCURL", "libcurl",          false, "libcurl support" }, // NovelVM change
+	{    "sdlnet",     "USE_SDL_NET", "SDL_net",          false, "SDL_net support" }, // NovelVM change
+	{      "glew",        "USE_GLEW", "GLEW",             true,  "GLEW support" }, // NovelVM specific
 
 	// Feature flags
 	{            "bink",                      "USE_BINK",  "", true,  "Bink video support" },
@@ -1069,11 +1069,11 @@ const Feature s_features[] = {
 	{       "hqscalers",                "USE_HQ_SCALERS",  "", true,  "HQ scalers" },
 	{           "16bit",                 "USE_RGB_COLOR",  "", true,  "16bit color support" },
 	{         "highres",                   "USE_HIGHRES",  "", true,  "high resolution" },
-//	{         "mt32emu",                   "USE_MT32EMU",  "", true,  "integrated MT-32 emulator" }, // ResidualVM change
+//	{         "mt32emu",                   "USE_MT32EMU",  "", true,  "integrated MT-32 emulator" }, // NovelVM change
 //	{             "lua",                       "USE_LUA",  "", true,  "lua" },
 	{            "nasm",                      "USE_NASM",  "", true,  "IA-32 assembly support" }, // This feature is special in the regard, that it needs additional handling.
 	{          "opengl",                    "USE_OPENGL",  "", true,  "OpenGL support" },
-	{   "openglshaders",            "USE_OPENGL_SHADERS",  "", true,  "OpenGL support (shaders)" }, // ResidualVM specific
+	{   "openglshaders",            "USE_OPENGL_SHADERS",  "", true,  "OpenGL support (shaders)" }, // NovelVM specific
 	{        "opengles",                      "USE_GLES",  "", true,  "forced OpenGL ES mode" },
 	{         "taskbar",                   "USE_TASKBAR",  "", true,  "Taskbar integration support" },
 	{           "cloud",                     "USE_CLOUD",  "", true,  "Cloud integration support" },
@@ -1535,10 +1535,10 @@ void ProjectProvider::createProject(BuildSetup &setup) {
 		createModuleList(setup.srcDir + "/graphics", setup.defines, setup.testDirs, in, ex);
 		createModuleList(setup.srcDir + "/gui", setup.defines, setup.testDirs, in, ex);
 		createModuleList(setup.srcDir + "/audio", setup.defines, setup.testDirs, in, ex);
-//		createModuleList(setup.srcDir + "/audio/softsynth/mt32", setup.defines, setup.testDirs, in, ex); // ResidualVM
+//		createModuleList(setup.srcDir + "/audio/softsynth/mt32", setup.defines, setup.testDirs, in, ex); // NovelVM
 		createModuleList(setup.srcDir + "/video", setup.defines, setup.testDirs, in, ex);
 		createModuleList(setup.srcDir + "/image", setup.defines, setup.testDirs, in, ex);
-		//ResidualVM specific:
+		//NovelVM specific:
 		createModuleList(setup.srcDir + "/math", setup.defines, setup.testDirs, in, ex);
 
 		// Resource files

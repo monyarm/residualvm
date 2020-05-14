@@ -103,7 +103,7 @@ void OSystem_MacOSX::addSysArchivesToSearchSet(Common::SearchSet &s, int priorit
 		if (CFURLGetFileSystemRepresentation(fileUrl, true, buf, sizeof(buf))) {
 			// Success: Add it to the search path
 			Common::String bundlePath((const char *)buf);
-			// ResidualVM: Search with a depth of 2 so the shaders are found
+			// NovelVM: Search with a depth of 2 so the shaders are found
 			s.add("__OSX_BUNDLE__", new Common::FSDirectory(bundlePath, 2), priority);
 		}
 		CFRelease(fileUrl);
@@ -202,7 +202,7 @@ Common::String OSystem_MacOSX::getSystemLanguage() const {
 }
 
 Common::String OSystem_MacOSX::getDefaultConfigFileName() {
-	const Common::String baseConfigName = "Library/Preferences/ResidualVM Preferences";
+	const Common::String baseConfigName = "Library/Preferences/NovelVM Preferences";
 
 	Common::String configFile;
 
@@ -229,7 +229,7 @@ Common::String OSystem_MacOSX::getDefaultLogFileName() {
 		return Common::String();
 	}
 
-	return Common::String(prefix) + "/Library/Logs/residualvm.log";
+	return Common::String(prefix) + "/Library/Logs/novelvm.log";
 }
 
 Common::String OSystem_MacOSX::getScreenshotsPath() {

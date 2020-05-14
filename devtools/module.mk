@@ -46,7 +46,7 @@ credits:
 	$(srcdir)/devtools/credits.pl --text > $(srcdir)/AUTHORS
 #	$(srcdir)/devtools/credits.pl --rtf > $(srcdir)/Credits.rtf
 	$(srcdir)/devtools/credits.pl --cpp > $(srcdir)/gui/credits.h
-	$(srcdir)/devtools/credits.pl --xml-website > $(srcdir)/../../residualvm-web/data/credits.xml
+	$(srcdir)/devtools/credits.pl --xml-website > $(srcdir)/../../novelvm-web/data/credits.xml
 #	$(srcdir)/devtools/credits.pl --xml-docbook > $(srcdir)/../../docs/trunk/docbook/credits.xml
 
 

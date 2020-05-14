@@ -61,7 +61,7 @@
 #include "backends/platform/android/jni.h"
 #include "backends/platform/android/android.h"
 
-const char *android_log_tag = "ResidualVM";
+const char *android_log_tag = "NovelVM";
 
 // This replaces the bionic libc assert functions with something that
 // actually prints the assertion failure before aborting.

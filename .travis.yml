@@ -30,7 +30,7 @@ matrix:
            ../code/configure --host=$CROSS_HOST &&
            make -j4"
       before_deploy:
-        - mkdir artifacts && cp -r build/residualvm.exe artifacts
+        - mkdir artifacts && cp -r build/novelvm.exe artifacts
     - os: linux
       dist: xenial
       addons:
@@ -79,7 +79,7 @@ matrix:
         - ./configure --enable-all-engines && make -j4
       before_deploy:
         - make osxsnap
-        - mkdir artifacts && cp -r ResidualVM-snapshot.dmg artifacts
+        - mkdir artifacts && cp -r NovelVM-snapshot.dmg artifacts
     - os: linux
       name: "Android (ARM64 & ARMv7)"
       language: android
@@ -110,7 +110,7 @@ matrix:
           - $TRAVIS_BUILD_DIR/dependencies
       script: .travis/android-build
       before_deploy:
-        - mkdir artifacts && cp build/android/build/outputs/apk/release/ResidualVM-release*.apk artifacts
+        - mkdir artifacts && cp build/android/build/outputs/apk/release/NovelVM-release*.apk artifacts
 
 deploy:
   provider: script

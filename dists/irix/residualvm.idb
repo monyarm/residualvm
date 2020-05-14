@@ -1,20 +1,20 @@
-f 0644 root sys usr/ResidualVM/COPYING COPYING residualvm.man.readme
-f 0644 root sys usr/ResidualVM/COPYING.LGPL COPYING.LGPL residualvm.man.readme
-f 0644 root sys usr/ResidualVM/COPYING.BSD COPYING.BSD residualvm.man.readme
-f 0644 root sys usr/ResidualVM/COPYING.FREEFONT COPYING.FREEFONT residualvm.man.readme
-f 0644 root sys usr/ResidualVM/COPYING.ISC COPYING.ISC residualvm.man.readme
-f 0644 root sys usr/ResidualVM/COPYING.LUA COPYING.LUA residualvm.man.readme
-f 0644 root sys usr/ResidualVM/COPYING.TINYGL COPYING.TINYGL residualvm.man.readme
-f 0644 root sys usr/ResidualVM/COPYRIGHT COPYRIGHT residualvm.man.readme
-f 0644 root sys usr/ResidualVM/KNOWN_BUGS KNOWN_BUGS residualvm.man.readme
-f 0644 root sys usr/ResidualVM/NEWS.md NEWS.md residualvm.man.readme
-f 0644 root sys usr/ResidualVM/README.md README.md residualvm.man.readme
-f 0755 root sys usr/ResidualVM/residualvm residualvm residualvm.sw.eoe tag('0x5260dbec')
-f 0644 root sys usr/ResidualVM/share/pixmaps/residualvm.xpm residualvm.xpm residualvm.sw.eoe
-f 0644 root sys usr/ResidualVM/share/residualvm/residualvm-grim-patch.lab residualvm-grim-patch.lab residualvm.sw.eoe
-f 0644 root sys usr/ResidualVM/share/residualvm/residualvm-emi-patch.m4b residualvm-emi-patch.m4b residualvm.sw.eoe
-f 0644 root sys usr/ResidualVM/share/residualvm/myst3.dat myst3.dat residualvm.sw.eoe
-f 0644 root sys usr/ResidualVM/share/residualvm/modern.zip modern.zip residualvm.sw.eoe
-l 0000 root sys usr/bin/residualvm residualvm residualvm.sw.eoe symval(/usr/ResidualVM/residualvm)
-f 0644 root sys usr/lib/filetype/local/ResidualVM.ftr ResidualVM.ftr residualvm.sw.eoe exitop('if test -r $rbase/usr/lib/filetype/Makefile ; then chroot $rbase /sbin/sh -c "cd /usr/lib/filetype ; make -u > /dev/null" ; fi')
-f 0644 root sys usr/lib/filetype/local/iconlib/ResidualVM.fti ResidualVM.fti residualvm.sw.eoe exitop('if [ -x $rbase/usr/sbin/iconcatalogedit ]; then chroot $rbase /usr/sbin/iconcatalogedit -add "Category:File Name:/usr/ResidualVM/residualvm" -syspage Games; fi') removeop('if [ -x $rbase/usr/sbin/iconcatalogedit ]; then chroot $rbase /usr/sbin/iconcatalogedit -remove "Category:File Name:/usr/ResidualVM/residualvm" -syspage Games; fi')
+f 0644 root sys usr/NovelVM/COPYING COPYING novelvm.man.readme
+f 0644 root sys usr/NovelVM/COPYING.LGPL COPYING.LGPL novelvm.man.readme
+f 0644 root sys usr/NovelVM/COPYING.BSD COPYING.BSD novelvm.man.readme
+f 0644 root sys usr/NovelVM/COPYING.FREEFONT COPYING.FREEFONT novelvm.man.readme
+f 0644 root sys usr/NovelVM/COPYING.ISC COPYING.ISC novelvm.man.readme
+f 0644 root sys usr/NovelVM/COPYING.LUA COPYING.LUA novelvm.man.readme
+f 0644 root sys usr/NovelVM/COPYING.TINYGL COPYING.TINYGL novelvm.man.readme
+f 0644 root sys usr/NovelVM/COPYRIGHT COPYRIGHT novelvm.man.readme
+f 0644 root sys usr/NovelVM/KNOWN_BUGS KNOWN_BUGS novelvm.man.readme
+f 0644 root sys usr/NovelVM/NEWS.md NEWS.md novelvm.man.readme
+f 0644 root sys usr/NovelVM/README.md README.md novelvm.man.readme
+f 0755 root sys usr/NovelVM/novelvm novelvm novelvm.sw.eoe tag('0x5260dbec')
+f 0644 root sys usr/NovelVM/share/pixmaps/novelvm.xpm novelvm.xpm novelvm.sw.eoe
+f 0644 root sys usr/NovelVM/share/novelvm/novelvm-grim-patch.lab novelvm-grim-patch.lab novelvm.sw.eoe
+f 0644 root sys usr/NovelVM/share/novelvm/novelvm-emi-patch.m4b novelvm-emi-patch.m4b novelvm.sw.eoe
+f 0644 root sys usr/NovelVM/share/novelvm/myst3.dat myst3.dat novelvm.sw.eoe
+f 0644 root sys usr/NovelVM/share/novelvm/modern.zip modern.zip novelvm.sw.eoe
+l 0000 root sys usr/bin/novelvm novelvm novelvm.sw.eoe symval(/usr/NovelVM/novelvm)
+f 0644 root sys usr/lib/filetype/local/NovelVM.ftr NovelVM.ftr novelvm.sw.eoe exitop('if test -r $rbase/usr/lib/filetype/Makefile ; then chroot $rbase /sbin/sh -c "cd /usr/lib/filetype ; make -u > /dev/null" ; fi')
+f 0644 root sys usr/lib/filetype/local/iconlib/NovelVM.fti NovelVM.fti novelvm.sw.eoe exitop('if [ -x $rbase/usr/sbin/iconcatalogedit ]; then chroot $rbase /usr/sbin/iconcatalogedit -add "Category:File Name:/usr/NovelVM/novelvm" -syspage Games; fi') removeop('if [ -x $rbase/usr/sbin/iconcatalogedit ]; then chroot $rbase /usr/sbin/iconcatalogedit -remove "Category:File Name:/usr/NovelVM/novelvm" -syspage Games; fi')

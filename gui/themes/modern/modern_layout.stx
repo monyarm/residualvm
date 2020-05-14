@@ -342,15 +342,15 @@
 			<widget name = 'grFullscreenCheckbox'
 					type = 'Checkbox'
 			/>
-			<!-- ResidualVM specific - Start -->
+			<!-- NovelVM specific - Start -->
 			<widget name = 'grVSyncCheckbox'
 					type = 'Checkbox'
 			/>
-			<!-- ResidualVM specific - End -->
+			<!-- NovelVM specific - End -->
 			<widget name = 'grFilteringCheckbox'
 					type = 'Checkbox'
 			/>
-			<!-- ResidualVM specific - Start -->
+			<!-- NovelVM specific - Start -->
 			<layout type = 'horizontal' padding = '0, 0, 0, 0' spacing = '10' align = 'center'>
 				<widget name = 'grRendererTypePopupDesc'
 						type = 'OptionsLabel'
@@ -367,7 +367,7 @@
 						type = 'PopUp'
 				/>
 			</layout>
-			<!-- ResidualVM specific - End -->
+			<!-- NovelVM specific - End -->
 		</layout>
 	</dialog>
 

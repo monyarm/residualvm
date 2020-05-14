@@ -1,4 +1,4 @@
-package org.residualvm.residualvm;
+package org.novelvm.novelvm;
 
 import android.content.Context;
 import android.text.InputType;

@@ -12,28 +12,28 @@
 #define IDI_COUNT 1002
 #define ID_GDF_XML __GDF_XML
 
-CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "dists/win32/residualvm.exe.manifest"
-IDI_ICON               ICON    "icons/residualvm.ico"
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "dists/win32/novelvm.exe.manifest"
+IDI_ICON               ICON    "icons/novelvm.ico"
 IDI_COUNT              ICON    "icons/count.ico"
 
-#if 0 // ResidualVM - not used
+#if 0 // NovelVM - not used
 ID_GDF_XML             DATA    "dists/win32/scummvm.gdf.xml"
 
 scummclassic.zip       FILE    "gui/themes/scummclassic.zip"
 scummmodern.zip        FILE    "gui/themes/scummmodern.zip"
 scummremastered.zip    FILE    "gui/themes/scummremastered.zip"
 #endif
-// ResidualVM specific START
+// NovelVM specific START
 modern.zip             FILE    "gui/themes/modern.zip"
 
 #if PLUGIN_ENABLED_STATIC(GRIM)
-residualvm-grim-patch.lab       FILE    "dists/engine-data/residualvm-grim-patch.lab"
-residualvm-emi-patch.m4b        FILE    "dists/engine-data/residualvm-emi-patch.m4b"
+novelvm-grim-patch.lab       FILE    "dists/engine-data/novelvm-grim-patch.lab"
+novelvm-emi-patch.m4b        FILE    "dists/engine-data/novelvm-emi-patch.m4b"
 #endif
 #if PLUGIN_ENABLED_STATIC(MYST3)
 myst3.dat                       FILE    "dists/engine-data/myst3.dat"
 #endif
-// ResidualVM specific END
+// NovelVM specific END
 
 #ifdef USE_TRANSLATION
 translations.dat       FILE    "gui/themes/translations.dat"
@@ -106,7 +106,7 @@ xeen.ccs               FILE    "dists/engine-data/xeen.ccs"
 pred.dic               FILE    "dists/pred.dic"
 #endif
 
-// ResidualVM specific START
+// NovelVM specific START
 #ifdef USE_OPENGL_SHADERS
 #if PLUGIN_ENABLED_STATIC(GRIM)
 shaders/dim.fragment             FILE    "engines/grim/shaders/dim.fragment"
@@ -153,7 +153,7 @@ shaders/stark_shadow.fragment    FILE    "engines/stark/shaders/stark_shadow.fra
 shaders/stark_shadow.vertex      FILE    "engines/stark/shaders/stark_shadow.vertex"
 #endif
 #endif
-// ResidualVM specific END
+// NovelVM specific END
 
 VS_VERSION_INFO VERSIONINFO
  FILEVERSION     SCUMMVM_VER_MAJOR,SCUMMVM_VER_MINOR,SCUMMVM_VER_PATCH,0
@@ -173,13 +173,13 @@ BEGIN
         BLOCK "040904b0" // US English, Unicode
         BEGIN
             VALUE "Comments", "\0"
-            VALUE "CompanyName", "residualvm.org\0"
-            VALUE "FileDescription", "ResidualVM: A free 3D game interpreter\0"
+            VALUE "CompanyName", "novelvm.org\0"
+            VALUE "FileDescription", "NovelVM: A free 3D game interpreter\0"
             VALUE "FileVersion", SCUMMVM_VERSION "\0"
-            VALUE "InternalName", "residualvm\0"
-            VALUE "LegalCopyright", "Copyright \xA9 2003-2020 The ResidualVM Team\nCopyright \xA9 2001-2020 The ScummVM Team\0"
-            VALUE "OriginalFilename", "residualvm.exe\0"
-            VALUE "ProductName", "ResidualVM\0"
+            VALUE "InternalName", "novelvm\0"
+            VALUE "LegalCopyright", "Copyright \xA9 2003-2020 The NovelVM Team\nCopyright \xA9 2001-2020 The ScummVM Team\0"
+            VALUE "OriginalFilename", "novelvm.exe\0"
+            VALUE "ProductName", "NovelVM\0"
             VALUE "ProductVersion", SCUMMVM_VERSION "\0"
         END
     END

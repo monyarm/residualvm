@@ -1,16 +1,16 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: ResidualVM
-Source: https://residualvm.org/
+Upstream-Name: NovelVM
+Source: https://novelvm.org/
 
 Files: *
 Copyright:
-    2003-2020 ResidualVM team
+    2003-2020 NovelVM team
     2001-2020 The ScummVM Project
               and others listed in COPYRIGHT file
 License: GPL-2+
 Comment:
- See list of copyright holders in "/usr/share/doc/residualvm/COPYRIGHT".
- See list of upstream authors in "/usr/share/doc/residualvm/AUTHORS".
+ See list of copyright holders in "/usr/share/doc/novelvm/COPYRIGHT".
+ See list of upstream authors in "/usr/share/doc/novelvm/AUTHORS".
  .
  Portions of the following files are Expat licensed:
   * engines/grim/gfx_base.cpp
@@ -29,7 +29,7 @@ License: GPL-2+ and Expat
 
 Files: math/quat.cpp
        math/matrix4.cpp
-Copyright: 2013-2014 ResidualVM team
+Copyright: 2013-2014 NovelVM team
            1999      Kevin B. Thompson <kevinbthompson@yahoo.com>
            2000-2001 Brett Porter <brettporter@yahoo.com>
 License: GPL-2+
@@ -193,7 +193,7 @@ Comment: portions copyright as below
  SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 
 Files: *.patchr
-Copyright: 2001-2013 ResidualVM team
+Copyright: 2001-2013 NovelVM team
 License: ISC
  Permission to use, copy, modify, and/or distribute this software for any
  purpose with or without fee is hereby granted, provided that the above

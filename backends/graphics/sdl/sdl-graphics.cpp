@@ -30,22 +30,22 @@
 #include "common/fs.h"
 #include "common/textconsole.h"
 #include "common/translation.h"
-//#include "graphics/scaler/aspect.h" // ResidualVM
-#if 0 // ResidualVM
+//#include "graphics/scaler/aspect.h" // NovelVM
+#if 0 // NovelVM
 #ifdef USE_OSD
 #include "common/translation.h"
 #endif
-#endif // ResidualVM
+#endif // NovelVM
 
 SdlGraphicsManager::SdlGraphicsManager(SdlEventSource *source, SdlWindow *window)
-	: _eventSource(source), _window(window)// ResidualVM not used: , _hwScreen(nullptr) {
-#if 0 // ResidualVM
+	: _eventSource(source), _window(window)// NovelVM not used: , _hwScreen(nullptr) {
+#if 0 // NovelVM
 #if SDL_VERSION_ATLEAST(2, 0, 0)
 	, _allowWindowSizeReset(false), _hintedWidth(0), _hintedHeight(0), _lastFlags(0)
 #endif
-#endif // ResidualVM
+#endif // NovelVM
 {
-	// ResidualVM - not used:
+	// NovelVM - not used:
 	//SDL_GetMouseState(&_cursorX, &_cursorY);
 }
 
@@ -97,7 +97,7 @@ bool SdlGraphicsManager::setState(const State &state) {
 	}
 }
 
-#if 0 // ResidualVM
+#if 0 // NovelVM
 bool SdlGraphicsManager::defaultGraphicsModeConfig() const {
 	const Common::ConfigManager::Domain *transientDomain = ConfMan.getDomain(Common::ConfigManager::kTransientDomain);
 	if (transientDomain && transientDomain->contains("gfx_mode")) {
@@ -364,7 +364,7 @@ void SdlGraphicsManager::toggleFullScreen() {
 		displayMessageOnOSD(_("Windowed mode"));
 #endif
 }
-#endif // ResidualVM
+#endif // NovelVM
 Common::Keymap *SdlGraphicsManager::getKeymap() {
 	using namespace Common;
 
@@ -395,7 +395,7 @@ Common::Keymap *SdlGraphicsManager::getKeymap() {
 		act->setCustomBackendActionEvent(kActionToggleAspectRatioCorrection);
 		keymap->addAction(act);
 	}
-#if 0 // ResidualVM: not used
+#if 0 // NovelVM: not used
 	if (hasFeature(OSystem::kFeatureFilteringMode)) {
 		act = new Action("FILT", _("Toggle linear filtered scaling"));
 		act->addDefaultInputMapping("C+A+f");
@@ -448,6 +448,6 @@ Common::Keymap *SdlGraphicsManager::getKeymap() {
 		keymap->addAction(act);
 	}
 #endif
-#endif // ResidualVM
+#endif // NovelVM
 	return keymap;
 }

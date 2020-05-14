@@ -48,7 +48,7 @@
 #include "audio/mididrv.h"
 #include "audio/musicplugin.h"
 #include "audio/mixer.h"
-//#include "audio/fmopl.h" // ResidualVM removed
+//#include "audio/fmopl.h" // NovelVM removed
 #include "widgets/scrollcontainer.h"
 #include "widgets/edittext.h"
 
@@ -63,7 +63,7 @@
 #endif
 #endif
 
-#include "graphics/renderer.h"  // ResidualVM specific
+#include "graphics/renderer.h"  // NovelVM specific
 
 namespace GUI {
 
@@ -90,7 +90,7 @@ enum {
 	kKbdMouseSpeedChanged	= 'kmsc',
 	kJoystickDeadzoneChanged= 'jodc',
 	kGraphicsTabContainerReflowCmd = 'gtcr',
-	kFullscreenToggled		= 'oful'  // ResidualVM specific
+	kFullscreenToggled		= 'oful'  // NovelVM specific
 };
 
 enum {
@@ -177,11 +177,11 @@ void OptionsDialog::init() {
 	_enableShaderSettings = false;
 	_shaderPopUpDesc = nullptr;
 	_shaderPopUp = nullptr;
-	_vsyncCheckbox = nullptr;  // ResidualVM specific
-	_rendererTypePopUpDesc = nullptr; // ResidualVM specific
-	_rendererTypePopUp = nullptr; // ResidualVM specific
-	_antiAliasPopUpDesc = nullptr; // ResidualVM specific
-	_antiAliasPopUp = nullptr; // ResidualVM specific
+	_vsyncCheckbox = nullptr;  // NovelVM specific
+	_rendererTypePopUpDesc = nullptr; // NovelVM specific
+	_rendererTypePopUp = nullptr; // NovelVM specific
+	_antiAliasPopUpDesc = nullptr; // NovelVM specific
+	_antiAliasPopUp = nullptr; // NovelVM specific
 	_enableAudioSettings = false;
 	_midiPopUp = nullptr;
 	_midiPopUpDesc = nullptr;
@@ -283,7 +283,7 @@ void OptionsDialog::build() {
 
 	// Graphic options
 	if (_fullscreenCheckbox) {
-#if 0 // ResidualVM specific
+#if 0 // NovelVM specific
 		_gfxPopUp->setSelected(0);
 
 		if (ConfMan.hasKey("gfx_mode", _domain)) {
@@ -349,14 +349,14 @@ void OptionsDialog::build() {
 
 		// Aspect ratio setting
 		if (_guioptions.contains(GUIO_NOASPECT)) {
-			_aspectCheckbox->setState(true); // ResidualVM specific change
+			_aspectCheckbox->setState(true); // NovelVM specific change
 			_aspectCheckbox->setEnabled(false);
 		} else {
 			_aspectCheckbox->setEnabled(true);
 			_aspectCheckbox->setState(ConfMan.getBool("aspect_ratio", _domain));
 		}
 
-		// ResidualVM specific -- Start
+		// NovelVM specific -- Start
 		_vsyncCheckbox->setState(ConfMan.getBool("vsync", _domain));
 
 		_rendererTypePopUp->setEnabled(true);
@@ -368,7 +368,7 @@ void OptionsDialog::build() {
 		} else {
 			_antiAliasPopUp->setSelectedTag(-1);
 		}
-		// ResidualVM specific -- End
+		// NovelVM specific -- End
 	}
 
 	// Shader options
@@ -397,7 +397,7 @@ void OptionsDialog::build() {
 	if (!loadMusicDeviceSetting(_midiPopUp, "music_driver"))
 		_midiPopUp->setSelected(0);
 
-#if 0 // ResidualVM specific
+#if 0 // NovelVM specific
 	if (_oplPopUp) {
 		OPL::Config::DriverId id = MAX<OPL::Config::DriverId>(OPL::Config::parse(ConfMan.get("opl_driver", _domain)), 0);
 		_oplPopUp->setSelectedTag(id);
@@ -521,15 +521,15 @@ void OptionsDialog::apply() {
 				graphicsModeChanged = true;
 			if (ConfMan.getBool("aspect_ratio", _domain) != _aspectCheckbox->getState())
 				graphicsModeChanged = true;
-			if (ConfMan.getBool("vsync", _domain) != _vsyncCheckbox->getState()) // ResidualVM specific
-				graphicsModeChanged = true; // ResidualVM specific
+			if (ConfMan.getBool("vsync", _domain) != _vsyncCheckbox->getState()) // NovelVM specific
+				graphicsModeChanged = true; // NovelVM specific
 			
 			ConfMan.setBool("filtering", _filteringCheckbox->getState(), _domain);
 			ConfMan.setBool("fullscreen", _fullscreenCheckbox->getState(), _domain);
 			ConfMan.setBool("aspect_ratio", _aspectCheckbox->getState(), _domain);
-			ConfMan.setBool("vsync", _vsyncCheckbox->getState(), _domain); // ResidualVM specific
+			ConfMan.setBool("vsync", _vsyncCheckbox->getState(), _domain); // NovelVM specific
 			
-#if 0 // ResidualVM specific
+#if 0 // NovelVM specific
 			bool isSet = false;
 
 			if ((int32)_gfxPopUp->getSelectedTag() >= 0) {
@@ -570,7 +570,7 @@ void OptionsDialog::apply() {
 				ConfMan.removeKey("stretch_mode", _domain);
 #endif
 
-			// ResidualVM specific -- Start
+			// NovelVM specific -- Start
 			if (_rendererTypePopUp->getSelectedTag() > 0) {
 				Graphics::RendererType selected = (Graphics::RendererType) _rendererTypePopUp->getSelectedTag();
 				ConfMan.set("renderer", Graphics::getRendererTypeCode(selected), _domain);
@@ -584,20 +584,20 @@ void OptionsDialog::apply() {
 			} else {
 				ConfMan.removeKey("antialiasing", _domain);
 			}
-			// ResidualVM specific -- End
+			// NovelVM specific -- End
 
 		} else {
 			ConfMan.removeKey("fullscreen", _domain);
 			ConfMan.removeKey("filtering", _domain);
 			ConfMan.removeKey("aspect_ratio", _domain);
-#if 0 // ResidualVM specific
+#if 0 // NovelVM specific
 			ConfMan.removeKey("gfx_mode", _domain);
 			ConfMan.removeKey("stretch_mode", _domain);
 			ConfMan.removeKey("render_mode", _domain);
 #endif
-			ConfMan.removeKey("renderer", _domain); // ResidualVM specific
-			ConfMan.removeKey("antialiasing", _domain); // ResidualVM specific
-			ConfMan.removeKey("vsync", _domain); // ResidualVM specific
+			ConfMan.removeKey("renderer", _domain); // NovelVM specific
+			ConfMan.removeKey("antialiasing", _domain); // NovelVM specific
+			ConfMan.removeKey("vsync", _domain); // NovelVM specific
 		}
 	}
 
@@ -771,7 +771,7 @@ void OptionsDialog::apply() {
 		}
 	}
 
-#if 0 // ResidualVM specific
+#if 0 // NovelVM specific
 	if (_oplPopUp) {
 		if (_enableAudioSettings) {
 			const OPL::Config::EmulatorDescription *ed = OPL::Config::findDriver(_oplPopUp->getSelectedTag());
@@ -982,7 +982,7 @@ void OptionsDialog::handleOtherEvent(const Common::Event &event) {
 void OptionsDialog::setGraphicSettingsState(bool enabled) {
 	_enableGraphicSettings = enabled;
 
-#if 0 // ResidualVM specific
+#if 0 // NovelVM specific
 	_gfxPopUpDesc->setEnabled(enabled);
 	_gfxPopUp->setEnabled(enabled);
 	_renderModePopUpDesc->setEnabled(enabled);
@@ -1011,7 +1011,7 @@ void OptionsDialog::setShaderSettingsState(bool enabled) {
 }
 
 void OptionsDialog::setAudioSettingsState(bool enabled) {
-	return; // ResidualVM specific
+	return; // NovelVM specific
 	_enableAudioSettings = enabled;
 	_midiPopUpDesc->setEnabled(enabled);
 	_midiPopUp->setEnabled(enabled);
@@ -1264,7 +1264,7 @@ void OptionsDialog::addShaderControls(GuiObject *boss, const Common::String &pre
 }
 
 void OptionsDialog::addGraphicControls(GuiObject *boss, const Common::String &prefix) {
-#if 0 // ResidualVM specific
+#if 0 // NovelVM specific
 	const OSystem::GraphicsMode *gm = g_system->getSupportedGraphicsModes();
 	Common::String context;
 	if (g_system->getOverlayWidth() <= 320)
@@ -1314,10 +1314,10 @@ void OptionsDialog::addGraphicControls(GuiObject *boss, const Common::String &pr
 	// Fullscreen checkbox
 	_fullscreenCheckbox = new CheckboxWidget(boss, prefix + "grFullscreenCheckbox", _("Fullscreen mode"), 0, kFullscreenToggled);
 
-	// ResidualVM specific description
+	// NovelVM specific description
 	_aspectCheckbox = new CheckboxWidget(boss, prefix + "grAspectCheckbox", _("Preserve aspect ratio"), _("Preserve the aspect ratio in fullscreen mode"));
 
-	// ResidualVM specific -- Start
+	// NovelVM specific -- Start
 	_vsyncCheckbox = new CheckboxWidget(boss, prefix + "grVSyncCheckbox", _("V-Sync"), _("Wait for the vertical sync to refresh the screen"));
 
 	_rendererTypePopUpDesc = new StaticTextWidget(boss, prefix + "grRendererTypePopupDesc", _("Game Renderer:"));
@@ -1343,12 +1343,12 @@ void OptionsDialog::addGraphicControls(GuiObject *boss, const Common::String &pr
 		_antiAliasPopUpDesc->setVisible(false);
 		_antiAliasPopUp->setVisible(false);
 	}
-	// ResidualVM specific -- End
+	// NovelVM specific -- End
 
 	// Filtering checkbox
 	_filteringCheckbox = new CheckboxWidget(boss, prefix + "grFilteringCheckbox", _("Filter graphics"), _("Use linear filtering when scaling graphics"));
 
-#if 0 // not used by ResidualVM
+#if 0 // not used by NovelVM
 	// Aspect ratio checkbox
 	_aspectCheckbox = new CheckboxWidget(boss, prefix + "grAspectCheckbox", _("Aspect ratio correction"), _("Correct aspect ratio for 320x200 games"));
 #endif
@@ -1391,7 +1391,7 @@ void OptionsDialog::addAudioControls(GuiObject *boss, const Common::String &pref
 	_oplPopUp = new PopUpWidget(boss, prefix + "auOPLPopup", _("AdLib is used for music in many games"));
 
 	// Populate it
-#if 0 // ResidualVM specific
+#if 0 // NovelVM specific
 	const OPL::Config::EmulatorDescription *ed = OPL::Config::getAvailable();
 	while (ed->name) {
 		_oplPopUp->appendEntry(_(ed->description), ed->id);
@@ -1664,7 +1664,7 @@ void OptionsDialog::reflowLayout() {
 void OptionsDialog::setupGraphicsTab() {
 	if (!_fullscreenCheckbox)
 		return;
-#if 0 // ResidualVM specific
+#if 0 // NovelVM specific
 	_gfxPopUpDesc->setVisible(true);
 	_gfxPopUp->setVisible(true);
 	if (g_system->hasFeature(OSystem::kFeatureStretchMode)) {
@@ -1676,14 +1676,14 @@ void OptionsDialog::setupGraphicsTab() {
 	}
 #endif
 	_fullscreenCheckbox->setVisible(true);
-#if 0 // ResidualVM specific
+#if 0 // NovelVM specific
 	if (g_system->hasFeature(OSystem::kFeatureFilteringMode))
 		_filteringCheckbox->setVisible(true);
 	else
 		_filteringCheckbox->setVisible(false);
 #endif
 	_aspectCheckbox->setVisible(true);
-#if 0 // ResidualVM specific
+#if 0 // NovelVM specific
 	_renderModePopUpDesc->setVisible(true);
 	_renderModePopUp->setVisible(true);
 #endif
@@ -1856,7 +1856,7 @@ void GlobalOptionsDialog::build() {
 
 	// TODO: cd drive setting
 
-#if 0 // ResidualVM does not use it
+#if 0 // NovelVM does not use it
 	//
 	// 3) The MIDI tab
 	//
@@ -2052,10 +2052,10 @@ void GlobalOptionsDialog::addPathsControls(GuiObject *boss, const Common::String
 	_themePathClearButton = addClearButton(boss, prefix + "ThemePathClearButton", kThemePathClearCmd);
 
 	if (!lowres)
-		new ButtonWidget(boss, prefix + "ExtraButton", _("Extra Path:"), _("Specifies path to additional data used by all games or ResidualVM"), kChooseExtraDirCmd);
+		new ButtonWidget(boss, prefix + "ExtraButton", _("Extra Path:"), _("Specifies path to additional data used by all games or NovelVM"), kChooseExtraDirCmd);
 	else
-		new ButtonWidget(boss, prefix + "ExtraButton", _c("Extra Path:", "lowres"), _("Specifies path to additional data used by all games or ResidualVM"), kChooseExtraDirCmd);
-	_extraPath = new StaticTextWidget(boss, prefix + "ExtraPath", _c("None", "path"), _("Specifies path to additional data used by all games or ResidualVM"));
+		new ButtonWidget(boss, prefix + "ExtraButton", _c("Extra Path:", "lowres"), _("Specifies path to additional data used by all games or NovelVM"), kChooseExtraDirCmd);
+	_extraPath = new StaticTextWidget(boss, prefix + "ExtraPath", _c("None", "path"), _("Specifies path to additional data used by all games or NovelVM"));
 
 	_extraPathClearButton = addClearButton(boss, prefix + "ExtraPathClearButton", kExtraPathClearCmd);
 
@@ -2105,7 +2105,7 @@ void GlobalOptionsDialog::addMiscControls(GuiObject *boss, const Common::String 
 
 
 #ifdef USE_TRANSLATION
-	_guiLanguagePopUpDesc = new StaticTextWidget(boss, prefix + "GuiLanguagePopupDesc", _("GUI language:"), _("Language of ResidualVM GUI"));
+	_guiLanguagePopUpDesc = new StaticTextWidget(boss, prefix + "GuiLanguagePopupDesc", _("GUI language:"), _("Language of NovelVM GUI"));
 	_guiLanguagePopUp = new PopUpWidget(boss, prefix + "GuiLanguagePopup");
 #ifdef USE_DETECTLANG
 	_guiLanguagePopUp->appendEntry(_("<default>"), Common::kTranslationAutodetectId);
@@ -2133,7 +2133,7 @@ void GlobalOptionsDialog::addMiscControls(GuiObject *boss, const Common::String 
 	_guiLanguageUseGameLanguageCheckbox = new CheckboxWidget(boss, prefix + "GuiLanguageUseGameLanguage",
 			_("Switch the GUI language to the game language"),
 			_("When starting a game, change the GUI language to the game language."
-			"That way, if a game uses the ResidualVM save and load dialogs, they are "
+			"That way, if a game uses the NovelVM save and load dialogs, they are "
 			"in the same language as the game.")
 	);
 
@@ -2146,14 +2146,14 @@ void GlobalOptionsDialog::addMiscControls(GuiObject *boss, const Common::String 
 	if (g_system->hasFeature(OSystem::kFeatureSystemBrowserDialog)) {
 		_useSystemDialogsCheckbox = new CheckboxWidget(boss, prefix + "UseSystemDialogs",
 			_("Use native system file browser"),
-			_("Use the native system file browser instead of the ResidualVM one to select a file or directory.")
+			_("Use the native system file browser instead of the NovelVM one to select a file or directory.")
 		);
 
 		_useSystemDialogsCheckbox->setState(ConfMan.getBool("gui_browser_native", _domain));
 	}
 
 #ifdef USE_UPDATES
-	_updatesPopUpDesc = new StaticTextWidget(boss, prefix + "UpdatesPopupDesc", _("Update check:"), _("How often to check ResidualVM updates"));
+	_updatesPopUpDesc = new StaticTextWidget(boss, prefix + "UpdatesPopupDesc", _("Update check:"), _("How often to check NovelVM updates"));
 	_updatesPopUp = new PopUpWidget(boss, prefix + "UpdatesPopup");
 
 	const int *vals = Common::UpdateManager::getUpdateIntervals();
@@ -2189,7 +2189,7 @@ void GlobalOptionsDialog::addCloudControls(GuiObject *boss, const Common::String
 	_storageUsernameDesc = new StaticTextWidget(boss, prefix + "StorageUsernameDesc", _("Username:"), _("Username used by this storage"));
 	_storageUsername = new StaticTextWidget(boss, prefix + "StorageUsernameLabel", _("<none>"), "", ThemeEngine::kFontStyleNormal);
 
-	_storageUsedSpaceDesc = new StaticTextWidget(boss, prefix + "StorageUsedSpaceDesc", _("Used space:"), _("Space used by ResidualVM's saved games on this storage"));
+	_storageUsedSpaceDesc = new StaticTextWidget(boss, prefix + "StorageUsedSpaceDesc", _("Used space:"), _("Space used by NovelVM's saved games on this storage"));
 	_storageUsedSpace = new StaticTextWidget(boss, prefix + "StorageUsedSpaceLabel", "0 bytes", "", ThemeEngine::kFontStyleNormal);
 
 	_storageLastSyncDesc = new StaticTextWidget(boss, prefix + "StorageLastSyncDesc", _("Last sync:"), _("When was the last time saved games were synced with this storage"));
@@ -2201,9 +2201,9 @@ void GlobalOptionsDialog::addCloudControls(GuiObject *boss, const Common::String
 	_storageSyncSavesButton = new ButtonWidget(boss, prefix + "SyncSavesButton", _("Sync now"), _("Start saved games sync"), kSyncSavesStorageCmd);
 
 	if (lowres)
-		_storageDownloadHint = new StaticTextWidget(boss, prefix + "StorageDownloadHint", _c("You can download game files from your cloud ResidualVM folder:", "lowres"));
+		_storageDownloadHint = new StaticTextWidget(boss, prefix + "StorageDownloadHint", _c("You can download game files from your cloud NovelVM folder:", "lowres"));
 	else
-		_storageDownloadHint = new StaticTextWidget(boss, prefix + "StorageDownloadHint", _("You can download game files from your cloud ResidualVM folder:"));
+		_storageDownloadHint = new StaticTextWidget(boss, prefix + "StorageDownloadHint", _("You can download game files from your cloud NovelVM folder:"));
 	_storageDownloadButton = new ButtonWidget(boss, prefix + "DownloadButton", _("Download game files"), _("Open downloads manager dialog"), kDownloadStorageCmd);
 
 	if (lowres)
@@ -2217,7 +2217,7 @@ void GlobalOptionsDialog::addCloudControls(GuiObject *boss, const Common::String
 	else
 		_storageWizardNotConnectedHint = new StaticTextWidget(boss, prefix + "StorageWizardNotConnectedHint", _("This storage is not connected yet! To connect,"));
 	_storageWizardOpenLinkHint = new StaticTextWidget(boss, prefix + "StorageWizardOpenLinkHint", _("1. Open this link:"));
-	_storageWizardLink = new ButtonWidget(boss, prefix + "StorageWizardLink", "https://cloud.residualvm.org/", _("Open URL"), kOpenUrlStorageCmd);
+	_storageWizardLink = new ButtonWidget(boss, prefix + "StorageWizardLink", "https://cloud.novelvm.org/", _("Open URL"), kOpenUrlStorageCmd);
 	if (lowres)
 		_storageWizardCodeHint = new StaticTextWidget(boss, prefix + "StorageWizardCodeHint", _c("2. Get the code and enter it here:", "lowres"));
 	else
@@ -2452,8 +2452,8 @@ void GlobalOptionsDialog::apply() {
 			}
 			_ttsVoiceSelectionPopUp->setSelectedTag(0);
 		}
-		int volume = (ConfMan.getInt("speech_volume", "residualvm") * 100) / 256;
-		if (ConfMan.hasKey("mute", "residualvm") && ConfMan.getBool("mute", "residualvm"))
+		int volume = (ConfMan.getInt("speech_volume", "novelvm") * 100) / 256;
+		if (ConfMan.hasKey("mute", "novelvm") && ConfMan.getBool("mute", "novelvm"))
 			volume = 0;
 		ttsMan->setVolume(volume);
 		ConfMan.setBool("tts_enabled", _ttsCheckbox->getState(), _domain);
@@ -2630,7 +2630,7 @@ void GlobalOptionsDialog::handleCommand(CommandSender *sender, uint32 cmd, uint3
 		break;
 	}
 	case kOpenUrlStorageCmd: {
-		Common::String url = "https://cloud.residualvm.org/";
+		Common::String url = "https://cloud.novelvm.org/";
 		switch (_selectedStorageIndex) {
 		case Cloud::kStorageDropboxId:
 			url += "dropbox";

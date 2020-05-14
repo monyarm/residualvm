@@ -40,7 +40,7 @@
 #include "common/dct.h"
 #include "common/system.h"
 
-#include "graphics/yuva_to_rgba.h" // ResidualVM specific
+#include "graphics/yuva_to_rgba.h" // NovelVM specific
 #include "graphics/surface.h"
 
 #include "video/binkdata.h"
@@ -332,7 +332,7 @@ BinkDecoder::BinkVideoTrack::~BinkVideoTrack() {
 	_surface.free();
 }
 
-// ResidualVM-specific class -- Duplicated from audio/decoders/quicktime.cpp
+// NovelVM-specific class -- Duplicated from audio/decoders/quicktime.cpp
 // If the Bink seeking code ever makes it to ScummVM, move SilentAudioStream
 // out of quicktime.cpp so that it can be shared.
 /**
@@ -356,14 +356,14 @@ private:
 	bool _isStereo;
 };
 
-// ResidualVM-specific function
+// NovelVM-specific function
 Common::Rational BinkDecoder::getFrameRate() {
 	BinkVideoTrack *videoTrack = (BinkVideoTrack *)getTrack(0);
 
 	return videoTrack->getFrameRate();
 }
 
-// ResidualVM-specific function
+// NovelVM-specific function
 bool BinkDecoder::seekIntern(const Audio::Timestamp &time) {
 	BinkVideoTrack *videoTrack = (BinkVideoTrack *)getTrack(0);
 
@@ -404,7 +404,7 @@ bool BinkDecoder::seekIntern(const Audio::Timestamp &time) {
 	return true;
 }
 
-// ResidualVM-specific function
+// NovelVM-specific function
 uint32 BinkDecoder::findKeyFrame(uint32 frame) const {
 	assert(frame < _frames.size());
 
@@ -417,12 +417,12 @@ uint32 BinkDecoder::findKeyFrame(uint32 frame) const {
 	return frame;
 }
 
-// ResidualVM-specific function
+// NovelVM-specific function
 int BinkDecoder::BinkAudioTrack::getRate() {
 	return _audioStream->getRate();
 }
 
-// ResidualVM-specific function
+// NovelVM-specific function
 void BinkDecoder::BinkAudioTrack::skipSamples(const Audio::Timestamp &length) {
 	int32 sampleCount = length.totalNumberOfFrames();
 
@@ -437,7 +437,7 @@ void BinkDecoder::BinkAudioTrack::skipSamples(const Audio::Timestamp &length) {
 	delete[] tempBuffer;
 }
 
-// ResidualVM-specific function
+// NovelVM-specific function
 bool BinkDecoder::BinkAudioTrack::seek(const Audio::Timestamp &time) {
 	// Don't window the output with the previous frame -- there is no output from the previous frame
 	_audioInfo->first = true;
@@ -459,7 +459,7 @@ bool BinkDecoder::BinkAudioTrack::seek(const Audio::Timestamp &time) {
 	return true;
 }
 
-// ResidualVM-specific function
+// NovelVM-specific function
 bool BinkDecoder::BinkVideoTrack::rewind() {
 	if (!VideoTrack::rewind()) {
 		return false;
@@ -505,7 +505,7 @@ void BinkDecoder::BinkVideoTrack::decodePacket(VideoFrame &frame) {
 	// Convert the YUV data we have to our format
 	// The width used here is the surface-width, and not the video-width
 	// to allow for odd-sized videos.
-	// ResidualVM: added support for Alpha version: YUVAToRGBAMan, _curPlanes[3]
+	// NovelVM: added support for Alpha version: YUVAToRGBAMan, _curPlanes[3]
 	assert(_curPlanes[0] && _curPlanes[1] && _curPlanes[2] && _curPlanes[3]);
 	YUVAToRGBAMan.convert420(&_surface, Graphics::YUVAToRGBAManager::kScaleITU, _curPlanes[0], _curPlanes[1], _curPlanes[2], _curPlanes[3],
 			_surfaceWidth, _surfaceHeight, _yBlockWidth * 8, _uvBlockWidth * 8);

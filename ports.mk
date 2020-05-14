@@ -9,70 +9,70 @@ install:
 	$(INSTALL) -d "$(DESTDIR)$(bindir)"
 	$(INSTALL) -c -m 755 "./$(EXECUTABLE)" "$(DESTDIR)$(bindir)/$(EXECUTABLE)"
 	$(INSTALL) -d "$(DESTDIR)$(mandir)/man6/"
-	$(INSTALL) -c -m 644 "$(srcdir)/dists/residualvm.6" "$(DESTDIR)$(mandir)/man6/residualvm.6"
+	$(INSTALL) -c -m 644 "$(srcdir)/dists/novelvm.6" "$(DESTDIR)$(mandir)/man6/novelvm.6"
 	$(INSTALL) -d "$(DESTDIR)$(datarootdir)/pixmaps/"
-	$(INSTALL) -c -m 644 "$(srcdir)/icons/residualvm.xpm" "$(DESTDIR)$(datarootdir)/pixmaps/residualvm.xpm"
+	$(INSTALL) -c -m 644 "$(srcdir)/icons/novelvm.xpm" "$(DESTDIR)$(datarootdir)/pixmaps/novelvm.xpm"
 	$(INSTALL) -d "$(DESTDIR)$(datarootdir)/icons/hicolor/scalable/apps/"
-	$(INSTALL) -c -m 644 "$(srcdir)/icons/residualvm.svg" "$(DESTDIR)$(datarootdir)/icons/hicolor/scalable/apps/residualvm.svg"
+	$(INSTALL) -c -m 644 "$(srcdir)/icons/novelvm.svg" "$(DESTDIR)$(datarootdir)/icons/hicolor/scalable/apps/novelvm.svg"
 	$(INSTALL) -d "$(DESTDIR)$(docdir)"
 	$(INSTALL) -c -m 644 $(DIST_FILES_DOCS) "$(DESTDIR)$(docdir)"
 	$(INSTALL) -d "$(DESTDIR)$(datadir)"
 	$(INSTALL) -c -m 644 $(DIST_FILES_THEMES) $(DIST_FILES_NETWORKING) $(DIST_FILES_VKEYBD) $(DIST_FILES_ENGINEDATA) "$(DESTDIR)$(datadir)/"
 	$(INSTALL) -d "$(DESTDIR)$(datarootdir)/applications"
-	$(INSTALL) -c -m 644 "$(srcdir)/dists/residualvm.desktop" "$(DESTDIR)$(datarootdir)/applications/residualvm.desktop"
+	$(INSTALL) -c -m 644 "$(srcdir)/dists/novelvm.desktop" "$(DESTDIR)$(datarootdir)/applications/novelvm.desktop"
 	$(INSTALL) -d "$(DESTDIR)$(datarootdir)/appdata"
-#	$(INSTALL) -c -m 644 "$(srcdir)/dists/residualvm.appdata.xml" "$(DESTDIR)$(datarootdir)/appdata/residualvm.appdata.xml"
-	# ResidualVM specific
+#	$(INSTALL) -c -m 644 "$(srcdir)/dists/novelvm.appdata.xml" "$(DESTDIR)$(datarootdir)/appdata/novelvm.appdata.xml"
+	# NovelVM specific
 ifdef USE_OPENGL_SHADERS
 	$(INSTALL) -d "$(DESTDIR)$(datadir)/shaders"
 	$(INSTALL) -c -m 644 $(DIST_FILES_SHADERS) "$(DESTDIR)$(datadir)/shaders"
 endif
 ifdef DYNAMIC_MODULES
-	$(INSTALL) -d "$(DESTDIR)$(libdir)/residualvm/"
-	$(INSTALL) -c -m 644 $(PLUGINS) "$(DESTDIR)$(libdir)/residualvm/"
+	$(INSTALL) -d "$(DESTDIR)$(libdir)/novelvm/"
+	$(INSTALL) -c -m 644 $(PLUGINS) "$(DESTDIR)$(libdir)/novelvm/"
 endif
 
 install-strip:
 	$(INSTALL) -d "$(DESTDIR)$(bindir)"
 	$(INSTALL) -c -s -m 755 "./$(EXECUTABLE)" "$(DESTDIR)$(bindir)/$(EXECUTABLE)"
 	$(INSTALL) -d "$(DESTDIR)$(mandir)/man6/"
-	$(INSTALL) -c -m 644 "$(srcdir)/dists/residualvm.6" "$(DESTDIR)$(mandir)/man6/residualvm.6"
+	$(INSTALL) -c -m 644 "$(srcdir)/dists/novelvm.6" "$(DESTDIR)$(mandir)/man6/novelvm.6"
 	$(INSTALL) -d "$(DESTDIR)$(datarootdir)/pixmaps/"
-	$(INSTALL) -c -m 644 "$(srcdir)/icons/residualvm.xpm" "$(DESTDIR)$(datarootdir)/pixmaps/residualvm.xpm"
+	$(INSTALL) -c -m 644 "$(srcdir)/icons/novelvm.xpm" "$(DESTDIR)$(datarootdir)/pixmaps/novelvm.xpm"
 	$(INSTALL) -d "$(DESTDIR)$(datarootdir)/icons/hicolor/scalable/apps/"
-	$(INSTALL) -c -m 644 "$(srcdir)/icons/residualvm.svg" "$(DESTDIR)$(datarootdir)/icons/hicolor/scalable/apps/residualvm.svg"
+	$(INSTALL) -c -m 644 "$(srcdir)/icons/novelvm.svg" "$(DESTDIR)$(datarootdir)/icons/hicolor/scalable/apps/novelvm.svg"
 	$(INSTALL) -d "$(DESTDIR)$(docdir)"
 	$(INSTALL) -c -m 644 $(DIST_FILES_DOCS) "$(DESTDIR)$(docdir)"
 	$(INSTALL) -d "$(DESTDIR)$(datadir)"
 	$(INSTALL) -c -m 644 $(DIST_FILES_THEMES) $(DIST_FILES_NETWORKING) $(DIST_FILES_VKEYBD) $(DIST_FILES_ENGINEDATA) "$(DESTDIR)$(datadir)/"
 	$(INSTALL) -d "$(DESTDIR)$(datarootdir)/applications"
-	$(INSTALL) -c -m 644 "$(srcdir)/dists/residualvm.desktop" "$(DESTDIR)$(datarootdir)/applications/residualvm.desktop"
+	$(INSTALL) -c -m 644 "$(srcdir)/dists/novelvm.desktop" "$(DESTDIR)$(datarootdir)/applications/novelvm.desktop"
 	$(INSTALL) -d "$(DESTDIR)$(datarootdir)/appdata"
-#	$(INSTALL) -c -m 644 "$(srcdir)/dists/residualvm.appdata.xml" "$(DESTDIR)$(datarootdir)/appdata/residualvm.appdata.xml"
-	# ResidualVM specific
+#	$(INSTALL) -c -m 644 "$(srcdir)/dists/novelvm.appdata.xml" "$(DESTDIR)$(datarootdir)/appdata/novelvm.appdata.xml"
+	# NovelVM specific
 ifdef USE_OPENGL_SHADERS
 	$(INSTALL) -d "$(DESTDIR)$(datadir)/shaders"
 	$(INSTALL) -c -m 644 $(DIST_FILES_SHADERS) "$(DESTDIR)$(datadir)/shaders"
 endif
 ifdef DYNAMIC_MODULES
-	$(INSTALL) -d "$(DESTDIR)$(libdir)/residualvm/"
-	$(INSTALL) -c -s -m 644 $(PLUGINS) "$(DESTDIR)$(libdir)/residualvm/"
+	$(INSTALL) -d "$(DESTDIR)$(libdir)/novelvm/"
+	$(INSTALL) -c -s -m 644 $(PLUGINS) "$(DESTDIR)$(libdir)/novelvm/"
 endif
 
 uninstall:
 	rm -f "$(DESTDIR)$(bindir)/$(EXECUTABLE)"
-	rm -f "$(DESTDIR)$(mandir)/man6/residualvm.6"
-	rm -f "$(DESTDIR)$(datarootdir)/pixmaps/residualvm.xpm"
-	rm -f "$(DESTDIR)$(datarootdir)/icons/hicolor/scalable/apps/residualvm.svg"
+	rm -f "$(DESTDIR)$(mandir)/man6/novelvm.6"
+	rm -f "$(DESTDIR)$(datarootdir)/pixmaps/novelvm.xpm"
+	rm -f "$(DESTDIR)$(datarootdir)/icons/hicolor/scalable/apps/novelvm.svg"
 	rm -rf "$(DESTDIR)$(docdir)"
 	rm -rf "$(DESTDIR)$(datadir)"
 	rm -f "$(DESTDIR)$(datarootdir)/applications/scummvm.desktop"
 	rm -f "$(DESTDIR)$(datarootdir)/appdata/scummvm.appdata.xml"
 ifdef DYNAMIC_MODULES
-	rm -rf "$(DESTDIR)$(libdir)/residualvm/"
+	rm -rf "$(DESTDIR)$(libdir)/novelvm/"
 endif
 
-#ResidualVM specific:
+#NovelVM specific:
 deb:
 	ln -sf dists/debian;
 	debian/prepare
@@ -102,25 +102,25 @@ ScummVMDockTilePlugin: ScummVMDockTilePlugin64
 	cp ScummVMDockTilePlugin64 ScummVMDockTilePlugin
 else
 ScummVMDockTilePlugin: ScummVMDockTilePlugin32 ScummVMDockTilePlugin64
-	lipo -create ScummVMDockTilePlugin32 ScummVMDockTilePlugin64 -output ResidualVMDockTilePlugin
+	lipo -create ScummVMDockTilePlugin32 ScummVMDockTilePlugin64 -output NovelVMDockTilePlugin
 endif
 
-residualvm.docktileplugin: ResidualVMDockTilePlugin
-	mkdir -p residualvm.docktileplugin/Contents
-	cp $(srcdir)/dists/macosx/dockplugin/Info.plist residualvm.docktileplugin/Contents
-	mkdir -p residualvm.docktileplugin/Contents/MacOS
-	cp ResidualVMDockTilePlugin residualvm.docktileplugin/Contents/MacOS/
-	chmod 644 residualvm.docktileplugin/Contents/MacOS/ResidualVMDockTilePlugin
+novelvm.docktileplugin: NovelVMDockTilePlugin
+	mkdir -p novelvm.docktileplugin/Contents
+	cp $(srcdir)/dists/macosx/dockplugin/Info.plist novelvm.docktileplugin/Contents
+	mkdir -p novelvm.docktileplugin/Contents/MacOS
+	cp NovelVMDockTilePlugin novelvm.docktileplugin/Contents/MacOS/
+	chmod 644 novelvm.docktileplugin/Contents/MacOS/NovelVMDockTilePlugin
 
 endif
 
-bundle_name = ResidualVM.app
+bundle_name = NovelVM.app
 
 bundle-pack:
 	mkdir -p $(bundle_name)/Contents/MacOS
 	mkdir -p $(bundle_name)/Contents/Resources
 	echo "APPL????" > $(bundle_name)/Contents/PkgInfo
-	sed -e 's/$$(PRODUCT_BUNDLE_IDENTIFIER)/org.residualvm.residualvm/' $(srcdir)/dists/macosx/Info.plist >$(bundle_name)/Contents/Info.plist
+	sed -e 's/$$(PRODUCT_BUNDLE_IDENTIFIER)/org.novelvm.novelvm/' $(srcdir)/dists/macosx/Info.plist >$(bundle_name)/Contents/Info.plist
 ifdef USE_SPARKLE
 	mkdir -p $(bundle_name)/Contents/Frameworks
 	cp $(srcdir)/dists/macosx/dsa_pub.pem $(bundle_name)/Contents/Resources/
@@ -128,9 +128,9 @@ ifdef USE_SPARKLE
 	cp -R $(SPARKLEPATH)/Sparkle.framework $(bundle_name)/Contents/Frameworks/
 endif
 ifdef MACOSX_USE_LEGACY_ICONS
-	cp $(srcdir)/icons/residualvm.icns $(bundle_name)/Contents/Resources/
+	cp $(srcdir)/icons/novelvm.icns $(bundle_name)/Contents/Resources/
 else
-	cp $(srcdir)/icons/residualvm.icns $(bundle_name)/Contents/Resources/
+	cp $(srcdir)/icons/novelvm.icns $(bundle_name)/Contents/Resources/
 endif
 	cp $(DIST_FILES_DOCS) $(bundle_name)/Contents/Resources/
 	cp $(DIST_FILES_THEMES) $(bundle_name)/Contents/Resources/
@@ -149,7 +149,7 @@ ifdef USE_OPENGL_SHADERS
 endif
 	$(srcdir)/devtools/credits.pl --rtf > $(bundle_name)/Contents/Resources/AUTHORS.rtf
 	rm $(bundle_name)/Contents/Resources/AUTHORS
-	mv $(bundle_name)/Contents/Resources/README.md $(bundle_name)/Contents/Resources/README # ResidualVM
+	mv $(bundle_name)/Contents/Resources/README.md $(bundle_name)/Contents/Resources/README # NovelVM
 	cp $(bundle_name)/Contents/Resources/COPYING.LGPL $(bundle_name)/Contents/Resources/COPYING-LGPL
 	cp $(bundle_name)/Contents/Resources/COPYING.FREEFONT $(bundle_name)/Contents/Resources/COPYING-FREEFONT
 	cp $(bundle_name)/Contents/Resources/COPYING.OFL $(bundle_name)/Contents/Resources/COPYING-OFL
@@ -158,18 +158,18 @@ endif
 ifdef USE_OPENGL_SHADERS
 	chmod 755 $(bundle_name)/Contents/Resources/shaders
 endif
-	cp residualvm-static $(bundle_name)/Contents/MacOS/residualvm
-	chmod 755 $(bundle_name)/Contents/MacOS/residualvm
-	$(STRIP) $(bundle_name)/Contents/MacOS/residualvm
+	cp novelvm-static $(bundle_name)/Contents/MacOS/novelvm
+	chmod 755 $(bundle_name)/Contents/MacOS/novelvm
+	$(STRIP) $(bundle_name)/Contents/MacOS/novelvm
 ifdef USE_DOCKTILEPLUGIN
 	mkdir -p $(bundle_name)/Contents/PlugIns
-	cp -r residualvm.docktileplugin $(bundle_name)/Contents/PlugIns/
+	cp -r novelvm.docktileplugin $(bundle_name)/Contents/PlugIns/
 endif
 
 ifdef USE_DOCKTILEPLUGIN
-bundle: residualvm-static residualvm.docktileplugin bundle-pack
+bundle: novelvm-static novelvm.docktileplugin bundle-pack
 else
-bundle: residualvm-static bundle-pack
+bundle: novelvm-static bundle-pack
 endif
 
 iphonebundle: iphone
@@ -186,10 +186,10 @@ endif
 ifdef DIST_FILES_VKEYBD
 	cp $(DIST_FILES_VKEYBD) $(bundle_name)/
 endif
-	$(STRIP) residualvm
-	ldid -S residualvm
-	chmod 755 residualvm
-	cp residualvm $(bundle_name)/ResidualVM
+	$(STRIP) novelvm
+	ldid -S novelvm
+	chmod 755 novelvm
+	cp novelvm $(bundle_name)/NovelVM
 	cp $(srcdir)/dists/iphone/icon.png $(bundle_name)/
 	cp $(srcdir)/dists/iphone/icon-72.png $(bundle_name)/
 	cp $(srcdir)/dists/iphone/Default.png $(bundle_name)/
@@ -304,22 +304,22 @@ OSX_STATIC_LIBS += -framework Sparkle -Wl,-rpath,@loader_path/../Frameworks
 endif
 endif
 
-# ResidualVM specific:
+# NovelVM specific:
 ifdef USE_GLEW
 OSX_STATIC_LIBS += $(STATICLIBPATH)/lib/libglew.a
 endif
 # Special target to create a static linked binary for Mac OS X.
 # We use -force_cpusubtype_ALL to ensure the binary runs on every
 # PowerPC machine.
-residualvm-static: $(OBJS)
-	$(CXX) $(LDFLAGS) -force_cpusubtype_ALL -o residualvm-static $(OBJS) \
+novelvm-static: $(OBJS)
+	$(CXX) $(LDFLAGS) -force_cpusubtype_ALL -o novelvm-static $(OBJS) \
 		-framework CoreMIDI \
 		$(OSX_STATIC_LIBS) \
 		$(OSX_ZLIB)
 
 # Special target to create a static linked binary for the iPhone (legacy, and iOS 7+)
 iphone: $(OBJS)
-	$(CXX) $(LDFLAGS) -o residualvm $(OBJS) \
+	$(CXX) $(LDFLAGS) -o novelvm $(OBJS) \
 		$(OSX_STATIC_LIBS) \
 		-framework UIKit -framework CoreGraphics -framework OpenGLES \
 		-framework CoreFoundation -framework QuartzCore -framework Foundation \
@@ -328,36 +328,36 @@ iphone: $(OBJS)
 # Special target to create a snapshot disk image for Mac OS X
 # TODO: Replace AUTHORS by Credits.rtf
 osxsnap: bundle
-	mkdir ResidualVM-snapshot
-	cp $(DIST_FILES_DOCS) ./ResidualVM-snapshot/
-	mv ./ResidualVM-snapshot/COPYING ./ResidualVM-snapshot/License\ \(GPL\)
-	mv ./ResidualVM-snapshot/COPYING.LGPL ./ResidualVM-snapshot/License\ \(LGPL\)
-	mv ./ResidualVM-snapshot/COPYING.FREEFONT ./ResidualVM-snapshot/License\ \(FREEFONT\)
-	mv ./ResidualVM-snapshot/COPYING.OFL ./ResidualVM-snapshot/License\ \(OFL\)
-	mv ./ResidualVM-snapshot/COPYING.BSD ./ResidualVM-snapshot/License\ \(BSD\)
-	mv ./ResidualVM-snapshot/COPYING.ISC ./ResidualVM-snapshot/License\ \(ISC\)
-	mv ./ResidualVM-snapshot/COPYING.LUA ./ResidualVM-snapshot/License\ \(Lua\)
-	mv ./ResidualVM-snapshot/COPYING.MIT ./ResidualVM-snapshot/License\ \(MIT\)
-	mv ./ResidualVM-snapshot/COPYING.TINYGL ./ResidualVM-snapshot/License\ \(TinyGL\)
-	$(XCODETOOLSPATH)/SetFile -t ttro -c ttxt ./ResidualVM-snapshot/*
-	mkdir ResidualVM-snapshot/doc
-	cp $(srcdir)/doc/QuickStart ./ResidualVM-snapshot/doc/QuickStart
-	$(XCODETOOLSPATH)/SetFile -t ttro -c ttxt ./ResidualVM-snapshot/doc/QuickStart
-# ResidualVM: missing CpMac in some cases
-	cp -R $(bundle_name) ./ResidualVM-snapshot/
-# ResidualVM missing background file:
-#	cp $(srcdir)/dists/macosx/DS_Store ./ResidualVM-snapshot/.DS_Store
-#	cp $(srcdir)/dists/macosx/background.jpg ./ResidualVM-snapshot/background.jpg
-#	$(XCODETOOLSPATH)/SetFile -a V ./ResidualVM-snapshot/.DS_Store
-#	$(XCODETOOLSPATH)/SetFile -a V ./ResidualVM-snapshot/background.jpg
+	mkdir NovelVM-snapshot
+	cp $(DIST_FILES_DOCS) ./NovelVM-snapshot/
+	mv ./NovelVM-snapshot/COPYING ./NovelVM-snapshot/License\ \(GPL\)
+	mv ./NovelVM-snapshot/COPYING.LGPL ./NovelVM-snapshot/License\ \(LGPL\)
+	mv ./NovelVM-snapshot/COPYING.FREEFONT ./NovelVM-snapshot/License\ \(FREEFONT\)
+	mv ./NovelVM-snapshot/COPYING.OFL ./NovelVM-snapshot/License\ \(OFL\)
+	mv ./NovelVM-snapshot/COPYING.BSD ./NovelVM-snapshot/License\ \(BSD\)
+	mv ./NovelVM-snapshot/COPYING.ISC ./NovelVM-snapshot/License\ \(ISC\)
+	mv ./NovelVM-snapshot/COPYING.LUA ./NovelVM-snapshot/License\ \(Lua\)
+	mv ./NovelVM-snapshot/COPYING.MIT ./NovelVM-snapshot/License\ \(MIT\)
+	mv ./NovelVM-snapshot/COPYING.TINYGL ./NovelVM-snapshot/License\ \(TinyGL\)
+	$(XCODETOOLSPATH)/SetFile -t ttro -c ttxt ./NovelVM-snapshot/*
+	mkdir NovelVM-snapshot/doc
+	cp $(srcdir)/doc/QuickStart ./NovelVM-snapshot/doc/QuickStart
+	$(XCODETOOLSPATH)/SetFile -t ttro -c ttxt ./NovelVM-snapshot/doc/QuickStart
+# NovelVM: missing CpMac in some cases
+	cp -R $(bundle_name) ./NovelVM-snapshot/
+# NovelVM missing background file:
+#	cp $(srcdir)/dists/macosx/DS_Store ./NovelVM-snapshot/.DS_Store
+#	cp $(srcdir)/dists/macosx/background.jpg ./NovelVM-snapshot/background.jpg
+#	$(XCODETOOLSPATH)/SetFile -a V ./NovelVM-snapshot/.DS_Store
+#	$(XCODETOOLSPATH)/SetFile -a V ./NovelVM-snapshot/background.jpg
 	hdiutil create -ov -format UDZO -imagekey zlib-level=9 -fs HFS+ \
-					-srcfolder ResidualVM-snapshot \
-					-volname "ResidualVM" \
-					ResidualVM-snapshot.dmg
-	rm -rf ResidualVM-snapshot
+					-srcfolder NovelVM-snapshot \
+					-volname "NovelVM" \
+					NovelVM-snapshot.dmg
+	rm -rf NovelVM-snapshot
 
 publish-appcast:
-	cp dists/macosx/residualvm_appcast.xml www.residualvm.org:/var/www/appcasts/macosx/release.xml
+	cp dists/macosx/novelvm_appcast.xml www.novelvm.org:/var/www/appcasts/macosx/release.xml
 
 
 #
@@ -390,10 +390,10 @@ endif
 # Target to create Raspberry Pi zip containig binary and specific README
 raspberrypi_dist:
 	mkdir -p $(srcdir)/residulvm-rpi
-	cp $(srcdir)/backends/platform/sdl/raspberrypi/README.RASPBERRYPI $(srcdir)/residualvm-rpi/README
-	cp $(srcdir)/residualvm $(srcdir)/residualvm-rpi
-	zip -r residualvm-rpi.zip residualvm-rpi
-	rm -f -R residualvm-rpi
+	cp $(srcdir)/backends/platform/sdl/raspberrypi/README.RASPBERRYPI $(srcdir)/novelvm-rpi/README
+	cp $(srcdir)/novelvm $(srcdir)/novelvm-rpi
+	zip -r novelvm-rpi.zip novelvm-rpi
+	rm -f -R novelvm-rpi
 
 # Mark special targets as phony
 .PHONY: deb bundle osxsnap install uninstall

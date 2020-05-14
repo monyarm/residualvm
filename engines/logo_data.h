@@ -1,6 +1,6 @@
-/* ResidualVM - A 3D game interpreter
+/* NovelVM - A 3D game interpreter
  *
- * ResidualVM is the legal property of its developers, whose names
+ * NovelVM is the legal property of its developers, whose names
  * are too numerous to list here. Please refer to the COPYRIGHT
  * file distributed with this source distribution.
  *
@@ -21,7 +21,7 @@
  */
 
 // This is a BMP file dumped into array.
-//   recode ../d1 <dists/residualvm_logo.bmp >logo_data.h
+//   recode ../d1 <dists/novelvm_logo.bmp >logo_data.h
 // The tool is from https://github.com/pinard/Recode
 
 byte logo_data[] = {

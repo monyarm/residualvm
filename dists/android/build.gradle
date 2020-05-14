@@ -22,7 +22,7 @@ apply plugin: 'com.android.application'
 android {
 	compileSdkVersion 28
 	defaultConfig {
-		applicationId 'com.residualvm.residualvm'
+		applicationId 'com.novelvm.novelvm'
 		minSdkVersion 16
 		targetSdkVersion 28
 		versionCode gradle.versionCode
@@ -52,8 +52,8 @@ android {
 			release {
 				storeFile file(System.env["KEYSTORE"])
 				keyAlias "upload_key"
-				storePassword "ResidualVM"
-				keyPassword "ResidualVM"
+				storePassword "NovelVM"
+				keyPassword "NovelVM"
 			}
 		}
 		buildTypes {

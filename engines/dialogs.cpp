@@ -59,11 +59,11 @@ MainMenuDialog::MainMenuDialog(Engine *engine)
 		_logo->useThemeTransparency(true);
 		_logo->setGfx(g_gui.theme()->getImageSurface(GUI::ThemeEngine::kImageLogoSmall));
 	} else {
-		GUI::StaticTextWidget *title = new GUI::StaticTextWidget(this, "GlobalMenu.Title", "ResidualVM");
+		GUI::StaticTextWidget *title = new GUI::StaticTextWidget(this, "GlobalMenu.Title", "NovelVM");
 		title->setAlign(Graphics::kTextAlignCenter);
 	}
 #else
-	GUI::StaticTextWidget *title = new GUI::StaticTextWidget(this, "GlobalMenu.Title", "ResidualVM");
+	GUI::StaticTextWidget *title = new GUI::StaticTextWidget(this, "GlobalMenu.Title", "NovelVM");
 	title->setAlign(Graphics::kTextAlignCenter);
 #endif
 
@@ -186,7 +186,7 @@ void MainMenuDialog::reflowLayout() {
 	} else {
 		GUI::StaticTextWidget *title = (GUI::StaticTextWidget *)findWidget("GlobalMenu.Title");
 		if (!title) {
-			title = new GUI::StaticTextWidget(this, "GlobalMenu.Title", "ResidualVM");
+			title = new GUI::StaticTextWidget(this, "GlobalMenu.Title", "NovelVM");
 			title->setAlign(Graphics::kTextAlignCenter);
 		}
 

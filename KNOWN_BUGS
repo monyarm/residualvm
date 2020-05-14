@@ -1,8 +1,8 @@
-Known issues in ResidualVM:
+Known issues in NovelVM:
 
 Common
 ------
- * Switching full-screen/windowed with alt-enter might crash ResidualVM
+ * Switching full-screen/windowed with alt-enter might crash NovelVM
  * Running fullscreen in widescreen monitors might stretch the image
    You can try solve issue by using config file option: "fullscreen_res".
    See README.md file for more information.

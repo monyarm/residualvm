@@ -1,6 +1,6 @@
-/* ResidualVM - A 3D game interpreter
+/* NovelVM - A 3D game interpreter
  *
- * ResidualVM is the legal property of its developers, whose names
+ * NovelVM is the legal property of its developers, whose names
  * are too numerous to list here. Please refer to the COPYRIGHT
  * file distributed with this source distribution.
  *
@@ -29,7 +29,7 @@
 #define MULTIPLIER 16
 
 /**
- * Custom event source for ResidualVM with true joystick support.
+ * Custom event source for NovelVM with true joystick support.
  */
 class ResVmSdlEventSource : public SdlEventSource {
 public:

@@ -70,7 +70,7 @@ private:
 /**
  * Outputs an uncompressed BMP stream of the given input surface.
  */
-// ResidualVM specific argument: bottomUp
+// NovelVM specific argument: bottomUp
 bool writeBMP(Common::WriteStream &out, const Graphics::Surface &input, const bool bottomUp = false);
 
 } // End of namespace Image

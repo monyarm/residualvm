@@ -259,8 +259,8 @@ Common::String Widget::cleanupHotkey(const Common::String &label) {
 
 void Widget::read(Common::String str) {
 #ifdef USE_TTS
-	if (ConfMan.hasKey("tts_enabled", "residualvm") &&
-			ConfMan.getBool("tts_enabled", "residualvm")) {
+	if (ConfMan.hasKey("tts_enabled", "novelvm") &&
+			ConfMan.getBool("tts_enabled", "novelvm")) {
 		Common::TextToSpeechManager *ttsMan = g_system->getTextToSpeechManager();
 		if (ttsMan == nullptr)
 			return;

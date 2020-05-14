@@ -1,7 +1,7 @@
-icons/residualvm.svg usr/share/pixmaps
-icons/residualvm.xpm usr/share/pixmaps
-dists/residualvm.desktop usr/share/applications
-dists/engine-data/*.lab usr/share/residualvm
-dists/engine-data/*.m4b usr/share/residualvm
-gui/themes/modern.zip usr/share/residualvm
-residualvm usr/games
+icons/novelvm.svg usr/share/pixmaps
+icons/novelvm.xpm usr/share/pixmaps
+dists/novelvm.desktop usr/share/applications
+dists/engine-data/*.lab usr/share/novelvm
+dists/engine-data/*.m4b usr/share/novelvm
+gui/themes/modern.zip usr/share/novelvm
+novelvm usr/games

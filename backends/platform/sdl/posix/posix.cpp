@@ -113,19 +113,19 @@ bool OSystem_POSIX::hasFeature(Feature f) {
 }
 
 Common::String OSystem_POSIX::getDefaultConfigFileName() {
-	const Common::String baseConfigName = "residualvm.ini";
+	const Common::String baseConfigName = "novelvm.ini";
 
 	Common::String configFile;
 
 	Common::String prefix;
 
-	// Our old configuration file path for POSIX systems was ~/.residualvmrc.
+	// Our old configuration file path for POSIX systems was ~/.novelvmrc.
 	// If that file exists, we still use it.
 	const char *envVar = getenv("HOME");
 	if (envVar && *envVar) {
 		configFile = envVar;
 		configFile += '/';
-		configFile += ".residualvmrc";
+		configFile += ".novelvmrc";
 
 		if (configFile.size() < MAXPATHLEN) {
 			struct stat sb;
@@ -153,8 +153,8 @@ Common::String OSystem_POSIX::getDefaultConfigFileName() {
 		prefix = envVar;
 	}
 
-	if (!prefix.empty() && Posix::assureDirectoryExists("residualvm", prefix.c_str())) {
-		prefix += "/residualvm";
+	if (!prefix.empty() && Posix::assureDirectoryExists("novelvm", prefix.c_str())) {
+		prefix += "/novelvm";
 	}
 
 	if (!prefix.empty() && (prefix.size() + 1 + baseConfigName.size()) < MAXPATHLEN) {
@@ -243,7 +243,7 @@ Common::String OSystem_POSIX::getScreenshotsPath() {
 		return path;
 	}
 
-	// Otherwise, the default screenshots path is the "ResidualVM Screenshots"
+	// Otherwise, the default screenshots path is the "NovelVM Screenshots"
 	// directory in the XDG "Pictures" user directory, as defined in the
 	// xdg-user-dirs spec: https://www.freedesktop.org/wiki/Software/xdg-user-dirs/
 	Common::String picturesPath = getXdgUserDir("PICTURES");
@@ -255,7 +255,7 @@ Common::String OSystem_POSIX::getScreenshotsPath() {
 		picturesPath += "/";
 	}
 
-	static const char *SCREENSHOTS_DIR_NAME = "ResidualVM Screenshots";
+	static const char *SCREENSHOTS_DIR_NAME = "NovelVM Screenshots";
 	if (!Posix::assureDirectoryExists(SCREENSHOTS_DIR_NAME, picturesPath.c_str())) {
 		return "";
 	}
@@ -297,13 +297,13 @@ Common::String OSystem_POSIX::getDefaultLogFileName() {
 		logFile = ".cache/";
 	}
 
-	logFile += "residualvm/logs";
+	logFile += "novelvm/logs";
 
 	if (!Posix::assureDirectoryExists(logFile, prefix)) {
 		return Common::String();
 	}
 
-	return Common::String::format("%s/%s/residualvm.log", prefix, logFile.c_str());
+	return Common::String::format("%s/%s/novelvm.log", prefix, logFile.c_str());
 }
 
 bool OSystem_POSIX::displayLogFile() {

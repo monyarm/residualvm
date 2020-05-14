@@ -157,11 +157,11 @@ private:
 	CheckboxWidget *_fullscreenCheckbox;
 	CheckboxWidget *_filteringCheckbox;
 	CheckboxWidget *_aspectCheckbox;
-	CheckboxWidget *_vsyncCheckbox; // ResidualVM specific
-	StaticTextWidget *_rendererTypePopUpDesc; // ResidualVM specific
-	PopUpWidget *_rendererTypePopUp; // ResidualVM specific
-	StaticTextWidget *_antiAliasPopUpDesc; // ResidualVM specific
-	PopUpWidget *_antiAliasPopUp; // ResidualVM specific
+	CheckboxWidget *_vsyncCheckbox; // NovelVM specific
+	StaticTextWidget *_rendererTypePopUpDesc; // NovelVM specific
+	PopUpWidget *_rendererTypePopUp; // NovelVM specific
+	StaticTextWidget *_antiAliasPopUpDesc; // NovelVM specific
+	PopUpWidget *_antiAliasPopUp; // NovelVM specific
 	StaticTextWidget *_renderModePopUpDesc;
 	PopUpWidget *_renderModePopUp;
 

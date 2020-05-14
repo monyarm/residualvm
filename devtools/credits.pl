@@ -599,7 +599,7 @@ sub add_paragraph {
 #
 
 begin_credits("Credits");
-    begin_section("ResidualVM");
+    begin_section("NovelVM");
 	begin_section("Project Leaders");
 	    begin_persons();
 		add_person("Pawe&#322; Ko&#322;odziejski", "aquadran", "");
@@ -702,7 +702,7 @@ begin_credits("Credits");
 
     begin_section("ScummVM code");
 	  add_paragraph(
-	  "ResidualVM uses a lot of ScummVM code. ".
+	  "NovelVM uses a lot of ScummVM code. ".
 	  "For a list of authors look into COPYRIGHT file.");
     end_section();
 

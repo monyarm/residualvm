@@ -2,8 +2,8 @@
 <!-- NB: android:versionCode needs to be bumped for formal releases -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-		package="org.residualvm.residualvm"
-		android:sharedUserId="org.residualvm.residualvm">
+		package="org.novelvm.novelvm"
+		android:sharedUserId="org.novelvm.novelvm">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:required="true"/>
 
@@ -14,10 +14,10 @@
 			android:label="@string/app_name"
 			android:description="@string/app_desc"
 			android:allowBackup="false"
-			android:icon="@drawable/residualvm"
+			android:icon="@drawable/novelvm"
 			android:extractNativeLibs="false"
 			android:isGame="true">
-		<activity android:name=".ResidualVMActivity"
+		<activity android:name=".NovelVMActivity"
 				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
 				android:screenOrientation="landscape"
 				android:configChanges="orientation|keyboardHidden"

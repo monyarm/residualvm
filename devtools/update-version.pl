@@ -32,11 +32,11 @@ print "Setting version to '$VERSION'\n";
 # List of the files in which we need to perform substitution.
 my @subs_files = qw(
 	base/internal_version.h
-	dists/redhat/residualvm.spec
-	dists/slackware/residualvm.SlackBuild
+	dists/redhat/novelvm.spec
+	dists/slackware/novelvm.SlackBuild
 	dists/macosx/Info.plist
 	dists/macosx/dockplugin/Info.plist
-	dists/irix/residualvm.spec
+	dists/irix/novelvm.spec
 	dists/android/AndroidManifest.xml
 	dists/riscos/!Boot,feb
 	);

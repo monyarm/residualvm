@@ -4,15 +4,15 @@
 .*.swo
 *.o
 *.dwo
-residualvm.dwp
+novelvm.dwp
 lib*.a
 .deps
 
 /config.log
-/residualvm
-/libresidualvm.so
-/residualvm-static
-/ResidualVMDockTilePlugin*
+/novelvm
+/libnovelvm.so
+/novelvm-static
+/NovelVMDockTilePlugin*
 /config.h
 /config.mk
 /.gdb_history
@@ -22,11 +22,11 @@ lib*.a
 /*.dSYM
 /MT32_CONTROL.ROM
 /MT32_PCM.ROM
-/ResidualVM.app
-/residualvm.docktileplugin
-/\!ResidualVM
+/NovelVM.app
+/novelvm.docktileplugin
+/\!NovelVM
 /*,e1f
-/residualvm-ps3.pkg
+/novelvm-ps3.pkg
 /*.ipk
 /map.txt
 *.elf
@@ -36,7 +36,7 @@ lib*.a
 /.settings
 /.autotools
 /Icon.*
-/residualvm-conf.cpp
+/novelvm-conf.cpp
 /tmp_*.cpp
 /*.apk
 /*.m4b
@@ -58,16 +58,16 @@ lib*.a
 /dists/codeblocks/*.cbp
 /dists/codeblocks/*.depend
 /dists/codeblocks/*.layout
-/dists/codeblocks/residualvm*
+/dists/codeblocks/novelvm*
 
 #Ignore XCode user data and build files
 xcuserdata
 project.xcworkspace
 /dists/iphone/build
-/dists/iphone/residualvm.xcodeproj
+/dists/iphone/novelvm.xcodeproj
 /dists/iphone/create_project
 /dists/macosx/build
-/dists/macosx/residualvm.xcodeproj
+/dists/macosx/novelvm.xcodeproj
 /dists/macosx/create_project
 
 /dists/msvc/[Dd]ebug*/
@@ -157,10 +157,10 @@ LLVM64/
 /messages.mo
 
 #Ignore Qt Creator project files
-ResidualVM.config
-ResidualVM.creator
-ResidualVM.files
-ResidualVM.includes
+NovelVM.config
+NovelVM.creator
+NovelVM.files
+NovelVM.includes
 
 #Ignore Komodo IDE/Edit project files
 *.komodoproject
@@ -193,9 +193,9 @@ psp2pkg/
 
 #Ignore Switch files
 switch_release/
-residualvm.elf
-residualvm.nro
-residualvm_switch.zip
+novelvm.elf
+novelvm.nro
+novelvm_switch.zip
 
 #Ignore gmon.out created by gprof
 gmon.out

@@ -26,7 +26,7 @@
 #include "common/array.h"
 #include "common/fs.h"
 #include "common/str.h"
-//#include "backends/plugins/elf/version.h" // ResidualVM specific
+//#include "backends/plugins/elf/version.h" // NovelVM specific
 
 #define INCLUDED_FROM_BASE_PLUGINS_H
 #include "base/internal_plugins.h"

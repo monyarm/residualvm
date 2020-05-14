@@ -5,13 +5,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleDisplayName</key>
-	<string>ResidualVM</string>
+	<string>NovelVM</string>
 	<key>CFBundleExecutable</key>
-	<string>residualvm</string>
+	<string>novelvm</string>
 	<key>CFBundleGetInfoString</key>
-	<string>0.4.0git, Copyright 2003-2020 The ResidualVM Team</string>
+	<string>0.4.0git, Copyright 2003-2020 The NovelVM Team</string>
 	<key>CFBundleIconFile</key>
-	<string>residualvm.icns</string>
+	<string>novelvm.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -41,7 +41,7 @@
 		<string>uk</string>
 	</array>
 	<key>CFBundleName</key>
-	<string>ResidualVM</string>
+	<string>NovelVM</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -49,16 +49,16 @@
 	<key>CFBundleVersion</key>
 	<string>0.4.0git</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright 2003-2020 The ResidualVM Team</string>
+	<string>Copyright 2003-2020 The NovelVM Team</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>SUFeedURL</key>
-	<string>https://www.residualvm.org/appcasts/macosx/release.xml</string>
+	<string>https://www.novelvm.org/appcasts/macosx/release.xml</string>
 	<key>NSDockTilePlugIn</key>
-	<string>residualvm.docktileplugin</string>
+	<string>novelvm.docktileplugin</string>
 	<key>NSRequiresAquaSystemAppearance</key>
 	<false/>
 	<key>NSDocumentsFolderUsageDescription</key>
-	<string>ResidualVM saves and loads savegames in the Documents folder by default.</string>
+	<string>NovelVM saves and loads savegames in the Documents folder by default.</string>
 </dict>
 </plist>

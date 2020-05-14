@@ -156,11 +156,11 @@ enum JoystickButton {
 	JOYSTICK_BUTTON_DPAD_DOWN,
 	JOYSTICK_BUTTON_DPAD_LEFT,
 	JOYSTICK_BUTTON_DPAD_RIGHT,
-/* START of ResidualVM-specific code */
+/* START of NovelVM-specific code */
 	// Left and right trigger button events are generated in place of the axis events for now
 	JOYSTICK_BUTTON_LEFT_TRIGGER,
 	JOYSTICK_BUTTON_RIGHT_TRIGGER
-/* END of ResidualVM-specific code */
+/* END of NovelVM-specific code */
 };
 
 /**
@@ -228,7 +228,7 @@ struct Event {
 	/**
 	 * Mouse movement since the last mouse movement event.
 	 *
-	 * This field is ResidualVM specific
+	 * This field is NovelVM specific
 	 */
 	Common::Point relMouse;
 

@@ -239,10 +239,10 @@ void splashScreen() {
 
 	g_system->showOverlay();
 
-	// Fill with blue - ResidualVM theme
+	// Fill with blue - NovelVM theme
 	Graphics::Surface screen;
 	screen.create(g_system->getOverlayWidth(), g_system->getOverlayHeight(), g_system->getOverlayFormat());
-	screen.fillRect(Common::Rect(screen.w, screen.h), screen.format.ARGBToColor(0xff, 0x1e, 0x6f, 0x95)); // ResidualVM theme
+	screen.fillRect(Common::Rect(screen.w, screen.h), screen.format.ARGBToColor(0xff, 0x1e, 0x6f, 0x95)); // NovelVM theme
 
 	// Load logo
 	Graphics::Surface *logo = bitmap.getSurface()->convertTo(g_system->getOverlayFormat(), bitmap.getPalette());
@@ -399,7 +399,7 @@ void GUIErrorMessage(const Common::String &msg) {
 	g_system->beginGFXTransaction();
 		initCommonGFX();
 		g_system->initSize(320, 200);
-		g_system->launcherInitSize(640, 480);//ResidualVM specific
+		g_system->launcherInitSize(640, 480);//NovelVM specific
 	if (g_system->endGFXTransaction() == OSystem::kTransactionSuccess) {
 		GUI::MessageDialog dialog(msg);
 		dialog.runModal();
@@ -591,9 +591,9 @@ void Engine::openMainMenuDialog() {
 bool Engine::warnUserAboutUnsupportedGame() {
 	if (ConfMan.getBool("enable_unsupported_game_warning")) {
 		GUI::MessageDialog alert(_("WARNING: The game you are about to start is"
-			" not yet fully supported by ResidualVM. As such, it is likely to be"
+			" not yet fully supported by NovelVM. As such, it is likely to be"
 			" unstable, and any saved game you make might not work in future"
-			" versions of ResidualVM."), _("Start anyway"), _("Cancel"));
+			" versions of NovelVM."), _("Start anyway"), _("Cancel"));
 		return alert.runModal() == GUI::kMessageOK;
 	}
 	return true;

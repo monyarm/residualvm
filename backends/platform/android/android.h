@@ -305,7 +305,7 @@ public:
 	virtual bool isConnectionLimited();
 	virtual Common::String getSystemLanguage() const;
 
-	// ResidualVM specific method
+	// NovelVM specific method
 	virtual void launcherInitSize(uint w, uint h);
 	bool lockMouse(bool lock);
 	void setupScreen(uint screenW, uint screenH, bool fullscreen, bool accel3d) {

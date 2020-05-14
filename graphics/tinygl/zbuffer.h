@@ -1,6 +1,6 @@
-/* ResidualVM - A 3D game interpreter
+/* NovelVM - A 3D game interpreter
  *
- * ResidualVM is the legal property of its developers, whose names
+ * NovelVM is the legal property of its developers, whose names
  * are too numerous to list here. Please refer to the AUTHORS
  * file distributed with this source distribution.
  *
@@ -23,7 +23,7 @@
 /*
  * This file is based on, or a modified version of code from TinyGL (C) 1997-1998 Fabrice Bellard,
  * which is licensed under the zlib-license (see LICENSE).
- * It also has modifications by the ResidualVM-team, which are covered under the GPLv2 (or later).
+ * It also has modifications by the NovelVM-team, which are covered under the GPLv2 (or later).
  */
 
 #ifndef GRAPHICS_TINYGL_ZBUFFER_H_

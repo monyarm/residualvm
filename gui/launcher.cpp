@@ -137,9 +137,9 @@ void LauncherDialog::build() {
 	new StaticTextWidget(this, "Launcher.Version", gScummVMFullVersion);
 #endif
 	if (!g_system->hasFeature(OSystem::kFeatureNoQuit))
-		new ButtonWidget(this, "Launcher.QuitButton", _("~Q~uit"), _("Quit ResidualVM"), kQuitCmd);
-	new ButtonWidget(this, "Launcher.AboutButton", _("A~b~out..."), _("About ResidualVM"), kAboutCmd);
-	new ButtonWidget(this, "Launcher.OptionsButton", _("~O~ptions..."), _("Change global ResidualVM options"), kOptionsCmd);
+		new ButtonWidget(this, "Launcher.QuitButton", _("~Q~uit"), _("Quit NovelVM"), kQuitCmd);
+	new ButtonWidget(this, "Launcher.AboutButton", _("A~b~out..."), _("About NovelVM"), kAboutCmd);
+	new ButtonWidget(this, "Launcher.OptionsButton", _("~O~ptions..."), _("Change global NovelVM options"), kOptionsCmd);
 	_startButton =
 		new ButtonWidget(this, "Launcher.StartButton", _("~S~tart"), _("Start selected game"), kStartCmd);
 
@@ -488,7 +488,7 @@ void LauncherDialog::loadGame(int item) {
 			dialog.runModal();
 		}
 	} else {
-		MessageDialog dialog(_("ResidualVM could not find any engine capable of running the selected game!"), _("OK"));
+		MessageDialog dialog(_("NovelVM could not find any engine capable of running the selected game!"), _("OK"));
 		dialog.runModal();
 	}
 }
@@ -534,7 +534,7 @@ bool LauncherDialog::doGameDetection(const Common::String &path) {
 	Common::FSNode dir(path);
 	Common::FSList files;
 	if (!dir.getChildren(files, Common::FSNode::kListAll)) {
-		MessageDialog alert(_("ResidualVM couldn't open the specified directory!"));
+		MessageDialog alert(_("NovelVM couldn't open the specified directory!"));
 		alert.runModal();
 		return true;
 	}
@@ -553,7 +553,7 @@ bool LauncherDialog::doGameDetection(const Common::String &path) {
 	int idx;
 	if (candidates.empty()) {
 		// No game was found in the specified directory
-		MessageDialog alert(_("ResidualVM could not find any game in the specified directory!"));
+		MessageDialog alert(_("NovelVM could not find any game in the specified directory!"));
 		alert.runModal();
 		idx = -1;
 		return false;

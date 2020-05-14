@@ -808,7 +808,7 @@ XcodeProvider::ValueList& XcodeProvider::getResourceFiles() const {
 		files.push_back("dists/engine-data/xeen.ccs");
 		files.push_back("dists/pred.dic");
 		files.push_back("dists/networking/wwwroot.zip");
-		files.push_back("icons/residualvm.icns");
+		files.push_back("icons/novelvm.icns");
 		files.push_back("AUTHORS");
 		files.push_back("COPYING");
 		files.push_back("COPYING.LGPL");

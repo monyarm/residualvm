@@ -95,7 +95,7 @@ echo Removing all project files
 del /Q *.vcproj* > NUL 2>&1
 del /Q *.vsprops > NUL 2>&1
 del /Q *.sln* > NUL 2>&1
-del /Q residualvm* > NUL 2>&1
+del /Q novelvm* > NUL 2>&1
 del /Q devtools* > NUL 2>&1
 del /Q test_runner.cpp
 goto done

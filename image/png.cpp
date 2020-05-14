@@ -255,7 +255,7 @@ bool PNGDecoder::loadStream(Common::SeekableReadStream &stream) {
 #endif
 }
 
-// ResidualVM specific argument: bottomUp
+// NovelVM specific argument: bottomUp
 bool writePNG(Common::WriteStream &out, const Graphics::Surface &input, const bool bottomUp) {
 #ifdef USE_PNG
 #ifdef SCUMM_LITTLE_ENDIAN
@@ -309,7 +309,7 @@ bool writePNG(Common::WriteStream &out, const Graphics::Surface &input, const bo
 
 	Common::Array<const uint8 *> rows;
 	rows.reserve(surface->h);
-// ResidualVM specific
+// NovelVM specific
 	if (bottomUp) {
 		for (uint y = surface->h; y-- > 0;) {
 			rows.push_back((const uint8 *)surface->getBasePtr(0, y));

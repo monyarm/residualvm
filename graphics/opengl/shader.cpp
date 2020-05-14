@@ -1,6 +1,6 @@
-/* ResidualVM - A 3D game interpreter
+/* NovelVM - A 3D game interpreter
  *
- * ResidualVM is the legal property of its developers, whose names
+ * NovelVM is the legal property of its developers, whose names
  * are too numerous to list here. Please refer to the COPYRIGHT
  * file distributed with this source distribution.
  *
@@ -36,9 +36,6 @@ static const GLchar *readFile(const Common::String &filename) {
 	// Allow load shaders from source code directory without install them
 	// It's used for development purpose
 	// FIXME: it's doesn't work with just search subdirs in 'engines'
-	SearchMan.addDirectory("GRIM_SHADERS", "engines/grim", 0, 2);
-	SearchMan.addDirectory("MYST3_SHADERS", "engines/myst3", 0, 2);
-	SearchMan.addDirectory("STARK_SHADERS", "engines/stark", 0, 2);
 	file.open(Common::String("shaders/") + filename);
 	if (!file.isOpen())
 		error("Could not open shader %s!", filename.c_str());

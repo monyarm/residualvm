@@ -1,7 +1,7 @@
 /*
 README to .guide converter $VER: RM2AG.rx 0.15 (25.01.2018)
 
-This script converts the pure ASCII-text based README file of ResidualVM to a
+This script converts the pure ASCII-text based README file of NovelVM to a
 basic Amiga guide file.
 
 More AmigaGuide features being added in the process if feasible.
@@ -14,7 +14,7 @@ PARSE ARG readme_txt
 to secure a sane working path. We get rid of them to make AREXX find the file */
 readme_txt=COMPRESS(readme_txt,'"')
 OPEN(check_readme,readme_txt,'R')
-IF READCH(check_readme,14) = 'ResidualVM README' THEN
+IF READCH(check_readme,14) = 'NovelVM README' THEN
 	CLOSE(check_readme)
 ELSE DO
 	SAY "Not the README file. Aborting!"
@@ -28,9 +28,9 @@ OPEN(guide_write,'README.guide','W')
 
 /* Prepare the Amiga guide file, add the intro and fixed text */
 
-WRITELN(guide_write,'@DATABASE ResidualVM README.guide')
+WRITELN(guide_write,'@DATABASE NovelVM README.guide')
 WRITELN(guide_write,'@WORDWRAP')
-WRITELN(guide_write,'@NODE "main" "ResidualVM README Guide"')
+WRITELN(guide_write,'@NODE "main" "NovelVM README Guide"')
 WRITELN(guide_write,' ')
 WRITELN(guide_write,'@{b}')
 WRITELN(guide_write,READLN(readme_read))
@@ -103,8 +103,8 @@ END
 /* Finish the TOC, hardcoded due the outro text getting read in last, but needs to be read/written after the TOC creation */
 WRITELN(guide_write,'------------------------------------------------------------------------')
 WRITELN(guide_write,'Good Luck!')
-WRITELN(guide_write,'The ResidualVM team.')
-WRITELN(guide_write,'@{"https://www.residualvm.org/" System "URLOpen https://www.residualvm.org/"}')
+WRITELN(guide_write,'The NovelVM team.')
+WRITELN(guide_write,'@{"https://www.novelvm.org/" System "URLOpen https://www.novelvm.org/"}')
 WRITELN(guide_write,'------------------------------------------------------------------------')
 
 /* Creating the sub links nodes */

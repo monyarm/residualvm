@@ -76,7 +76,7 @@ enum {
  * @param surf	a surface (will always have 16 bpp after this for now)
  * @return		false if a error occurred
  */
-//ResidualVM specific:
+//NovelVM specific:
 inline bool createThumbnailFromScreen(Graphics::Surface *surf) { return true; }
 
 /**

@@ -26,7 +26,7 @@
 
 #include "common/textconsole.h"
 
-#include "icons/residualvm.xpm"
+#include "icons/novelvm.xpm"
 
 #if SDL_VERSION_ATLEAST(2, 0, 0)
 static const uint32 fullscreenMask = SDL_WINDOW_FULLSCREEN_DESKTOP | SDL_WINDOW_FULLSCREEN;
@@ -34,7 +34,7 @@ static const uint32 fullscreenMask = SDL_WINDOW_FULLSCREEN_DESKTOP | SDL_WINDOW_
 
 SdlWindow::SdlWindow()
 #if SDL_VERSION_ATLEAST(2, 0, 0)
-	: _window(nullptr), _inputGrabState(false), _windowCaption("ResidualVM"),
+	: _window(nullptr), _inputGrabState(false), _windowCaption("NovelVM"),
 	_lastFlags(0), _lastX(SDL_WINDOWPOS_UNDEFINED), _lastY(SDL_WINDOWPOS_UNDEFINED)
 #endif
 	{

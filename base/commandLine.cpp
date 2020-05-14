@@ -43,7 +43,7 @@
 
 #include "audio/musicplugin.h"
 
-#include "graphics/renderer.h" // ResidualVM
+#include "graphics/renderer.h" // NovelVM
 
 #define DETECTOR_TESTING_HACK
 #define UPGRADE_ALL_TARGETS_HACK
@@ -64,9 +64,9 @@ static const char USAGE_STRING[] =
 static const char HELP_STRING[] = "NoUsageString"; // save more data segment space
 #else
 static const char HELP_STRING[] =
-	"ResidualVM - A 3D game interpreter\n"
+	"NovelVM - A 3D game interpreter\n"
 	"Usage: %s [OPTIONS]... [GAME]\n"
-	"  -v, --version            Display ResidualVM version information and exit\n"
+	"  -v, --version            Display NovelVM version information and exit\n"
 	"  -h, --help               Display a brief help text and exit\n"
 	"  -z, --list-games         Display list of supported games and exit\n"
 	"  -t, --list-targets       Display list of configured targets and exit\n"
@@ -194,15 +194,15 @@ static const char HELP_STRING[] =
 #if defined(ENABLE_DIRECTOR)
 	"  --start-movie=NAME       Start movie for Director\n"
 #endif
-//#ifdef ENABLE_SCUMM // ResidualVM not used
+//#ifdef ENABLE_SCUMM // NovelVM not used
 	"  --tempo=NUM              Set music tempo (in percent, 50-200) for SCUMM games\n"
 	"                           (default: 100)\n"
-//#ifdef ENABLE_SCUMM_7_8 // ResidualVM not used
-#ifdef ENABLE_GRIM // ResidualVM specific
+//#ifdef ENABLE_SCUMM_7_8 // NovelVM not used
+#ifdef ENABLE_GRIM // NovelVM specific
 	"  --dimuse-tempo=NUM       Set internal Digital iMuse tempo (10 - 100) per second\n"
 	"                           (default: 10)\n"
 #endif
-//#endif // ResidualVM - not used
+//#endif // NovelVM - not used
 #if 1 // ResidulVM specific
 	"  --engine-speed=NUM       Set frame per second limit (0 - 100), 0 = no limit\n"
 	"                           (default: 60)\n"
@@ -213,7 +213,7 @@ static const char HELP_STRING[] =
 ;
 #endif
 
-static const char *s_appName = "residualvm";
+static const char *s_appName = "novelvm";
 
 static void NORETURN_PRE usage(const char *s, ...) GCC_PRINTF(1, 2) NORETURN_POST;
 
@@ -250,17 +250,17 @@ void registerDefaults() {
 	ConfMan.registerDefault("filtering", false);
 	ConfMan.registerDefault("show_fps", false);
 	ConfMan.registerDefault("aspect_ratio", false);
-/* ResidualVM - not used
+/* NovelVM - not used
 	ConfMan.registerDefault("gfx_mode", "normal");
 	ConfMan.registerDefault("render_mode", "default");
 	ConfMan.registerDefault("desired_screen_aspect_ratio", "auto");
 	ConfMan.registerDefault("stretch_mode", "default");
 	ConfMan.registerDefault("shader", "default");*/
-// ResidualVM specific start
+// NovelVM specific start
 	ConfMan.registerDefault("show_fps", false);
 	ConfMan.registerDefault("dirtyrects", true);
 	ConfMan.registerDefault("bpp", 0);
-// ResidualVM specific end
+// NovelVM specific end
 
 	// Sound & Music
 	ConfMan.registerDefault("music_volume", 192);
@@ -274,7 +274,7 @@ void registerDefaults() {
 
 	ConfMan.registerDefault("multi_midi", false);
 	ConfMan.registerDefault("native_mt32", false);
-/* ResidualVM - not used
+/* NovelVM - not used
 	ConfMan.registerDefault("dump_midi", false);
 	ConfMan.registerDefault("enable_gs", false);
 	ConfMan.registerDefault("midi_gain", 100);
@@ -302,7 +302,7 @@ void registerDefaults() {
 	ConfMan.registerDefault("object_labels", true);
 #endif
 
-/* ResidualVM - not used
+/* NovelVM - not used
 	ConfMan.registerDefault("copy_protection", false);
 	ConfMan.registerDefault("talkspeed", 60);*/
 
@@ -319,10 +319,10 @@ void registerDefaults() {
 #if defined(ENABLE_SKY) || defined(ENABLE_QUEEN)
 	ConfMan.registerDefault("alt_intro", false);
 #endif
-#ifdef ENABLE_GRIM // ResidualVM specific
+#ifdef ENABLE_GRIM // NovelVM specific
 	ConfMan.registerDefault("dimuse_tempo", 10);
 #endif
-#if 1 // ResidualVM specific
+#if 1 // NovelVM specific
 	ConfMan.registerDefault("talkspeed", 179);
 #endif
 
@@ -636,7 +636,7 @@ Common::String parseCommandLine(Common::StringMap &settings, int argc, const cha
 			DO_LONG_OPTION("opl-driver")
 			END_OPTION
 
-/* ResidualVM - not used
+/* NovelVM - not used
 			DO_OPTION('g', "gfx-mode")
 			END_OPTION
 
@@ -713,7 +713,7 @@ Common::String parseCommandLine(Common::StringMap &settings, int argc, const cha
 			DO_LONG_OPTION_BOOL("native-mt32")
 			END_OPTION
 
-/* ResidualVM - not used
+/* NovelVM - not used
 			DO_LONG_OPTION_BOOL("dump-midi")
 			END_OPTION*/
 
@@ -723,13 +723,13 @@ Common::String parseCommandLine(Common::StringMap &settings, int argc, const cha
 			DO_LONG_OPTION_BOOL("aspect-ratio")
 			END_OPTION
 
-/* ResidualVM - not used
+/* NovelVM - not used
 			DO_LONG_OPTION("render-mode")
 				int renderMode = Common::parseRenderMode(option);
 				if (renderMode == Common::kRenderDefault)
 					usage("Unrecognized render mode '%s'", option);*/
 
-// ResidualVM specific start
+// NovelVM specific start
 			DO_LONG_OPTION_INT("bpp")
 			END_OPTION
 
@@ -738,7 +738,7 @@ Common::String parseCommandLine(Common::StringMap &settings, int argc, const cha
 
 			DO_LONG_OPTION("gamma")
 			END_OPTION
-// ResidualVM specific start
+// NovelVM specific start
 			DO_LONG_OPTION("renderer")
 				Graphics::RendererType renderer = Graphics::parseRendererTypeCode(option);
 				if (renderer == Graphics::kRendererTypeDefault)
@@ -746,7 +746,7 @@ Common::String parseCommandLine(Common::StringMap &settings, int argc, const cha
 			END_OPTION
 
 			DO_LONG_OPTION_BOOL("show-fps")
-// ResidualVM specific end
+// NovelVM specific end
 			END_OPTION
 
 			DO_LONG_OPTION("savepath")
@@ -770,7 +770,7 @@ Common::String parseCommandLine(Common::StringMap &settings, int argc, const cha
 			DO_LONG_OPTION_INT("talkspeed")
 			END_OPTION
 
-/* ResidualVM - not used
+/* NovelVM - not used
 			DO_LONG_OPTION_BOOL("copy-protection")
 			END_OPTION*/
 
@@ -817,14 +817,14 @@ Common::String parseCommandLine(Common::StringMap &settings, int argc, const cha
 #endif
 
 
-// ResidualVM specific start
+// NovelVM specific start
 #ifdef ENABLE_GRIM
 			DO_LONG_OPTION_INT("dimuse-tempo")
 			END_OPTION
 #endif
 			DO_LONG_OPTION_INT("engine-speed")
 			END_OPTION
-// ResidualVM specific end
+// NovelVM specific end
 
 #ifdef IPHONE
 			// This is automatically set when launched from the Springboard.
@@ -1089,7 +1089,7 @@ static Common::String detectGames(const Common::String &path, const Common::Stri
 	DetectedGames candidates = recListGames(dir, engineId, gameId, recursive);
 
 	if (candidates.empty()) {
-		printf("WARNING: ResidualVM could not find any game in %s\n", dir.getPath().c_str());
+		printf("WARNING: NovelVM could not find any game in %s\n", dir.getPath().c_str());
 		if (noPath) {
 			printf("WARNING: Consider using --path=<path> to specify a directory\n");
 		}

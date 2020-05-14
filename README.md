@@ -1,12 +1,9 @@
-ResidualVM: A 3D game interpreter
+NovelVM: Visual Novel interpreter
 =================================
 
 
-  1. [ What is ResidualVM?         ](#1-what-is-residualvm)
+  1. [ What is NovelVM?         ](#1-what-is-novelvm)
   2. [ Current state               ](#2-current-state)
-  3. [ Running GrimE games         ](#3-running-grime-games)
-  4. [ Running Myst III            ](#4-running-myst-iii)
-  5. [ Running The Longest Journey ](#5-running-the-longest-journey)
   6. [ Configuration               ](#6-configuration)
   7. [ Troubleshooting             ](#7-troubleshooting-known-bugs-issues)
   8. [ Debugging                   ](#8-debugging)
@@ -16,280 +13,18 @@ ResidualVM: A 3D game interpreter
  12. [ Contact                     ](#12-contact)
 
 
-## 1. What is ResidualVM?
-ResidualVM is a game engine reimplementation that allows you to play 3D
-adventure games such as Grim Fandango, Escape from Monkey Island, Myst III
-and The Longest Journey.
-
-ResidualVM utilizes OpenGL for 3D graphics hardware acceleration.
-A software renderer is also included for machines without hardware OpenGL.
-
+## 1. What is NovelVM?
+NovelVM is a game engine reimplementation that allows you to play Visual Novel games.
 
 ## 2. Current state
-At this point ResidualVM is fit for normal use, when playing supported
-games, it is however worth noting that you should still save early and
-save often, as problems or dead ends might still exist (Grim Fandango
-itself originally had a few unintentional ways to get the game stuck).
+Currently not playable.
 
-### 2.1. Which games does ResidualVM support? ###
+### 2.1. Which games does NovelVM support? ###
 
-Currently ResidualVM supports Grim Fandango and Escape from Monkey Island,
-as well as Myst III and The Longest Journey.
-
-#### 2.1.1. GrimE games support ####
-
-Game                             | Status
--------------------------------- | -------------------------
-Grim Fandango                    | Completable with glitches
-Grim Fandango (demo)             | Completable with glitches
-Escape from Monkey Island        | Completable with glitches
-Escape from Monkey Island (demo) | Completable with glitches
-Escape from Monkey Island (PS2)  | Untested
-
-#### 2.1.2. Other games support ####
-
-Game                             | Status
--------------------------------- | -------------------------
-Myst III Exile                   | Completable
-The Longest Journey              | Untested
-The Longest Journey (demo)       | Untested
-
-Specifics can be found at
-https://www.residualvm.org/compatibility/
-
-For more information, see the page on ResidualVM at the wiki page:
-https://wiki.residualvm.org/
-
-
-## 3. Running GrimE games
-
-### 3.1. Required files
-
-For both Grim Fandango and Escape from Monkey Island, you will need the
-original game files as well as the official update patch.
-
-#### 3.1.1. Grim Fandango ####
-
-You will need to copy the data files from your Grim Fandango CDs into one
-directory. Specifically, you'll need:
-  * All of the `LAB` files from both CDs.
-  * A copy of the Grim Fandango 1.01 update EXE.
-        The patch can be downloaded from:
-        https://demos.residualvm.org/patches/gfupd101.exe
-
-#### 3.1.2. Escape from Monkey Island ####
-
-You will need to copy the data files from your Escape from Monkey Island
-CDs into one directory. Specifically, you'll need:
-  * All of the `M4B` files from both CDs.
-    One of the files is easy to miss:
-    `local.m4b` is located on CD1 in `Monkey4/MonkeyInstall`.
-        Note: The file `voiceAll.m4b` is repeated on both CDs. Use the
-              copy from the first CD, it contains all of the required
-              voice data.
-  * The `Textures` directory, combined from both CDs. When copying,
-    rename the `FullMonkeyMap.imt` files to `FullMonkeyMap1.imt` and
-    `FullMonkeyMap2.imt` from CDs 1 and 2 respectively.
-  * The `Movies` directory from each CD.
-  * A copy of the Escape from Monkey Monkey Island update EXE.
-    You will need a patch specific to the EMI version you're using:
-
-Language   | URL
----------- |---------------------------------------------------------
-English    | https://demos.residualvm.org/patches/MonkeyUpdate.exe
-Portuguese | https://demos.residualvm.org/patches/MonkeyUpdate_BRZ.exe
-German     | https://demos.residualvm.org/patches/MonkeyUpdate_DEU.exe
-Spanish    | https://demos.residualvm.org/patches/MonkeyUpdate_ESP.exe
-French     | https://demos.residualvm.org/patches/MonkeyUpdate_FRA.exe
-Italian    | https://demos.residualvm.org/patches/MonkeyUpdate_ITA.exe
-
-  * "EFMI Installer" if you have the Mac version of EMI.
-
-#### 3.1.3. Escape from Monkey Island (PS2) ####
-
-You will need to copy the data files from your Escape from Monkey Island
-DVD into one directory. Specifically, you'll need:
-  * All of the `M4B` files from the DVD.
-  * The `Videos`, `demos`, `jambalay`, `lucre`, `melee` and `monkey`
-    directores.
-
-### 3.2. Running the game ###
-
-1. Prepare the game directory as specified above.
-2. Open ResidualVM.
-3. Click `Add Game...`.
-4. Select the directory you created in step 1.
-5. Click `Start`.
-
-If you want to play with software rendering, see the configuration section
-below, or use the in-game settings to disable 3D acceleration.
-
-When launching the game for the first time, ResidualVM will perform a full
-integrity check of your game data files. This can take a bit of time, but
-it will not happen again on successive runs. This prevents bugs from
-incompatible game data and helps us to find game variants that we're not
-aware of.
-
-### 3.3. Default keyboard settings ###
-
-Key             | Binding
---------------- | ---------------------------------------------
-Arrow keys      | Movement
-`Shift`         | Hold to run
-`Enter`         | Selects items in inventory, conversation, etc
-`Escape`        | Skips cutscenes, exits certain screens
-`e`             | Examine
-`u`             | Use
-`p`             | Pickup
-`i`             | Inventory
-`q`             | Exit Dialog Menu
-`.`             | Skips dialogue
-`F1`            | Menu
-`Alt` + `x`     | Quit (in-game)
-`Ctrl` + `c`    | Force quit (from command line)
-`Alt` + `Enter` | Switch between windowed mode and fullscreen
-`Alt` + `s`     | Save a screenshot
-
-### 3.4. Joystick/gamepad support ###
-
-If you want to use a joystick or gamepad for navigation, the joystick
-support of the engine needs to be enabled using one of the following two
-options:
-  * start ResidualVM with `--joystick` parameter,
-  * add `joystick\_num=0` to the `[residualvm]` section of the
-    configuration file (see section 6.1. how to find it).
-
-
-## 4. Running Myst III
-
-### 4.1. Required files ###
-
-You will need to copy the data files from your Myst III CDs or DVD into
-one directory. Specifically, you'll need:
-  * The `M3Data` directory.
-  * The `Data` directory.
-  * The menu language file `[LANGUAGE].m3u` (DVD only).
-
-The game must be at least version 1.1. For most releases of the game, the
-update is already applied on the installation media and no action is
-required.
-Otherwise, ResidualVM asks for the update to be installed and refuses to
-run the game. The updates can be downloaded from
-https://demos.residualvm.org/patches/
-
-The DVD version is multilingual, you can change the in-game language from
-the game menu. However, you must choose the language of the menus by
-copying the appropriate files. You have to copy the menu language file
-from your chosen language directory on the disc. On the DVD, the menu
-language file can be named `language.m3u` or `[LANGUAGE].m3u` depending on
-the release. It should be copied to the `M3Data/TEXT` directory. If the
-file is named `language.m3u`, it should be renamed to the explicit
-language e.g. `ENGLISH.m3u` for English.
-
-The required files must be organized in the following manner to be
-recognized:
-
-    ├── Data
-    │   └── *.m3a
-    └── M3Data
-        └── Various files and directories (including the DVD version's menu language file)
-
-### 4.2. Running the game ###
-
-1. Prepare the game directory as specified above.
-2. Open ResidualVM.
-3. Click `Add Game...`.
-4. Select the directory you created in step 1.
-5. Click `Start`.
-
-### 4.3. Input controls ###
-
-The mouse is used to look around and interact with the ages.
-
-Available keyboard shortcuts:
-
-Key           | Binding
-------------- | ------------------------------
-`Escape`      | Original Myst III menu
-`Space`       | Skip cutscenes, interact
-`Ctrl` + `F5` | ResidualVM menu
-`Ctrl` + `c`  | Force quit (from command line)
-`Ctrl` + `q`  | Quit (in-game)
-`Alt`  + `s`  | Save a screenshot
-
-
-## 5. Running The Longest Journey
-
-### 5.1. Required files ###
-
-You will need to copy the data files from your The Longest Journey CDs,
-DVD or digital distribution into one directory. Specifically, you'll
-need:
-  * The `1a`—`79` directories (only `4f` for demo version).
-  * The `global` directory.
-  * The `static` directory.
-  * The `fonts` directory (not critical, but recommended – see below).
-  * `x.xarc` and all the `INI` files.
-  * `game.exe` (not critical, but recommended for a styled message dialog)
-
-The 2-CD and DVD versions have some of the data files packed in installer
-archives. The archives need to be unpacked before they can be used.
-
-Steam version and demo from Steam are missing the `fonts` directory.
-The required fonts can be copied over from demo version obtained from
-different sources or a GOG or retail version.
-
-Mixing files from different versions of the game is not supported.
-
-### 5.2. Running the game ###
-
-1. Prepare the game directory as specified above.
-2. Open ResidualVM.
-3. Click `Add Game...`.
-4. Select the directory you created in step 1.
-5. Click `Start`.
-
-### 5.3. Input controls ###
-
-The mouse is used to interact with objects and menu elements.
-
-Available keyboard shortcuts:
-
-Key             | Binding
---------------- | -------------------------------------------------------------------------------------------
-`Escape`        | Skip video sequence or current line of dialogue, skip time if *Time Skip* option is enabled
-`F1`            | Diary Menu
-`F2`            | Save game
-`F3`            | Load game
-`F4`            | Conversation Log
-`F5`            | April's Diary (initially disabled)
-`F6`            | Video replay
-`F7`            | Game settings
-`F8`            | Save a screenshot
-`F9`            | Toggle subtitles on and off
-`F10`           | Quit game and return to main menu
-`A`             | Cycle back through inventory cursor items
-`S`             | Cycle forward through inventory cursor items
-`I`             | Inventory
-`P`             | Pause the game
-`X`             | Display all exits on current location
-`Page Up`       | Scroll up in dialogues and in your inventory
-`Up arrow`      | Scroll up in dialogues and in your inventory
-`Page Down`     | Scroll down in dialogues and in your inventory
-`Down arrow`    | Scroll down in dialogues and in your inventory
-`Enter`         | Select currently highlighted dialogue choice
-`1` – `9`       | Select a dialogue choice
-`Ctrl` + `F5`   | ResidualVM menu
-`Alt` + `Enter` | Switch between windowed mode and fullscreen
-`Ctrl` + `c`    | Force quit (from command line)
-`Ctrl` + `q`    | Quit (in-game)
-`Alt` + `x`     | Quit
-`Alt` + `q`     | Quit
-`Alt` + `s`     | Save a screenshot
-
+None
 
 ## 6. Configuration
-Currently, not all the settings for ResidualVM are available through the
+Currently, not all the settings for NovelVM are available through the
 GUI, if you have problems with getting anything to work, first try to pass
 the settings from the command line, then, if that doesn't work, try to
 change your configuration file manually.
@@ -300,11 +35,11 @@ By default, the configuration file is saved in and loaded from:
 
 Operating System     | Location
 -------------------- | -----------------------------------------------------------------------------
-Windows Vista/7/8/10 | `\Users\username\AppData\Roaming\ResidualVM\residualvm.ini`
-Windows 2000/XP      | `\Documents and Settings\username\Application Data\ResidualVM\residualvm.ini`
-Linux                | `~/.config/residualvm/residualvm.ini`
-macOS/OS X           | `~/Library/Preferences/ResidualVM Preferences`
-Others               | `residualvm.ini` in the current directory
+Windows Vista/7/8/10 | `\Users\username\AppData\Roaming\NovelVM\novelvm.ini`
+Windows 2000/XP      | `\Documents and Settings\username\Application Data\NovelVM\novelvm.ini`
+Linux                | `~/.config/novelvm/novelvm.ini`
+macOS/OS X           | `~/Library/Preferences/NovelVM Preferences`
+Others               | `novelvm.ini` in the current directory
 
 ### 6.2. Location of saved screenshots ###
 
@@ -312,15 +47,15 @@ By default, screenshots will be saved to:
 
 Operating System    | Location
 ------------------- | -----------------------------------------------------------------
-Windows             | `\Users\username\My Pictures\ResidualVM Screenshots`
+Windows             | `\Users\username\My Pictures\NovelVM Screenshots`
 macOS X             | On the Desktop
-Other unices        | In the XDG Pictures user directory, e.g. `~/Pictures/ResidualVM Screenshots`
+Other unices        | In the XDG Pictures user directory, e.g. `~/Pictures/NovelVM Screenshots`
 Any other OS        | In the current directory
 
-Alternatively, you can specify the directory where the screenshots will be saved in the configuration file. To do so, add a screenshotpath value under the [residualvm] section:
+Alternatively, you can specify the directory where the screenshots will be saved in the configuration file. To do so, add a screenshotpath value under the [novelvm] section:
 
 ```
-[residualvm]
+[novelvm]
 screenshotpath=/path/to/screenshots/
 ```
 
@@ -328,23 +63,23 @@ screenshotpath=/path/to/screenshots/
 
 The following settings are currently available in the config file, however
 some of them might not work with your current build and some of them might
-make ResidualVM crash, or behave in weird ways.
+make NovelVM crash, or behave in weird ways.
 
 Setting           | Values                   | Effect
 ----------------- | ------------------------ | ---------------------------------------------------
-`show_fps`        | `true`/`false`           | If set to `true`, ResidualVM will show the current FPS rate while you play
-`last_set`        | set name                 | The set you were last on, ResidualVM will try to continue from there
-`last_save`       | save number              | The save you last saved, ResidualVM will have that selected the next time you try to load a game
-`use_arb_shaders` | `true`/`false`           | If set to `true` and if you are using the OpenGL renderer ResidualVM will use ARB shaders. While fast, they may be incompatible with some graphics drivers
-`fullscreen_res`  | `desktop`/width`x`height | If set to `desktop` (the default), ResidualVM will use your desktop resolution in fullscreen mode. If set to a resolution such as `640x480` or `1280x720`, that resolution will be used
+`show_fps`        | `true`/`false`           | If set to `true`, NovelVM will show the current FPS rate while you play
+`last_set`        | set name                 | The set you were last on, NovelVM will try to continue from there
+`last_save`       | save number              | The save you last saved, NovelVM will have that selected the next time you try to load a game
+`use_arb_shaders` | `true`/`false`           | If set to `true` and if you are using the OpenGL renderer NovelVM will use ARB shaders. While fast, they may be incompatible with some graphics drivers
+`fullscreen_res`  | `desktop`/width`x`height | If set to `desktop` (the default), NovelVM will use your desktop resolution in fullscreen mode. If set to a resolution such as `640x480` or `1280x720`, that resolution will be used
 
 
 ## 7. Troubleshooting, known bugs, issues
 Grim Fandango had a few issues when it came out and a few new and
 exciting issues when you try to run it on newer hardware. Some of these
-have been fixed in ResidualVM, but ResidualVM itself also has a few new
+have been fixed in NovelVM, but NovelVM itself also has a few new
 issues that we know about:
-https://github.com/residualvm/residualvm/blob/master/KNOWN_BUGS
+https://github.com/novelvm/novelvm/blob/master/KNOWN_BUGS
 
 Look below for help with these issues and if you can't find help here,
 try contacting us at [Contact](#10-contact) section.
@@ -353,20 +88,20 @@ try contacting us at [Contact](#10-contact) section.
 
 This is because the last save and visited scene is stored in your
 configuration file, either delete your Grim Fandango entry from the
-ResidualVM menu and readd it, or go to your configuration file and clean
+NovelVM menu and readd it, or go to your configuration file and clean
 out the `last_save` and `last_set` entries.
 
 ### 7.2. My saved games don't work any more! ###
 
-Did you recently update to a newer build of ResidualVM?
-ResidualVM is still a work in progress, which means that the save format
+Did you recently update to a newer build of NovelVM?
+NovelVM is still a work in progress, which means that the save format
 might change between builds. While attempts are made to keep save file
 compatibility, this isn't always possible.
 
 
 ## 8. Debugging
 **WARNING:** This section contains information about the various tools that
-are included for debugging ResidualVM, this should not be necessary for
+are included for debugging NovelVM, this should not be necessary for
 normal play at all! However, the curious might like to know how to access
 these tool. Please use at your own risk!
 
@@ -400,8 +135,8 @@ Command        | Description
 `set_renderer` | Select a renderer (software, OpenGL or OpenGL with shaders)
 
 The `jump` targets can be found at:
-  * https://wiki.residualvm.org/index.php/Grim_Fandango_Debug_Mode#Jump_targets
-  * https://wiki.residualvm.org/index.php/Escape_From_Monkey_Island_Debug_Mode#Jump_targets
+  * https://wiki.novelvm.org/index.php/Grim_Fandango_Debug_Mode#Jump_targets
+  * https://wiki.novelvm.org/index.php/Escape_From_Monkey_Island_Debug_Mode#Jump_targets
 
 ### 8.2. Debugging Grim Fandango ###
 
@@ -480,7 +215,7 @@ Command               | Description
 
 ### 8.5. Modding The Longest Journey ###
 
-ResidualVM can load replacement assets instead of the original files for
+NovelVM can load replacement assets instead of the original files for
 some of the asset types. By leveraging this capability, users can create
 mods for the game. These are the currently supported modding features:
 
@@ -497,8 +232,8 @@ mods for the game. These are the currently supported modding features:
   which the XMG picture to be replaced is located. For instance:
   `mods/[my_mod]/1e/00/xarc/fountain_layercenter.png` needs to be used for
   the Venice park background.
-    ResidualVM expects PNGs to be in pre-multiplied alpha format for improved
-  load times. However the `replacement_png_premultiply_alpha` `residualvm.ini`
+    NovelVM expects PNGs to be in pre-multiplied alpha format for improved
+  load times. However the `replacement_png_premultiply_alpha` `novelvm.ini`
   setting allows to load regular transparency PNGs when set to `true` for
   convenience when testing.
 
@@ -530,16 +265,16 @@ mods for the game. These are the currently supported modding features:
 Contact us if you need further capabilities for your mod.
 
 ## 9. Bug reports
-ResidualVM still has a few bugs, many might already have been reported,
+NovelVM still has a few bugs, many might already have been reported,
 but should you find a new one, don't hesitate to report it.
 
 ### 9.1. How and where do I report bugs? ###
 
 You can report bugs at our GitHub issue tracker:
-https://github.com/residualvm/residualvm/issues
+https://github.com/novelvm/novelvm/issues
 
 Please read the Wiki regarding how to report bugs properly first though:
-https://wiki.residualvm.org/index.php?title=Reporting_Bugs
+https://wiki.novelvm.org/index.php?title=Reporting_Bugs
 
 Remember to always provide the following information in your bug reports:
   * Information about the game (e.g. *Escape from Monkey Island, PS2
@@ -559,8 +294,8 @@ Please refer to our extensive Changelog [here](NEWS.md).
 Please refer to our extensive Credits list [here](AUTHORS).
 
 ## 12. Contact
-  * Homepage: https://www.residualvm.org/
-  * Wiki: https://wiki.residualvm.org/
+  * Homepage: https://www.novelvm.org/
+  * Wiki: https://wiki.novelvm.org/
   * Discord: https://discord.gg/VFQjRfa
-  * Forums: https://forums.residualvm.org/
-  * IRC: #residualvm on freenode
+  * Forums: https://forums.novelvm.org/
+  * IRC: #novelvm on freenode

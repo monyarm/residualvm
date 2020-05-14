@@ -52,7 +52,7 @@ ifeq "$(HAVE_CLANG)" "1"
 	# It works for all our target systems though, thus we simply disable that
 	# warning.
 	CXXFLAGS+= -Wno-nested-anon-types
-	# ResidualVM: added -Wno-global-constructors
+	# NovelVM: added -Wno-global-constructors
 	CXXFLAGS+= -Wno-global-constructors
 endif
 
@@ -80,7 +80,7 @@ ZIP     ?= zip -q
 # Misc stuff - you should never have to edit this                     #
 #######################################################################
 
-EXECUTABLE  := $(EXEPRE)residualvm$(EXEEXT)
+EXECUTABLE  := $(EXEPRE)novelvm$(EXEEXT)
 
 include $(srcdir)/Makefile.common
 

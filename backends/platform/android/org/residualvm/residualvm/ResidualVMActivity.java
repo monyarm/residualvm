@@ -1,4 +1,4 @@
-package org.residualvm.residualvm;
+package org.novelvm.novelvm;
 
 import android.Manifest;
 import android.app.Activity;
@@ -35,7 +35,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ResidualVMActivity extends Activity {
+public class NovelVMActivity extends Activity {
 
 	public static final String[] REQUIRED_PERMISSIONS = {Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE};
 	static int PERMISSION_REQUEST_REQUIRED_PERMISSIONS = 1001;
@@ -57,8 +57,8 @@ public View.OnClickListener optionsBtnOnClickListener = new View.OnClickListener
     };
 
     private void emulateKeyPress(int keyCode){
-		_residualvm.pushEvent(ResidualVMEvents.JE_KEY, KeyEvent.ACTION_DOWN, keyCode, 0, 0, 0, 0);
-		_residualvm.pushEvent(ResidualVMEvents.JE_KEY, KeyEvent.ACTION_UP, keyCode, 0, 0, 0, 0);
+		_novelvm.pushEvent(NovelVMEvents.JE_KEY, KeyEvent.ACTION_DOWN, keyCode, 0, 0, 0, 0);
+		_novelvm.pushEvent(NovelVMEvents.JE_KEY, KeyEvent.ACTION_UP, keyCode, 0, 0, 0, 0);
     }
 
 public View.OnClickListener menuBtnOnClickListener = new View.OnClickListener() {
@@ -110,10 +110,10 @@ public View.OnClickListener pickUpBtnOnClickListener = new View.OnClickListener(
 		}
 	}
 
-	private class MyResidualVM extends ResidualVM {
+	private class MyNovelVM extends NovelVM {
 
-		public MyResidualVM(SurfaceHolder holder) {
-			super(ResidualVMActivity.this.getAssets(), holder);
+		public MyNovelVM(SurfaceHolder holder) {
+			super(NovelVMActivity.this.getAssets(), holder);
 		}
 
 		@Override
@@ -128,7 +128,7 @@ public View.OnClickListener pickUpBtnOnClickListener = new View.OnClickListener(
 		@Override
 		protected void displayMessageOnOSD(String msg) {
 			Log.i(LOG_TAG, "OSD: " + msg);
-			Toast.makeText(ResidualVMActivity.this, msg, Toast.LENGTH_LONG).show();
+			Toast.makeText(NovelVMActivity.this, msg, Toast.LENGTH_LONG).show();
 		}
 
 		@Override
@@ -207,10 +207,10 @@ public View.OnClickListener pickUpBtnOnClickListener = new View.OnClickListener(
 
 	}
 
-	private MyResidualVM _residualvm;
-	private ResidualVMEvents _events;
+	private MyNovelVM _novelvm;
+	private NovelVMEvents _events;
 	private MouseHelper _mouseHelper;
-	private Thread _residualvm_thread;
+	private Thread _novelvm_thread;
 
 	private boolean checkPermissions() {
 		for (String permission : REQUIRED_PERMISSIONS) {
@@ -226,7 +226,7 @@ public View.OnClickListener pickUpBtnOnClickListener = new View.OnClickListener(
 		super.onCreate(savedInstanceState);
 
 		if (checkPermissions()) {
-			launchResidualVM();
+			launchNovelVM();
 		} else {
 			ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, PERMISSION_REQUEST_REQUIRED_PERMISSIONS);
 		}
@@ -242,13 +242,13 @@ public View.OnClickListener pickUpBtnOnClickListener = new View.OnClickListener(
 		}
 
 		if (permissionsToCheck.isEmpty()) {
-			launchResidualVM();
+			launchNovelVM();
 		} else {
 			// TODO
 		}
 	}
 
-	private void launchResidualVM() {
+	private void launchNovelVM() {
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
 		setContentView(R.layout.main);
@@ -262,7 +262,7 @@ public View.OnClickListener pickUpBtnOnClickListener = new View.OnClickListener(
 
 		// Store savegames on external storage if we can, which means they're
 		// world-readable and don't get deleted on uninstall.
-		String savePath = Environment.getExternalStorageDirectory() + "/ResidualVM/Saves/";
+		String savePath = Environment.getExternalStorageDirectory() + "/NovelVM/Saves/";
 		File saveDir = new File(savePath);
 		saveDir.mkdirs();
 		if (!saveDir.isDirectory()) {
@@ -272,24 +272,24 @@ public View.OnClickListener pickUpBtnOnClickListener = new View.OnClickListener(
 
 		_clipboard = (ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
 
-		// Start ResidualVM
-		_residualvm = new MyResidualVM(main_surface.getHolder());
+		// Start NovelVM
+		_novelvm = new MyNovelVM(main_surface.getHolder());
 
-		_residualvm.setArgs(new String[] {
-				"ResidualVM",
-				"--config=" + getFileStreamPath("residualvmrc").getPath(),
+		_novelvm.setArgs(new String[] {
+				"NovelVM",
+				"--config=" + getFileStreamPath("novelvmrc").getPath(),
 				"--path=" + Environment.getExternalStorageDirectory().getPath(),
 				"--gui-theme=modern",
 				"--savepath=" + savePath
 		});
 
-		Log.d(ResidualVM.LOG_TAG, "Hover available: " + _hoverAvailable);
+		Log.d(NovelVM.LOG_TAG, "Hover available: " + _hoverAvailable);
 		if (_hoverAvailable) {
-			_mouseHelper = new MouseHelper(_residualvm);
+			_mouseHelper = new MouseHelper(_novelvm);
 			_mouseHelper.attach(main_surface);
 		}
 
-		_events = new ResidualVMEvents(this, _residualvm, _mouseHelper);
+		_events = new NovelVMEvents(this, _novelvm, _mouseHelper);
 
 		// On screen buttons listeners
 		((ImageView)findViewById(R.id.options)).setOnClickListener(optionsBtnOnClickListener);
@@ -301,8 +301,8 @@ public View.OnClickListener pickUpBtnOnClickListener = new View.OnClickListener(
 
 		main_surface.setOnKeyListener(_events);
 
-		_residualvm_thread = new Thread(_residualvm, "ResidualVM");
-		_residualvm_thread.start();
+		_novelvm_thread = new Thread(_novelvm, "NovelVM");
+		_novelvm_thread.start();
 	}
 
 	@Override
@@ -322,41 +322,41 @@ public View.OnClickListener pickUpBtnOnClickListener = new View.OnClickListener(
 
 	@Override
 	public void onStart() {
-		Log.d(ResidualVM.LOG_TAG, "onStart");
+		Log.d(NovelVM.LOG_TAG, "onStart");
 
 		super.onStart();
 	}
 
 	@Override
 	public void onResume() {
-		Log.d(ResidualVM.LOG_TAG, "onResume");
+		Log.d(NovelVM.LOG_TAG, "onResume");
 
 		super.onResume();
 
-		if (_residualvm != null)
-			_residualvm.setPause(false);
+		if (_novelvm != null)
+			_novelvm.setPause(false);
 	}
 
 	@Override
 	public void onPause() {
-		Log.d(ResidualVM.LOG_TAG, "onPause");
+		Log.d(NovelVM.LOG_TAG, "onPause");
 
 		super.onPause();
 
-		if (_residualvm != null)
-			_residualvm.setPause(true);
+		if (_novelvm != null)
+			_novelvm.setPause(true);
 	}
 
 	@Override
 	public void onStop() {
-		Log.d(ResidualVM.LOG_TAG, "onStop");
+		Log.d(NovelVM.LOG_TAG, "onStop");
 
 		super.onStop();
 	}
 
 	@Override
 	public void onDestroy() {
-		Log.d(ResidualVM.LOG_TAG, "onDestroy");
+		Log.d(NovelVM.LOG_TAG, "onDestroy");
 
 		super.onDestroy();
 
@@ -365,12 +365,12 @@ public View.OnClickListener pickUpBtnOnClickListener = new View.OnClickListener(
 
 			try {
 				// 1s timeout
-				_residualvm_thread.join(1000);
+				_novelvm_thread.join(1000);
 			} catch (InterruptedException e) {
-				Log.i(ResidualVM.LOG_TAG, "Error while joining ResidualVM thread", e);
+				Log.i(NovelVM.LOG_TAG, "Error while joining NovelVM thread", e);
 			}
 
-			_residualvm = null;
+			_novelvm = null;
 		}
 	}
 

@@ -1,20 +1,20 @@
-POTFILE := $(srcdir)/po/residualvm/residualvm.pot
+POTFILE := $(srcdir)/po/novelvm/novelvm.pot
 POFILES := $(wildcard $(srcdir)/po/*.po)
 CPFILES := $(wildcard $(srcdir)/po/*.cp)
 
 ENGINE_INPUT_POTFILES := $(sort $(wildcard $(srcdir)/engines/*/POTFILES))
 updatepot:
 	cat $(srcdir)/po/POTFILES $(ENGINE_INPUT_POTFILES) | \
-	xgettext -f - -D $(srcdir) -d residualvm --c++ -k_ -k_s -k_c:1,2c -k_sc:1,2c --add-comments=I18N\
+	xgettext -f - -D $(srcdir) -d novelvm --c++ -k_ -k_s -k_c:1,2c -k_sc:1,2c --add-comments=I18N\
 		-kDECLARE_TRANSLATION_ADDITIONAL_CONTEXT:1,2c -o $(POTFILE) \
-		--copyright-holder="ResidualVM Team" --package-name=ResidualVM \
-		--package-version=$(VERSION) --msgid-bugs-address=https://github.com/residualvm/residualvm/issues -o $(POTFILE)_
+		--copyright-holder="NovelVM Team" --package-name=NovelVM \
+		--package-version=$(VERSION) --msgid-bugs-address=https://github.com/novelvm/novelvm/issues -o $(POTFILE)_
 
-	sed -e 's/SOME DESCRIPTIVE TITLE/LANGUAGE translation for ResidualVM/' \
-		-e 's/UTF-8/CHARSET/' -e 's/PACKAGE/ResidualVM/' $(POTFILE)_ > $(POTFILE).new
+	sed -e 's/SOME DESCRIPTIVE TITLE/LANGUAGE translation for NovelVM/' \
+		-e 's/UTF-8/CHARSET/' -e 's/PACKAGE/NovelVM/' $(POTFILE)_ > $(POTFILE).new
 
 	rm $(POTFILE)_
-	$(srcdir)/po/msgcut $(POTFILE).new $(srcdir)/po/scummvm.pot 	# ResidualVM specific
+	$(srcdir)/po/msgcut $(POTFILE).new $(srcdir)/po/scummvm.pot 	# NovelVM specific
 
 
 	if test -f $(POTFILE); then \
@@ -32,14 +32,14 @@ updatepot:
 	fi;
 
 %.po: $(POTFILE)
-	# ResidualVM specific start ->
-	$(eval RESIDUALVM_PO = $(dir $@)/residualvm/$(notdir $@))
-	if [ -f "$(RESIDUALVM_PO)" ]; then \
-		msgmerge $(RESIDUALVM_PO) $(POTFILE) | msgcat --use-first - $@ > $@.new; \
+	# NovelVM specific start ->
+	$(eval NOVELVM_PO = $(dir $@)/novelvm/$(notdir $@))
+	if [ -f "$(NOVELVM_PO)" ]; then \
+		msgmerge $(NOVELVM_PO) $(POTFILE) | msgcat --use-first - $@ > $@.new; \
 	else \
 		cp $@ $@.new; \
 	fi
-	# ResidualVM specific end <-
+	# NovelVM specific end <-
 	if cmp $@ $@.new >/dev/null 2>&1; then \
 		rm -f $@.new; \
 	else \

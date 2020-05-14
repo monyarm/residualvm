@@ -34,7 +34,7 @@
 #include "common/array.h"
 #include "common/bitstream.h"
 #include "common/rational.h"
-#include "graphics/surface.h" // ResidualVM specific
+#include "graphics/surface.h" // NovelVM specific
 
 #include "video/video_decoder.h"
 
@@ -74,14 +74,14 @@ public:
 	bool loadStream(Common::SeekableReadStream *stream);
 	void close();
 
-	// ResidualVM-specific:
+	// NovelVM-specific:
 	Common::Rational getFrameRate();
 protected:
 	void readNextPacket();
 	bool supportsAudioTrackSwitching() const { return true; }
 	AudioTrack *getAudioTrack(int index);
 
-	// ResidualVM-specific:
+	// NovelVM-specific:
 	bool seekIntern(const Audio::Timestamp &time);
 	uint32 findKeyFrame(uint32 frame) const;
 
@@ -158,17 +158,17 @@ private:
 		int getCurFrame() const { return _curFrame; }
 		int getFrameCount() const { return _frameCount; }
 		const Graphics::Surface *decodeNextFrame() { return &_surface; }
-// ResidualVM-specific:
+// NovelVM-specific:
 		bool isSeekable() const { return true; }
 		bool seek(const Audio::Timestamp &time) { return true; }
 		bool rewind() override;
 		void setCurFrame(uint32 frame) { _curFrame = frame; }
-// End of ResidualVM-specific
+// End of NovelVM-specific
 
 		/** Decode a video packet. */
 		void decodePacket(VideoFrame &frame);
 
-	public: // ResidualVM
+	public: // NovelVM
 		Common::Rational getFrameRate() const { return _frameRate; }
 
 	private:
@@ -345,10 +345,10 @@ private:
 		/** Decode an audio packet. */
 		void decodePacket();
 
-		bool seek(const Audio::Timestamp &time);  // ResidualVM-specific
-		bool isSeekable() const { return true; }  // ResidualVM-specific
-		void skipSamples(const Audio::Timestamp &length);  // ResidualVM-specific
-		int getRate(); // ResidualVM-specific
+		bool seek(const Audio::Timestamp &time);  // NovelVM-specific
+		bool isSeekable() const { return true; }  // NovelVM-specific
+		void skipSamples(const Audio::Timestamp &length);  // NovelVM-specific
+		int getRate(); // NovelVM-specific
 	protected:
 		Audio::AudioStream *getAudioStream() const;
 

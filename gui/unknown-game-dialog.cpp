@@ -59,7 +59,7 @@ UnknownGameDialog::UnknownGameDialog(const DetectedGame &detectedGame) :
 	} else
 		_copyToClipboardButton = nullptr;
 
-#if 0 // ResidualVM specific
+#if 0 // NovelVM specific
 	//Check if we have support for opening URLs
 	if (g_system->hasFeature(OSystem::kFeatureOpenUrl)) {
 		_openBugTrackerUrlButton = new ButtonWidget(this, "UnknownGameDialog.Report", _("Report game"), nullptr, kOpenBugtrackerURL);
@@ -102,7 +102,7 @@ void UnknownGameDialog::rebuild() {
 		reportTranslated += "\n";
 		reportTranslated += _("Use the button below to copy the required game information into your clipboard.");
 	}
-#if 0 // ResidualVM specific
+#if 0 // NovelVM specific
 	// Check if we have support for opening URLs and expand the reportTranslated message if needed...
 	if (g_system->hasFeature(OSystem::kFeatureOpenUrl)) {
 		reportTranslated += "\n";
@@ -143,7 +143,7 @@ Common::String UnknownGameDialog::generateBugtrackerURL() {
 	Common::String engineId = encodeUrlString(_detectedGame.engineId);
 
 	return Common::String::format(
-		"https://www.residualvm.org/unknowngame?"
+		"https://www.novelvm.org/unknowngame?"
 		"engine=%s"
 		"&description=%s",
 		engineId.c_str(),

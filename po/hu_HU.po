@@ -142,8 +142,8 @@ msgid "No"
 msgstr "Nem"
 
 #: gui/downloaddialog.cpp:137 gui/launcher.cpp:536
-msgid "ResidualVM couldn't open the specified directory!"
-msgstr "ResidualVM nem tudja megnyitni a választott mappát!"
+msgid "NovelVM couldn't open the specified directory!"
+msgstr "NovelVM nem tudja megnyitni a választott mappát!"
 
 #: gui/downloaddialog.cpp:147
 msgid ""
@@ -632,24 +632,24 @@ msgid "~Q~uit"
 msgstr "Kilépés"
 
 #: gui/launcher.cpp:140 backends/platform/sdl/macosx/appmenu_osx.mm:209
-msgid "Quit ResidualVM"
-msgstr "ResidualVM bezárása"
+msgid "Quit NovelVM"
+msgstr "NovelVM bezárása"
 
 #: gui/launcher.cpp:141
 msgid "A~b~out..."
 msgstr "Névjegy..."
 
 #: gui/launcher.cpp:141 backends/platform/sdl/macosx/appmenu_osx.mm:203
-msgid "About ResidualVM"
-msgstr "ResidualVM névjegy"
+msgid "About NovelVM"
+msgstr "NovelVM névjegy"
 
 #: gui/launcher.cpp:142
 msgid "~O~ptions..."
 msgstr "~O~pciók..."
 
 #: gui/launcher.cpp:142
-msgid "Change global ResidualVM options"
-msgstr "Globális ResidualVM opciók cseréje"
+msgid "Change global NovelVM options"
+msgstr "Globális NovelVM opciók cseréje"
 
 #: gui/launcher.cpp:144
 msgid "~S~tart"
@@ -767,13 +767,13 @@ msgid "This game does not support loading games from the launcher."
 msgstr "Ez a játék nem támogatja a játékállás betöltést az indítóból."
 
 #: gui/launcher.cpp:490
-msgid "ResidualVM could not find any engine capable of running the selected game!"
+msgid "NovelVM could not find any engine capable of running the selected game!"
 msgstr ""
-"ResidualVM nem talált olyan játékmotort ami a választott játékot támogatja!"
+"NovelVM nem talált olyan játékmotort ami a választott játékot támogatja!"
 
 #: gui/launcher.cpp:555
-msgid "ResidualVM could not find any game in the specified directory!"
-msgstr "A ResidualVM nem talált egy játékot sem a választott mappában!"
+msgid "NovelVM could not find any game in the specified directory!"
+msgstr "A NovelVM nem talált egy játékot sem a választott mappában!"
 
 #: gui/launcher.cpp:570
 msgid "Unknown variant"
@@ -1216,8 +1216,8 @@ msgid "Theme Path:"
 msgstr "Téma Mappa:"
 
 #: gui/options.cpp:1895 gui/options.cpp:1897 gui/options.cpp:1898
-msgid "Specifies path to additional data used by all games or ResidualVM"
-msgstr "Minden jéték és ResidualVM kiegészítõ fájljainak mappája"
+msgid "Specifies path to additional data used by all games or NovelVM"
+msgstr "Minden jéték és NovelVM kiegészítõ fájljainak mappája"
 
 #: gui/options.cpp:1904
 msgid "Plugins Path:"
@@ -1254,8 +1254,8 @@ msgid "GUI language:"
 msgstr "GUI nyelv:"
 
 #: gui/options.cpp:1948
-msgid "Language of ResidualVM GUI"
-msgstr "A ResidualVM GUI nyelve"
+msgid "Language of NovelVM GUI"
+msgstr "A NovelVM GUI nyelve"
 
 #: gui/options.cpp:1974
 msgid "Switch the GUI language to the game language"
@@ -1264,11 +1264,11 @@ msgstr "Kapcsolja át a GUI nyelvét a játék nyelvére"
 #: gui/options.cpp:1975
 msgid ""
 "When starting a game, change the GUI language to the game language.That way, "
-"if a game uses the ResidualVM save and load dialogs, they are in the same "
+"if a game uses the NovelVM save and load dialogs, they are in the same "
 "language as the game."
 msgstr ""
 "A játék indításakor módosítja a GUI nyelvét a játék nyelvére. Így ha egy "
-"játék a ResidualVM mentési és betöltési párbeszédablakot használja, akkor "
+"játék a NovelVM mentési és betöltési párbeszédablakot használja, akkor "
 "ugyanaz lesz a nyelv, mint a játéké."
 
 #: gui/options.cpp:1988
@@ -1277,10 +1277,10 @@ msgstr "Használjon natív rendszerfájl böngészõt"
 
 #: gui/options.cpp:1989
 msgid ""
-"Use the native system file browser instead of the ResidualVM one to select a "
+"Use the native system file browser instead of the NovelVM one to select a "
 "file or directory."
 msgstr ""
-"A ResidualVM-é helyett az eredeti rendszer fájlböngészõjét használhatja egy "
+"A NovelVM-é helyett az eredeti rendszer fájlböngészõjét használhatja egy "
 "fájl vagy könyvtár kiválasztásához."
 
 #: gui/options.cpp:1996 gui/updates-dialog.cpp:86
@@ -1288,8 +1288,8 @@ msgid "Update check:"
 msgstr "Frissítés ellenõrzés:"
 
 #: gui/options.cpp:1996
-msgid "How often to check ResidualVM updates"
-msgstr "Milyen gyakran ellenõrizze a ResidualVM frissítéseket"
+msgid "How often to check NovelVM updates"
+msgstr "Milyen gyakran ellenõrizze a NovelVM frissítéseket"
 
 #: gui/options.cpp:2008
 msgid "Check now"
@@ -1343,8 +1343,8 @@ msgid "Used space:"
 msgstr "Használt hely:"
 
 #: gui/options.cpp:2032
-msgid "Space used by ResidualVM's saved games on this storage"
-msgstr "ResidualVM mentésekhez használt hely ezen a tárolón"
+msgid "Space used by NovelVM's saved games on this storage"
+msgstr "NovelVM mentésekhez használt hely ezen a tárolón"
 
 #: gui/options.cpp:2035
 msgid "Last sync:"
@@ -1381,12 +1381,12 @@ msgstr "Indítsd el a mentett játékok szinkronizálását"
 
 #: gui/options.cpp:2044
 msgctxt "lowres"
-msgid "You can download game files from your cloud ResidualVM folder:"
-msgstr "Töltsd le a játék fájljait a saját felhõ ResidualVM mappádból:"
+msgid "You can download game files from your cloud NovelVM folder:"
+msgstr "Töltsd le a játék fájljait a saját felhõ NovelVM mappádból:"
 
 #: gui/options.cpp:2046
-msgid "You can download game files from your cloud ResidualVM folder:"
-msgstr "Töltsd le a játék fájljait a saját felhõ ResidualVM mappádból:"
+msgid "You can download game files from your cloud NovelVM folder:"
+msgstr "Töltsd le a játék fájljait a saját felhõ NovelVM mappádból:"
 
 #: gui/options.cpp:2047
 msgid "Download game files"
@@ -1693,8 +1693,8 @@ msgid "Unknown Author"
 msgstr "Ismeretlen Szerzõ"
 
 #: gui/remotebrowser.cpp:129
-msgid "ResidualVM could not access the directory!"
-msgstr "ResidualVM nem tud hozzáférni a mappához!"
+msgid "NovelVM could not access the directory!"
+msgstr "NovelVM nem tud hozzáférni a mappához!"
 
 #: gui/saveload-dialog.cpp:343
 msgid "List view"
@@ -1825,11 +1825,11 @@ msgstr "A játékinformációk másolása a vágólapra nem sikerült!"
 
 #: gui/updates-dialog.cpp:49
 msgid ""
-"ResidualVM now supports automatic check for updates\n"
+"NovelVM now supports automatic check for updates\n"
 "which requires access to the Internet. Would you\n"
 "like to enable this feature?"
 msgstr ""
-"ResidualVM már támogatja az automatikus frissítéseket\n"
+"NovelVM már támogatja az automatikus frissítéseket\n"
 "amely internethozzáférést igényel. Szeretné\n"
 "engedélyezni ezt a funkciót?"
 
@@ -2158,12 +2158,12 @@ msgstr ""
 #: engines/engine.cpp:591
 msgid ""
 "WARNING: The game you are about to start is not yet fully supported by "
-"ResidualVM. As such, it is likely to be unstable, and any saved game you make "
-"might not work in future versions of ResidualVM."
+"NovelVM. As such, it is likely to be unstable, and any saved game you make "
+"might not work in future versions of NovelVM."
 msgstr ""
 "FIGYELEM: A játékot amit indítani akarsz még nem teljesen támogatotja a "
-"ResidualVM. Számíts rá hogy nem stabilan fut, és a mentések nem mûködnek a "
-"jövõbeni ResidualVM verziókkal."
+"NovelVM. Számíts rá hogy nem stabilan fut, és a mentések nem mûködnek a "
+"jövõbeni NovelVM verziókkal."
 
 #: engines/engine.cpp:594 engines/wintermute/wintermute.cpp:190
 msgid "Start anyway"
@@ -2182,12 +2182,12 @@ msgstr "A játék mentés jelenleg nem elérhetõ"
 msgid ""
 "The game in '%s' seems to be an unknown game variant.\n"
 "\n"
-"Please report the following data to the ResidualVM team at %s along with the "
+"Please report the following data to the NovelVM team at %s along with the "
 "name of the game you tried to add and its version, language, etc.:"
 msgstr ""
 "A(z) '%s'  játék egy ismeretlen játékváltozatnak tûnik.\n"
 "\n"
-"Kérjük, jelentse a következõ adatokat a ResidualVM csapatnak %s a játék nevével "
+"Kérjük, jelentse a következõ adatokat a NovelVM csapatnak %s a játék nevével "
 "együtt, amelyet megpróbált hozzáadni, és annak verzióját, nyelvét stb.:"
 
 #: engines/game.cpp:175
@@ -2827,9 +2827,9 @@ msgstr "Nem sikerült elolvasni a fájlt!"
 #: backends/networking/sdl_net/handlers/filesajaxpagehandler.cpp:59
 msgid ""
 "The page is not available without the resources. Make sure file wwwroot.zip "
-"from ResidualVM distribution is available in 'themepath'."
+"from NovelVM distribution is available in 'themepath'."
 msgstr ""
-"Az oldal források nélkül nem érhetõ el. Gyõzõdj meg arról, hogy a ResidualVM "
+"Az oldal források nélkül nem érhetõ el. Gyõzõdj meg arról, hogy a NovelVM "
 "kiadásából származó wwwroot.zip fájl elérhetõ a 'themepath' -ban."
 
 #: backends/networking/sdl_net/handlers/filesajaxpagehandler.cpp:67
@@ -2882,8 +2882,8 @@ msgid "Parent directory"
 msgstr "Szülõ könyvtár"
 
 #: backends/networking/sdl_net/handlers/filespagehandler.cpp:218
-msgid "ResidualVM couldn't list the directory you specified."
-msgstr "A ResidualVM nem tudta listázni a megadott könyvtárat."
+msgid "NovelVM couldn't list the directory you specified."
+msgstr "A NovelVM nem tudta listázni a megadott könyvtárat."
 
 #: backends/networking/sdl_net/handlers/filespagehandler.cpp:232
 msgid "Index of"
@@ -3097,8 +3097,8 @@ msgid "Magnify Mode Off"
 msgstr "Nagyítás Mód Ki"
 
 #: backends/platform/ds/arm9/source/dsoptions.cpp:57
-msgid "ResidualVM Main Menu"
-msgstr "ResidualVM Fõmenü"
+msgid "NovelVM Main Menu"
+msgstr "NovelVM Fõmenü"
 
 #: backends/platform/ds/arm9/source/dsoptions.cpp:63
 msgid "~L~eft handed mode"
@@ -3206,8 +3206,8 @@ msgid "Right Click"
 msgstr "Jobb katt"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:205
-msgid "Hide ResidualVM"
-msgstr "ResidualVM elrejtése"
+msgid "Hide NovelVM"
+msgstr "NovelVM elrejtése"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:206
 msgid "Hide Others"
@@ -3238,8 +3238,8 @@ msgid "General Information"
 msgstr "Általános információ"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:218
-msgid "What's New in ResidualVM"
-msgstr "A ResidualVM újdonságai"
+msgid "What's New in NovelVM"
+msgstr "A NovelVM újdonságai"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:220
 msgid "Credits"
@@ -3602,8 +3602,8 @@ msgstr "Eredeti ment/tölt képernyõk használata"
 #: engines/neverhood/detection.cpp:178 engines/sci/detection.cpp:458
 #: engines/sherlock/detection.cpp:76 engines/toltecs/detection.cpp:229
 #: engines/zvision/detection_tables.h:51
-msgid "Use the original save/load screens instead of the ResidualVM ones"
-msgstr "Használd az eredeti mentés/betöltés képernyõt a ResidualVM féle helyett"
+msgid "Use the original save/load screens instead of the NovelVM ones"
+msgstr "Használd az eredeti mentés/betöltés képernyõt a NovelVM féle helyett"
 
 #: engines/agi/detection.cpp:157
 msgid "Use an alternative palette"
@@ -3802,7 +3802,7 @@ msgstr ""
 
 #: engines/drascula/saveload.cpp:47
 msgid ""
-"ResidualVM found that you have old saved games for Drascula that should be "
+"NovelVM found that you have old saved games for Drascula that should be "
 "converted.\n"
 "The old saved game format is no longer supported, so you will not be able to "
 "load your games if you don't convert them.\n"
@@ -3810,7 +3810,7 @@ msgid ""
 "Press OK to convert them now, otherwise you will be asked again the next "
 "time you start the game.\n"
 msgstr ""
-"ResidualVM régi játékmentést talált a Drascula-hoz, ezt át kell alakítani.\n"
+"NovelVM régi játékmentést talált a Drascula-hoz, ezt át kell alakítani.\n"
 "A régi játékmentés forma többé nem támogatott, ezért a játék mentése nem "
 "töltõdik be ha nem akítod át azt.\n"
 "\n"
@@ -4327,14 +4327,14 @@ msgid ""
 "\n"
 "%s %s\n"
 "\n"
-"Do you wish to use this saved game file with ResidualVM?\n"
+"Do you wish to use this saved game file with NovelVM?\n"
 "\n"
 msgstr ""
 "A következõ eredeti játékmentés fájlt találtam a játékkönyvtárban:\n"
 "\n"
 "%s %s\n"
 "\n"
-"Akarod hogy ezt a játékmentés fájlt használja a ResidualVM?\n"
+"Akarod hogy ezt a játékmentés fájlt használja a NovelVM?\n"
 "\n"
 
 #: engines/kyra/gui/saveload_eob.cpp:602
@@ -4350,14 +4350,14 @@ msgstr ""
 #, c-format
 msgid ""
 "%d original saved games have been successfully imported into\n"
-"ResidualVM. If you want to manually import original saved game later you will\n"
-"need to open the ResidualVM debug console and use the command "
+"NovelVM. If you want to manually import original saved game later you will\n"
+"need to open the NovelVM debug console and use the command "
 "'import_savefile'.\n"
 "\n"
 msgstr ""
 "%d eredeti játékmentés fájlt sikeresen importálta a\n"
-"ResidualVM. Ha késõbb manuálisan akarod importálni az eredeti játékmentéseket\n"
-"meg kell nyitnod a ResidualVM debug konzolt és használd az 'import_savefile' "
+"NovelVM. Ha késõbb manuálisan akarod importálni az eredeti játékmentéseket\n"
+"meg kell nyitnod a NovelVM debug konzolt és használd az 'import_savefile' "
 "utasítást.\n"
 "\n"
 
@@ -4642,13 +4642,13 @@ msgid ""
 "At this point, the Riven Demo would\n"
 "ask if you would like to open a web browser\n"
 "to bring you to the Red Orb store to buy\n"
-"the game. ResidualVM cannot do that and\n"
+"the game. NovelVM cannot do that and\n"
 "the site no longer exists."
 msgstr ""
 "Ezen a ponton, a Riven Demo megkérdezi\n"
 "hogy a web böngészõddel nyissa-e meg\n"
 "a Red Orb áruházát, hogy megvásárold\n"
-"a játékot. A ResidualVM nem teszi ezt\n"
+"a játékot. A NovelVM nem teszi ezt\n"
 "az oldal többé nem elérhetõ."
 
 #: engines/neverhood/detection.cpp:184
@@ -4695,14 +4695,14 @@ msgstr "Játék mentés..."
 
 #: engines/parallaction/saveload.cpp:269
 msgid ""
-"ResidualVM found that you have old saved games for Nippon Safes that should be "
+"NovelVM found that you have old saved games for Nippon Safes that should be "
 "renamed.\n"
 "The old names are no longer supported, so you will not be able to load your "
 "games if you don't convert them.\n"
 "\n"
 "Press OK to convert them now, otherwise you will be asked next time.\n"
 msgstr ""
-"ResidualVM régi játékmentést talált a Nippon Safes hez ezt át kell nevezni.\n"
+"NovelVM régi játékmentést talált a Nippon Safes hez ezt át kell nevezni.\n"
 "A régi játékmentés nem támogatott, ezért a játék nem töltõdik be átnevezés "
 "nélkül..\n"
 "\n"
@@ -4710,17 +4710,17 @@ msgstr ""
 "játékot.\n"
 
 #: engines/parallaction/saveload.cpp:316
-msgid "ResidualVM successfully converted all your saved games."
-msgstr "ResidualVM sikeresen konvertálta az összes játékállásodat."
+msgid "NovelVM successfully converted all your saved games."
+msgstr "NovelVM sikeresen konvertálta az összes játékállásodat."
 
 #: engines/parallaction/saveload.cpp:318
 msgid ""
-"ResidualVM printed some warnings in your console window and can't guarantee all "
+"NovelVM printed some warnings in your console window and can't guarantee all "
 "your files have been converted.\n"
 "\n"
 "Please report to the team."
 msgstr ""
-"ResidualVM kiírt néhány figyelmeztetést a konzolablakba és nem biztos hogy az "
+"NovelVM kiírt néhány figyelmeztetést a konzolablakba és nem biztos hogy az "
 "összes fájlod át lett alakítva.\n"
 "\n"
 "Légyszíves jelentsd a csapatnak."
@@ -4929,16 +4929,16 @@ msgstr ""
 #: engines/sci/sci.cpp:388
 msgid ""
 "Subtitles are enabled, but subtitling in King's Quest 7 was unfinished and "
-"disabled in the release version of the game. ResidualVM allows the subtitles to "
+"disabled in the release version of the game. NovelVM allows the subtitles to "
 "be re-enabled, but because they were removed from the original game, they do "
 "not always render properly or reflect the actual game speech. This is not a "
-"ResidualVM bug -- it is a problem with the game's assets."
+"NovelVM bug -- it is a problem with the game's assets."
 msgstr ""
 "A feliratok engedélyezve vannak, de a King's Quest 7 feliratozása "
-"befejezetlen és letiltották a játék kiadott verziójában. A ResidualVM lehetõvé "
+"befejezetlen és letiltották a játék kiadott verziójában. A NovelVM lehetõvé "
 "teszi a feliratok újbóli engedélyezését, de mivel eltávolításra kerültek az "
 "eredeti játéktól, nem minden esetben látszik megfelelõen, vagy tükrözi a "
-"tényleges beszédet. Ez nem ResidualVM hiba - ez probléma a játékban található."
+"tényleges beszédet. Ez nem NovelVM hiba - ez probléma a játékban található."
 
 #: engines/sci/sci.cpp:412
 msgid ""
@@ -4946,7 +4946,7 @@ msgid ""
 "market support for General MIDI for this game in their \"General MIDI Utility"
 "\". Please, apply this patch in order to enjoy MIDI music with this game. "
 "Once you have obtained it, you can unpack all of the included *.PAT files in "
-"your ResidualVM extras folder and ResidualVM will add the appropriate patch "
+"your NovelVM extras folder and NovelVM will add the appropriate patch "
 "automatically. Alternatively, you can follow the instructions in the READ.ME "
 "file included in the patch and rename the associated *.PAT file to 4.PAT and "
 "place it in the game folder. Without this patch, General MIDI music for this "
@@ -4955,8 +4955,8 @@ msgstr ""
 "A General MIDI hangeszközt választotta. A Sierra a General MIDI-t a "
 "\"General MIDI Utility\"-n keresztül támogatta a General MIDI számára. "
 "Kérjük, alkalmazza ezt a javítást, hogy élvezhesse a MIDI zenét a játékkal. "
-"Ha beszerezte, a ResidualVM extrák mappába az összes mellékelt * .PAT fájlt "
-"csomagolja ki, a ResidualVM automatikusan hozzáadja a megfelelõ javítást. "
+"Ha beszerezte, a NovelVM extrák mappába az összes mellékelt * .PAT fájlt "
+"csomagolja ki, a NovelVM automatikusan hozzáadja a megfelelõ javítást. "
 "Alternatív megoldásként követheti a javításban szereplõ READ.ME fájlban "
 "található utasításokat, és átnevezheti a hozzárendelt * .PAT fájlt a 4.PAT "
 "fájlba és helyezze a játék mappába. A javítás nélkül a General MIDI zene "
@@ -4966,14 +4966,14 @@ msgstr ""
 msgid ""
 "Your game is patched with a fan made script patch. Such patches have been "
 "reported to cause issues, as they modify game scripts extensively. The "
-"issues that these patches fix do not occur in ResidualVM, so you are advised to "
+"issues that these patches fix do not occur in NovelVM, so you are advised to "
 "remove this patch from your game folder in order to avoid having unexpected "
 "errors and/or issues later on."
 msgstr ""
 "A játék egy rajongók által készített script patch-el készült. Az ilyen "
 "javítások problémákat okozhatnak, mivel nagymértékben módosítják a "
 "játékszkripteket. A javítások által okozott problémák nem fordulnak elõ a "
-"ResidualVM-ben, ezért javasoljuk, távolítsa el ezt a javítást a játék "
+"NovelVM-ben, ezért javasoljuk, távolítsa el ezt a javítást a játék "
 "mappájából, hogy elkerülje a váratlan és / vagy késõbbi hibákat."
 
 #: engines/sci/sci.cpp:517
@@ -5006,14 +5006,14 @@ msgstr ""
 
 #: engines/sci/sci.cpp:879
 msgid ""
-"Characters saved inside ResidualVM are shown automatically. Character files "
-"saved in the original interpreter need to be put inside ResidualVM's saved "
+"Characters saved inside NovelVM are shown automatically. Character files "
+"saved in the original interpreter need to be put inside NovelVM's saved "
 "games directory and a prefix needs to be added depending on which game it "
 "was saved in: 'qfg1-' for Quest for Glory 1, 'qfg2-' for Quest for Glory 2. "
 "Example: 'qfg2-thief.sav'."
 msgstr ""
-"A ResidualVM-ben a karakterek automatikusan megjelennek. Az eredeti "
-"karakterfájlokat a ResidualVM mentett játékkönyvtárába kell másolni, és hozzá "
+"A NovelVM-ben a karakterek automatikusan megjelennek. Az eredeti "
+"karakterfájlokat a NovelVM mentett játékkönyvtárába kell másolni, és hozzá "
 "kell adni egy elõtagot attól függõen, hogy melyik játékot mentette el: "
 "'qfg1-' Quest for Glory 1 'qfg2-' Quest for Glory 2. Például: 'qfg2-thief."
 "sav'."
@@ -5058,13 +5058,13 @@ msgstr ""
 msgid ""
 "Your game version appears to be unknown. If this is *NOT* a fan-modified\n"
 "version (in particular, not a fan-made translation), please, report the\n"
-"following data to the ResidualVM team along with the name of the game you "
+"following data to the NovelVM team along with the name of the game you "
 "tried\n"
 "to add and its version, language, etc.:\n"
 msgstr ""
 "A játék verziója ismeretlen. Ha ez *NEM* egy rajongói\n"
 "mod (esetleg egyedi nyelvi fordítás), kérlek vedd fel\n"
-" a kapcsolatot a ResidualVM csapatában és részletesen\n"
+" a kapcsolatot a NovelVM csapatában és részletesen\n"
 " írd meg a játék nevét, verzióját , stb...\n"
 
 #: engines/scumm/detection.cpp:1158
@@ -5759,11 +5759,11 @@ msgstr ""
 msgid ""
 "Usually, Maniac Mansion would start now. But for that to work, the game "
 "files for Maniac Mansion have to be in the 'Maniac' directory inside the "
-"Tentacle game directory, and the game has to be added to ResidualVM."
+"Tentacle game directory, and the game has to be added to NovelVM."
 msgstr ""
 "Általában a Maniac Mansion indulna most. De a mûködéshez a Maniac Mansion "
 "fájljainak, a 'Maniac' mappában kell lenni a Tentacle játékmappáján belül, "
-"és a játékot így adja hozzá a ResidualVM a listához."
+"és a játékot így adja hozzá a NovelVM a listához."
 
 #: engines/scumm/players/player_v3m.cpp:129
 msgid ""
@@ -5924,14 +5924,14 @@ msgid "PSX stream cutscene '%s' cannot be played in paletted mode"
 msgstr "'%s'  PSX stream átvezetõ nem játszható le paletta módban"
 
 #: engines/sword1/animation.cpp:553 engines/sword2/animation.cpp:449
-msgid "DXA cutscenes found but ResidualVM has been built without zlib"
-msgstr "DXA átvezetõ elérhetõ, de a ResidualVM zlib támogatás nincs lefordítva"
+msgid "DXA cutscenes found but NovelVM has been built without zlib"
+msgstr "DXA átvezetõ elérhetõ, de a NovelVM zlib támogatás nincs lefordítva"
 
 #: engines/sword1/animation.cpp:569 engines/sword2/animation.cpp:465
 msgid ""
-"MPEG-2 cutscenes found but ResidualVM has been built without MPEG-2 support"
+"MPEG-2 cutscenes found but NovelVM has been built without MPEG-2 support"
 msgstr ""
-"MPEG-2 átvezetõfilmet találtam, de a ResidualVM MPEG-2 támogatás nélkül van "
+"MPEG-2 átvezetõfilmet találtam, de a NovelVM MPEG-2 támogatás nélkül van "
 "lefordítva"
 
 #: engines/sword1/animation.cpp:576 engines/sword2/animation.cpp:474
@@ -5941,7 +5941,7 @@ msgstr "'%s' átvezetõ nem található"
 
 #: engines/sword1/control.cpp:887
 msgid ""
-"ResidualVM found that you have old saved games for Broken Sword 1 that should "
+"NovelVM found that you have old saved games for Broken Sword 1 that should "
 "be converted.\n"
 "The old saved game format is no longer supported, so you will not be able to "
 "load your games if you don't convert them.\n"
@@ -5949,7 +5949,7 @@ msgid ""
 "Press OK to convert them now, otherwise you will be asked again the next "
 "time you start the game.\n"
 msgstr ""
-"ResidualVM régi játékmentést talált a Broken Sword 1 hez, ezt át kell "
+"NovelVM régi játékmentést talált a Broken Sword 1 hez, ezt át kell "
 "alakítani.\n"
 "A régi játékmentés nem támogatott, ezért a játék nem töltõdik be átalakítás "
 "nélkül.\n"
@@ -5980,9 +5980,9 @@ msgstr "Ez a Broken Sword 1 Demo vége"
 
 #: engines/sword2/animation.cpp:429
 msgid ""
-"PSX cutscenes found but ResidualVM has been built without RGB color support"
+"PSX cutscenes found but NovelVM has been built without RGB color support"
 msgstr ""
-"PSX átvezetõfilmet találtam, de ez a ResidualVM RGB színtámogatás nélkül van "
+"PSX átvezetõfilmet találtam, de ez a NovelVM RGB színtámogatás nélkül van "
 "lefordítva"
 
 #: engines/sword2/sword2.cpp:79
@@ -6470,9 +6470,9 @@ msgstr "Ehhez a játékhoz HeroCraft almotor szükséges, ami nincs befordítva."
 
 #: engines/wintermute/wintermute.cpp:189
 msgid ""
-"This game requires 3D characters support, which is out of ResidualVM's scope."
+"This game requires 3D characters support, which is out of NovelVM's scope."
 msgstr ""
-"Ehhez a játékhoz 3D karakter támogatás szükséges, ami a ResidualVM hatókörén "
+"Ehhez a játékhoz 3D karakter támogatás szükséges, ami a NovelVM hatókörén "
 "kívül esik."
 
 #: engines/xeen/detection.cpp:96
@@ -6704,8 +6704,8 @@ msgstr ""
 #~ msgid "Pastes clipboard contents into fields"
 #~ msgstr "Beilleszti a vágólap tartalmát a mezõbe"
 
-#~ msgid "You will be directed to ResidualVM's page where"
-#~ msgstr "Át kell irányítanod a ResidualVM oldalára, ahol"
+#~ msgid "You will be directed to NovelVM's page where"
+#~ msgstr "Át kell irányítanod a NovelVM oldalára, ahol"
 
 #~ msgid "you should allow it to access your storage."
 #~ msgstr "lehetõvé teheted a hozzáférést a tárolódhoz."
@@ -6744,8 +6744,8 @@ msgstr ""
 #~ msgid "AdLib Emulator"
 #~ msgstr "AdLib Emulátor"
 
-#~ msgid "Use the original save/load screens instead of the ResidualVM interface"
-#~ msgstr "Használd az eredeti mentés/töltés képet a ResidualVM felület helyett"
+#~ msgid "Use the original save/load screens instead of the NovelVM interface"
+#~ msgstr "Használd az eredeti mentés/töltés képet a NovelVM felület helyett"
 
 #~ msgid "(You can always enable it in the options dialog on the Misc tab)"
 #~ msgstr "(Bármikor engedélyezheti a beállítások ablakban az Egyéb fülnél)"
@@ -6812,27 +6812,27 @@ msgstr ""
 
 #~ msgid ""
 #~ "Unable to find \"sky.cpt\" file!\n"
-#~ "Please download it from www.ResidualVM.org"
+#~ "Please download it from www.NovelVM.org"
 #~ msgstr ""
 #~ "A \"sky.cpt\" fájl nem található!\n"
-#~ "Töltsd le a www.ResidualVM.org oldaláról"
+#~ "Töltsd le a www.NovelVM.org oldaláról"
 
 #~ msgid ""
 #~ "The \"sky.cpt\" file has an incorrect size.\n"
-#~ "Please (re)download it from www.ResidualVM.org"
+#~ "Please (re)download it from www.NovelVM.org"
 #~ msgstr ""
 #~ "A \"sky.cpt\" fájl mérete nem megfelelõ.\n"
-#~ "Töltsd le a www.ResidualVM.org oldaláról"
+#~ "Töltsd le a www.NovelVM.org oldaláról"
 
 #~ msgid ""
-#~ "You're missing the 'teenagent.dat' file. Get it from the ResidualVM website"
-#~ msgstr "Hiányzik a 'teenagent.dat' fájl. Szerezd be a ResidualVM website-ról"
+#~ "You're missing the 'teenagent.dat' file. Get it from the NovelVM website"
+#~ msgstr "Hiányzik a 'teenagent.dat' fájl. Szerezd be a NovelVM website-ról"
 
-#~ msgid "You're missing the 'toon.dat' file. Get it from the ResidualVM website"
-#~ msgstr "Hiányzik a 'toon.dat' fájl. Szerezd be a ResidualVM honlapjáról"
+#~ msgid "You're missing the 'toon.dat' file. Get it from the NovelVM website"
+#~ msgstr "Hiányzik a 'toon.dat' fájl. Szerezd be a NovelVM honlapjáról"
 
-#~ msgid "File 'toon.dat' is corrupt. Get it from the ResidualVM website"
-#~ msgstr "A 'toon.dat' fájl hibás. Szerezd be a ResidualVM honlapjáról"
+#~ msgid "File 'toon.dat' is corrupt. Get it from the NovelVM website"
+#~ msgstr "A 'toon.dat' fájl hibás. Szerezd be a NovelVM honlapjáról"
 
 #~ msgid "Invalid save file name"
 #~ msgstr "Érvénytelen mentés fájlnév"
@@ -6842,24 +6842,24 @@ msgstr ""
 
 #~ msgid ""
 #~ "Files button in-game shows original savegame dialog rather than the "
-#~ "ResidualVM menu"
+#~ "NovelVM menu"
 #~ msgstr ""
 #~ "Fájl gomb a játékban, az eredeti játékmentés párbeszédet jeleníti meg a "
-#~ "ResidualVM-é helyett"
+#~ "NovelVM-é helyett"
 
 #~ msgid "The game in '%s' seems to be unknown."
 #~ msgstr "A '%s' játék ismeretlennek tûnik."
 
 #~ msgid ""
-#~ "Please, report the following data to the ResidualVM team along with name"
+#~ "Please, report the following data to the NovelVM team along with name"
 #~ msgstr ""
-#~ "Kérlek jelezd a ResidualVM csapatnak a következõ adatokat, együtt a játék"
+#~ "Kérlek jelezd a NovelVM csapatnak a következõ adatokat, együtt a játék"
 
 #~ msgid "of the game you tried to add and its version/language/etc.:"
 #~ msgstr "címével és megbízható adataival játékverzió/nyelv(ek)/stb.:"
 
-#~ msgid "You have to restart ResidualVM before your changes will take effect."
-#~ msgstr "Indítsd újra a ResidualVM-et a változások érvényesítéséhez."
+#~ msgid "You have to restart NovelVM before your changes will take effect."
+#~ msgstr "Indítsd újra a NovelVM-et a változások érvényesítéséhez."
 
 #~ msgid "OpenGL (No filtering)"
 #~ msgstr "OpenGL (Nincs szûrés)"
@@ -6874,9 +6874,9 @@ msgstr ""
 #~ msgid "Enable undithering in EGA games"
 #~ msgstr "Undithering engedélyezése EGA játékokban"
 
-#~ msgid "MPEG-2 cutscenes found but ResidualVM has been built without MPEG-2"
+#~ msgid "MPEG-2 cutscenes found but NovelVM has been built without MPEG-2"
 #~ msgstr ""
-#~ "MPEG-2 átvezetõfilmet találtam, de a ResidualVM MPEG-2 nélkül van lefordítva"
+#~ "MPEG-2 átvezetõfilmet találtam, de a NovelVM MPEG-2 nélkül van lefordítva"
 
 #~ msgid ""
 #~ "Turns off General MIDI mapping for games with Roland MT-32 soundtrack"
@@ -6921,8 +6921,8 @@ msgstr ""
 #~ msgid "If this is an original and unmodified version, please report any"
 #~ msgstr "Ha ez egy eredeti nem változtatott verzió, kérlek jelezd minden"
 
-#~ msgid "information previously printed by ResidualVM to the team."
-#~ msgstr "elõzõleg kiírt információt a ResidualVM csapatnak."
+#~ msgid "information previously printed by NovelVM to the team."
+#~ msgstr "elõzõleg kiírt információt a NovelVM csapatnak."
 
 #~ msgid "Discovered %d new games."
 #~ msgstr "%d Új játékot találtam."

@@ -1,4 +1,4 @@
-/* ResidualVM - Graphic Adventure Engine
+/* NovelVM - Graphic Adventure Engine
  *
  * ResidulVM is the legal property of its developers, whose names
  * are too numerous to list here. Please refer to the COPYRIGHT
@@ -38,7 +38,7 @@
  */
 class ResVmGraphicsManager : public GraphicsManager {
 public:
-	// Methods not used by ResidualVM
+	// Methods not used by NovelVM
 #ifdef USE_RGB_COLOR
 	virtual Common::List<Graphics::PixelFormat> getSupportedFormats() const {
 		Common::List<Graphics::PixelFormat> supportedFormats;
@@ -60,7 +60,7 @@ public:
 	virtual void setMouseCursor(const void *buf, uint w, uint h, int hotspotX, int hotspotY, uint32 keycolor, bool dontScale = false, const Graphics::PixelFormat *format = NULL) {}
 	virtual void setCursorPalette(const byte *colors, uint start, uint num) {}
 
-	// ResidualVM specific methods
+	// NovelVM specific methods
 	virtual void setupScreen(uint screenW, uint screenH, bool fullscreen, bool accel3d) = 0;
 	virtual Graphics::PixelBuffer getScreenPixelBuffer() = 0;
 	virtual void suggestSideTextures(Graphics::Surface *left, Graphics::Surface *right) = 0;

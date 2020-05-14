@@ -214,7 +214,7 @@ Networking::Request *GoogleDriveStorage::info(StorageInfoCallback callback, Netw
 	return addRequest(request);
 }
 
-Common::String GoogleDriveStorage::savesDirectoryPath() { return "residualvm/saves/"; }
+Common::String GoogleDriveStorage::savesDirectoryPath() { return "novelvm/saves/"; }
 
 GoogleDriveStorage *GoogleDriveStorage::loadFromConfig(Common::String keyPrefix) {
 	if (!ConfMan.hasKey(keyPrefix + "access_token", ConfMan.kCloudDomain)) {

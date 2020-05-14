@@ -8,9 +8,9 @@ REPEAT
    READ territory%, prefix$, readme$
    WHILE readme$<>""
       IF territory%=current_territory% OR territory%=-1 THEN
-         SYS "OS_File",20,"<ResidualVM$Dir>.docs."+prefix$+readme$ TO type%,,,,,,ftype%
+         SYS "OS_File",20,"<NovelVM$Dir>.docs."+prefix$+readme$ TO type%,,,,,,ftype%
          IF type%<>0 AND NOT (stronghelp%=0 AND ftype%=&3D6) THEN
-            file$="<ResidualVM$Dir>.docs."+prefix$+readme$
+            file$="<NovelVM$Dir>.docs."+prefix$+readme$
          ENDIF
       ENDIF
       READ readme$
@@ -28,4 +28,4 @@ DEF PROCerror
 ENDPROC
 
 REM Reference: https://www.riscosopen.org/wiki/documentation/show/Territory%20Numbers
-DATA -1,  "",       "QuickStart",      "README/md", "README",   "ResidualVM", ""
+DATA -1,  "",       "QuickStart",      "README/md", "README",   "NovelVM", ""

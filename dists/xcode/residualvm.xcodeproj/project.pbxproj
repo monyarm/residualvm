@@ -1311,7 +1311,7 @@
 		285787DC19B1D9CA00AA2E6F /* savestate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = savestate.cpp; sourceTree = "<group>"; };
 		285787DD19B1D9CA00AA2E6F /* savestate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = savestate.h; sourceTree = "<group>"; };
 		285787DE19B1D9CA00AA2E6F /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
-		8DD76F6C0486A84900D96B5E /* residualvm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = residualvm; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DD76F6C0486A84900D96B5E /* novelvm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = novelvm; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1325,13 +1325,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08FB7794FE84155DC02AAC07 /* residualvm */ = {
+		08FB7794FE84155DC02AAC07 /* novelvm */ = {
 			isa = PBXGroup;
 			children = (
 				08FB7795FE84155DC02AAC07 /* Source */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
 			);
-			name = residualvm;
+			name = novelvm;
 			sourceTree = "<group>";
 		};
 		08FB7795FE84155DC02AAC07 /* Source */ = {
@@ -1354,7 +1354,7 @@
 		1AB674ADFE9D54B511CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8DD76F6C0486A84900D96B5E /* residualvm */,
+				8DD76F6C0486A84900D96B5E /* novelvm */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2741,9 +2741,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8DD76F620486A84900D96B5E /* residualvm */ = {
+		8DD76F620486A84900D96B5E /* novelvm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "residualvm" */;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "novelvm" */;
 			buildPhases = (
 				8DD76F640486A84900D96B5E /* Sources */,
 				8DD76F660486A84900D96B5E /* Frameworks */,
@@ -2753,10 +2753,10 @@
 			);
 			dependencies = (
 			);
-			name = residualvm;
+			name = novelvm;
 			productInstallPath = "$(HOME)/bin";
-			productName = residualvm;
-			productReference = 8DD76F6C0486A84900D96B5E /* residualvm */;
+			productName = novelvm;
+			productReference = 8DD76F6C0486A84900D96B5E /* novelvm */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -2767,18 +2767,18 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "residualvm" */;
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "novelvm" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 08FB7794FE84155DC02AAC07 /* residualvm */;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* novelvm */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8DD76F620486A84900D96B5E /* residualvm */,
+				8DD76F620486A84900D96B5E /* novelvm */,
 			);
 		};
 /* End PBXProject section */
@@ -3222,7 +3222,7 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = residualvm;
+				PRODUCT_NAME = novelvm;
 			};
 			name = Debug;
 		};
@@ -3231,7 +3231,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				PRODUCT_NAME = residualvm;
+				PRODUCT_NAME = novelvm;
 			};
 			name = Release;
 		};
@@ -3370,7 +3370,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "residualvm" */ = {
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "novelvm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB923208733DC60010E9CD /* Debug */,
@@ -3379,7 +3379,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "residualvm" */ = {
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "novelvm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB923608733DC60010E9CD /* Debug */,

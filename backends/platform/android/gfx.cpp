@@ -53,12 +53,12 @@ static inline GLfixed xdiv(int numerator, int denominator) {
 	return (numerator << 16) / denominator;
 }
 
-// ResidualVM specific method
+// NovelVM specific method
 void OSystem_Android::launcherInitSize(uint w, uint h) {
 	setupScreen(w, h, true, true, false);
 }
 
-// ResidualVM specific method
+// NovelVM specific method
 bool OSystem_Android::lockMouse(bool lock) {
 	_show_mouse = lock;
 	return true;
@@ -441,7 +441,7 @@ void OSystem_Android::copyRectToScreen(const void *buf, int pitch,
 }
 
 
-// ResidualVM specific method
+// NovelVM specific method
 void OSystem_Android::setupScreen(uint screenW, uint screenH, bool fullscreen, bool accel3d, bool isGame) {
 	_opengl = accel3d;
 	initViewport();

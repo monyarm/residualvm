@@ -109,7 +109,7 @@ MODULE_OBJS += \
 	text-to-speech.o
 endif
 
-# ResidualVM specific
+# NovelVM specific
 ifdef USE_ICONV
 MODULE_OBJS += \
 	iconv.o

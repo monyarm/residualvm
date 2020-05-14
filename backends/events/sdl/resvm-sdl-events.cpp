@@ -1,6 +1,6 @@
-/* ResidualVM - A 3D game interpreter
+/* NovelVM - A 3D game interpreter
  *
- * ResidualVM is the legal property of its developers, whose names
+ * NovelVM is the legal property of its developers, whose names
  * are too numerous to list here. Please refer to the COPYRIGHT
  * file distributed with this source distribution.
  *
@@ -256,7 +256,7 @@ bool ResVmSdlEventSource::shouldGenerateMouseEvents() {
 }
 
 bool ResVmSdlEventSource::handleKbdMouse(Common::Event &event) {
-	// The ResidualVM version of this method handles relative mouse
+	// The NovelVM version of this method handles relative mouse
 	// movement, as required by Myst III.
 
 	int32 oldKmX = _km.x;

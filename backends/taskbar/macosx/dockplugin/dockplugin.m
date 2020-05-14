@@ -55,8 +55,8 @@
 
 - (NSMenu*)dockMenu {
 	// Get the list or recent games
-	CFPreferencesAppSynchronize(CFSTR("org.residualvm.residualvm"));
-	NSArray *array = CFPreferencesCopyAppValue(CFSTR("recentGames"), CFSTR("org.residualvm.residualvm"));
+	CFPreferencesAppSynchronize(CFSTR("org.novelvm.novelvm"));
+	NSArray *array = CFPreferencesCopyAppValue(CFSTR("recentGames"), CFSTR("org.novelvm.novelvm"));
 	if (array == nil)
 		return nil;
 
@@ -109,9 +109,9 @@
 - (IBAction) startGame {
 	NSLog(@"Starting Game %@...", game);
 
-	NSString *scummVMPath = [[NSWorkspace sharedWorkspace] absolutePathForAppBundleWithIdentifier:@"org.residualvm.residualvm"];
+	NSString *scummVMPath = [[NSWorkspace sharedWorkspace] absolutePathForAppBundleWithIdentifier:@"org.novelvm.novelvm"];
 	if (scummVMPath == nil) {
-		NSLog(@"Cannot find ResidualVM.app!");
+		NSLog(@"Cannot find NovelVM.app!");
 		return;
 	}
 	// Start ScummVM.app with the game ID as argument

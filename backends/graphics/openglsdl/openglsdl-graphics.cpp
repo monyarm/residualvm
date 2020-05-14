@@ -1,6 +1,6 @@
-/* ResidualVM - A 3D game interpreter
+/* NovelVM - A 3D game interpreter
  *
- * ResidualVM is the legal property of its developers, whose names
+ * NovelVM is the legal property of its developers, whose names
  * are too numerous to list here. Please refer to the COPYRIGHT
  * file distributed with this source distribution.
  *
@@ -348,7 +348,7 @@ bool OpenGLSdlGraphicsManager::createOrUpdateGLContext(uint gameWidth, uint game
                                                        uint effectiveWidth, uint effectiveHeight,
                                                        bool renderToFramebuffer,
                                                        bool engineSupportsArbitraryResolutions) {
-	// Build a list of OpenGL pixel formats usable by ResidualVM
+	// Build a list of OpenGL pixel formats usable by NovelVM
 	Common::Array<OpenGLPixelFormat> pixelFormats;
 	if (_antialiasing > 0 && !renderToFramebuffer) {
 		// Don't enable screen level multisampling when rendering to a framebuffer
@@ -385,7 +385,7 @@ bool OpenGLSdlGraphicsManager::createOrUpdateGLContext(uint gameWidth, uint game
 		SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_ES);
 #else
 		// AmigaOS4's OpenGL implementation is close to 1.3. Until that changes we need
-		// to use 1.3 as version or residualvm will cease working at all on that platform.
+		// to use 1.3 as version or novelvm will cease working at all on that platform.
 		// Profile Mask has to be 0 as well.
 		// This will be revised and removed once AmigaOS4 supports 2.x or OpenGLES2.
 		#ifdef __amigaos4__
@@ -408,7 +408,7 @@ bool OpenGLSdlGraphicsManager::createOrUpdateGLContext(uint gameWidth, uint game
 		if (_fullscreen) {
 			// On Linux/X11, when toggling to fullscreen, the window manager saves
 			// the window size to be able to restore it when going back to windowed mode.
-			// If the user configured ResidualVM to start in fullscreen mode, we first
+			// If the user configured NovelVM to start in fullscreen mode, we first
 			// create a window and then toggle it to fullscreen to give the window manager
 			// a chance to save the window size. That way if the user switches back
 			// to windowed mode, the window manager has a window size to apply instead
@@ -564,7 +564,7 @@ void OpenGLSdlGraphicsManager::updateScreen() {
 }
 
 int16 OpenGLSdlGraphicsManager::getHeight() const {
-	// ResidualVM specific
+	// NovelVM specific
 	if (_frameBuffer)
 		return _frameBuffer->getHeight();
 	else
@@ -572,7 +572,7 @@ int16 OpenGLSdlGraphicsManager::getHeight() const {
 }
 
 int16 OpenGLSdlGraphicsManager::getWidth() const {
-	// ResidualVM specific
+	// NovelVM specific
 	if (_frameBuffer)
 		return _frameBuffer->getWidth();
 	else
@@ -676,7 +676,7 @@ int16 OpenGLSdlGraphicsManager::getOverlayWidth() const {
 }
 
 void OpenGLSdlGraphicsManager::warpMouse(int x, int y) {
-	//ResidualVM specific
+	//NovelVM specific
 	if (_frameBuffer) {
 		// Scale from game coordinates to screen coordinates
 		x = (x * _gameRect.getWidth() * _overlayScreen->getWidth()) / _frameBuffer->getWidth();

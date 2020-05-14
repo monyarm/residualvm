@@ -1,31 +1,31 @@
 [Setup]
 AppCopyright=2020
-AppName=ResidualVM
-AppVerName=ResidualVM
-AppPublisher=The ResidualVM Team
-AppPublisherURL=https://www.residualvm.org/
-AppSupportURL=https://www.residualvm.org/
-AppUpdatesURL=https://www.residualvm.org/
-DefaultDirName={pf}\ResidualVM
-DefaultGroupName=ResidualVM
+AppName=NovelVM
+AppVerName=NovelVM
+AppPublisher=The NovelVM Team
+AppPublisherURL=https://www.novelvm.org/
+AppSupportURL=https://www.novelvm.org/
+AppUpdatesURL=https://www.novelvm.org/
+DefaultDirName={pf}\NovelVM
+DefaultGroupName=NovelVM
 AllowNoIcons=true
 AlwaysUsePersonalGroup=false
 EnableDirDoesntExistWarning=false
 Compression=lzma
-OutputDir=C:\ResidualVM
-OutputBaseFilename=residualvm-win32
+OutputDir=C:\NovelVM
+OutputBaseFilename=novelvm-win32
 DisableStartupPrompt=true
 AppendDefaultDirName=false
 SolidCompression=true
 DirExistsWarning=no
-;SetupIconFile=graphics\residualvm-install.ico
+;SetupIconFile=graphics\novelvm-install.ico
 ;WizardImageFile=graphics\left.bmp
-UninstallDisplayIcon={app}\residualvm.exe
+UninstallDisplayIcon={app}\novelvm.exe
 
 [Icons]
-Name: {group}\{cm:UninstallProgram, ResidualVM}; Filename: {uninstallexe}
-Name: {group}\ResidualVM; Filename: {app}\residualvm.exe; WorkingDir: {app}; Comment: residualvm; Flags: createonlyiffileexists; IconIndex: 0
-Name: {group}\ResidualVM (noconsole); Filename: {app}\residualvm.exe; Parameters: "--no-console"; WorkingDir: {app}; Comment: residualvm; Flags: createonlyiffileexists; IconIndex: 0
+Name: {group}\{cm:UninstallProgram, NovelVM}; Filename: {uninstallexe}
+Name: {group}\NovelVM; Filename: {app}\novelvm.exe; WorkingDir: {app}; Comment: novelvm; Flags: createonlyiffileexists; IconIndex: 0
+Name: {group}\NovelVM (noconsole); Filename: {app}\novelvm.exe; Parameters: "--no-console"; WorkingDir: {app}; Comment: novelvm; Flags: createonlyiffileexists; IconIndex: 0
 Name: {group}\Authors; Filename: {app}\AUTHORS.txt; WorkingDir: {app}; Comment: AUTHORS; Flags: createonlyiffileexists
 Name: {group}\Copying; Filename: {app}\COPYING.txt; WorkingDir: {app}; Comment: COPYING; Flags: createonlyiffileexists
 Name: {group}\Copying.FREEFONT; Filename: {app}\COPYING.FREEFONT.txt; WorkingDir: {app}; Comment: COPYING.FREEFONT; Flags: createonlyiffileexists
@@ -45,16 +45,16 @@ Name: {group}\News; Filename: {app}\NEWS.txt; WorkingDir: {app}; Comment: NEWS; 
 Name: {group}\Readme; Filename: {app}\README.txt; WorkingDir: {app}; Comment: README; Flags: createonlyiffileexists
 
 [Run]
-Filename: {app}\ResidualVM.exe; Flags: nowait skipifdoesntexist postinstall skipifsilent
+Filename: {app}\NovelVM.exe; Flags: nowait skipifdoesntexist postinstall skipifsilent
 ;Creates a symbolic link for standard save games area, under Windows Vista/7
-Filename: {cmd}; Parameters: "/c ""mklink /d ""%userprofile%\Saved Games\ResidualVM"" ""%appdata%\ResidualVM\Saved games"" "" "; MinVersion: 0, 6.1
+Filename: {cmd}; Parameters: "/c ""mklink /d ""%userprofile%\Saved Games\NovelVM"" ""%appdata%\NovelVM\Saved games"" "" "; MinVersion: 0, 6.1
 
 [UninstallDelete]
 Type: files; Name: {app}\ISTool.url
 
 [Dirs]
-Name: "{userappdata}\ResidualVM"; MinVersion: 0, 1
-Name: "{userappdata}\ResidualVM\Saved Games"; MinVersion: 0, 1
+Name: "{userappdata}\NovelVM"; MinVersion: 0, 1
+Name: "{userappdata}\NovelVM\Saved Games"; MinVersion: 0, 1
 
 [Files]
 Source: AUTHORS.txt; DestDir: {app}; Flags: ignoreversion
@@ -75,7 +75,7 @@ Source: NEWS.txt; DestDir: {app}; Flags: ignoreversion
 ;README
 Source: README.txt; DestDir: {app}; Flags: ignoreversion isreadme
 Source: README-SDL.txt; DestDir: {app}; Flags: ignoreversion
-Source: residualvm.exe; DestDir: {app}; Flags: ignoreversion
+Source: novelvm.exe; DestDir: {app}; Flags: ignoreversion
 Source: SDL2.dll; DestDir: {app}; Flags: replacesameversion
 ; Source: SDL2_net.dll; DestDir: {app}; Flags: replacesameversion
 ; Source: WinSparkle.dll; DestDir: {app}; Flags: replacesameversion

@@ -65,10 +65,10 @@ enum {
 
 static const char *copyright_text[] = {
 "",
-"C0""Copyright (C) 2003-2020 The ResidualVM Team",
-"C0""https://www.residualvm.org",
+"C0""Copyright (C) 2003-2020 The NovelVM Team",
+"C0""https://www.novelvm.org",
 "",
-"C0""ResidualVM is the legal property of its developers, whose names are too numerous to list here. Please refer to the AUTHORS file distributed with this binary.",
+"C0""NovelVM is the legal property of its developers, whose names are too numerous to list here. Please refer to the AUTHORS file distributed with this binary.",
 "",
 };
 
@@ -95,7 +95,7 @@ AboutDialog::AboutDialog()
 	for (i = 0; i < 1; i++)
 		_lines.push_back("");
 
-	Common::String version("C0""ResidualVM ");
+	Common::String version("C0""NovelVM ");
 	version += gScummVMVersion;
 	_lines.push_back(version);
 

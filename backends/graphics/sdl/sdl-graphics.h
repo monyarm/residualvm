@@ -31,7 +31,7 @@
 
 class SdlEventSource;
 
-#if 0 // ResidualVM - not used
+#if 0 // NovelVM - not used
 #ifndef __SYMBIAN32__
 #define USE_OSD	1
 #endif
@@ -85,7 +85,7 @@ public:
 	 * coordinates (may be either game screen or overlay).
 	 *
 	 * @param point Mouse coordinates to transform.
-	 * !! ResidualVM specific:
+	 * !! NovelVM specific:
 	 */
 	virtual void transformMouseCoordinates(Common::Point &point) = 0;
 
@@ -102,16 +102,16 @@ public:
 	 * @returns true if the mouse was in a valid position for the game and
 	 * should cause the event to be sent to the game.
 	 */
-	virtual bool notifyMousePosition(Common::Point &mouse) = 0; // ResidualVM specific
+	virtual bool notifyMousePosition(Common::Point &mouse) = 0; // NovelVM specific
 
-#if 0 // ResidualVM - not used
+#if 0 // NovelVM - not used
 	virtual bool showMouse(const bool visible) override;
 #endif
 
 	virtual bool saveScreenshot(const Common::String &filename) const { return false; }
-	virtual void saveScreenshot() {} // ResidualVM specific
+	virtual void saveScreenshot() {} // NovelVM specific
 
-#if 0 // ResidualVM - not used
+#if 0 // NovelVM - not used
 	// Override from Common::EventObserver
 	virtual bool notifyEvent(const Common::Event &event) override;
 #endif
@@ -146,7 +146,7 @@ public:
 	 */
 	SdlWindow *getWindow() const { return _window; }
 
-#if 0 // ResidualVM - not used
+#if 0 // NovelVM - not used
 	virtual void initSizeHint(const Graphics::ModeList &modes) override;
 #endif
 	Common::Keymap *getKeymap();
@@ -157,7 +157,7 @@ protected:
 		kActionToggleMouseCapture,
 		kActionSaveScreenshot,
 		kActionToggleAspectRatioCorrection
-#if 0 // ResidualVM - not used
+#if 0 // NovelVM - not used
 		kActionToggleFilteredScaling,
 		kActionCycleStretchMode,
 		kActionIncreaseScaleFactor,
@@ -173,7 +173,7 @@ protected:
 #endif
 	};
 
-#if 0 // ResidualVM - not used
+#if 0 // NovelVM - not used
 	virtual int getGraphicsModeScale(int mode) const = 0;
 
 	bool defaultGraphicsModeConfig() const;
@@ -208,7 +208,7 @@ protected:
 #if SDL_VERSION_ATLEAST(2, 0, 0)
 public:
 	void unlockWindowSize() {
-#if 0 // ResidualVM - not used
+#if 0 // NovelVM - not used
 		_allowWindowSizeReset = true;
 		_hintedWidth = 0;
 		_hintedHeight = 0;
@@ -216,7 +216,7 @@ public:
 	}
 
 protected:
-#if 0 // ResidualVM - not used
+#if 0 // NovelVM - not used
 	Uint32 _lastFlags;
 	bool _allowWindowSizeReset;
 	int _hintedWidth, _hintedHeight;
@@ -225,10 +225,10 @@ protected:
 #endif
 #endif
 
-	SDL_Surface *_hwScreen; // ResidualVM - not used
+	SDL_Surface *_hwScreen; // NovelVM - not used
 	SdlEventSource *_eventSource;
 	SdlWindow *_window;
-#if 0 // ResidualVM - not used
+#if 0 // NovelVM - not used
 private:
 	void toggleFullScreen();
 #endif

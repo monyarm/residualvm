@@ -663,7 +663,7 @@ bool SdlEventSource::handleKeyUp(SDL_Event &ev, Common::Event &event) {
 bool SdlEventSource::handleMouseMotion(SDL_Event &ev, Common::Event &event) {
 	event.type = Common::EVENT_MOUSEMOVE;
 
-	return processMouseEvent(event, ev.motion.x, ev.motion.y, ev.motion.xrel, ev.motion.yrel); // ResidualVM xrel,yrel
+	return processMouseEvent(event, ev.motion.x, ev.motion.y, ev.motion.xrel, ev.motion.yrel); // NovelVM xrel,yrel
 }
 
 bool SdlEventSource::handleMouseButtonDown(SDL_Event &ev, Common::Event &event) {

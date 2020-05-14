@@ -1,6 +1,6 @@
--- ResidualVM - A 3D game interpreter
+-- NovelVM - A 3D game interpreter
 --
--- ResidualVM is the legal property of its developers, whose names
+-- NovelVM is the legal property of its developers, whose names
 -- are too numerous to list here. Please refer to the COPYRIGHT
 -- file distributed with this source distribution.
 --
@@ -22,12 +22,12 @@
 --Setter and getter values for cfg
 function emi_cfg_settable_event(table, index, value)
 	PrintDebug("Set cfg value " .. index .. " to " .. value)
-	SetResidualVMPreference(tostring(index), value)
+	SetNovelVMPreference(tostring(index), value)
 end
 
 function emi_cfg_gettable_event(table, index)
 	PrintDebug("Get cfg value " .. index)
-	value = GetResidualVMPreference(tostring(index))
+	value = GetNovelVMPreference(tostring(index))
 
 	--use default value if not found in config
 	if value == nil then
@@ -43,7 +43,7 @@ system_prefs.loadprefs = function(table, filename)
 		return
 	end
 
-	PrintDebug("Function system_prefs.loadprefs modified for ResidualVM loaded")
+	PrintDebug("Function system_prefs.loadprefs modified for NovelVM loaded")
 
 	--save old cfg table as default values
 	system_prefs.defaults_cfg = system_prefs.cfg

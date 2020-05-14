@@ -1218,15 +1218,15 @@ const char *defaultXML1 = "<?xml version = '1.0'?>"
 "<widget name='grFullscreenCheckbox' "
 "type='Checkbox' "
 "/>"
-// ResidualVM specific -- Start
+// NovelVM specific -- Start
 "<widget name='grVSyncCheckbox' "
 "type='Checkbox' "
 "/>"
-// ResidualVM specific -- End
+// NovelVM specific -- End
 "<widget name='grFilteringCheckbox' "
 "type='Checkbox' "
 "/>"
-// ResidualVM specific -- Start
+// NovelVM specific -- Start
 "<layout type='horizontal' padding='0,0,0,0' spacing='10' align='center'>"
 "<widget name='grRendererTypePopupDesc' "
 "type='OptionsLabel' "
@@ -1243,7 +1243,7 @@ const char *defaultXML1 = "<?xml version = '1.0'?>"
 "type='PopUp' "
 "/>"
 "</layout>"
-// ResidualVM specific -- End
+// NovelVM specific -- End
 "</layout>"
 "</dialog>"
 "<dialog name='GlobalOptions_Shader' overlays='Dialog.GlobalOptions.TabWidget'>"
@@ -3055,15 +3055,15 @@ const char *defaultXML1 = "<?xml version = '1.0'?>"
 "<widget name='grFullscreenCheckbox' "
 "type='Checkbox' "
 "/>"
-// ResidualVM specific -- Start
+// NovelVM specific -- Start
 "<widget name='grVSyncCheckbox' "
 "type='Checkbox' "
 "/>"
-// ResidualVM specific -- End
+// NovelVM specific -- End
 "<widget name='grFilteringCheckbox' "
 "type='Checkbox' "
 "/>"
-// ResidualVM specific -- Start
+// NovelVM specific -- Start
 "<layout type='horizontal' padding='0,0,0,0' spacing='6' align='center'>"
 "<widget name='grRendererTypePopupDesc' "
 "type='OptionsLabel' "
@@ -3072,7 +3072,7 @@ const char *defaultXML1 = "<?xml version = '1.0'?>"
 "type='PopUp' "
 "/>"
 "</layout>"
-// ResidualVM specific -- End
+// NovelVM specific -- End
 "</layout>"
 "</dialog>"
 "<dialog name='GlobalOptions_Shader' overlays='Dialog.GlobalOptions.TabWidget'>"

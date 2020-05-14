@@ -141,8 +141,8 @@ msgid "No"
 msgstr "Όχι"
 
 #: gui/downloaddialog.cpp:137 gui/launcher.cpp:536
-msgid "ResidualVM couldn't open the specified directory!"
-msgstr "Το ResidualVM δε μπόρεσε να ανοίξει το καθορισμένο φάκελο!"
+msgid "NovelVM couldn't open the specified directory!"
+msgstr "Το NovelVM δε μπόρεσε να ανοίξει το καθορισμένο φάκελο!"
 
 #: gui/downloaddialog.cpp:147
 msgid ""
@@ -644,24 +644,24 @@ msgid "~Q~uit"
 msgstr "Έ~ξ~οδος"
 
 #: gui/launcher.cpp:140 backends/platform/sdl/macosx/appmenu_osx.mm:209
-msgid "Quit ResidualVM"
-msgstr "Έξοδος από το ResidualVM"
+msgid "Quit NovelVM"
+msgstr "Έξοδος από το NovelVM"
 
 #: gui/launcher.cpp:141
 msgid "A~b~out..."
 msgstr "~Π~ερί..."
 
 #: gui/launcher.cpp:141 backends/platform/sdl/macosx/appmenu_osx.mm:203
-msgid "About ResidualVM"
-msgstr "Περί του ResidualVM"
+msgid "About NovelVM"
+msgstr "Περί του NovelVM"
 
 #: gui/launcher.cpp:142
 msgid "~O~ptions..."
 msgstr "~Ε~πιλογές..."
 
 #: gui/launcher.cpp:142
-msgid "Change global ResidualVM options"
-msgstr "Αλλαγή καθολικών επιλογών του ResidualVM"
+msgid "Change global NovelVM options"
+msgstr "Αλλαγή καθολικών επιλογών του NovelVM"
 
 #: gui/launcher.cpp:144
 msgid "~S~tart"
@@ -783,15 +783,15 @@ msgid "This game does not support loading games from the launcher."
 msgstr "Αυτό το παιχνίδι δεν υποστηρίζει φόρτωση παιχνιδιών από τον launcher."
 
 #: gui/launcher.cpp:490
-msgid "ResidualVM could not find any engine capable of running the selected game!"
+msgid "NovelVM could not find any engine capable of running the selected game!"
 msgstr ""
-"Το ResidualVM δε μπόρεσε να βρεί κάποια μηχανή ικανή να εκτελέσει το επιλεγμένο "
+"Το NovelVM δε μπόρεσε να βρεί κάποια μηχανή ικανή να εκτελέσει το επιλεγμένο "
 "παιχνίδι!"
 
 #: gui/launcher.cpp:555
-msgid "ResidualVM could not find any game in the specified directory!"
+msgid "NovelVM could not find any game in the specified directory!"
 msgstr ""
-"Το ResidualVM δεν μπόρεσε να βρει κάποιο παιχνίδι στον συγκεκριμένο φάκελο!"
+"Το NovelVM δεν μπόρεσε να βρει κάποιο παιχνίδι στον συγκεκριμένο φάκελο!"
 
 #: gui/launcher.cpp:570
 msgid "Unknown variant"
@@ -1242,10 +1242,10 @@ msgid "Theme Path:"
 msgstr "Φάκελος Θέματος:"
 
 #: gui/options.cpp:1895 gui/options.cpp:1897 gui/options.cpp:1898
-msgid "Specifies path to additional data used by all games or ResidualVM"
+msgid "Specifies path to additional data used by all games or NovelVM"
 msgstr ""
 "Καθορίζει τη διαδρομή για πρόσθετα δεδομένα που χρησιμοποιούνται από όλα τα "
-"παιχνίδια ή το ResidualVM"
+"παιχνίδια ή το NovelVM"
 
 #: gui/options.cpp:1904
 msgid "Plugins Path:"
@@ -1282,8 +1282,8 @@ msgid "GUI language:"
 msgstr "Γλώσσα GUI:"
 
 #: gui/options.cpp:1948
-msgid "Language of ResidualVM GUI"
-msgstr "Γλώσσα του ResidualVM GUI"
+msgid "Language of NovelVM GUI"
+msgstr "Γλώσσα του NovelVM GUI"
 
 #: gui/options.cpp:1974
 msgid "Switch the GUI language to the game language"
@@ -1292,12 +1292,12 @@ msgstr "Χρήση γλώσσας παιχνιδιού ως γλώσσα του GUI"
 #: gui/options.cpp:1975
 msgid ""
 "When starting a game, change the GUI language to the game language.That way, "
-"if a game uses the ResidualVM save and load dialogs, they are in the same "
+"if a game uses the NovelVM save and load dialogs, they are in the same "
 "language as the game."
 msgstr ""
 "Όταν ξεκινάει ένα παιχνίδι, να γίνεται χρήση της γλώσσας παιχνιδιού ως "
 "γλώσσα του GUI. Έτσι, αν ένα παιχνίδι χρησιμοποιεί τα παράθυρα διαλόγου του "
-"ResidualVM για αποθήκευση και φόρτωση, αυτά θα είναι στην ίδια γλώσσα με το "
+"NovelVM για αποθήκευση και φόρτωση, αυτά θα είναι στην ίδια γλώσσα με το "
 "παιχνίδι."
 
 #: gui/options.cpp:1988
@@ -1306,19 +1306,19 @@ msgstr "Χρήση του εγγενούς περιηγητή αρχείων"
 
 #: gui/options.cpp:1989
 msgid ""
-"Use the native system file browser instead of the ResidualVM one to select a "
+"Use the native system file browser instead of the NovelVM one to select a "
 "file or directory."
 msgstr ""
 "Χρήση του εγγενούς περιηγητή αρχείων που παρέχει το λειτουργικό σύστημα αντί "
-"αυτού από το ResidualVM για την επιλογή αρχείου ή καταλόγου."
+"αυτού από το NovelVM για την επιλογή αρχείου ή καταλόγου."
 
 #: gui/options.cpp:1996 gui/updates-dialog.cpp:86
 msgid "Update check:"
 msgstr "Έλεγχος αναβαθμίσεων:"
 
 #: gui/options.cpp:1996
-msgid "How often to check ResidualVM updates"
-msgstr "Συχνότητα ελέγχου ενημερώσεων του ResidualVM"
+msgid "How often to check NovelVM updates"
+msgstr "Συχνότητα ελέγχου ενημερώσεων του NovelVM"
 
 #: gui/options.cpp:2008
 msgid "Check now"
@@ -1374,9 +1374,9 @@ msgid "Used space:"
 msgstr "Χρησιμοποιημένος χώρος:"
 
 #: gui/options.cpp:2032
-msgid "Space used by ResidualVM's saved games on this storage"
+msgid "Space used by NovelVM's saved games on this storage"
 msgstr ""
-"Χώρος που χρησιμοποιείται από τα αποθηκευμένα παιχνίδια του ResidualVM σε αυτή "
+"Χώρος που χρησιμοποιείται από τα αποθηκευμένα παιχνίδια του NovelVM σε αυτή "
 "την αποθήκη"
 
 #: gui/options.cpp:2035
@@ -1415,16 +1415,16 @@ msgstr "Εκκίνηση συγχρονισμού αποθηκευμένων παιχνιδιών"
 
 #: gui/options.cpp:2044
 msgctxt "lowres"
-msgid "You can download game files from your cloud ResidualVM folder:"
+msgid "You can download game files from your cloud NovelVM folder:"
 msgstr ""
 "Μπορείτε να μεταφορτώσετε αρχεία παιχνιδιού από τον δικό σας φάκελο Νέφους "
-"για το ResidualVM:"
+"για το NovelVM:"
 
 #: gui/options.cpp:2046
-msgid "You can download game files from your cloud ResidualVM folder:"
+msgid "You can download game files from your cloud NovelVM folder:"
 msgstr ""
 "Μπορείτε να μεταφορτώσετε αρχεία παιχνιδιού από τον δικό σας φάκελο Νέφους "
-"για το ResidualVM:"
+"για το NovelVM:"
 
 #: gui/options.cpp:2047
 msgid "Download game files"
@@ -1747,8 +1747,8 @@ msgid "Unknown Author"
 msgstr "Άγνωστος Συγγραφέας"
 
 #: gui/remotebrowser.cpp:129
-msgid "ResidualVM could not access the directory!"
-msgstr "Το ResidualVM δε μπόρεσε να προσπελάσει τον φάκελο!"
+msgid "NovelVM could not access the directory!"
+msgstr "Το NovelVM δε μπόρεσε να προσπελάσει τον φάκελο!"
 
 #: gui/saveload-dialog.cpp:343
 msgid "List view"
@@ -1881,11 +1881,11 @@ msgstr "Η αντιγραφή της πληροφορίας παιχνιδιού στο πρόχειρο απέτυχε!"
 
 #: gui/updates-dialog.cpp:49
 msgid ""
-"ResidualVM now supports automatic check for updates\n"
+"NovelVM now supports automatic check for updates\n"
 "which requires access to the Internet. Would you\n"
 "like to enable this feature?"
 msgstr ""
-"Το ResidualVM τώρα υποστηρίζει αυτόματο έλεγχο\n"
+"Το NovelVM τώρα υποστηρίζει αυτόματο έλεγχο\n"
 "για ενημερώσεις, που απαιτεί πρόσβαση στο Internet.\n"
 "Θέλετε να ενεργοποιήσετε αυτή τη δυνατότητα;"
 
@@ -2220,13 +2220,13 @@ msgstr ""
 #: engines/engine.cpp:591
 msgid ""
 "WARNING: The game you are about to start is not yet fully supported by "
-"ResidualVM. As such, it is likely to be unstable, and any saved game you make "
-"might not work in future versions of ResidualVM."
+"NovelVM. As such, it is likely to be unstable, and any saved game you make "
+"might not work in future versions of NovelVM."
 msgstr ""
 "ΠΡΟΣΟΧΗ: Το παιχνίδι που θα ξεκινήσει, δεν υποστηρίζεται ακόμα πλήρως από το "
-"ResidualVM. Ως εκ τούτου, είναι πιθανό να είναι ασταθές, και κάθε αποθηκευμένο "
+"NovelVM. Ως εκ τούτου, είναι πιθανό να είναι ασταθές, και κάθε αποθηκευμένο "
 "παιχνίδι που κάνετε μπορεί να μη λειτουργεί σε μελλοντικές εκδόσεις του "
-"ResidualVM."
+"NovelVM."
 
 #: engines/engine.cpp:594 engines/wintermute/wintermute.cpp:190
 msgid "Start anyway"
@@ -2245,12 +2245,12 @@ msgstr ""
 msgid ""
 "The game in '%s' seems to be an unknown game variant.\n"
 "\n"
-"Please report the following data to the ResidualVM team at %s along with the "
+"Please report the following data to the NovelVM team at %s along with the "
 "name of the game you tried to add and its version, language, etc.:"
 msgstr ""
 "Το παιχνίδι στο '%s' φαίνεται να είναι μια άγνωστη εκδοχή παιχνιδιού.\n"
 "\n"
-"Παρακαλούμε, αναφέρετε τα ακόλουθα στοιχεία στην ομάδα ResidualVM στο %s μαζί "
+"Παρακαλούμε, αναφέρετε τα ακόλουθα στοιχεία στην ομάδα NovelVM στο %s μαζί "
 "με το όνομα του παιχνιδιού που προσπαθήσατε να προσθέσετε και την έκδοση, τη "
 "γλώσσα του, κλπ.:"
 
@@ -2412,7 +2412,7 @@ msgstr "Η μεταφόρτωση απέτυχε."
 #: backends/events/default/default-events.cpp:181
 msgid "Do you really want to return to the Launcher?"
 msgstr ""
-"Σίγουρα επιθυμείτε επιστροφή στο Launcher (Κεντρικό Μενού του ResidualVM);"
+"Σίγουρα επιθυμείτε επιστροφή στο Launcher (Κεντρικό Μενού του NovelVM);"
 
 #: backends/events/default/default-events.cpp:181
 msgid "Launcher"
@@ -2920,10 +2920,10 @@ msgstr "Η ανάγνωση του αρχείου απέτυχε!"
 #: backends/networking/sdl_net/handlers/filesajaxpagehandler.cpp:59
 msgid ""
 "The page is not available without the resources. Make sure file wwwroot.zip "
-"from ResidualVM distribution is available in 'themepath'."
+"from NovelVM distribution is available in 'themepath'."
 msgstr ""
 "Η σελίδα δεν είναι διαθέσιμη χωρίς τους απαιτούμενους πόρους. Επιβεβαιώστε "
-"ότι το αρχείο wwwroot.zip της διανομής ResidualVM είναι διαθέσιμο στη διαδρομή "
+"ότι το αρχείο wwwroot.zip της διανομής NovelVM είναι διαθέσιμο στη διαδρομή "
 "θέματος  'themepath'."
 
 #: backends/networking/sdl_net/handlers/filesajaxpagehandler.cpp:67
@@ -2976,8 +2976,8 @@ msgid "Parent directory"
 msgstr "Γονικός φάκελος"
 
 #: backends/networking/sdl_net/handlers/filespagehandler.cpp:218
-msgid "ResidualVM couldn't list the directory you specified."
-msgstr "Το ResidualVM δεν μπόρεσε να παραθέσει τον φάκελο που προσδιορίσατε."
+msgid "NovelVM couldn't list the directory you specified."
+msgstr "Το NovelVM δεν μπόρεσε να παραθέσει τον φάκελο που προσδιορίσατε."
 
 #: backends/networking/sdl_net/handlers/filespagehandler.cpp:232
 msgid "Index of"
@@ -3203,8 +3203,8 @@ msgid "Magnify Mode Off"
 msgstr "Η Λειτουργία Μεγέθυνσης Απενεργοποιήθηκε"
 
 #: backends/platform/ds/arm9/source/dsoptions.cpp:57
-msgid "ResidualVM Main Menu"
-msgstr "Κεντρικό Μενού ResidualVM"
+msgid "NovelVM Main Menu"
+msgstr "Κεντρικό Μενού NovelVM"
 
 #: backends/platform/ds/arm9/source/dsoptions.cpp:63
 msgid "~L~eft handed mode"
@@ -3312,8 +3312,8 @@ msgid "Right Click"
 msgstr "Δεξί Click"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:205
-msgid "Hide ResidualVM"
-msgstr "Απόκρυψη ResidualVM"
+msgid "Hide NovelVM"
+msgstr "Απόκρυψη NovelVM"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:206
 msgid "Hide Others"
@@ -3344,8 +3344,8 @@ msgid "General Information"
 msgstr "Γενικές Πληροφορίες"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:218
-msgid "What's New in ResidualVM"
-msgstr "Τι νέο υπάρχει στο ResidualVM"
+msgid "What's New in NovelVM"
+msgstr "Τι νέο υπάρχει στο NovelVM"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:220
 msgid "Credits"
@@ -3709,9 +3709,9 @@ msgstr "Χρήση αρχικών οθονών αποθήκευσης/φόρτωσης"
 #: engines/neverhood/detection.cpp:178 engines/sci/detection.cpp:458
 #: engines/sherlock/detection.cpp:76 engines/toltecs/detection.cpp:229
 #: engines/zvision/detection_tables.h:51
-msgid "Use the original save/load screens instead of the ResidualVM ones"
+msgid "Use the original save/load screens instead of the NovelVM ones"
 msgstr ""
-"Χρήση των αρχικών οθονών αποθήκευσης/φόρτωσης αντί για αυτές του ResidualVM"
+"Χρήση των αρχικών οθονών αποθήκευσης/φόρτωσης αντί για αυτές του NovelVM"
 
 #: engines/agi/detection.cpp:157
 msgid "Use an alternative palette"
@@ -3916,7 +3916,7 @@ msgstr ""
 
 #: engines/drascula/saveload.cpp:47
 msgid ""
-"ResidualVM found that you have old saved games for Drascula that should be "
+"NovelVM found that you have old saved games for Drascula that should be "
 "converted.\n"
 "The old saved game format is no longer supported, so you will not be able to "
 "load your games if you don't convert them.\n"
@@ -3924,7 +3924,7 @@ msgid ""
 "Press OK to convert them now, otherwise you will be asked again the next "
 "time you start the game.\n"
 msgstr ""
-"Το ResidualVM διαπίστωσε ότι έχετε παλιά αποθηκευμένα παιχνίδια για το Drascula "
+"Το NovelVM διαπίστωσε ότι έχετε παλιά αποθηκευμένα παιχνίδια για το Drascula "
 "που θα πρέπει να μετατραπούν.\n"
 "Η παλιά αποθηκευμένη μορφή παιχνιδιών δεν υποστηρίζεται πλέον, οπότε δε θα "
 "είστε σε θέση να φορτώσετε τα παιχνίδια σας, αν δεν τα μετατρέψετε.\n"
@@ -4444,7 +4444,7 @@ msgid ""
 "\n"
 "%s %s\n"
 "\n"
-"Do you wish to use this saved game file with ResidualVM?\n"
+"Do you wish to use this saved game file with NovelVM?\n"
 "\n"
 msgstr ""
 "Το ακόλουθο αποθηκευμένο αρχείο του αρχικού παιχνιδιού έχει βρεθεί στο "
@@ -4453,7 +4453,7 @@ msgstr ""
 "%s %s\n"
 "\n"
 "Θέλετε να χρησιμοποιήσετε αυτό το αποθηκευμένο αρχείο παιχνιδιού με το "
-"ResidualVM;\n"
+"NovelVM;\n"
 
 #: engines/kyra/gui/saveload_eob.cpp:602
 #, c-format
@@ -4469,16 +4469,16 @@ msgstr ""
 #, c-format
 msgid ""
 "%d original saved games have been successfully imported into\n"
-"ResidualVM. If you want to manually import original saved game later you will\n"
-"need to open the ResidualVM debug console and use the command "
+"NovelVM. If you want to manually import original saved game later you will\n"
+"need to open the NovelVM debug console and use the command "
 "'import_savefile'.\n"
 "\n"
 msgstr ""
 "%d πρωτότυπα αποθηκευμένα αρχεία παιχνιδιού εισήχθησαν επιτυχώς στο\n"
-"ResidualVM. Αν αργότερα θελήσετε να εισάγετε πρωτότυπα αποθηκευμένα αρχεία \n"
+"NovelVM. Αν αργότερα θελήσετε να εισάγετε πρωτότυπα αποθηκευμένα αρχεία \n"
 "παιχνιδιού χειροκίνητα, θα χρειαστεί να ανοίξετε το τερματικό "
 "αποσφαλμάτωσης \n"
-"(debug console) του ResidualVM και να χρησιμοποιήσετε την εντολή "
+"(debug console) του NovelVM και να χρησιμοποιήσετε την εντολή "
 "'import_savefile'.\n"
 "\n"
 
@@ -4783,13 +4783,13 @@ msgid ""
 "At this point, the Riven Demo would\n"
 "ask if you would like to open a web browser\n"
 "to bring you to the Red Orb store to buy\n"
-"the game. ResidualVM cannot do that and\n"
+"the game. NovelVM cannot do that and\n"
 "the site no longer exists."
 msgstr ""
 "Σε αυτό το σημείο, η δοκιμαστική έκδοση του Riven\n"
 "θα σας ρωτούσε αν θέλετε να ανοίξετε ένα φυλλομετρητή\n"
 "(browser) για να μεταβείτε στο ηλεκτρονικό κατάστημα\n"
-"της Red Orb και να αγοράσετε το παιχνίδι. Το ResidualVM\n"
+"της Red Orb και να αγοράσετε το παιχνίδι. Το NovelVM\n"
 "δεν μπορεί να το κάνει αυτό και η ιστοσελίδα δεν υπάρχει πλέον."
 
 #: engines/neverhood/detection.cpp:184
@@ -4837,14 +4837,14 @@ msgstr "Αποθήκευση παιχνιδιού..."
 
 #: engines/parallaction/saveload.cpp:269
 msgid ""
-"ResidualVM found that you have old saved games for Nippon Safes that should be "
+"NovelVM found that you have old saved games for Nippon Safes that should be "
 "renamed.\n"
 "The old names are no longer supported, so you will not be able to load your "
 "games if you don't convert them.\n"
 "\n"
 "Press OK to convert them now, otherwise you will be asked next time.\n"
 msgstr ""
-"Το ResidualVM διαπίστωσε ότι έχετε παλιά αποθηκευμένα παιχνίδια του Nippon "
+"Το NovelVM διαπίστωσε ότι έχετε παλιά αποθηκευμένα παιχνίδια του Nippon "
 "Safes τα οποία θα πρέπει να μετονομαστούν.\n"
 "Τα παλιά ονόματα δεν υποστηρίζονται πλέον, οπότε δε θα είστε σε θέση να "
 "φορτώσετε τα παιχνίδια σας, αν δεν τα μετατρέψετε.\n"
@@ -4853,17 +4853,17 @@ msgstr ""
 "φορά.\n"
 
 #: engines/parallaction/saveload.cpp:316
-msgid "ResidualVM successfully converted all your saved games."
-msgstr "Το ResidualVM μετάτρεψε επιτυχώς όλα τα αποθηκευμένα παιχνίδια σας."
+msgid "NovelVM successfully converted all your saved games."
+msgstr "Το NovelVM μετάτρεψε επιτυχώς όλα τα αποθηκευμένα παιχνίδια σας."
 
 #: engines/parallaction/saveload.cpp:318
 msgid ""
-"ResidualVM printed some warnings in your console window and can't guarantee all "
+"NovelVM printed some warnings in your console window and can't guarantee all "
 "your files have been converted.\n"
 "\n"
 "Please report to the team."
 msgstr ""
-"Το ResidualVM τύπωσε κάποιες προειδοποιήσεις στο παράθυρο της κονσόλας σας και "
+"Το NovelVM τύπωσε κάποιες προειδοποιήσεις στο παράθυρο της κονσόλας σας και "
 "δεν μπορεί να εγγυηθεί ότι όλα τα αρχεία σας έχουν μετατραπεί.\n"
 "\n"
 "Παρακαλούμε αναφέρετε στην ομάδα."
@@ -5085,16 +5085,16 @@ msgstr ""
 #: engines/sci/sci.cpp:388
 msgid ""
 "Subtitles are enabled, but subtitling in King's Quest 7 was unfinished and "
-"disabled in the release version of the game. ResidualVM allows the subtitles to "
+"disabled in the release version of the game. NovelVM allows the subtitles to "
 "be re-enabled, but because they were removed from the original game, they do "
 "not always render properly or reflect the actual game speech. This is not a "
-"ResidualVM bug -- it is a problem with the game's assets."
+"NovelVM bug -- it is a problem with the game's assets."
 msgstr ""
 "Οι υπότιτλοι είναι ενεργοί αλλά ο υποτιτλισμός στο King's Quest 7 ήταν "
-"ημιτελής και απενεργοποιήθηκε στην τελική έκδοση του παιχνιδιού. Το ResidualVM "
+"ημιτελής και απενεργοποιήθηκε στην τελική έκδοση του παιχνιδιού. Το NovelVM "
 "επιτρέπει να ενεργοποιηθούν οι υπότιτλοι αλλά, επειδή είχαν αφαιρεθεί από το "
 "πρωτότυπο παιχνίδι, δεν εμφανίζονται πάντα σωστά ή δεν είναι ίδιοι με την "
-"ομιλία του παιχνιδιού. Αυτό δεν είναι σφάλμα του ResidualVM, είναι πρόβλημα του "
+"ομιλία του παιχνιδιού. Αυτό δεν είναι σφάλμα του NovelVM, είναι πρόβλημα του "
 "παιχνιδιού."
 
 #: engines/sci/sci.cpp:412
@@ -5103,7 +5103,7 @@ msgid ""
 "market support for General MIDI for this game in their \"General MIDI Utility"
 "\". Please, apply this patch in order to enjoy MIDI music with this game. "
 "Once you have obtained it, you can unpack all of the included *.PAT files in "
-"your ResidualVM extras folder and ResidualVM will add the appropriate patch "
+"your NovelVM extras folder and NovelVM will add the appropriate patch "
 "automatically. Alternatively, you can follow the instructions in the READ.ME "
 "file included in the patch and rename the associated *.PAT file to 4.PAT and "
 "place it in the game folder. Without this patch, General MIDI music for this "
@@ -5114,7 +5114,7 @@ msgstr ""
 "βοηθητικό πρόγραμμα \"General MIDI Utility\". Εφαρμόστε την διόρθωση (patch) "
 "ώστε να απολαύσετε μουσική MIDI με αυτό το παιχνίδι. Μόλις προμηθευτείτε το "
 "βοηθητικό πρόγραμμα, μπορείτε να αποσυμπιέσετε όλα τα συμπεριλαμβανόμενα "
-"αρχεία τύπου *.PAT στον φάκελο extras του ResidualVM και το ResidualVM θα "
+"αρχεία τύπου *.PAT στον φάκελο extras του NovelVM και το NovelVM θα "
 "προσθέσει αυτόματα την κατάλληλη διόρθωση (patch). Εναλλακτικά, μπορείτε να "
 "ακολουθήσετε τις οδηγίες του αρχείου READ.ME το οποίο συμπεριλαμβάνεται στα "
 "αρχεία της διόρθωσης (patch). Εν συντομία, θα πρέπει να πάρετε το σχετικό "
@@ -5126,7 +5126,7 @@ msgstr ""
 msgid ""
 "Your game is patched with a fan made script patch. Such patches have been "
 "reported to cause issues, as they modify game scripts extensively. The "
-"issues that these patches fix do not occur in ResidualVM, so you are advised to "
+"issues that these patches fix do not occur in NovelVM, so you are advised to "
 "remove this patch from your game folder in order to avoid having unexpected "
 "errors and/or issues later on."
 msgstr ""
@@ -5134,7 +5134,7 @@ msgstr ""
 "θαυμαστών του παιχνιδιού (fan made). Έχει αναφερθεί πως τέτοιες διορθώσεις "
 "μπορεί να δημιουργούν προβλήματα καθώς τροποποιούν τις δέσμες ενέργειας του "
 "παιχνιδιού σημαντικά. Τα προβλήματα τα οποιά αυτές οι διορθώσεις (patches) "
-"επιλύνουν, δεν υφίστανται στο ResidualVM. Για αυτό το λόγο σας προτείνουμε να "
+"επιλύνουν, δεν υφίστανται στο NovelVM. Για αυτό το λόγο σας προτείνουμε να "
 "αφαιρέσετε τις διορθώσεις (patches) από τον φάκελο των αρχείων του "
 "παιχνιδιου ώστε να μην αντιμετωπίσετε απρόβλεπτα σφάλματα στην συνέχεια."
 
@@ -5161,15 +5161,15 @@ msgstr ""
 
 #: engines/sci/sci.cpp:879
 msgid ""
-"Characters saved inside ResidualVM are shown automatically. Character files "
-"saved in the original interpreter need to be put inside ResidualVM's saved "
+"Characters saved inside NovelVM are shown automatically. Character files "
+"saved in the original interpreter need to be put inside NovelVM's saved "
 "games directory and a prefix needs to be added depending on which game it "
 "was saved in: 'qfg1-' for Quest for Glory 1, 'qfg2-' for Quest for Glory 2. "
 "Example: 'qfg2-thief.sav'."
 msgstr ""
-"Χαρακτήρες αποθηκευμένοι μέσα στο ResidualVM εμφανίζονται αυτομάτως. Αρχεία "
+"Χαρακτήρες αποθηκευμένοι μέσα στο NovelVM εμφανίζονται αυτομάτως. Αρχεία "
 "χαρακτήρων αποθηκευμένα με τον πρωτότυπο διερμηνευτή πρέπει να τοποθετηθούν "
-"στον φάκελο αποθηκευμένων παιχνιδιών του ResidualVM. Έπειτα, πρέπει να "
+"στον φάκελο αποθηκευμένων παιχνιδιών του NovelVM. Έπειτα, πρέπει να "
 "προστεθεί σε κάθε τέτοιο αρχείο ένα πρόθεμα το οποίο διαφέρει ανάλογα με το "
 "παιχνίδι στο οποίο δημιουργήθηκε, όπως για παράδειγμα: πρόθεμα  'qfg1-' για "
 "το Quest for Glory 1, πρόθεμα 'qfg2-' για το Quest for Glory 2. Παράδειγμα "
@@ -5219,7 +5219,7 @@ msgstr ""
 msgid ""
 "Your game version appears to be unknown. If this is *NOT* a fan-modified\n"
 "version (in particular, not a fan-made translation), please, report the\n"
-"following data to the ResidualVM team along with the name of the game you "
+"following data to the NovelVM team along with the name of the game you "
 "tried\n"
 "to add and its version, language, etc.:\n"
 msgstr ""
@@ -5227,7 +5227,7 @@ msgstr ""
 "είναι έκδοση τροποποιημένη\n"
 "από θαυμαστές (ειδικότερα, δεν είναι μια μετάφραση φτιαγμένη από θαυμαστές), "
 "παρακαλώ, αναφέρετε τα\n"
-"ακόλουθα δεδομένα στην ομάδα του ResidualVM μαζί με το όνομα του παιχνιδιού που "
+"ακόλουθα δεδομένα στην ομάδα του NovelVM μαζί με το όνομα του παιχνιδιού που "
 "προσπαθήσατε\n"
 "να προσθέσετε και την έκδοσή του, τη γλώσσα του, κλπ.:\n"
 
@@ -5924,12 +5924,12 @@ msgstr ""
 msgid ""
 "Usually, Maniac Mansion would start now. But for that to work, the game "
 "files for Maniac Mansion have to be in the 'Maniac' directory inside the "
-"Tentacle game directory, and the game has to be added to ResidualVM."
+"Tentacle game directory, and the game has to be added to NovelVM."
 msgstr ""
 "Κανονικά, τώρα θα ξεκινούσε το Maniac Mansion. Αλλά για να λειτουργήσει "
 "αυτό, τα αρχεία παιχνιδιού του Maniac Mansion θα πρέπει να είναι μέσα στο "
 "φάκελο 'Maniac' μέσα στο φάκελο παιχνιδιού του Tentacle, και το παιχνίδι "
-"πρέπει να προστεθεί στο ResidualVM."
+"πρέπει να προστεθεί στο NovelVM."
 
 #: engines/scumm/players/player_v3m.cpp:129
 msgid ""
@@ -6097,15 +6097,15 @@ msgstr ""
 "λειτουργία παλέτας"
 
 #: engines/sword1/animation.cpp:553 engines/sword2/animation.cpp:449
-msgid "DXA cutscenes found but ResidualVM has been built without zlib"
+msgid "DXA cutscenes found but NovelVM has been built without zlib"
 msgstr ""
-"Βρέθηκαν ταινίες DXA αλλά το ResidualVM έχει φτιαχτεί χωρίς υποστήριξη zlib"
+"Βρέθηκαν ταινίες DXA αλλά το NovelVM έχει φτιαχτεί χωρίς υποστήριξη zlib"
 
 #: engines/sword1/animation.cpp:569 engines/sword2/animation.cpp:465
 msgid ""
-"MPEG-2 cutscenes found but ResidualVM has been built without MPEG-2 support"
+"MPEG-2 cutscenes found but NovelVM has been built without MPEG-2 support"
 msgstr ""
-"Βρέθηκαν βίντεο MPEG-2 αλλά το ResidualVM κατασκευάστηκε χωρίς υποστήριξη MPEG-2"
+"Βρέθηκαν βίντεο MPEG-2 αλλά το NovelVM κατασκευάστηκε χωρίς υποστήριξη MPEG-2"
 
 #: engines/sword1/animation.cpp:576 engines/sword2/animation.cpp:474
 #, c-format
@@ -6114,7 +6114,7 @@ msgstr "Η ταινία '%s' δε βρέθηκε"
 
 #: engines/sword1/control.cpp:887
 msgid ""
-"ResidualVM found that you have old saved games for Broken Sword 1 that should "
+"NovelVM found that you have old saved games for Broken Sword 1 that should "
 "be converted.\n"
 "The old saved game format is no longer supported, so you will not be able to "
 "load your games if you don't convert them.\n"
@@ -6122,7 +6122,7 @@ msgid ""
 "Press OK to convert them now, otherwise you will be asked again the next "
 "time you start the game.\n"
 msgstr ""
-"Το ResidualVM διαπίστωσε ότι έχετε παλιά αποθηκευμένα παιχνίδια για το Broken "
+"Το NovelVM διαπίστωσε ότι έχετε παλιά αποθηκευμένα παιχνίδια για το Broken "
 "Sword 1 που θα πρέπει να μετατραπούν.\n"
 "Η παλιά αποθηκευμένη μορφή παιχνιδιού δεν υποστηρίζεται πλέον, οπότε δε θα "
 "είστε σε θέση να φορτώσετε τα παιχνίδια σας, αν δεν τα μετατρέψετε.\n"
@@ -6153,9 +6153,9 @@ msgstr "Αυτό είναι το τέλος της επίδειξης του Broken Sword 1"
 
 #: engines/sword2/animation.cpp:429
 msgid ""
-"PSX cutscenes found but ResidualVM has been built without RGB color support"
+"PSX cutscenes found but NovelVM has been built without RGB color support"
 msgstr ""
-"Βρέθηκαν βίντεο PSX αλλά το ResidualVM δημιουργήθηκε χωρίς υποστήριξη χρώματος "
+"Βρέθηκαν βίντεο PSX αλλά το NovelVM δημιουργήθηκε χωρίς υποστήριξη χρώματος "
 "RGB"
 
 #: engines/sword2/sword2.cpp:79
@@ -6680,21 +6680,21 @@ msgstr "Το παιχνίδι αυτό απαιτεί υποστήριξη PNG, JPEG και Vorbis."
 msgid "This game requires the FoxTail subengine, which is not compiled in."
 msgstr ""
 "Το παιχνίδι αυτό απαιτεί υποστήριξη 3D μοντέλων, που είναι εκτός πλαισίου "
-"στόχων του ResidualVM."
+"στόχων του NovelVM."
 
 #: engines/wintermute/wintermute.cpp:178
 #, fuzzy
 msgid "This game requires the HeroCraft subengine, which is not compiled in."
 msgstr ""
 "Το παιχνίδι αυτό απαιτεί υποστήριξη 3D μοντέλων, που είναι εκτός πλαισίου "
-"στόχων του ResidualVM."
+"στόχων του NovelVM."
 
 #: engines/wintermute/wintermute.cpp:189
 msgid ""
-"This game requires 3D characters support, which is out of ResidualVM's scope."
+"This game requires 3D characters support, which is out of NovelVM's scope."
 msgstr ""
 "Το παιχνίδι αυτό απαιτεί υποστήριξη 3D μοντέλων, που είναι εκτός πλαισίου "
-"στόχων του ResidualVM."
+"στόχων του NovelVM."
 
 #: engines/xeen/detection.cpp:96
 msgid "Show item costs in standard inventory mode"
@@ -6931,8 +6931,8 @@ msgstr ""
 #~ msgid "Pastes clipboard contents into fields"
 #~ msgstr "Επικόλληση περιεχόμενου πρόχειρου σε πεδία"
 
-#~ msgid "You will be directed to ResidualVM's page where"
-#~ msgstr "Θα οδηγηθείτε στη σελίδα ResidualVM όπου"
+#~ msgid "You will be directed to NovelVM's page where"
+#~ msgstr "Θα οδηγηθείτε στη σελίδα NovelVM όπου"
 
 #~ msgid "you should allow it to access your storage."
 #~ msgstr "θα πρέπει να επιτρέψετε την πρόσβαση στον αποθηκευτικό χώρο σας."
@@ -6972,10 +6972,10 @@ msgstr ""
 #~ msgid "AdLib Emulator"
 #~ msgstr "Εξομοιωτής Adlib"
 
-#~ msgid "Use the original save/load screens instead of the ResidualVM interface"
+#~ msgid "Use the original save/load screens instead of the NovelVM interface"
 #~ msgstr ""
 #~ "Χρησιμοποιήστε τις αρχικές οθόνες αποθήκευσης/φόρτωσης αντί αυτών του "
-#~ "ResidualVM"
+#~ "NovelVM"
 
 #~ msgid "(You can always enable it in the options dialog on the Misc tab)"
 #~ msgstr ""

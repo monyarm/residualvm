@@ -6,14 +6,14 @@ cp -R dists/debian debian
 VERSION=`cat base/internal_version.h | grep SCUMMVM_VERSION | cut -d\" -f2`
 DATE=`date -R`
 
-echo "residualvm ($VERSION) stable; urgency=low
+echo "novelvm ($VERSION) stable; urgency=low
 
   * Build-date: $DATE
 
     Please don't file bugs you find in this package in the Debian Bug Tracking
-    system, use the ResidualVM team's own bug tracker instead.  You can find this
-    tracker at <https://www.github.com/residualvm/residualvm/issues>.
+    system, use the NovelVM team's own bug tracker instead.  You can find this
+    tracker at <https://www.github.com/novelvm/novelvm/issues>.
 
- -- Pawel Kolodziejski <aquadran@residualvm.org>  $DATE
+ -- Pawel Kolodziejski <aquadran@novelvm.org>  $DATE
 
 " > debian/changelog

@@ -6,13 +6,13 @@
 # leave one space after the ':'.
 
           |-----handy-ruler------------------------------------------------------|
-residualvm: ResidualVM
-residualvm:
-residualvm: ResidualVM is a cross-platform 3D game interpreter which allows you
-residualvm: to play LucasArts' LUA-based 3D adventures: Grim Fandango and Escape
-residualvm: from Monkey Island, provided you already have their data files.
-residualvm: ResidualVM just replaces the executables shipped with the games,
-residualvm: allowing you to play them on systems for which they were never
-residualvm: designed!
-residualvm:
-residualvm:
+novelvm: NovelVM
+novelvm:
+novelvm: NovelVM is a cross-platform 3D game interpreter which allows you
+novelvm: to play LucasArts' LUA-based 3D adventures: Grim Fandango and Escape
+novelvm: from Monkey Island, provided you already have their data files.
+novelvm: NovelVM just replaces the executables shipped with the games,
+novelvm: allowing you to play them on systems for which they were never
+novelvm: designed!
+novelvm:
+novelvm:

@@ -144,8 +144,8 @@ msgid "No"
 msgstr "לא"
 
 #: gui/downloaddialog.cpp:137 gui/launcher.cpp:536
-msgid "ResidualVM couldn't open the specified directory!"
-msgstr "ResidualVM לא הצליח לפתוח את התיקייה שנבחרה!"
+msgid "NovelVM couldn't open the specified directory!"
+msgstr "NovelVM לא הצליח לפתוח את התיקייה שנבחרה!"
 
 #: gui/downloaddialog.cpp:147
 msgid ""
@@ -636,24 +636,24 @@ msgid "~Q~uit"
 msgstr "~י~ציאה"
 
 #: gui/launcher.cpp:140 backends/platform/sdl/macosx/appmenu_osx.mm:209
-msgid "Quit ResidualVM"
-msgstr "סגור את ResidualVM"
+msgid "Quit NovelVM"
+msgstr "סגור את NovelVM"
 
 #: gui/launcher.cpp:141
 msgid "A~b~out..."
 msgstr "~א~ודות..."
 
 #: gui/launcher.cpp:141 backends/platform/sdl/macosx/appmenu_osx.mm:203
-msgid "About ResidualVM"
-msgstr "על אודות ResidualVM"
+msgid "About NovelVM"
+msgstr "על אודות NovelVM"
 
 #: gui/launcher.cpp:142
 msgid "~O~ptions..."
 msgstr "א~פ~שרויות..."
 
 #: gui/launcher.cpp:142
-msgid "Change global ResidualVM options"
-msgstr "שנה הגדרות ResidualVM גלובליות"
+msgid "Change global NovelVM options"
+msgstr "שנה הגדרות NovelVM גלובליות"
 
 #: gui/launcher.cpp:144
 msgid "~S~tart"
@@ -770,12 +770,12 @@ msgid "This game does not support loading games from the launcher."
 msgstr "המשחק שנחבר אינו תומך בטעינת משחקים מתוך המשגר."
 
 #: gui/launcher.cpp:490
-msgid "ResidualVM could not find any engine capable of running the selected game!"
-msgstr "ResidualVM לא הצליח למצוא מנוע שמסוגל להריץ את המשחק שנבחר!"
+msgid "NovelVM could not find any engine capable of running the selected game!"
+msgstr "NovelVM לא הצליח למצוא מנוע שמסוגל להריץ את המשחק שנבחר!"
 
 #: gui/launcher.cpp:555
-msgid "ResidualVM could not find any game in the specified directory!"
-msgstr "ResidualVM לא מצא שום משחק בתיקייה שנבחרה!"
+msgid "NovelVM could not find any game in the specified directory!"
+msgstr "NovelVM לא מצא שום משחק בתיקייה שנבחרה!"
 
 #: gui/launcher.cpp:570
 msgid "Unknown variant"
@@ -1214,8 +1214,8 @@ msgid "Theme Path:"
 msgstr "נתיב נושא:"
 
 #: gui/options.cpp:1895 gui/options.cpp:1897 gui/options.cpp:1898
-msgid "Specifies path to additional data used by all games or ResidualVM"
-msgstr "מציין נתיב לנתונים נוספים המשמשים את כל המשחקים או ResidualVM"
+msgid "Specifies path to additional data used by all games or NovelVM"
+msgstr "מציין נתיב לנתונים נוספים המשמשים את כל המשחקים או NovelVM"
 
 #: gui/options.cpp:1904
 msgid "Plugins Path:"
@@ -1252,8 +1252,8 @@ msgid "GUI language:"
 msgstr "שפת GUI:"
 
 #: gui/options.cpp:1948
-msgid "Language of ResidualVM GUI"
-msgstr "שפת GUI של ResidualVM"
+msgid "Language of NovelVM GUI"
+msgstr "שפת GUI של NovelVM"
 
 #: gui/options.cpp:1974
 msgid "Switch the GUI language to the game language"
@@ -1262,11 +1262,11 @@ msgstr "העבר את שפת ה- GUI לשפת המשחק"
 #: gui/options.cpp:1975
 msgid ""
 "When starting a game, change the GUI language to the game language.That way, "
-"if a game uses the ResidualVM save and load dialogs, they are in the same "
+"if a game uses the NovelVM save and load dialogs, they are in the same "
 "language as the game."
 msgstr ""
 "כשאתה מתחיל משחק, שנה את שפת ה- GUI לשפת המשחק. בדרך זו, אם משחק משתמש ב- "
-"ResidualVM שמירה וטעינה של דו-שיח, הם נמצאים באותה שפה כמו המשחק."
+"NovelVM שמירה וטעינה של דו-שיח, הם נמצאים באותה שפה כמו המשחק."
 
 #: gui/options.cpp:1988
 msgid "Use native system file browser"
@@ -1274,18 +1274,18 @@ msgstr "השתמש בדפדפן קבצי המערכת המקורי"
 
 #: gui/options.cpp:1989
 msgid ""
-"Use the native system file browser instead of the ResidualVM one to select a "
+"Use the native system file browser instead of the NovelVM one to select a "
 "file or directory."
 msgstr ""
-"השתמש בדפדפן קבצי המערכת המקורי במקום ב- ResidualVM כדי לבחור קובץ או ספרייה."
+"השתמש בדפדפן קבצי המערכת המקורי במקום ב- NovelVM כדי לבחור קובץ או ספרייה."
 
 #: gui/options.cpp:1996 gui/updates-dialog.cpp:86
 msgid "Update check:"
 msgstr "בדיקת עדכון:"
 
 #: gui/options.cpp:1996
-msgid "How often to check ResidualVM updates"
-msgstr "באיזו תדירות לבדוק עדכוני ResidualVM"
+msgid "How often to check NovelVM updates"
+msgstr "באיזו תדירות לבדוק עדכוני NovelVM"
 
 #: gui/options.cpp:2008
 msgid "Check now"
@@ -1335,8 +1335,8 @@ msgid "Used space:"
 msgstr "מקום משומש:"
 
 #: gui/options.cpp:2032
-msgid "Space used by ResidualVM's saved games on this storage"
-msgstr "שטח שמשמש את המשחקים השמורים של ResidualVM באחסון זה"
+msgid "Space used by NovelVM's saved games on this storage"
+msgstr "שטח שמשמש את המשחקים השמורים של NovelVM באחסון זה"
 
 #: gui/options.cpp:2035
 msgid "Last sync:"
@@ -1369,12 +1369,12 @@ msgstr "התחל סנכרון משחקים שנשמר"
 
 #: gui/options.cpp:2044
 msgctxt "lowres"
-msgid "You can download game files from your cloud ResidualVM folder:"
-msgstr "אתה יכול להוריד קבצי משחק מתיקיית ResidualVM הענן שלך:"
+msgid "You can download game files from your cloud NovelVM folder:"
+msgstr "אתה יכול להוריד קבצי משחק מתיקיית NovelVM הענן שלך:"
 
 #: gui/options.cpp:2046
-msgid "You can download game files from your cloud ResidualVM folder:"
-msgstr "אתה יכול להוריד קבצי משחק מתיקיית ResidualVM הענן שלך:"
+msgid "You can download game files from your cloud NovelVM folder:"
+msgstr "אתה יכול להוריד קבצי משחק מתיקיית NovelVM הענן שלך:"
 
 #: gui/options.cpp:2047
 msgid "Download game files"
@@ -1679,8 +1679,8 @@ msgid "Unknown Author"
 msgstr "סופר לא ידוע"
 
 #: gui/remotebrowser.cpp:129
-msgid "ResidualVM could not access the directory!"
-msgstr "ResidualVM לא יכול היה לגשת לספרייה!"
+msgid "NovelVM could not access the directory!"
+msgstr "NovelVM לא יכול היה לגשת לספרייה!"
 
 #: gui/saveload-dialog.cpp:343
 msgid "List view"
@@ -1809,11 +1809,11 @@ msgstr "העתקת מידע המשחק ללוח נכשלה!"
 
 #: gui/updates-dialog.cpp:49
 msgid ""
-"ResidualVM now supports automatic check for updates\n"
+"NovelVM now supports automatic check for updates\n"
 "which requires access to the Internet. Would you\n"
 "like to enable this feature?"
 msgstr ""
-"ResidualVM תומך כעת בבדיקה אוטומטית של עדכונים\n"
+"NovelVM תומך כעת בבדיקה אוטומטית של עדכונים\n"
 "הדורש גישה לאינטרנט. היית\n"
 "רוצה להפעיל תכונה זו?"
 
@@ -2142,12 +2142,12 @@ msgstr ""
 #: engines/engine.cpp:591
 msgid ""
 "WARNING: The game you are about to start is not yet fully supported by "
-"ResidualVM. As such, it is likely to be unstable, and any saved game you make "
-"might not work in future versions of ResidualVM."
+"NovelVM. As such, it is likely to be unstable, and any saved game you make "
+"might not work in future versions of NovelVM."
 msgstr ""
-"אזהרה: המשחק שאתה עומד להתחיל עדיין אינו נתמך במלואו על ידי ResidualVM. ככזה, "
+"אזהרה: המשחק שאתה עומד להתחיל עדיין אינו נתמך במלואו על ידי NovelVM. ככזה, "
 "סביר להניח שהוא לא יציב, וכל משחק שנשמר שתבצע עשוי לא לעבוד בגירסאות עתידיות "
-"של ResidualVM."
+"של NovelVM."
 
 #: engines/engine.cpp:594 engines/wintermute/wintermute.cpp:190
 msgid "Start anyway"
@@ -2166,12 +2166,12 @@ msgstr ""
 msgid ""
 "The game in '%s' seems to be an unknown game variant.\n"
 "\n"
-"Please report the following data to the ResidualVM team at %s along with the "
+"Please report the following data to the NovelVM team at %s along with the "
 "name of the game you tried to add and its version, language, etc.:"
 msgstr ""
 "נראה כי המשחק ב-% s הוא גרסת משחק לא ידועה.\n"
 "\n"
-"אנא דווח על הנתונים הבאים לצוות ResidualVM ב-% s יחד עם שם המשחק שניסית להוסיף "
+"אנא דווח על הנתונים הבאים לצוות NovelVM ב-% s יחד עם שם המשחק שניסית להוסיף "
 "והגרסה שלו, השפה וכו ':"
 
 #: engines/game.cpp:175
@@ -2831,9 +2831,9 @@ msgstr "קריאת הקובץ נכשלה!"
 #: backends/networking/sdl_net/handlers/filesajaxpagehandler.cpp:59
 msgid ""
 "The page is not available without the resources. Make sure file wwwroot.zip "
-"from ResidualVM distribution is available in 'themepath'."
+"from NovelVM distribution is available in 'themepath'."
 msgstr ""
-"הדף אינו זמין ללא המשאבים. וודא שהקובץ wwwroot.zip מההפצה של ResidualVM זמין ב"
+"הדף אינו זמין ללא המשאבים. וודא שהקובץ wwwroot.zip מההפצה של NovelVM זמין ב"
 "\" themepath \"."
 
 #: backends/networking/sdl_net/handlers/filesajaxpagehandler.cpp:67
@@ -2886,8 +2886,8 @@ msgid "Parent directory"
 msgstr "מדריך הורים"
 
 #: backends/networking/sdl_net/handlers/filespagehandler.cpp:218
-msgid "ResidualVM couldn't list the directory you specified."
-msgstr "ResidualVM לא יכול היה לרשום את הספרייה שציינת."
+msgid "NovelVM couldn't list the directory you specified."
+msgstr "NovelVM לא יכול היה לרשום את הספרייה שציינת."
 
 #: backends/networking/sdl_net/handlers/filespagehandler.cpp:232
 msgid "Index of"
@@ -3103,8 +3103,8 @@ msgid "Magnify Mode Off"
 msgstr ""
 
 #: backends/platform/ds/arm9/source/dsoptions.cpp:57
-msgid "ResidualVM Main Menu"
-msgstr "תפריט ראשי של ResidualVM"
+msgid "NovelVM Main Menu"
+msgstr "תפריט ראשי של NovelVM"
 
 #: backends/platform/ds/arm9/source/dsoptions.cpp:63
 msgid "~L~eft handed mode"
@@ -3212,8 +3212,8 @@ msgid "Right Click"
 msgstr "לחיצה ימנית"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:205
-msgid "Hide ResidualVM"
-msgstr "הסתר את ResidualVM"
+msgid "Hide NovelVM"
+msgstr "הסתר את NovelVM"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:206
 msgid "Hide Others"
@@ -3244,8 +3244,8 @@ msgid "General Information"
 msgstr "מידע כללי"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:218
-msgid "What's New in ResidualVM"
-msgstr "מה חדש בResidualVM"
+msgid "What's New in NovelVM"
+msgstr "מה חדש בNovelVM"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:220
 msgid "Credits"
@@ -3606,8 +3606,8 @@ msgstr "השתמש במסכי שמירה / טעינה מקוריים"
 #: engines/neverhood/detection.cpp:178 engines/sci/detection.cpp:458
 #: engines/sherlock/detection.cpp:76 engines/toltecs/detection.cpp:229
 #: engines/zvision/detection_tables.h:51
-msgid "Use the original save/load screens instead of the ResidualVM ones"
-msgstr "השתמש במסכי השמירה / הטעינה המקוריים במקום במסכי ResidualVM"
+msgid "Use the original save/load screens instead of the NovelVM ones"
+msgstr "השתמש במסכי השמירה / הטעינה המקוריים במקום במסכי NovelVM"
 
 #: engines/agi/detection.cpp:157
 msgid "Use an alternative palette"
@@ -3794,7 +3794,7 @@ msgstr ""
 
 #: engines/drascula/saveload.cpp:47
 msgid ""
-"ResidualVM found that you have old saved games for Drascula that should be "
+"NovelVM found that you have old saved games for Drascula that should be "
 "converted.\n"
 "The old saved game format is no longer supported, so you will not be able to "
 "load your games if you don't convert them.\n"
@@ -3802,7 +3802,7 @@ msgid ""
 "Press OK to convert them now, otherwise you will be asked again the next "
 "time you start the game.\n"
 msgstr ""
-"ResidualVM מצא שיש לך משחקים שמורים ישנים עבור דרקולה שצריך להמיר.\n"
+"NovelVM מצא שיש לך משחקים שמורים ישנים עבור דרקולה שצריך להמיר.\n"
 "פורמט המשחק הישן שנשמר כבר לא נתמך, כך שלא תוכל לטעון את המשחקים שלך אם לא "
 "תמיר אותם.\n"
 "\n"
@@ -4320,14 +4320,14 @@ msgid ""
 "\n"
 "%s %s\n"
 "\n"
-"Do you wish to use this saved game file with ResidualVM?\n"
+"Do you wish to use this saved game file with NovelVM?\n"
 "\n"
 msgstr ""
 "קובץ המשחק המקורי שנשמר הבא נמצא בנתיב המשחק שלך:\n"
 "\n"
 "% s% s\n"
 "\n"
-"האם ברצונך להשתמש בקובץ המשחק השמור הזה עם ResidualVM?\n"
+"האם ברצונך להשתמש בקובץ המשחק השמור הזה עם NovelVM?\n"
 "\n"
 
 #: engines/kyra/gui/saveload_eob.cpp:602
@@ -4343,14 +4343,14 @@ msgstr ""
 #, c-format
 msgid ""
 "%d original saved games have been successfully imported into\n"
-"ResidualVM. If you want to manually import original saved game later you will\n"
-"need to open the ResidualVM debug console and use the command "
+"NovelVM. If you want to manually import original saved game later you will\n"
+"need to open the NovelVM debug console and use the command "
 "'import_savefile'.\n"
 "\n"
 msgstr ""
 "% d המשחקים השמורים המקוריים יובאו בהצלחה לתוך\n"
-"ResidualVM. אם ברצונך לייבא ידנית משחק שנשמר במקור בהמשך, תעשה זאת\n"
-"צריך לפתוח את קונסולת הבאגים של ResidualVM ולהשתמש בפקודה 'import_savefile'.\n"
+"NovelVM. אם ברצונך לייבא ידנית משחק שנשמר במקור בהמשך, תעשה זאת\n"
+"צריך לפתוח את קונסולת הבאגים של NovelVM ולהשתמש בפקודה 'import_savefile'.\n"
 "\n"
 
 #: engines/kyra/graphics/screen_eob.cpp:2436
@@ -4636,13 +4636,13 @@ msgid ""
 "At this point, the Riven Demo would\n"
 "ask if you would like to open a web browser\n"
 "to bring you to the Red Orb store to buy\n"
-"the game. ResidualVM cannot do that and\n"
+"the game. NovelVM cannot do that and\n"
 "the site no longer exists."
 msgstr ""
 "בשלב זה, הדגמת Riven תעשה זאת\n"
 "שאל אם ברצונך לפתוח דפדפן אינטרנט\n"
 "להביא אותך לחנות Red Orb לקנות\n"
-"המשחק. ResidualVM לא יכול לעשות זאת ו\n"
+"המשחק. NovelVM לא יכול לעשות זאת ו\n"
 "האתר כבר לא קיים."
 
 #: engines/neverhood/detection.cpp:184
@@ -4688,31 +4688,31 @@ msgstr "שומר משחק ..."
 
 #: engines/parallaction/saveload.cpp:269
 msgid ""
-"ResidualVM found that you have old saved games for Nippon Safes that should be "
+"NovelVM found that you have old saved games for Nippon Safes that should be "
 "renamed.\n"
 "The old names are no longer supported, so you will not be able to load your "
 "games if you don't convert them.\n"
 "\n"
 "Press OK to convert them now, otherwise you will be asked next time.\n"
 msgstr ""
-"ResidualVM מצא שיש לך משחקים שמורים ישנים עבור כספות ניפון שצריך לשנות את שמם.\n"
+"NovelVM מצא שיש לך משחקים שמורים ישנים עבור כספות ניפון שצריך לשנות את שמם.\n"
 "השמות הישנים כבר אינם נתמכים, כך שלא תוכל לטעון את המשחקים שלך אם לא תמיר "
 "אותם.\n"
 "\n"
 "לחץ על OK כדי להמיר אותם כעת, אחרת תישאל בפעם הבאה.\n"
 
 #: engines/parallaction/saveload.cpp:316
-msgid "ResidualVM successfully converted all your saved games."
-msgstr "ResidualVM המיר בהצלחה את כל המשחקים ששמרתם."
+msgid "NovelVM successfully converted all your saved games."
+msgstr "NovelVM המיר בהצלחה את כל המשחקים ששמרתם."
 
 #: engines/parallaction/saveload.cpp:318
 msgid ""
-"ResidualVM printed some warnings in your console window and can't guarantee all "
+"NovelVM printed some warnings in your console window and can't guarantee all "
 "your files have been converted.\n"
 "\n"
 "Please report to the team."
 msgstr ""
-"ResidualVM הדפיס כמה אזהרות בחלון המסוף שלך ולא יכול להבטיח שכל הקבצים שלך "
+"NovelVM הדפיס כמה אזהרות בחלון המסוף שלך ולא יכול להבטיח שכל הקבצים שלך "
 "הומרו.\n"
 "\n"
 "אנא דווח לצוות."
@@ -4916,15 +4916,15 @@ msgstr ""
 #: engines/sci/sci.cpp:388
 msgid ""
 "Subtitles are enabled, but subtitling in King's Quest 7 was unfinished and "
-"disabled in the release version of the game. ResidualVM allows the subtitles to "
+"disabled in the release version of the game. NovelVM allows the subtitles to "
 "be re-enabled, but because they were removed from the original game, they do "
 "not always render properly or reflect the actual game speech. This is not a "
-"ResidualVM bug -- it is a problem with the game's assets."
+"NovelVM bug -- it is a problem with the game's assets."
 msgstr ""
 "כתוביות מופעלות, אך כתוביות ב- King's Quest 7 לא הושלמה והושבתה בגרסת "
-"המהדורה של המשחק. ResidualVM מאפשר להפעיל מחדש את הכתוביות, אך מכיוון שהוסרו "
+"המהדורה של המשחק. NovelVM מאפשר להפעיל מחדש את הכתוביות, אך מכיוון שהוסרו "
 "מהמשחק המקורי, הם לא תמיד נותנים כראוי או משקפים את נאום המשחק בפועל. זה לא "
-"באג ResidualVM - זו בעיה עם נכסי המשחק."
+"באג NovelVM - זו בעיה עם נכסי המשחק."
 
 #: engines/sci/sci.cpp:412
 msgid ""
@@ -4932,7 +4932,7 @@ msgid ""
 "market support for General MIDI for this game in their \"General MIDI Utility"
 "\". Please, apply this patch in order to enjoy MIDI music with this game. "
 "Once you have obtained it, you can unpack all of the included *.PAT files in "
-"your ResidualVM extras folder and ResidualVM will add the appropriate patch "
+"your NovelVM extras folder and NovelVM will add the appropriate patch "
 "automatically. Alternatively, you can follow the instructions in the READ.ME "
 "file included in the patch and rename the associated *.PAT file to 4.PAT and "
 "place it in the game folder. Without this patch, General MIDI music for this "
@@ -4941,7 +4941,7 @@ msgstr ""
 "בחרת ב- MIDI כללי כמכשיר קול. סיירה סיפקה תמיכה לאחר השוק לגנרל MIDI למשחק "
 "זה ב\"כללית השירות MIDI \". אנא, החל את התיקון הזה כדי ליהנות ממוזיקת MIDI "
 "עם המשחק הזה. לאחר שתשיג אותו, באפשרותך לפרוק את כל קבצי ה- * .PAT הכלולים "
-"בתיקיית התוספות ResidualVM ו- ResidualVM יוסיף אוטומטית את התיקון המתאים. לחלופין, "
+"בתיקיית התוספות NovelVM ו- NovelVM יוסיף אוטומטית את התיקון המתאים. לחלופין, "
 "תוכלו לעקוב אחר ההוראות בקובץ READ.ME הכלול בתיקון ולשנות את שם הקובץ * .PAT "
 "המשויך ל- 4.PAT ולהניח אותו בתיקיית המשחק. ללא התיקון הזה, מוזיקת MIDI כללית "
 "למשחק זה תישמע מעוותת קשה."
@@ -4950,13 +4950,13 @@ msgstr ""
 msgid ""
 "Your game is patched with a fan made script patch. Such patches have been "
 "reported to cause issues, as they modify game scripts extensively. The "
-"issues that these patches fix do not occur in ResidualVM, so you are advised to "
+"issues that these patches fix do not occur in NovelVM, so you are advised to "
 "remove this patch from your game folder in order to avoid having unexpected "
 "errors and/or issues later on."
 msgstr ""
 "המשחק שלך טלאי על ידי תיקון תסריטים על ידי מניפה. דיווחים על טלאים כאלה "
 "גורמים לבעיות, מכיוון שהם משנים את סקריפט המשחק באופן נרחב. הבעיות שהתיקונים "
-"הללו פותרים לא מתרחשות ב- ResidualVM, לכן מומלץ להסיר תיקון זה מתיקיית המשחק "
+"הללו פותרים לא מתרחשות ב- NovelVM, לכן מומלץ להסיר תיקון זה מתיקיית המשחק "
 "שלך על מנת להימנע משגיאות ו / או בעיות לא צפויות בהמשך."
 
 #: engines/sci/sci.cpp:517
@@ -4982,14 +4982,14 @@ msgstr ""
 
 #: engines/sci/sci.cpp:879
 msgid ""
-"Characters saved inside ResidualVM are shown automatically. Character files "
-"saved in the original interpreter need to be put inside ResidualVM's saved "
+"Characters saved inside NovelVM are shown automatically. Character files "
+"saved in the original interpreter need to be put inside NovelVM's saved "
 "games directory and a prefix needs to be added depending on which game it "
 "was saved in: 'qfg1-' for Quest for Glory 1, 'qfg2-' for Quest for Glory 2. "
 "Example: 'qfg2-thief.sav'."
 msgstr ""
-"תווים שנשמרו בתוך ResidualVM מוצגים באופן אוטומטי. יש להכניס קבצי תווים שנשמרו "
-"במתורגמן המקורי בספריית המשחקים השמורים של ResidualVM ויש להוסיף קידומת תלויה "
+"תווים שנשמרו בתוך NovelVM מוצגים באופן אוטומטי. יש להכניס קבצי תווים שנשמרו "
+"במתורגמן המקורי בספריית המשחקים השמורים של NovelVM ויש להוסיף קידומת תלויה "
 "באיזה משחק הוא נשמר ב: 'qfg1-' עבור Quest for Glory 1, 'qfg2-' עבור Quest "
 "for Glory 2. דוגמה: 'qfg2-thief.sav'."
 
@@ -5033,13 +5033,13 @@ msgstr ""
 msgid ""
 "Your game version appears to be unknown. If this is *NOT* a fan-modified\n"
 "version (in particular, not a fan-made translation), please, report the\n"
-"following data to the ResidualVM team along with the name of the game you "
+"following data to the NovelVM team along with the name of the game you "
 "tried\n"
 "to add and its version, language, etc.:\n"
 msgstr ""
 "נראה כי גרסת המשחק שלך אינה ידועה. אם זה לא * מאוורר שינוי\n"
 "גרסה (בפרט, לא תרגום מתוצרת מניפה), אנא דווח על\n"
-"בעקבות הנתונים לצוות ResidualVM יחד עם שם המשחק שניסית\n"
+"בעקבות הנתונים לצוות NovelVM יחד עם שם המשחק שניסית\n"
 "להוסיף את הגרסה שלו, השפה וכו ':\n"
 
 #: engines/scumm/detection.cpp:1158
@@ -5735,11 +5735,11 @@ msgstr ""
 msgid ""
 "Usually, Maniac Mansion would start now. But for that to work, the game "
 "files for Maniac Mansion have to be in the 'Maniac' directory inside the "
-"Tentacle game directory, and the game has to be added to ResidualVM."
+"Tentacle game directory, and the game has to be added to NovelVM."
 msgstr ""
 "בדרך כלל, אחוזת מניאק תתחיל עכשיו. אבל כדי שזה יעבוד, קבצי המשחק של Maniac "
 "Mansion חייבים להיות בספריית 'Maniac' בתוך ספריית המשחק Tentacle, ויש להוסיף "
-"את המשחק ל- ResidualVM."
+"את המשחק ל- NovelVM."
 
 #: engines/scumm/players/player_v3m.cpp:129
 msgid ""
@@ -5896,13 +5896,13 @@ msgid "PSX stream cutscene '%s' cannot be played in paletted mode"
 msgstr "אין אפשרות לנגן זרם PSX '% s' במצב לוח-לוח"
 
 #: engines/sword1/animation.cpp:553 engines/sword2/animation.cpp:449
-msgid "DXA cutscenes found but ResidualVM has been built without zlib"
-msgstr "נמצאו חיתוכי DXA אך ResidualVM נבנה ללא זליב"
+msgid "DXA cutscenes found but NovelVM has been built without zlib"
+msgstr "נמצאו חיתוכי DXA אך NovelVM נבנה ללא זליב"
 
 #: engines/sword1/animation.cpp:569 engines/sword2/animation.cpp:465
 msgid ""
-"MPEG-2 cutscenes found but ResidualVM has been built without MPEG-2 support"
-msgstr "חיתוכי MPEG-2 נמצאו אך ResidualVM נבנה ללא תמיכה ב- MPEG-2"
+"MPEG-2 cutscenes found but NovelVM has been built without MPEG-2 support"
+msgstr "חיתוכי MPEG-2 נמצאו אך NovelVM נבנה ללא תמיכה ב- MPEG-2"
 
 #: engines/sword1/animation.cpp:576 engines/sword2/animation.cpp:474
 #, c-format
@@ -5911,7 +5911,7 @@ msgstr "Cutscene '% s' לא נמצא"
 
 #: engines/sword1/control.cpp:887
 msgid ""
-"ResidualVM found that you have old saved games for Broken Sword 1 that should "
+"NovelVM found that you have old saved games for Broken Sword 1 that should "
 "be converted.\n"
 "The old saved game format is no longer supported, so you will not be able to "
 "load your games if you don't convert them.\n"
@@ -5919,7 +5919,7 @@ msgid ""
 "Press OK to convert them now, otherwise you will be asked again the next "
 "time you start the game.\n"
 msgstr ""
-"ResidualVM מצא שיש לך משחקים שמורים ישנים עבור חרב שבור 1 שיש להמיר.\n"
+"NovelVM מצא שיש לך משחקים שמורים ישנים עבור חרב שבור 1 שיש להמיר.\n"
 "פורמט המשחק הישן שנשמר כבר לא נתמך, כך שלא תוכל לטעון את המשחקים שלך אם לא "
 "תמיר אותם.\n"
 "\n"
@@ -5948,8 +5948,8 @@ msgstr "זה סוף הדגמת שבור חרב 1"
 
 #: engines/sword2/animation.cpp:429
 msgid ""
-"PSX cutscenes found but ResidualVM has been built without RGB color support"
-msgstr "חיתוכי PSX נמצאו אך ResidualVM נבנה ללא תמיכה בצבע RGB"
+"PSX cutscenes found but NovelVM has been built without RGB color support"
+msgstr "חיתוכי PSX נמצאו אך NovelVM נבנה ללא תמיכה בצבע RGB"
 
 #: engines/sword2/sword2.cpp:79
 msgid "Show object labels"
@@ -6462,17 +6462,17 @@ msgstr "משחק זה דורש תמיכה ב- PNG, JPEG ו- Vorbis."
 #: engines/wintermute/wintermute.cpp:167
 #, fuzzy
 msgid "This game requires the FoxTail subengine, which is not compiled in."
-msgstr "משחק זה דורש תמיכה בתווי תלת ממד, שהוא מחוץ לתחום של ResidualVM."
+msgstr "משחק זה דורש תמיכה בתווי תלת ממד, שהוא מחוץ לתחום של NovelVM."
 
 #: engines/wintermute/wintermute.cpp:178
 #, fuzzy
 msgid "This game requires the HeroCraft subengine, which is not compiled in."
-msgstr "משחק זה דורש תמיכה בתווי תלת ממד, שהוא מחוץ לתחום של ResidualVM."
+msgstr "משחק זה דורש תמיכה בתווי תלת ממד, שהוא מחוץ לתחום של NovelVM."
 
 #: engines/wintermute/wintermute.cpp:189
 msgid ""
-"This game requires 3D characters support, which is out of ResidualVM's scope."
-msgstr "משחק זה דורש תמיכה בתווי תלת ממד, שהוא מחוץ לתחום של ResidualVM."
+"This game requires 3D characters support, which is out of NovelVM's scope."
+msgstr "משחק זה דורש תמיכה בתווי תלת ממד, שהוא מחוץ לתחום של NovelVM."
 
 #: engines/xeen/detection.cpp:96
 msgid "Show item costs in standard inventory mode"

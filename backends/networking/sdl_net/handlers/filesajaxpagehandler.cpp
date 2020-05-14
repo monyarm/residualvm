@@ -56,7 +56,7 @@ void FilesAjaxPageHandler::handle(Client &client) {
 	// load stylish response page from the archive
 	Common::SeekableReadStream *const stream = HandlerUtils::getArchiveFile(FILES_PAGE_NAME);
 	if (stream == nullptr) {
-		HandlerUtils::setFilesManagerErrorMessageHandler(client, HandlerUtils::toUtf8(_("The page is not available without the resources. Make sure file wwwroot.zip from ResidualVM distribution is available in 'themepath'.")));
+		HandlerUtils::setFilesManagerErrorMessageHandler(client, HandlerUtils::toUtf8(_("The page is not available without the resources. Make sure file wwwroot.zip from NovelVM distribution is available in 'themepath'.")));
 		return;
 	}
 

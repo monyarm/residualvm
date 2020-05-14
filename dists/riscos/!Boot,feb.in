@@ -1,8 +1,8 @@
-Set ResidualVM$Dir <Obey$Dir>
-IconSprites <ResidualVM$Dir>.!Sprites
+Set NovelVM$Dir <Obey$Dir>
+IconSprites <NovelVM$Dir>.!Sprites
 
-Set ResidualVM$Title "ResidualVM"
-Set ResidualVM$Description "Interpreter for several 3D games"
-Set ResidualVM$Publisher "ResidualVM Developers"
-Set ResidualVM$Web "https://www.residualvm.org/"
-Set ResidualVM$Version "@VERSION@"
+Set NovelVM$Title "NovelVM"
+Set NovelVM$Description "Interpreter for several 3D games"
+Set NovelVM$Publisher "NovelVM Developers"
+Set NovelVM$Web "https://www.novelvm.org/"
+Set NovelVM$Version "@VERSION@"

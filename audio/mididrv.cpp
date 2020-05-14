@@ -445,37 +445,37 @@ void MidiDriver::sendGMReset() {
 
 
 void MidiDriver_BASE::midiDumpInit() {
-// ResidualVM - not used
+// NovelVM - not used
 }
 
 int MidiDriver_BASE::midiDumpVarLength(const uint32 &delta) {
-// ResidualVM - not used
+// NovelVM - not used
 	return 0;
 }
 
 void MidiDriver_BASE::midiDumpDelta() {
-// ResidualVM - not used
+// NovelVM - not used
 }
 
 void MidiDriver_BASE::midiDumpDo(uint32 b) {
-// ResidualVM - not used
+// NovelVM - not used
 }
 
 void MidiDriver_BASE::midiDumpSysEx(const byte *msg, uint16 length) {
-// ResidualVM - not used
+// NovelVM - not used
 }
 
 
 void MidiDriver_BASE::midiDumpFinish() {
-// ResidualVM - not used
+// NovelVM - not used
 }
 
 MidiDriver_BASE::MidiDriver_BASE() {
-// ResidualVM - not used
+// NovelVM - not used
 }
 
 MidiDriver_BASE::~MidiDriver_BASE() {
-// ResidualVM - not used
+// NovelVM - not used
 }
 
 void MidiDriver_BASE::send(byte status, byte firstOp, byte secondOp) {
@@ -483,11 +483,11 @@ void MidiDriver_BASE::send(byte status, byte firstOp, byte secondOp) {
 }
 
 void MidiDriver::midiDriverCommonSend(uint32 b) {
-// ResidualVM - not used
+// NovelVM - not used
 }
 
 void MidiDriver::midiDriverCommonSysEx(const byte *msg, uint16 length) {
-// ResidualVM - not used
+// NovelVM - not used
 }
 
 

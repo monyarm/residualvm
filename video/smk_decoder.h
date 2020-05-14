@@ -67,7 +67,7 @@ public:
 
 	bool rewind();
 
-	// ResidualVM-specific function
+	// NovelVM-specific function
 	Common::Rational getFrameRate() const;
 
 protected:
@@ -99,7 +99,7 @@ protected:
 		void decodeFrame(Common::BitStreamMemory8LSB &bs);
 		void unpackPalette(Common::SeekableReadStream *stream);
 
-		// ResidualVM-specific code
+		// NovelVM-specific code
 		Common::Rational getFrameRate() const { return _frameRate; }
 
 	protected:

@@ -128,7 +128,7 @@ void OSystem::destroy() {
 }
 
 bool OSystem::setGraphicsMode(const char *name) {
-	return true; //ResidualVM not use it
+	return true; //NovelVM not use it
 	if (!name)
 		return false;
 
@@ -216,7 +216,7 @@ Common::WriteStream *OSystem::createConfigWriteStream() {
 }
 
 Common::String OSystem::getDefaultConfigFileName() {
-	return "residualvm.ini";
+	return "novelvm.ini";
 }
 
 Common::String OSystem::getSystemLanguage() const {

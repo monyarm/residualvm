@@ -188,7 +188,7 @@ Common::String HandlerUtils::toUtf8(const char *text) {
 }
 
 void HandlerUtils::setMessageHandler(Client &client, Common::String message, Common::String redirectTo) {
-	Common::String response = "<html><head><title>ResidualVM</title><meta charset=\"utf-8\"/></head><body>{message}</body></html>";
+	Common::String response = "<html><head><title>NovelVM</title><meta charset=\"utf-8\"/></head><body>{message}</body></html>";
 
 	// load stylish response page from the archive
 	Common::SeekableReadStream *const stream = getArchiveFile(INDEX_PAGE_NAME);

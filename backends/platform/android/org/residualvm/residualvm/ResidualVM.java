@@ -1,4 +1,4 @@
-package org.residualvm.residualvm;
+package org.novelvm.novelvm;
 
 import android.util.Log;
 import android.content.res.AssetManager;
@@ -18,8 +18,8 @@ import java.io.File;
 import java.util.LinkedHashMap;
 
 @SuppressWarnings("JniMissingFunction")
-public abstract class ResidualVM implements SurfaceHolder.Callback, Runnable {
-	final protected static String LOG_TAG = "ResidualVM";
+public abstract class NovelVM implements SurfaceHolder.Callback, Runnable {
+	final protected static String LOG_TAG = "NovelVM";
 	final private AssetManager _asset_manager;
 	final private Object _sem_surface;
 
@@ -47,7 +47,7 @@ public abstract class ResidualVM implements SurfaceHolder.Callback, Runnable {
 	// pause the engine and all native threads
 	final public native void setPause(boolean pause);
 	final public native void enableZoning(boolean enable);
-	// Feed an event to ResidualVM.  Safe to call from other threads.
+	// Feed an event to NovelVM.  Safe to call from other threads.
 	final public native void pushEvent(int type, int arg1, int arg2, int arg3,
 										int arg4, int arg5, int arg6);
 	final public native String getCurrentCharset();
@@ -64,7 +64,7 @@ public abstract class ResidualVM implements SurfaceHolder.Callback, Runnable {
 	abstract protected void showVirtualKeyboard(boolean enable);
 	abstract protected String[] getSysArchives();
 
-	public ResidualVM(AssetManager asset_manager, SurfaceHolder holder) {
+	public NovelVM(AssetManager asset_manager, SurfaceHolder holder) {
 		_asset_manager = asset_manager;
 		_sem_surface = new Object();
 
@@ -134,7 +134,7 @@ public abstract class ResidualVM implements SurfaceHolder.Callback, Runnable {
 			deinitEGL();
 			deinitAudio();
 
-			throw new RuntimeException("Error preparing the ResidualVM thread", e);
+			throw new RuntimeException("Error preparing the NovelVM thread", e);
 		}
 
 		create(_asset_manager, _egl, _egl_display,
@@ -460,6 +460,6 @@ public abstract class ResidualVM implements SurfaceHolder.Callback, Runnable {
 			}
 		}
 
-		System.loadLibrary("residualvm");
+		System.loadLibrary("novelvm");
 	}
 }

@@ -125,11 +125,11 @@ const Action *Keymap::findAction(const char *id) const {
 }
 
 Keymap::ActionArray Keymap::getMappedActions(const Event &event) const {
-	// ResidualVM specific START
+	// NovelVM specific START
 	if (event.type == EVENT_JOYAXIS_MOTION) {
 		return ActionArray();
 	}
-	// ResidualVM specific END
+	// NovelVM specific END
 
 	switch (event.type) {
 	case EVENT_KEYDOWN:

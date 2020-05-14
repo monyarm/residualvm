@@ -43,7 +43,7 @@ void BaseStorage::getAccessToken(Common::String code, Networking::ErrorCallback 
 	Networking::JsonCallback innerCallback = new Common::CallbackBridge<BaseStorage, Networking::ErrorResponse, Networking::JsonResponse>(this, &BaseStorage::codeFlowComplete, callback);
 	Networking::ErrorCallback errorCallback = new Common::CallbackBridge<BaseStorage, Networking::ErrorResponse, Networking::ErrorResponse>(this, &BaseStorage::codeFlowFailed, callback);
 
-	Common::String url = Common::String::format("https://cloud.residualvm.org/%s/token/%s", cloudProvider().c_str(), code.c_str());
+	Common::String url = Common::String::format("https://cloud.novelvm.org/%s/token/%s", cloudProvider().c_str(), code.c_str());
 	Networking::CurlJsonRequest *request = new Networking::CurlJsonRequest(innerCallback, errorCallback, url);
 
 	addRequest(request);
@@ -143,7 +143,7 @@ void BaseStorage::refreshAccessToken(BoolCallback callback, Networking::ErrorCal
 
 	Common::String url = Common::String::format("https://cloud.residulvm.org/%s/refresh", cloudProvider().c_str());
 	Networking::CurlJsonRequest *request = new Networking::CurlJsonRequest(innerCallback, errorCallback, url);
-	request->addHeader("X-ResidualVM-Refresh-Token: " + _refreshToken);
+	request->addHeader("X-NovelVM-Refresh-Token: " + _refreshToken);
 	addRequest(request);
 }
 

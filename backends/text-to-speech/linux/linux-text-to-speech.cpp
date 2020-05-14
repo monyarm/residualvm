@@ -97,7 +97,7 @@ SpeechDispatcherManager::SpeechDispatcherManager()
 }
 
 void SpeechDispatcherManager::init() {
-	_connection = spd_open("ResidualVM", "main", NULL, SPD_MODE_THREADED);
+	_connection = spd_open("NovelVM", "main", NULL, SPD_MODE_THREADED);
 	if (_connection == 0) {
 		_speechState = BROKEN;
 		warning("Couldn't initialize text to speech through speech-dispatcher");
