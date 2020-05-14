@@ -55,17 +55,17 @@ Common::Error SMTEngine::run()
 		//PSP
 		//initGraphics(480, 272, format);
 		initGraphics(1920, 1080, format);
-	} else if (strcmp(getGameId(), "P4G") == 0)
+	}
+	else if (strcmp(getGameId(), "P4G") == 0)
 	{
 		//PSP
 		initGraphics(960, 554, format);
 	}
 	else
 	{
-		
+
 		initGraphics(1920, 1080, format);
 	}
-	
 
 	//Graphics::PixelFormat format = g_system->getScreenFormat();
 	debug(format->toString().c_str());
@@ -103,28 +103,31 @@ Common::Error SMTEngine::run()
 	// Additional setup.
 	debug("SMTEngine::init");
 
-
 	Common::Event e;
+
+	g_system->getEventManager()->pollEvent(e);
+	g_system->delayMillis(10);
+
+	Graphics::Surface *screen = g_system->lockScreen();
+	screen->fillRect(Common::Rect(0, 0, g_system->getWidth(), g_system->getHeight()), 212313211);
+
+	Graphics::Surface *surface = _tmx.getSurface(); // = tmxData
+
+	int w = CLIP<int>(surface->w, 0, g_system->getWidth());
+	int h = CLIP<int>(surface->h, 0, g_system->getHeight());
+
+	int x = (g_system->getWidth() - w) / 2;
+	int y = (g_system->getHeight() - h) / 2;
+
+	screen->copyRectToSurface(*surface, x, y, Common::Rect(0, 0, w, h));
+
+	g_system->unlockScreen();
+	g_system->updateScreen();
+
 	while (!shouldQuit())
 	{
 		g_system->getEventManager()->pollEvent(e);
 		g_system->delayMillis(10);
-
-		Graphics::Surface *screen = g_system->lockScreen();
-		screen->fillRect(Common::Rect(0, 0, g_system->getWidth(), g_system->getHeight()), 212313211);
-
-		Graphics::Surface *surface = _tmx.getSurface(); // = tmxData
-		
-		int w = CLIP<int>(surface->w, 0, g_system->getWidth());
-		int h = CLIP<int>(surface->h, 0, g_system->getHeight());
-
-		int x = (g_system->getWidth() - w) / 2;
-		int y = (g_system->getHeight() - h) / 2;
-
-		screen->copyRectToSurface(*surface, x, y, Common::Rect(0, 0, w, h));
-
-		g_system->unlockScreen();
-		g_system->updateScreen();
 	}
 
 	return Common::kNoError;
