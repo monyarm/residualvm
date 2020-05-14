@@ -46,9 +46,7 @@ Common::Error SMTEngine::run()
 {
 	// Initialize graphics using following:
 
-	Common::List<Graphics::PixelFormat> formats = g_system->getSupportedFormats();
-	Graphics::PixelFormat *format = new Graphics::PixelFormat();
-	*format = Graphics::createPixelFormat<8888>();
+	const Graphics::PixelFormat *format = new Graphics::PixelFormat(4, 8, 8, 8, 8, 0, 8, 16, 24);
 
 	if (strcmp(getGameId(), "P3P") == 0)
 	{
@@ -58,7 +56,7 @@ Common::Error SMTEngine::run()
 	}
 	else if (strcmp(getGameId(), "P4G") == 0)
 	{
-		//PSP
+		//PSVita
 		initGraphics(960, 554, format);
 	}
 	else
@@ -66,9 +64,6 @@ Common::Error SMTEngine::run()
 
 		initGraphics(1920, 1080, format);
 	}
-
-	//Graphics::PixelFormat format = g_system->getScreenFormat();
-	debug(format->toString().c_str());
 
 	//CPKFile _cpk = CPKFile();
 
@@ -78,9 +73,7 @@ Common::Error SMTEngine::run()
 
 	//_pmsf.ReadFile("p3opmv_p3p.pmsf");
 
-	TMXFile _tmx = TMXFile();
-
-	_tmx.ReadFile("test.tmx");
+	TMXFile _tmx = TMXFile("test/PSMT8.tmx");
 
 	// You could use backend transactions directly as an alternative,
 	// but it isn't recommended, until you want to handle the error values
@@ -109,9 +102,11 @@ Common::Error SMTEngine::run()
 	g_system->delayMillis(10);
 
 	Graphics::Surface *screen = g_system->lockScreen();
-	screen->fillRect(Common::Rect(0, 0, g_system->getWidth(), g_system->getHeight()), 212313211);
+	screen->fillRect(Common::Rect(0, 0, g_system->getWidth(), g_system->getHeight()), 0);
 
-	Graphics::Surface *surface = _tmx.getSurface(); // = tmxData
+	const Graphics::Surface *surface = _tmx.getSurface(); // = tmxData
+
+	debug(surface->format.toString().c_str());
 
 	int w = CLIP<int>(surface->w, 0, g_system->getWidth());
 	int h = CLIP<int>(surface->h, 0, g_system->getHeight());

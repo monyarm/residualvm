@@ -98,22 +98,35 @@ struct TMXData
     TMXHeader header;
     TMXFormatSettings formatsettings;
 
-    //Common::Array<byte> palette;
-    //Common::Array<byte> image;
+    byte* palette;
+    byte* index;
 };
 
 class TMXFile
 {
 public:
-    TMXFile();
+    TMXFile(const char *path);
+	~TMXFile() {
+		_surface.free();
+	}
 
-    void ReadFile(char *path);
 
-    Graphics::Surface *getSurface() const;
+    const Graphics::Surface *getSurface() const;
 
 private:
-    Graphics::Surface *surface;
+    Graphics::Surface _surface;
     TMXData dat;
+
+    void readHeader(Common::File* f);
+
+    void readPalette(Common::File* f);
+
+    void readIndex(Common::File* f);
+
+    Common::Array<byte> tilePalette(Common::Array<byte> input);
+
+
+    
 };
 
 #endif
