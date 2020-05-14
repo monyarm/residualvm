@@ -64,6 +64,11 @@ enum Platform {
 	kPlatformOS2,
 	kPlatformBeOS,
 	kPlatformPocketPC,
+	kPlatformPS2,
+	kPlatformPSP,
+	kPlatformPSVita,
+	kPlatformPS3,
+	kPlatformPS4,
 
 	kPlatformUnknown = -1
 };

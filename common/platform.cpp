@@ -59,6 +59,11 @@ const PlatformDescription g_platforms[] = {
 	{ "os2", "os2", "os2", "OS/2", kPlatformOS2 },
 	{ "beos", "beos", "beos", "BeOS", kPlatformBeOS },
 	{ "ppc", "ppc", "ppc", "PocketPC", kPlatformPocketPC },
+	{ "ps2", "ps2", "ps2", "Sony Playstation 2", kPlatformPS2 },
+	{ "psp", "psp", "psp", "Sony Playstation Portable", kPlatformPSP },
+	{ "psv", "psv", "psv", "Sony Playstation Vita", kPlatformPSVita },
+	{ "ps3", "ps3", "ps3", "Sony Playstation 3", kPlatformPS3 },
+	{ "ps4", "ps4", "ps4", "Sony Playstation 4", kPlatformPS4 },
 
 	{ nullptr, nullptr, nullptr, "Default", kPlatformUnknown }
 };
