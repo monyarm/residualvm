@@ -6,14 +6,14 @@ TMXFile::TMXFile(const char *path)
     Common::File f;
     if (f.open(path))
     {
-        readHeader(&f);
-        debug(path);
-        Common::hexdump((byte *)&dat.formatsettings.paletteFmt, 1);
-        Common::hexdump((byte *)&dat.formatsettings.pixelFmt, 1);
-
-        readPalette(&f);
-        readIndex(&f);
+        readFile(&f);
     }
+}
+
+TMXFile::TMXFile(Common::SeekableReadStream *stream)
+{
+    readFile(stream);
+
 }
 
 const Graphics::Surface *TMXFile::getSurface() const
@@ -21,7 +21,18 @@ const Graphics::Surface *TMXFile::getSurface() const
     return &_surface;
 }
 
-void TMXFile::readHeader(Common::File *f)
+void TMXFile::readFile(Common::SeekableReadStream *stream)
+{
+    
+    readHeader(stream);
+    Common::hexdump((byte *)&dat.formatsettings.paletteFmt, 1);
+    Common::hexdump((byte *)&dat.formatsettings.pixelFmt, 1);
+
+    readPalette(stream);
+    readIndex(stream);
+}
+
+void TMXFile::readHeader(Common::SeekableReadStream *f)
 {
 
     dat.header.tmxID = f->readUint16BE();
@@ -46,7 +57,7 @@ void TMXFile::readHeader(Common::File *f)
     f->read(&dat.formatsettings.userComment, 28);
 }
 
-void TMXFile::readPalette(Common::File *f)
+void TMXFile::readPalette(Common::SeekableReadStream *f)
 {
 
     switch (dat.formatsettings.paletteFmt)
@@ -80,7 +91,7 @@ void TMXFile::readPalette(Common::File *f)
     };
 }
 
-void TMXFile::readIndex(Common::File *f)
+void TMXFile::readIndex(Common::SeekableReadStream *f)
 {
 
     const Graphics::PixelFormat *format = new Graphics::PixelFormat(4, 8, 8, 8, 8, 0, 8, 16, 24);
@@ -114,7 +125,6 @@ void TMXFile::readIndex(Common::File *f)
             *destP = truepalette[pixels[i]];
         }
         delete _pixels;
-
     }
     break;
     case PSMT8:

@@ -1,7 +1,7 @@
 #include "smt/formats/archive/cpk.h"
-#include "smt/formats/archive/cvm/cvmfile.h"
 #include "smt/formats/video/pmsf.h"
 #include "smt/formats/image/tmx.h"
+#include "smt/formats/image/dds.h"
 
 #include "smt/smt.h"
 
@@ -72,10 +72,11 @@ Common::Error SMTEngine::run()
 
 	//_pmsf.ReadFile("p3opmv_p3p.pmsf");
 
-	TMXFile _tmx = TMXFile("test/PSMT8.tmx");
+	TMXFile _tmx("test/PSMT8.tmx");
+	DDSFile _dds("test/DXT5.dds");
 
 	//CVMArchive _bgm("BGM.CVM");
-	CVMArchive _data("DATA.CVM");
+	//CVMArchive _data("DATA.CVM");
 	//CVMArchive _btl("BTL.CVM");
 
 	// You could use backend transactions directly as an alternative,
@@ -117,6 +118,18 @@ Common::Error SMTEngine::run()
 	int y = (g_system->getHeight() - h) / 2;
 
 	screen->copyRectToSurface(*surface, x, y, Common::Rect(0, 0, w, h));
+
+	const Graphics::Surface *surfacedds = _dds.getSurface(); // = tmxData
+
+	debug(surfacedds->format.toString().c_str());
+
+	 w = CLIP<int>(surfacedds->w, 0, g_system->getWidth());
+	 h = CLIP<int>(surfacedds->h, 0, g_system->getHeight());
+
+	 x = (g_system->getWidth() - w) / 3;
+	 y = (g_system->getHeight() - h) / 3;
+
+	screen->copyRectToSurface(*surfacedds, x, y, Common::Rect(0, 0, w, h));
 
 	g_system->unlockScreen();
 	g_system->updateScreen();

@@ -106,6 +106,7 @@ class TMXFile
 {
 public:
     TMXFile(const char *path);
+    TMXFile(Common::SeekableReadStream *stream);
 	~TMXFile() {
 		_surface.free();
 	}
@@ -117,11 +118,14 @@ private:
     Graphics::Surface _surface;
     TMXData dat;
 
-    void readHeader(Common::File* f);
+    
+    void readFile(Common::SeekableReadStream *stream);
 
-    void readPalette(Common::File* f);
+    void readHeader(Common::SeekableReadStream* f);
 
-    void readIndex(Common::File* f);
+    void readPalette(Common::SeekableReadStream* f);
+
+    void readIndex(Common::SeekableReadStream* f);
 
     Common::Array<byte> tilePalette(Common::Array<byte> input);
 
