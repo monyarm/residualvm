@@ -15,10 +15,7 @@
     SpaceBeforeAssignmentOperators: true,
     SpaceBeforeCtorInitializerColon: true,
     SpaceBeforeInheritanceColon: true,
-    SpaceBeforeSquareBrackets: false,
     SpaceInEmptyParentheses: false,
     SpacesInAngles: false,
-    SpacesInConditionalStatement: false,
     SpacesInParentheses: false,
-    SpacesInSquareBrackets: false,
 }

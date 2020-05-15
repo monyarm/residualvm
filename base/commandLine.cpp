@@ -26,6 +26,7 @@
 #define FORBIDDEN_SYMBOL_EXCEPTION_exit
 
 #include <limits.h>
+#include <wchar.h>
 
 #include "engines/metaengine.h"
 #include "base/commandLine.h"
