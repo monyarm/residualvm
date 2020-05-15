@@ -67,6 +67,7 @@ enum Platform {
 	kPlatformPSVita,
 	kPlatformPS3,
 	kPlatformPS4,
+	kPlatformDreamcast,
 
 	kPlatformUnknown = -1
 };

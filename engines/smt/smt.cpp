@@ -120,7 +120,7 @@ namespace SMT
 		while (!shouldQuit())
 		{
 			g_system->getEventManager()->pollEvent(e);
-			g_system->delayMillis(10);
+			g_system->delayMillis(1);
 		}
 
 		return Common::kNoError;

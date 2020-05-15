@@ -63,6 +63,7 @@ const PlatformDescription g_platforms[] = {
 	{ "psv", "psv", "psv", "Sony Playstation Vita", kPlatformPSVita },
 	{ "ps3", "ps3", "ps3", "Sony Playstation 3", kPlatformPS3 },
 	{ "ps4", "ps4", "ps4", "Sony Playstation 4", kPlatformPS4 },
+	{ "dc", "dc", "dc", "Sega Dreamcast", kPlatformDreamcast },
 
 	{ nullptr, nullptr, nullptr, "Default", kPlatformUnknown }
 };

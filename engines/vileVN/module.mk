@@ -2,6 +2,7 @@ MODULE := engines/vileVN
 
 MODULE_OBJS := \
 	detection.o \
+	vileVN.o \
 
 MODULE_DIRS += \
 	engines/vileVN
