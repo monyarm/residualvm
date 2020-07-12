@@ -25,6 +25,7 @@
 
 #if defined(__ANDROID__)
 
+#include "backends/platform/android/portdefs.h"
 #include "common/fs.h"
 #include "common/archive.h"
 #include "audio/mixer_intern.h"
@@ -33,12 +34,13 @@
 #include "graphics/pixelbuffer.h"
 #include "graphics/opengl/system_headers.h"
 #include "graphics/opengl/framebuffer.h"
-#include "backends/base-backend.h"
+#include "backends/modular-backend.h"
 #include "backends/plugins/posix/posix-provider.h"
 #include "backends/fs/posix/posix-fs-factory.h"
 
 #include "backends/platform/android/events.h"
 #include "backends/platform/android/texture.h"
+#include "backends/platform/android/graphics.h"
 #include "backends/platform/android/touchcontrols.h"
 
 #include <pthread.h>
@@ -98,45 +100,13 @@ extern void checkGlError(const char *expr, const char *file, int line);
 #define GLTHREADCHECK do {  } while (false)
 #endif
 
-class MutexManager;
-class OSystem_Android : public EventsBaseBackend, public PaletteManager, public KeyReceiver {
+class OSystem_Android : public ModularBackend, Common::EventSource {
 private:
 	// passed from the dark side
 	int _audio_sample_rate;
 	int _audio_buffer_size;
 
 	int _screen_changeid;
-	int _egl_surface_width;
-	int _egl_surface_height;
-
-	bool _force_redraw;
-
-	bool _opengl;
-
-	// Game layer
-	GLESBaseTexture *_game_texture;
-	Graphics::PixelBuffer _game_pbuf;
-	OpenGL::FrameBuffer *_frame_buffer;
-
-	Common::Rect _focus_rect;
-
-	// Overlay layer
-	GLES4444Texture *_overlay_texture;
-	bool _show_overlay;
-
-	// Mouse layer
-	GLESBaseTexture *_mouse_texture;
-	GLESBaseTexture *_mouse_texture_palette;
-	GLES5551Texture *_mouse_texture_rgb;
-	Common::Point _mouse_hotspot;
-	uint32 _mouse_keycolor;
-	int _mouse_targetscale;
-	bool _show_mouse;
-	bool _use_mouse_palette;
-
-	int _graphicsMode;
-	bool _fullscreen;
-	bool _ar_correction;
 
 	pthread_t _main_thread;
 
@@ -148,74 +118,34 @@ private:
 	pthread_t _audio_thread;
 	static void *audioThreadFunc(void *arg);
 
-	bool _enable_zoning;
 	bool _virtkeybd_on;
 
-	MutexManager *_mutexManager;
 	Audio::MixerImpl *_mixer;
 	timeval _startTime;
 
 	Common::String getSystemProperty(const char *name) const;
 
-	void initSurface();
-	void deinitSurface();
-	void initViewport();
-
-	void initOverlay();
-
-#ifdef USE_RGB_COLOR
-	void initTexture(GLESBaseTexture **texture, uint width, uint height,
-						const Graphics::PixelFormat *format);
-#endif
-
 	void setupKeymapper();
-	void setCursorPaletteInternal(const byte *colors, uint start, uint num);
+
+protected:
+	virtual Common::EventSource *getDefaultEventSource() { return this; }
 
 public:
 	OSystem_Android(int audio_sample_rate, int audio_buffer_size);
 	virtual ~OSystem_Android();
 
 	virtual void initBackend();
-	void enableZoning(bool enable) { _enable_zoning = enable; }
 
-	virtual bool hasFeature(Feature f);
-	virtual void setFeatureState(Feature f, bool enable);
-	virtual bool getFeatureState(Feature f);
+	virtual bool hasFeature(OSystem::Feature f);
+	virtual void setFeatureState(OSystem::Feature f, bool enable);
+	virtual bool getFeatureState(OSystem::Feature f);
 
-	virtual const GraphicsMode *getSupportedGraphicsModes() const;
-	virtual int getDefaultGraphicsMode() const;
-	virtual bool setGraphicsMode(int mode);
-	virtual int getGraphicsMode() const;
-
-#ifdef USE_RGB_COLOR
-	virtual Graphics::PixelFormat getScreenFormat() const;
-	virtual Common::List<Graphics::PixelFormat> getSupportedFormats() const;
-#endif
-
-	virtual void initSize(uint width, uint height,
-							const Graphics::PixelFormat *format);
-
-	enum FixupType {
-		kClear = 0,		// glClear
-		kClearSwap,		// glClear + swapBuffers
-		kClearUpdate	// glClear + updateScreen
-	};
-
-	void clearScreen(FixupType type, byte count = 1);
-
-	void updateScreenRect();
-	virtual int getScreenChangeID() const;
-
-	virtual int16 getHeight();
-	virtual int16 getWidth();
-
-	virtual PaletteManager *getPaletteManager() {
-		return this;
+	virtual PaletteManager *getPaletteManager() override {
+		return dynamic_cast<AndroidGraphicsManager *>(_graphicsManager);
 	}
 
 public:
 	void pushEvent(int type, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6);
-	void keyPress(const Common::KeyCode keycode, const KeyReceiver::KeyPressType type);
 	bool shouldGenerateMouseEvents();
 
 private:
@@ -234,63 +164,22 @@ private:
 	int _fingersDown;
 
 	void clipMouse(Common::Point &p);
-	void scaleMouse(Common::Point &p, int x, int y, bool deductDrawRect = true, bool touchpadMode = false);
-	void updateEventScale();
+	void scaleMouse(Common::Point &p, int x, int y, bool touchpadMode = false);
 	void disableCursorPalette();
 
 	TouchControls _touchControls;
 
-	void drawVirtControls();
-
-protected:
-	// PaletteManager API
-	virtual void setPalette(const byte *colors, uint start, uint num);
-	virtual void grabPalette(byte *colors, uint start, uint num) const;
-
 public:
-	virtual void copyRectToScreen(const void *buf, int pitch, int x, int y,
-									int w, int h);
-	virtual void updateScreen();
-	virtual Graphics::Surface *lockScreen();
-	virtual void unlockScreen();
-	virtual void setShakePos(int shakeOffset);
-	virtual void fillScreen(uint32 col);
-	virtual void setFocusRectangle(const Common::Rect& rect);
-	virtual void clearFocusRectangle();
-
-	virtual void showOverlay();
-	virtual void hideOverlay();
-	virtual void clearOverlay();
-	virtual void grabOverlay(void *buf, int pitch);
-	virtual void copyRectToOverlay(const void *buf, int pitch,
-									int x, int y, int w, int h);
-	virtual int16 getOverlayHeight();
-	virtual int16 getOverlayWidth();
-	virtual Graphics::PixelFormat getOverlayFormat() const;
-
-	virtual bool showMouse(bool visible);
-
-	virtual void warpMouse(int x, int y);
-	virtual void setMouseCursor(const void *buf, uint w, uint h, int hotspotX,
-								int hotspotY, uint32 keycolor,
-								bool dontScale,
-								const Graphics::PixelFormat *format);
-	virtual void setCursorPalette(const byte *colors, uint start, uint num);
 
 	virtual void pushEvent(const Common::Event &event);
+	virtual void pushKeyPressEvent(Common::Event &event);
 	virtual bool pollEvent(Common::Event &event);
 	virtual uint32 getMillis(bool skipRecord = false);
 	virtual void delayMillis(uint msecs);
 
-	virtual MutexRef createMutex(void);
-	virtual void lockMutex(MutexRef mutex);
-	virtual void unlockMutex(MutexRef mutex);
-	virtual void deleteMutex(MutexRef mutex);
-
 	virtual void quit();
 
 	virtual void setWindowCaption(const char *caption);
-	virtual void displayMessageOnOSD(const char *msg);
 	virtual void showVirtualKeyboard(bool enable);
 
 	virtual Audio::Mixer *getMixer();
@@ -307,12 +196,8 @@ public:
 
 	// NovelVM specific method
 	virtual void launcherInitSize(uint w, uint h);
-	bool lockMouse(bool lock);
-	void setupScreen(uint screenW, uint screenH, bool fullscreen, bool accel3d) {
-		setupScreen(screenW, screenH, fullscreen, accel3d, true);
-	}
-	void setupScreen(uint screenW, uint screenH, bool fullscreen, bool accel3d, bool isGame);
-	Graphics::PixelBuffer getScreenPixelBuffer();
+	void updateEventScale(const GLESBaseTexture *tex);
+	TouchControls* getTouchControls() { return &_touchControls; }
 };
 
 #endif

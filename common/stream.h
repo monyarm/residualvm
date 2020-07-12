@@ -727,9 +727,10 @@ public:
 	 *
 	 * @param s	the buffer to store into
 	 * @param bufSize	the size of the buffer
+	 * @param handleCR	if set (default), then CR and CR/LF are handled as well as LF
 	 * @return a pointer to the read string, or NULL if an error occurred
 	 */
-	virtual char *readLine(char *s, size_t bufSize);
+	virtual char *readLine(char *s, size_t bufSize, bool handleCR = true);
 
 	/**
 	 * Reads a full line and returns it as a Common::String. Reading
@@ -740,8 +741,10 @@ public:
 	 * of the line, *without* the end of a line marker. This method
 	 * does not indicate whether an error occurred. Callers must use
 	 * err() or eos() to determine whether an exception occurred.
+	 *
+	 * @param handleCR	if set (default), then CR and CR/LF are handled as well as LF
 	 */
-	virtual String readLine();
+	virtual String readLine(bool handleCR = true);
 
 	Common::String readString()
 	{

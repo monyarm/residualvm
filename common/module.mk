@@ -41,6 +41,7 @@ MODULE_OBJS := \
 	tokenizer.o \
 	translation.o \
 	unarj.o \
+	unicode-bidi.o \
 	unzip.o \
 	ustr.o \
 	util.o \

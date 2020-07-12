@@ -96,11 +96,11 @@ static const char HELP_STRING[] =
 	"  -x, --save-slot[=NUM]    Save game slot to load (default: autosave)\n"
 	"  -f, --fullscreen         Force full-screen mode\n"
 	"  -F, --no-fullscreen      Force windowed mode\n"
-#if 0 // ResidulVM - not used
+#if 0 // NovelVM - not used
 	"  -g, --gfx-mode=MODE      Select graphics scaler (1x,2x,3x,2xsai,super2xsai,\n"
 	"                           supereagle,advmame2x,advmame3x,hq2x,hq3x,tv2x,\n"
 	"                           dotmatrix)\n"
-	"  --stretch-mode=MODE      Select stretch mode (center, integral, fit, stretch)"
+	"  --stretch-mode=MODE      Select stretch mode (center, integral, fit, stretch)\n"
 	"  --filtering              Force filtered graphics mode\n"
 	"  --no-filtering           Force unfiltered graphics mode\n"
 #endif
@@ -134,7 +134,7 @@ static const char HELP_STRING[] =
 	"                           pce, segacd, wii, windows)\n"
 	"  --savepath=PATH          Path to where saved games are stored\n"
 	"  --extrapath=PATH         Extra path to additional game data\n"
-#if 0 // ResidulVM - not used
+#if 0 // NovelVM - not used
 	"  --soundfont=FILE         Select the SoundFont for MIDI playback (only\n"
 	"                           supported by some MIDI drivers)\n"
 	"  --multi-midi             Enable combination AdLib and native MIDI\n"
@@ -144,7 +144,7 @@ static const char HELP_STRING[] =
 	"  --enable-gs              Enable Roland GS mode for MIDI playback\n"
 #endif
 	"  --output-rate=RATE       Select output sample rate in Hz (e.g. 22050)\n"
-#if 0 // ResidulVM - not used
+#if 0 // NovelVM - not used
 	"  --opl-driver=DRIVER      Select AdLib (OPL) emulator (db, mame"
 #ifndef DISABLE_NUKED_OPL
                                                                      ", nuked"
@@ -154,7 +154,7 @@ static const char HELP_STRING[] =
 #endif
                                                                               ")\n"
 #endif
-#if 1 // ResidulVM specific
+#if 1 // NovelVM specific
 	"  --talkspeed=NUM          Set talk speed for games (default: 179)\n"
 	"  --show-fps               Set the turn on display FPS info\n"
 	"  --no-show-fps            Set the turn off display FPS info\n"
@@ -166,7 +166,7 @@ static const char HELP_STRING[] =
 	"                           (default: enabled)\n"
 #endif
 	"  --aspect-ratio           Enable aspect ratio correction\n"
-#if 0 // ResidulVM - not used
+#if 0 // NovelVM - not used
 	"  --render-mode=MODE       Enable additional render modes (hercGreen, hercAmber,\n"
 	"                           cga, ega, vga, amiga, fmtowns, pc9821, pc9801, 2gs,\n"
 	"                           atari, macintosh)\n"
@@ -183,7 +183,7 @@ static const char HELP_STRING[] =
 	"  --alt-intro              Use alternative intro for CD versions of Beneath a\n"
 	"                           Steel Sky and Flight of the Amazon Queen\n"
 #endif
-#if 0 // ResidulVM - not used
+#if 0 // NovelVM - not used
 	"  --copy-protection        Enable copy protection in games, when\n"
 	"                           ScummVM disables it by default.\n"
 	"  --talkspeed=NUM          Set talk speed for games (default: 60)\n"
@@ -203,7 +203,7 @@ static const char HELP_STRING[] =
 	"                           (default: 10)\n"
 #endif
 //#endif // NovelVM - not used
-#if 1 // ResidulVM specific
+#if 1 // NovelVM specific
 	"  --engine-speed=NUM       Set frame per second limit (0 - 100), 0 = no limit\n"
 	"                           (default: 60)\n"
 #endif
@@ -260,6 +260,7 @@ void registerDefaults() {
 	ConfMan.registerDefault("show_fps", false);
 	ConfMan.registerDefault("dirtyrects", true);
 	ConfMan.registerDefault("bpp", 0);
+	ConfMan.registerDefault("vsync", true);
 // NovelVM specific end
 
 	// Sound & Music

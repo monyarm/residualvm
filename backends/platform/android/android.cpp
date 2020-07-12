@@ -58,8 +58,9 @@
 #include "backends/saves/default/default-saves.h"
 #include "backends/timer/default/default-timer.h"
 
-#include "backends/platform/android/jni.h"
+#include "backends/platform/android/jni-android.h"
 #include "backends/platform/android/android.h"
+#include "backends/platform/android/graphics.h"
 
 const char *android_log_tag = "NovelVM";
 
@@ -115,26 +116,6 @@ OSystem_Android::OSystem_Android(int audio_sample_rate, int audio_buffer_size) :
 	_audio_sample_rate(audio_sample_rate),
 	_audio_buffer_size(audio_buffer_size),
 	_screen_changeid(0),
-	_egl_surface_width(0),
-	_egl_surface_height(0),
-	_force_redraw(false),
-	_game_texture(0),
-	_game_pbuf(),
-	_overlay_texture(0),
-	_opengl(false),
-	_mouse_texture(0),
-	_mouse_texture_palette(0),
-	_mouse_texture_rgb(0),
-	_mouse_hotspot(),
-	_mouse_keycolor(0),
-	_use_mouse_palette(false),
-	_graphicsMode(0),
-	_fullscreen(true),
-	_ar_correction(true),
-	_show_mouse(false),
-	_show_overlay(false),
-	_enable_zoning(false),
-	_mutexManager(0),
 	_mixer(0),
 	_queuedEventTime(0),
 	_event_queue_lock(0),
@@ -152,18 +133,14 @@ OSystem_Android::OSystem_Android(int audio_sample_rate, int audio_buffer_size) :
 
 	_fsFactory = new POSIXFilesystemFactory();
 
-	Common::String mf = getSystemProperty("ro.product.manufacturer");
-
 	LOGI("Running on: [%s] [%s] [%s] [%s] [%s] SDK:%s ABI:%s",
-			mf.c_str(),
+			getSystemProperty("ro.product.manufacturer").c_str(),
 			getSystemProperty("ro.product.model").c_str(),
 			getSystemProperty("ro.product.brand").c_str(),
 			getSystemProperty("ro.build.fingerprint").c_str(),
 			getSystemProperty("ro.build.display.id").c_str(),
 			getSystemProperty("ro.build.version.sdk").c_str(),
 			getSystemProperty("ro.product.cpu.abi").c_str());
-
-	mf.toLowercase();
 }
 
 OSystem_Android::~OSystem_Android() {
@@ -226,9 +203,7 @@ void *OSystem_Android::audioThreadFunc(void *arg) {
 
 	bool paused = true;
 
-	byte *buf;
-	int offset, left, written;
-	int samples, i;
+	int offset, left, written, i;
 
 	struct timespec tv_delay;
 	tv_delay.tv_sec = 0;
@@ -240,7 +215,6 @@ void *OSystem_Android::audioThreadFunc(void *arg) {
 	tv_full.tv_sec = 0;
 	tv_full.tv_nsec = msecs_full * 1000 * 1000;
 
-	bool silence;
 	uint silence_count = 33;
 
 	while (!system->_audio_thread_exit) {
@@ -255,12 +229,12 @@ void *OSystem_Android::audioThreadFunc(void *arg) {
 			LOGD("audio thread woke up");
 		}
 
-		buf = (byte *)env->GetPrimitiveArrayCritical(bufa, 0);
+		byte *buf = (byte *)env->GetPrimitiveArrayCritical(bufa, 0);
 		assert(buf);
 
-		samples = mixer->mixCallback(buf, buf_size);
+		int samples = mixer->mixCallback(buf, buf_size);
 
-		silence = samples < 1;
+		bool silence = samples < 1;
 
 		// looks stupid, and it is, but currently there's no way to detect
 		// silence-only buffers from the mixer
@@ -348,7 +322,6 @@ void OSystem_Android::initBackend() {
 	ConfMan.set("fullscreen", "true");
 	ConfMan.registerDefault("aspect_ratio", true);
 	ConfMan.registerDefault("touchpad_mouse_mode", true);
-	ConfMan.registerDefault("vsync", true);
 
 	ConfMan.setInt("autosave_period", 0);
 	ConfMan.setBool("FM_high_quality", false);
@@ -384,15 +357,9 @@ void OSystem_Android::initBackend() {
 	_audio_thread_exit = false;
 	pthread_create(&_audio_thread, 0, audioThreadFunc, this);
 
-	initSurface();
-	initViewport();
+	_graphicsManager = new AndroidGraphicsManager();
 
-	_game_texture = new GLESFakePalette565Texture();
-	_overlay_texture = new GLES4444Texture();
-	_mouse_texture_palette = new GLESFakePalette5551Texture();
-	_mouse_texture = _mouse_texture_palette;
-
-	initOverlay();
+	dynamic_cast<AndroidGraphicsManager *>(_graphicsManager)->initSurface();
 
 	// renice this thread to boost the audio thread
 	if (setpriority(PRIO_PROCESS, 0, 19) < 0)
@@ -400,68 +367,61 @@ void OSystem_Android::initBackend() {
 
 	JNI::setReadyForEvents(true);
 
-	EventsBaseBackend::initBackend();
+	BaseBackend::initBackend();
 }
 
 bool OSystem_Android::hasFeature(Feature f) {
-	return (f == kFeatureFullscreenMode ||
-			f == kFeatureAspectRatioCorrection ||
-			f == kFeatureCursorPalette ||
-			f == kFeatureVirtualKeyboard ||
-#ifdef USE_OPENGL
-			f == kFeatureOpenGL ||
-#endif
-			f == kFeatureOverlaySupportsAlpha ||
+	if (f == kFeatureVirtualKeyboard ||
 			f == kFeatureOpenUrl ||
 			f == kFeatureTouchpadMode ||
-			f == kFeatureClipboardSupport);
+			f == kFeatureOnScreenControl ||
+			f == kFeatureClipboardSupport ||
+			f == kFeatureOpenGL ||
+			f == kFeatureOverlaySupportsAlpha ||
+			f == kFeatureClipboardSupport) {
+		return true;
+	}
+	return ModularBackend::hasFeature(f);
 }
 
 void OSystem_Android::setFeatureState(Feature f, bool enable) {
 	ENTER("%d, %d", f, enable);
 
 	switch (f) {
-	case kFeatureFullscreenMode:
-		_fullscreen = enable;
-		updateScreenRect();
-		break;
-	case kFeatureAspectRatioCorrection:
-		_ar_correction = enable;
-		updateScreenRect();
-		break;
 	case kFeatureVirtualKeyboard:
 		_virtkeybd_on = enable;
 		showVirtualKeyboard(enable);
-		break;
-	case kFeatureCursorPalette:
-		_use_mouse_palette = enable;
-		if (!enable)
-			disableCursorPalette();
 		break;
 	case kFeatureTouchpadMode:
 		ConfMan.setBool("touchpad_mouse_mode", enable);
 		_touchpad_mode = enable;
 		break;
+	case kFeatureOnScreenControl:
+		ConfMan.setBool("onscreen_control", enable);
+		JNI::showKeyboardControl(enable);
+		break;
 	default:
+		ModularBackend::setFeatureState(f, enable);
 		break;
 	}
 }
 
 bool OSystem_Android::getFeatureState(Feature f) {
 	switch (f) {
-	case kFeatureFullscreenMode:
-		return _fullscreen;
-	case kFeatureAspectRatioCorrection:
-		return _ar_correction;
 	case kFeatureVirtualKeyboard:
 		return _virtkeybd_on;
-	case kFeatureCursorPalette:
-		return _use_mouse_palette;
 	case kFeatureTouchpadMode:
 		return ConfMan.getBool("touchpad_mouse_mode");
+	case kFeatureOnScreenControl:
+		return ConfMan.getBool("onscreen_control");
 	default:
-		return false;
+		return ModularBackend::getFeatureState(f);
 	}
+}
+
+// ResidualVM specific method
+void OSystem_Android::launcherInitSize(uint w, uint h) {
+	dynamic_cast<AndroidGraphicsManager *>(_graphicsManager)->setupScreen(w, h, true, true, false);
 }
 
 uint32 OSystem_Android::getMillis(bool skipRecord) {
@@ -477,26 +437,6 @@ void OSystem_Android::delayMillis(uint msecs) {
 	usleep(msecs * 1000);
 }
 
-OSystem::MutexRef OSystem_Android::createMutex() {
-	assert(_mutexManager);
-	return _mutexManager->createMutex();
-}
-
-void OSystem_Android::lockMutex(MutexRef mutex) {
-	assert(_mutexManager);
-	_mutexManager->lockMutex(mutex);
-}
-
-void OSystem_Android::unlockMutex(MutexRef mutex) {
-	assert(_mutexManager);
-	_mutexManager->unlockMutex(mutex);
-}
-
-void OSystem_Android::deleteMutex(MutexRef mutex) {
-	assert(_mutexManager);
-	_mutexManager->deleteMutex(mutex);
-}
-
 void OSystem_Android::quit() {
 	ENTER();
 
@@ -508,12 +448,7 @@ void OSystem_Android::quit() {
 	_timer_thread_exit = true;
 	pthread_join(_timer_thread, 0);
 
-	delete _game_texture;
-	delete _overlay_texture;
-	delete _mouse_texture_palette;
-	delete _mouse_texture_rgb;
-
-	deinitSurface();
+	dynamic_cast<AndroidGraphicsManager *>(_graphicsManager)->deinitSurface();
 }
 
 void OSystem_Android::setWindowCaption(const char *caption) {
@@ -522,11 +457,6 @@ void OSystem_Android::setWindowCaption(const char *caption) {
 	JNI::setWindowCaption(caption);
 }
 
-void OSystem_Android::displayMessageOnOSD(const char *msg) {
-	ENTER("%s", msg);
-
-	JNI::displayMessageOnOSD(msg);
-}
 
 void OSystem_Android::showVirtualKeyboard(bool enable) {
 	ENTER("%d", enable);
@@ -553,15 +483,13 @@ void OSystem_Android::getTimeAndDate(TimeDate &td) const {
 	td.tm_wday = tm.tm_wday;
 }
 
-void OSystem_Android::addSysArchivesToSearchSet(Common::SearchSet &s,
-												int priority) {
+void OSystem_Android::addSysArchivesToSearchSet(Common::SearchSet &s, int priority) {
 	ENTER("");
 
 	JNI::addSysArchivesToSearchSet(s, priority);
 }
 
-void OSystem_Android::logMessage(LogMessageType::Type type,
-									const char *message) {
+void OSystem_Android::logMessage(LogMessageType::Type type, const char *message) {
 	switch (type) {
 	case LogMessageType::kInfo:
 		__android_log_write(ANDROID_LOG_INFO, android_log_tag, message);
