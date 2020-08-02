@@ -24,24 +24,24 @@ msgstr "NovelVM beenden"
 
 #: gui/launcher.cpp:143 backends/platform/sdl/macosx/appmenu_osx.mm:187
 msgid "About NovelVM"
-msgstr "Über NovelVM"
+msgstr "ï¿½ber NovelVM"
 
 #: gui/launcher.cpp:144
 msgid "Change global NovelVM options"
-msgstr "Globale NovelVM-Optionen ändern"
+msgstr "Globale NovelVM-Optionen ï¿½ndern"
 
 #: gui/launcher.cpp:508
 msgid ""
 "NovelVM could not find any engine capable of running the selected game!"
-msgstr "NovelVM kann keine für diese Spiel geeignete Engine finden!"
+msgstr "NovelVM kann keine fï¿½r diese Spiel geeignete Engine finden!"
 
 #: gui/options.cpp:1130
 msgid "Preserve aspect ratio"
-msgstr "Seitenverhältnis beibehalten"
+msgstr "Seitenverhï¿½ltnis beibehalten"
 
 #: gui/options.cpp:1130
 msgid "Preserve the aspect ratio in fullscreen mode"
-msgstr "Seitenverhältnis im Vollbildmodus beibehalten"
+msgstr "Seitenverhï¿½ltnis im Vollbildmodus beibehalten"
 
 #: gui/options.cpp:1133
 msgid "V-Sync"
@@ -57,7 +57,7 @@ msgstr "Spiele-Renderer:"
 
 #: gui/options.cpp:1729
 msgid "Language of NovelVM GUI"
-msgstr "Sprache der NovelVM-Oberfläche"
+msgstr "Sprache der NovelVM-Oberflï¿½che"
 
 #: gui/options.cpp:1756
 msgid ""
@@ -65,9 +65,9 @@ msgid ""
 "if a game uses the NovelVM save and load dialogs, they are in the same "
 "language as the game."
 msgstr ""
-"Die Sprache der Menüführung wird beim Starten des Spiels auf die Sprache des "
+"Die Sprache der Menï¿½fï¿½hrung wird beim Starten des Spiels auf die Sprache des "
 "Spiels gestellt. Damit ist sichergestellt, dass bei der Verwendung der "
-"NovelVM-eigenen \"Speichern und Laden\"-Funktionalität gleiche Sprachen "
+"NovelVM-eigenen \"Speichern und Laden\"-Funktionalitï¿½t gleiche Sprachen "
 "verwendet werden."
 
 #: gui/options.cpp:1770
@@ -77,7 +77,7 @@ msgid ""
 msgstr ""
 "Verwende zur Auswahl einer Datei oder eines Verzeichnisses den "
 "betriebssystemeigenen Dateimanager anstelle des NovelVM-eigenen "
-"Auswahlmenüs."
+"Auswahlmenï¿½s."
 
 #: gui/options.cpp:1777
 msgid "How often to check NovelVM updates"
@@ -91,7 +91,7 @@ msgid ""
 msgstr ""
 "NovelVM kann automatisch nach Aktualisierungen suchen\n"
 "was einen Zugang zum Internet erfordert.\n"
-"Möchten Sie diese Funktion aktivieren?"
+"Mï¿½chten Sie diese Funktion aktivieren?"
 
 #: engines/engine.cpp:544
 msgid ""
@@ -99,9 +99,9 @@ msgid ""
 "NovelVM. As such, it is likely to be unstable, and any saved game you "
 "make might not work in future versions of NovelVM."
 msgstr ""
-"WARNUNG: Das Spiel, welches Sie starten wollen, wird noch nicht vollständig "
-"von NovelVM unterstützt. Somit ist es wahrscheinlich, dass es instabil "
-"ist und jegliche Spielstände, die Sie erstellen, könnten in zukünftigen "
+"WARNUNG: Das Spiel, welches Sie starten wollen, wird noch nicht vollstï¿½ndig "
+"von NovelVM unterstï¿½tzt. Somit ist es wahrscheinlich, dass es instabil "
+"ist und jegliche Spielstï¿½nde, die Sie erstellen, kï¿½nnten in zukï¿½nftigen "
 "Versionen von NovelVM nicht mehr funktionieren."
 
 #: engines/game.cpp:158
@@ -116,7 +116,7 @@ msgstr ""
 "\n"
 "Bitte teilen Sie dem NovelVM-Team unter %s die folgenden Informationen "
 "zusammen mit dem Namen, der Version und der Sprache des Spiels, welches Sie "
-"hinzufügen möchten, mit:"
+"hinzufï¿½gen mï¿½chten, mit:"
 
 #: backends/platform/sdl/macosx/appmenu_osx.mm:189
 msgid "Hide NovelVM"
@@ -128,7 +128,7 @@ msgstr "Neues in NovelVM"
 
 #: engines/grim/detection.cpp:57
 msgid "Load user patch (unsupported)"
-msgstr "Benutzer-Patch laden (nicht unterstützt)"
+msgstr "Benutzer-Patch laden (nicht unterstï¿½tzt)"
 
 #: engines/grim/detection.cpp:58
 msgid ""
@@ -136,7 +136,7 @@ msgid ""
 "support for using such patches."
 msgstr ""
 "Lade einen benutzerdefinierten Patch. Bitte beachten Sie, dass das "
-"NovelVM-Team keine Unterstützung für solche Patches anbietet."
+"NovelVM-Team keine Unterstï¿½tzung fï¿½r solche Patches anbietet."
 
 #: engines/grim/detection.cpp:66
 msgid "Show FPS"
@@ -144,7 +144,7 @@ msgstr "Bildwiederholrate anzeigen"
 
 #: engines/grim/detection.cpp:67
 msgid "Show the current FPS-rate, while you play."
-msgstr "Zeigt die aktuelle Bildwiederholrate an, während Sie spielen."
+msgstr "Zeigt die aktuelle Bildwiederholrate an, wï¿½hrend Sie spielen."
 
 #: engines/grim/grim.cpp:314
 #, c-format
@@ -155,8 +155,8 @@ msgid ""
 msgstr ""
 "NovelVM hat Probleme mit Ihren Spiel-Dateien gefunden.\n"
 "Wenn Sie NovelVM trotzdem starten, kann dies Fehler im Spiel oder "
-"Abstürze verursachen.\n"
-"Möchten Sie %s trotzdem ausführen?"
+"Abstï¿½rze verursachen.\n"
+"Mï¿½chten Sie %s trotzdem ausfï¿½hren?"
 
 #: engines/grim/grim.cpp:317
 msgid "Escape From Monkey Island"
@@ -169,7 +169,7 @@ msgstr "Grim Fandango"
 #: engines/grim/md5check.cpp:546
 #, c-format
 msgid "'%s' may be corrupted. MD5: '%s'"
-msgstr "'%s' ist möglicherweise defekt. MD5: '%s'"
+msgstr "'%s' ist mï¿½glicherweise defekt. MD5: '%s'"
 
 #: engines/grim/md5check.cpp:547
 #, c-format
@@ -180,7 +180,7 @@ msgid ""
 "version (i.e. dvd-box or jewelcase):\n"
 "%s"
 msgstr ""
-"Die Spiel-Datei %s ist möglicherweise defekt.\n"
+"Die Spiel-Datei %s ist mï¿½glicherweise defekt.\n"
 "Wenn Sie sicher sind, dass dies nicht der Fall ist, schicken Sie den "
 "folgenden Code an das NovelVM-Team, zusammen mit Dateinamen, der Sprache "
 "und einer Beschreibung Ihrer Spiele-Version (z.B. DVD-Box oder Jewelcase):\n"
@@ -189,7 +189,7 @@ msgstr ""
 #: engines/grim/md5check.cpp:553
 #, c-format
 msgid "Could not open %s for checking"
-msgstr "Kann %s nicht zur Überprüfung öffnen"
+msgstr "Kann %s nicht zur ï¿½berprï¿½fung ï¿½ffnen"
 
 #: engines/grim/md5check.cpp:554
 #, c-format
@@ -199,11 +199,11 @@ msgid ""
 "Go to https://wiki.novelvm.org/index.php/Datafiles to see a list of the "
 "needed files."
 msgstr ""
-"Die Datei %s kann nicht zur Überprüfung geöffnet werden.\n"
-"Entweder fehlt die Datei, oder Sie haben nicht die nötigen Rechte, um sie zu "
-"öffnen.\n"
+"Die Datei %s kann nicht zur ï¿½berprï¿½fung geï¿½ffnet werden.\n"
+"Entweder fehlt die Datei, oder Sie haben nicht die nï¿½tigen Rechte, um sie zu "
+"ï¿½ffnen.\n"
 "Auf https://wiki.novelvm.org/index.php/Datafiles finden Sie eine Liste der "
-"benötigten Dateien."
+"benï¿½tigten Dateien."
 
 #: engines/grim/md5checkdialog.cpp:42
 msgid ""
@@ -212,10 +212,10 @@ msgid ""
 "This may take a while, please wait.\n"
 "Successive runs will not check them again."
 msgstr ""
-"NovelVM wird jetzt die Spiel-Dateien überprüfen, um ein optimales "
+"NovelVM wird jetzt die Spiel-Dateien ï¿½berprï¿½fen, um ein optimales "
 "Spielerlebnis sicherzustellen.\n"
 "Dies wird eine Weile dauern - bitte warten.\n"
-"Zukünftig werden sie nicht mehr überprüft."
+"Zukï¿½nftig werden sie nicht mehr ï¿½berprï¿½ft."
 
 #: engines/grim/resource.cpp:96
 msgid ""
@@ -254,7 +254,7 @@ msgid ""
 "support for using such patches"
 msgstr ""
 "Lade datausr.lab. Bitte beachten Sie, dass das NovelVM-Team keine "
-"Unterstützung für solche Patches anbietet"
+"Unterstï¿½tzung fï¿½r solche Patches anbietet"
 
 #: engines/grim/resource.cpp:150
 #, c-format
@@ -267,21 +267,21 @@ msgid ""
 "support for using such patches"
 msgstr ""
 "Lade datausr.m4b. Bitte beachten Sie, dass das NovelVM-Team keine "
-"Unterstützung für solche Patches anbietet"
+"Unterstï¿½tzung fï¿½r solche Patches anbietet"
 
 #: engines/grim/resource.cpp:188
 msgid "Cannot find game data - check configuration file"
-msgstr "Spiel-Daten nicht gefunden - Konfigurationsdatei überprüfen"
+msgstr "Spiel-Daten nicht gefunden - Konfigurationsdatei ï¿½berprï¿½fen"
 
-#: engines/myst3/detection.cpp:193
+#: engines/smt/detection.cpp:193
 msgid "Widescreen mod"
 msgstr "Breitbild-Modus"
 
-#: engines/myst3/detection.cpp:194
+#: engines/smt/detection.cpp:194
 msgid "Enable enable widescreen rendering in fullscreen mode."
 msgstr "Aktiviere Breitbild-Darstellung im Vollbildmodus."
 
-#: engines/myst3/myst3.cpp:360
+#: engines/smt/myst3.cpp:360
 msgid ""
 "This version of Myst III has not been updated with the latest official "
 "patch.\n"
@@ -292,7 +292,7 @@ msgstr ""
 "Diese Version von Myst III wurde nicht auf die aktuellste Version "
 "aktualisiert.\n"
 "Bitte installieren Sie das zu Ihrer Sprache passende Update.\n"
-"Die Updates können unter folgender Website heruntergeladen werden:\n"
+"Die Updates kï¿½nnen unter folgender Website heruntergeladen werden:\n"
 "https://www.novelvm.org/downloads/"
 
 #: engines/stark/detection.cpp:317
@@ -312,7 +312,7 @@ msgid ""
 "When linear filtering is enabled the background graphics are smoother in "
 "full screen mode, at the cost of some details."
 msgstr ""
-"Wenn Bilineare Filterung für Hintergrundbilder aktiviert ist, wird die "
+"Wenn Bilineare Filterung fï¿½r Hintergrundbilder aktiviert ist, wird die "
 "Grafik auf Kosten der Detailgenauigkeit im Vollbildmodus verbessert."
 
 #: engines/stark/stark.cpp:302
@@ -325,35 +325,35 @@ msgid ""
 "designed. The Steam release is known to be missing it. You can get the fonts "
 "from the demo version of the game."
 msgstr ""
-"Der Ordner 'fonts' wird benötigt, um die Texte wie ursprünglich gedacht "
-"darzustellen. Das Steam-Release ist dafür bekannt, dass dieser Ordner fehlt. "
-"Sie können die Schriftarten von der Demo-Version dieses Spiels beziehen."
+"Der Ordner 'fonts' wird benï¿½tigt, um die Texte wie ursprï¿½nglich gedacht "
+"darzustellen. Das Steam-Release ist dafï¿½r bekannt, dass dieser Ordner fehlt. "
+"Sie kï¿½nnen die Schriftarten von der Demo-Version dieses Spiels beziehen."
 
 #: engines/stark/stark.cpp:323
 msgid ""
 "'gui.ini' is recommended to get proper font settings for the game "
 "localization."
 msgstr ""
-"'gui.ini' wird empfohlen, um die korrekten Schriftarten-Einstellungen für "
-"diese Übersetzung zu erhalten."
+"'gui.ini' wird empfohlen, um die korrekten Schriftarten-Einstellungen fï¿½r "
+"diese ï¿½bersetzung zu erhalten."
 
 #: engines/stark/stark.cpp:329
 msgid "'language.ini' is recommended to get localized confirmation dialogs."
 msgstr ""
-"'language.ini' wird empfohlen, um die korrekten übersetzten Bestätigungs-"
+"'language.ini' wird empfohlen, um die korrekten ï¿½bersetzten Bestï¿½tigungs-"
 "Dialoge zu erhalten."
 
 #: engines/stark/stark.cpp:335
 msgid "'game.exe' is recommended to get styled confirmation dialogs."
 msgstr ""
-"'game.exe' wird empfohlen, um korrekt dargestellte Bestätigungs-Dialoge zu "
+"'game.exe' wird empfohlen, um korrekt dargestellte Bestï¿½tigungs-Dialoge zu "
 "erhalten."
 
 #~ msgid "NovelVM couldn't open the specified directory!"
-#~ msgstr "NovelVM kann das gewählte Verzeichnis nicht öffnen!"
+#~ msgstr "NovelVM kann das gewï¿½hlte Verzeichnis nicht ï¿½ffnen!"
 
 #~ msgid "NovelVM could not find any game in the specified directory!"
-#~ msgstr "NovelVM kann kein Spiel im gewählten Verzeichnis finden!"
+#~ msgstr "NovelVM kann kein Spiel im gewï¿½hlten Verzeichnis finden!"
 
 #~ msgid "Software Rendering"
 #~ msgstr "Software-Rendering"
@@ -363,7 +363,7 @@ msgstr ""
 
 #~ msgid "You have to restart NovelVM before your changes will take effect."
 #~ msgstr ""
-#~ "Sie müssen NovelVM neu starten, damit die Änderungen wirksam werden."
+#~ "Sie mï¿½ssen NovelVM neu starten, damit die ï¿½nderungen wirksam werden."
 
 #~ msgid ""
 #~ "Please, report the following data to the NovelVM team along with name"

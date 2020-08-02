@@ -219,15 +219,15 @@ msgstr ""
 msgid "Cannot find game data - check configuration file"
 msgstr "Kan spelbestanden niet vinden. Check het configuratiebestand."
 
-#: engines/myst3/detection.cpp:193
+#: engines/smt/detection.cpp:193
 msgid "Widescreen mod"
 msgstr ""
 
-#: engines/myst3/detection.cpp:194
+#: engines/smt/detection.cpp:194
 msgid "Enable enable widescreen rendering in fullscreen mode."
 msgstr ""
 
-#: engines/myst3/myst3.cpp:363
+#: engines/smt/myst3.cpp:363
 #, fuzzy
 msgid ""
 "This version of Myst III has not been updated with the latest official "
@@ -238,7 +238,7 @@ msgid ""
 msgstr ""
 "Deze versie van Myst III is kopieerbeveiligd, waardoor \n"
 "NovelVM benodigde data niet kan uitlezen.\n"
-"Vervang 'M3.exe' met een kopie van de officiële update die overeenkomt \n"
+"Vervang 'M3.exe' met een kopie van de officiï¿½le update die overeenkomt \n"
 "met de taal van uw spel, en laat het spel opnieuw detecteren.\n"
 "De updates zijn vrij van kopieerbeveiliging en kunnen gedownload worden \n"
 "op https://www.novelvm.org/downloads/"
@@ -422,7 +422,7 @@ msgid ""
 "Cannot create a directory to download - the specified directory has a file "
 "with the same name."
 msgstr ""
-"Kan geen download folder creëren - de gespecificeerde folder bevat een file "
+"Kan geen download folder creï¿½ren - de gespecificeerde folder bevat een file "
 "met dezelfde naam."
 
 #: gui/downloaddialog.cpp:147 gui/editgamedialog.cpp:332
@@ -896,7 +896,7 @@ msgstr "Selecteer een actie a.u.b."
 
 #: gui/KeysDialog.cpp:102
 msgid "Press the key to associate"
-msgstr "Druk op de te associëren toets"
+msgstr "Druk op de te associï¿½ren toets"
 
 #: gui/KeysDialog.cpp:137 gui/KeysDialog.h:36
 msgid "Choose an action to map"
@@ -2089,7 +2089,7 @@ msgid ""
 "clipboard."
 msgstr ""
 "Gebruik de onderstaande knop om de benodigde spelinformatie naar uw klembord "
-"te kopiëren."
+"te kopiï¿½ren."
 
 #: gui/unknown-game-dialog.cpp:106
 msgid "You can also directly report your game to the Bug Tracker."
@@ -2103,7 +2103,7 @@ msgstr ""
 
 #: gui/unknown-game-dialog.cpp:158
 msgid "Copying the game information to the clipboard has failed!"
-msgstr "Kopiëren van de spelinformatie naar het klembord is mislukt!"
+msgstr "Kopiï¿½ren van de spelinformatie naar het klembord is mislukt!"
 
 #: gui/updates-dialog.cpp:49
 msgid ""
@@ -2410,7 +2410,7 @@ msgstr ""
 "U lijkt het spel direct van CD the spelen.\n"
 "Hiervan is bekend dat dit problemen veroorzaakt.\n"
 "Het wordt daarom aangeraden om de data\n"
-"bestanden naar uw harddisk te kopiëren.\n"
+"bestanden naar uw harddisk te kopiï¿½ren.\n"
 "Voor details kijk in de README."
 
 #: engines/engine.cpp:480
@@ -2568,7 +2568,7 @@ msgstr "Geen muziek"
 
 #: audio/softsynth/appleiigs.cpp:33
 msgid "Apple II GS emulator (NOT IMPLEMENTED)"
-msgstr "Apple II GS emulator (NIET GEÏMPLEMENTEERD)"
+msgstr "Apple II GS emulator (NIET GEï¿½MPLEMENTEERD)"
 
 #: audio/softsynth/cms.cpp:351
 msgid "Creative Music System emulator"
@@ -3061,7 +3061,7 @@ msgstr "Windows MIDI"
 
 #: backends/networking/sdl_net/handlers/createdirectoryhandler.cpp:60
 msgid "Can't create directory here!"
-msgstr "Kan hier geen map creëren!"
+msgstr "Kan hier geen map creï¿½ren!"
 
 #: backends/networking/sdl_net/handlers/createdirectoryhandler.cpp:66
 #: backends/networking/sdl_net/handlers/createdirectoryhandler.cpp:73
@@ -3084,7 +3084,7 @@ msgstr "Bovenliggende map bestaat niet!"
 
 #: backends/networking/sdl_net/handlers/createdirectoryhandler.cpp:88
 msgid "Can't create a directory within a file!"
-msgstr "Kan geen map creëren in een file!"
+msgstr "Kan geen map creï¿½ren in een file!"
 
 #: backends/networking/sdl_net/handlers/createdirectoryhandler.cpp:98
 #: backends/networking/sdl_net/uploadfileclienthandler.cpp:141
@@ -3093,12 +3093,12 @@ msgstr "Er is een bestand met die naam in de bovenliggende map!"
 
 #: backends/networking/sdl_net/handlers/createdirectoryhandler.cpp:104
 msgid "Failed to create the directory!"
-msgstr "Het creëren van de map is niet gelukt!"
+msgstr "Het creï¿½ren van de map is niet gelukt!"
 
 #: backends/networking/sdl_net/handlers/createdirectoryhandler.cpp:111
 #: backends/networking/sdl_net/handlers/createdirectoryhandler.cpp:120
 msgid "Directory created successfully!"
-msgstr "Map succesvol gecreëerd!"
+msgstr "Map succesvol gecreï¿½erd!"
 
 #: backends/networking/sdl_net/handlers/createdirectoryhandler.cpp:122
 #: backends/networking/sdl_net/uploadfileclienthandler.cpp:204
@@ -3130,7 +3130,7 @@ msgstr ""
 #: backends/networking/sdl_net/handlers/filespagehandler.cpp:223
 #: backends/networking/sdl_net/handlers/filespagehandler.cpp:224
 msgid "Create directory"
-msgstr "Creëer map"
+msgstr "Creï¿½er map"
 
 #: backends/networking/sdl_net/handlers/filesajaxpagehandler.cpp:69
 #: backends/networking/sdl_net/handlers/filesajaxpagehandler.cpp:70
@@ -3818,7 +3818,7 @@ msgstr "Timeout tijdens netwerkinitialisatie"
 #: backends/platform/wii/options.cpp:186
 #, c-format
 msgid "Network not initialized (%d)"
-msgstr "Netwerk niet geïnitialiseerd (%d)"
+msgstr "Netwerk niet geï¿½nitialiseerd (%d)"
 
 #: backends/updates/macosx/macosx-updates.mm:79
 msgid "Check for Updates..."
@@ -4145,7 +4145,7 @@ msgstr "Helaas, het opgeslagen spel kon niet hersteld worden"
 
 #: engines/glk/advsys/vm.cpp:314
 msgid "Sorry, the savegame couldn't be created"
-msgstr "Helaas, creëren van een opgeslagen spel is niet gelukt"
+msgstr "Helaas, creï¿½ren van een opgeslagen spel is niet gelukt"
 
 #: engines/glk/advsys/vm.cpp:560
 msgid "Speak up! I can't hear you!\n"
@@ -5381,7 +5381,7 @@ msgstr ""
 "\n"
 "Sommige audio drivers (voor sommige spellen tenminste) waren\n"
 "gemaakt door Sierra als aftermarktet patches en zijn mogelijkerwijs\n"
-"niet geïnstalleerd als onderdeel van de originele spel installatie.\n"
+"niet geï¿½nstalleerd als onderdeel van de originele spel installatie.\n"
 "\n"
 "Kopieer a.u.b. deze bestand(en) naar uw spel data map.\n"
 "\n"
@@ -6138,7 +6138,7 @@ msgstr ""
 
 #: engines/sherlock/detection.cpp:85
 msgid "Pixellated scene transitions"
-msgstr "Pixellated scèneovergangen"
+msgstr "Pixellated scï¿½neovergangen"
 
 #: engines/sherlock/detection.cpp:86
 msgid "When changing scenes, a randomized pixel transition is done"

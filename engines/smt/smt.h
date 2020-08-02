@@ -12,6 +12,7 @@
 #include "common/debug-channels.h"
 #include "common/error.h"
 #include "common/file.h"
+#include "common/array.h"
 #include "common/fs.h"
 #include "common/str.h"
 #include "common/events.h"
@@ -20,13 +21,18 @@
 #include "graphics/surface.h"
 #include "engines/util.h"
 
+#include "engines/smt/gfx.h"
+
 struct ADGameDescription;
+
  
 namespace SMT {
  
- 
+class Sound;
 class Console;
- 
+class Renderer;
+class FrameLimiter;
+
 // our engine debug channels
 enum {
 	kSMTDebug = 1 << 0,
@@ -46,11 +52,13 @@ public:
 	const ADGameDescription *_gameDescription;
 	const char *getGameId() const;
 	Common::Platform getPlatform() const;
+
+	Renderer *_gfx;
+	Sound *_sound;
  
 private:
 	Console *_console;
-
- 
+ 	FrameLimiter *_frameLimiter;
 	// We need random numbers
 	Common::RandomSource *_rnd;
 };

@@ -15,7 +15,7 @@ Comment:
  Portions of the following files are Expat licensed:
   * engines/grim/gfx_base.cpp
   * engines/grim/gfx_opengl_shaders.cpp
-  * engines/myst3/gfx_opengl_shaders.cpp
+  * engines/smt/gfx_opengl_shaders.cpp
 
 Files:
     common/json.cpp

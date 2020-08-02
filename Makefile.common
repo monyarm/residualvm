@@ -399,7 +399,7 @@ ifdef ENABLE_GRIM
 DIST_FILES_SHADERS+=$(wildcard $(srcdir)/engines/grim/shaders/*)
 endif
 ifdef ENABLE_MYST3
-DIST_FILES_SHADERS+=$(wildcard $(srcdir)/engines/myst3/shaders/*)
+DIST_FILES_SHADERS+=$(wildcard $(srcdir)/engines/smt/shaders/*)
 endif
 ifdef ENABLE_STARK
 DIST_FILES_SHADERS+=$(wildcard $(srcdir)/engines/stark/shaders/*)

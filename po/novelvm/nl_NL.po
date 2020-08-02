@@ -213,7 +213,7 @@ msgstr ""
 msgid "Cannot find game data - check configuration file"
 msgstr "Kan spelbestanden niet vinden. Check het configuratiebestand."
 
-#: engines/myst3/myst3.cpp:348
+#: engines/smt/myst3.cpp:348
 msgid ""
 "This version of Myst III is encrypted with a copy-protection\n"
 "preventing NovelVM from reading required data.\n"
@@ -224,7 +224,7 @@ msgid ""
 msgstr ""
 "Deze versie van Myst III is kopieerbeveiligd, waardoor \n"
 "NovelVM benodigde data niet kan uitlezen.\n"
-"Vervang 'M3.exe' met een kopie van de officiële update die overeenkomt \n"
+"Vervang 'M3.exe' met een kopie van de officiï¿½le update die overeenkomt \n"
 "met de taal van uw spel, en laat het spel opnieuw detecteren.\n"
 "De updates zijn vrij van kopieerbeveiliging en kunnen gedownload worden \n"
 "op https://www.novelvm.org/downloads/"

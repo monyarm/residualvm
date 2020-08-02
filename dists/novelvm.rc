@@ -133,12 +133,12 @@ shaders/text.fragment            FILE    "engines/grim/shaders/text.fragment"
 shaders/text.vertex              FILE    "engines/grim/shaders/text.vertex"
 #endif
 #if PLUGIN_ENABLED_STATIC(MYST3)
-shaders/myst3_box.fragment       FILE    "engines/myst3/shaders/myst3_box.fragment"
-shaders/myst3_box.vertex         FILE    "engines/myst3/shaders/myst3_box.vertex"
-shaders/myst3_cube.fragment      FILE    "engines/myst3/shaders/myst3_cube.fragment"
-shaders/myst3_cube.vertex        FILE    "engines/myst3/shaders/myst3_cube.vertex"
-shaders/myst3_text.fragment      FILE    "engines/myst3/shaders/myst3_text.fragment"
-shaders/myst3_text.vertex        FILE    "engines/myst3/shaders/myst3_text.vertex"
+shaders/myst3_box.fragment       FILE    "engines/smt/shaders/myst3_box.fragment"
+shaders/myst3_box.vertex         FILE    "engines/smt/shaders/myst3_box.vertex"
+shaders/myst3_cube.fragment      FILE    "engines/smt/shaders/myst3_cube.fragment"
+shaders/myst3_cube.vertex        FILE    "engines/smt/shaders/myst3_cube.vertex"
+shaders/myst3_text.fragment      FILE    "engines/smt/shaders/myst3_text.fragment"
+shaders/myst3_text.vertex        FILE    "engines/smt/shaders/myst3_text.vertex"
 #endif
 #if PLUGIN_ENABLED_STATIC(STARK)
 shaders/stark_actor.fragment     FILE    "engines/stark/shaders/stark_actor.fragment"

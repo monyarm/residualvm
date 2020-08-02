@@ -74,10 +74,11 @@ void TMXFile::readPalette(Common::SeekableReadStream *f)
 
             for (size_t i = 0; i < 256; i++)
             {
-                ((uint32 *)palette.data())[i] = (((uint32 *)palette.data())[i] & 0x0000FFFF) << 16 | (((uint32 *)palette.data())[i] & 0xFFFF0000) >> 16;
                 ((uint32 *)palette.data())[i] = (((uint32 *)palette.data())[i] & 0x00FF00FF) << 8 | (((uint32 *)palette.data())[i] & 0xFF00FF00) >> 8;
-            }
+                ((uint32 *)palette.data())[i] = (((uint32 *)palette.data())[i] & 0x0000FFFF) << 16 | (((uint32 *)palette.data())[i] & 0xFFFF0000) >> 16;
 
+            }
+ 
             dat.palette = ((uint32 *)palette.data());
         }
         else if (dat.formatsettings.pixelFmt == PSMT4)

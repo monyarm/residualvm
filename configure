@@ -5779,19 +5779,6 @@ fi
 define_in_config_if_yes $_updates 'USE_UPDATES'
 
 #
-# Check whether to activate engines (NovelVM specific)
-#
-if test `get_engine_build monkey4` = yes && test ! "$_mpeg2" = yes ; then
-	echo "...disabling support for video cutscenes in PS2 version of Escape from Monkey Island. mpeg2dec is required"
-fi
-
-# Added define for ICB - NovelVM specific
-# TODO: remove it
-if test `get_engine_build icb` = yes ; then
-	append_var DEFINES "-D_PC=1"
-fi
-
-#
 # Figure out installation directories
 #
 test "x$prefix" = xNONE && prefix=/usr/local

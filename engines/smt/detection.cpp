@@ -3,6 +3,9 @@
 #include "base/plugins.h"
 
 #include "engines/advancedDetector.h"
+#include "common/config-manager.h"
+#include "common/savefile.h"
+#include "common/translation.h"
 
 namespace SMT {
 const char *SMTEngine::getGameId() const { return _gameDescription->gameId; }
@@ -90,11 +93,29 @@ static const ADGameDescription gameDescriptions[] = {
 	AD_TABLE_END_MARKER
 };
 
+
+#define GAMEOPTION_WIDESCREEN_MOD GUIO_GAMEOPTIONS1
+
+static const ADExtraGuiOptionsMap optionsList[] = {
+	{
+		GAMEOPTION_WIDESCREEN_MOD,
+		{
+			_s("Widescreen mod"),
+			_s("Enable enable widescreen rendering in fullscreen mode."),
+			"widescreen_mod",
+			false
+		}
+	},
+
+	AD_EXTRA_GUI_OPTIONS_TERMINATOR
+};
+
 } // End of namespace SMT
 
 class SMTMetaEngine : public AdvancedMetaEngine {
 public:
-	SMTMetaEngine() : AdvancedMetaEngine(SMT::gameDescriptions, sizeof(ADGameDescription), SMTGames) {
+	SMTMetaEngine() : AdvancedMetaEngine(SMT::gameDescriptions, sizeof(ADGameDescription), SMTGames, SMT::optionsList) {
+		_guiOptions = GUIO5(GUIO_NOMIDI, GUIO_NOSFX, GUIO_NOSPEECH, GUIO_NOSUBTITLES, GAMEOPTION_WIDESCREEN_MOD);
 	}
 
 	const char *getEngineId() const override {

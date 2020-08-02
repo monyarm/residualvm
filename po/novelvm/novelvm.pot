@@ -180,15 +180,15 @@ msgstr ""
 msgid "Cannot find game data - check configuration file"
 msgstr ""
 
-#: engines/myst3/detection.cpp:193
+#: engines/smt/detection.cpp:193
 msgid "Widescreen mod"
 msgstr ""
 
-#: engines/myst3/detection.cpp:194
+#: engines/smt/detection.cpp:194
 msgid "Enable enable widescreen rendering in fullscreen mode."
 msgstr ""
 
-#: engines/myst3/myst3.cpp:363
+#: engines/smt/myst3.cpp:363
 msgid ""
 "This version of Myst III has not been updated with the latest official "
 "patch.\n"
