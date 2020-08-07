@@ -71,14 +71,20 @@ Common::Error KoihimeDokiEngine::run()
 		error("can't read archive");
 	} */
 
-	_archives["STREAM.PAK"].get()->listMembers(list);
+	_archives["lcsebody1"].get()->listMembers(list);
 
 	for (auto &&l : list)
 	{
 		debug(l.get()->getName().c_str());
 	}
 	list = Common::ArchiveMemberList();
+
 	Common::Event e;
+	Common::DumpFile df;
+	df.open("dumps/d.bmp", true);
+	auto rs =_archives["lcsebody1"].get()->createReadStreamForMember("TCG_BUN41AC.bmp");
+	df.writeStream(rs,rs->size());
+	df.close();
 	while (!shouldQuit())
 	{
 		g_system->getEventManager()->pollEvent(e);

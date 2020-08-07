@@ -78,37 +78,46 @@ EXWLCSArchive::EXWLCSArchive(const Common::String &filename) : _exwlcsFilename(f
         return;
     }
 
-    unsigned long key = unobfuscate();  
 
     entry_count = exwlcsLst.readUint32LE();
+    unsigned long key = unobfuscate();  
+
 //    Common::Array<LCSENTRY> entries(sizeof(LCSENTRY) * entry_count);
 
-    LCSENTRY * entries = new LCSENTRY [entry_count];
-    debug("%i",entry_count);
-    debug("%i",sizeof(LCSENTRY));
-    debug("%i",sizeof(LCSENTRY) * entry_count);
+    //LCSENTRY * entries = new LCSENTRY [entry_count];
+    Common::Array<LCSENTRY> entries;
     //entries.reserve(sizeof(LCSENTRY) * entry_count);
 
-    exwlcsLst.read(entries,sizeof(LCSENTRY) * entry_count);
+    //exwlcsLst.read(entries,sizeof(LCSENTRY) * entry_count);
 
 
   for (unsigned long i = 0; i < entry_count; i++) {
+    LCSENTRY hdr;
+
+    hdr.offset = exwlcsLst.readUint32LE();
+    hdr.length = exwlcsLst.readUint32LE();
+    exwlcsLst.read(hdr.filename,64);
+    hdr.unknown = exwlcsLst.readUint32LE();
+
+    entries.push_back(hdr);
     unobfuscate(entries[i], key);
 
-    unsigned long  len  = entries[i].length;
-    debug("%i",len); 
-    unsigned char* buff = new unsigned char[len];
+
+    unsigned char* buff = new unsigned char[entries[i].length];
 
     exwlcsFile.seek(entries[i].offset, SEEK_SET);
 
-    exwlcsFile.read(buff, len);
-
-    _headers[entries[i].filename + guess_file_extension(buff, len)].reset(new LCSHEADER({entries[i].offset,len,entries[i].filename + guess_file_extension(buff, len),0}));
+    exwlcsFile.read(buff, entries[i].length);
+    Common::String name(entries[i].filename + guess_file_extension(buff, entries[i].length));
+    name.trim();
+    //name = name + guess_file_extension(buff, entries[i].length);
+    
+    _headers[name].reset(new LCSHEADER({entries[i].offset,entries[i].length,name,0}));
 
     delete [] buff; 
 
   }
-    delete [] entries;
+    //delete [] entries;
 
 
     
@@ -164,7 +173,7 @@ Common::SeekableReadStream *EXWLCSArchive::createReadStreamForMember(const Commo
     archiveFile.read(buff, len);
 
     // Assume that any data we don't recognize is obfuscated 
-    if (strcmp(guess_file_extension(buff, len).c_str(), ".bin") != 0) {
+    if (strcmp(guess_file_extension(buff, len).c_str(), ".bin") == 0) {
       unobfuscate(buff, len);
     }
 
