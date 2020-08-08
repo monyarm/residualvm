@@ -1,4 +1,5 @@
 #include "smt/formats/archive/cpk.h"
+#include "smt/formats/archive/cvm.h"
 #include "smt/formats/audio/adx.h"
 #include "smt/formats/image/dds.h"
 #include "smt/formats/image/tmx.h"
@@ -19,7 +20,7 @@ SMTEngine::SMTEngine(OSystem *syst, const ADGameDescription *desc)
 
 	// However this is the place to specify all default directories
 	const Common::FSNode gameDataDir(ConfMan.get("path"));
-	SearchMan.addSubDirectoryMatching(gameDataDir, "sound/pmsf");
+	//SearchMan.addSubDirectoryMatching(gameDataDir, "sound/pmsf");
 
 	// Here is the right place to set up the engine specific debug channels
 	DebugMan.addDebugChannel(kSMTDebug, "example", "this is just an example for a engine specific debug channel");
@@ -68,8 +69,7 @@ Common::Error SMTEngine::run() {
 	_gfx->clear();
 
 	//_frameLimiter = new FrameLimiter(_system, ConfMan.getInt("engine_speed"));
-
-	//_cpk.ReadFile("umd0.cpk");
+	//CPK::CPKFile _cpk = CPK::CPKFile("umd0.cpk");
 
 	//PMSFFile _pmsf = PMSFFile();
 
@@ -79,7 +79,32 @@ Common::Error SMTEngine::run() {
 	DDSFile _dds("test/DXT5.dds");
 	//ADXFile _adx("test/TEST.ADX");
 
-	//CVMArchive _bgm("BGM.CVM");
+
+	Common::ArchiveMemberList list;
+	SearchMan.listMembers(list);
+
+
+	for (auto &&l : list)
+	{
+		//debug(l.get()->getName().c_str());
+	}
+	list = Common::ArchiveMemberList();
+	Common::File f;
+	
+/* 
+	if (!f.open("bgm01.wav", *_archives["STREAM.PAK"].get()))
+	{
+		error("can't read archive");
+	} */
+
+	CVMArchive _data("DATA.CVM");
+	_data.listMembers(list);
+	for (auto &&l : list)
+	{
+		debug(l.get()->getName().c_str());
+	}
+
+
 	//CVMArchive _data("DATA.CVM");
 	//CVMArchive _btl("BTL.CVM");
 
@@ -116,7 +141,6 @@ Common::Error SMTEngine::run() {
 	Common::Rect ddsRect = Common::Rect(0 - surfacedds->w,0,surfacedds->w, surfacedds->h);
 	auto texturetmx = _gfx->createTexture(surfacetmx);
 	auto texturedds = _gfx->createTexture(surfacedds);
-	Texture* testtex[] = {texturedds,texturetmx,texturedds,texturetmx,texturedds,texturetmx,texturedds,texturetmx};
 
 
 	debug("%i %i",_gfx->viewport().width(), _gfx->viewport().height());
