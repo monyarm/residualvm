@@ -75,7 +75,6 @@ Common::Error SMTEngine::run() {
 
 	//_pmsf.ReadFile("p3opmv_p3p.pmsf");
 
-	TMXFile _tmx("test/PSMT8.tmx");
 	DDSFile _dds("test/DXT5.dds");
 	//ADXFile _adx("test/TEST.ADX");
 
@@ -98,10 +97,18 @@ Common::Error SMTEngine::run() {
 	} */
 
 	CVMArchive _data("DATA.CVM");
+
+	Common::DumpFile df;
+	df.open("dumps/ARC_C002.TMX");
+	df.writeStream(_data.createReadStreamForMember("EVENT/SYS/ARC_C002.TMX"));
+
+	TMXFile _tmx("test/SHA_CARD00.TMX");
+	//TMXFile _tmx("test/PSMT8.tmx");
+
 	_data.listMembers(list);
 	for (auto &&l : list)
 	{
-		debug(l.get()->getName().c_str());
+	//	debug(l.get()->getName().c_str());
 	}
 
 
@@ -147,8 +154,8 @@ Common::Error SMTEngine::run() {
 	while (!shouldQuit()) {
 		_gfx->clear();
 
-		_gfx->drawTexturedRect2D(_gfx->viewport(), tmxRect, texturetmx,1,false);
-		_gfx->drawTexturedRect2D(_gfx->viewport(), ddsRect, texturedds,1,false);
+		_gfx->drawTexturedRect2D(_gfx->viewport(), tmxRect, texturetmx,-.5,false);
+		_gfx->drawTexturedRect2D(_gfx->viewport(), ddsRect, texturedds,-.5,false);
 		_gfx->flipBuffer();
 
 		g_system->updateScreen();
