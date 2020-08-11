@@ -11,6 +11,7 @@ MODULE_OBJS := \
 	detection.o \
 	formats/archive/cpk.o \
 	formats/archive/cvm.o \
+	formats/archive/pac.o \
 	formats/video/pmsf.o \
 	formats/image/tmx.o \
 	formats/image/dds.o \

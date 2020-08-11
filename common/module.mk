@@ -10,6 +10,7 @@ MODULE_OBJS := \
 	error.o \
 	events.o \
 	file.o \
+	file-format.o \
 	fs.o \
 	gui_options.o \
 	hashmap.o \
